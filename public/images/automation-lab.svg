@@ -1,0 +1,24 @@
+<svg width="900" height="700" viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lab-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#556EE6"/>
+      <stop offset="50%" stop-color="#AEE6F7"/>
+      <stop offset="100%" stop-color="#FFB08A"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="700" rx="40" fill="#050816"/>
+  <circle cx="700" cy="120" r="180" fill="url(#lab-grad)" opacity="0.18"/>
+  <rect x="120" y="160" width="660" height="380" rx="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="170" y="220" width="200" height="120" rx="20" fill="#0B142D"/>
+  <rect x="390" y="220" width="320" height="200" rx="24" fill="#0E1B36"/>
+  <rect x="170" y="360" width="200" height="120" rx="20" fill="#0B142D"/>
+  <rect x="390" y="440" width="320" height="80" rx="20" fill="#0E1B36"/>
+  <line x1="270" y1="220" x2="550" y2="220" stroke="url(#lab-grad)" stroke-width="2" stroke-dasharray="6 8"/>
+  <line x1="270" y1="480" x2="550" y2="480" stroke="url(#lab-grad)" stroke-width="2" stroke-dasharray="6 8"/>
+  <text x="205" y="280" font-family="Space Grotesk, Arial" font-size="18" fill="#AEE6F7">Automation node</text>
+  <text x="420" y="280" font-family="Space Grotesk, Arial" font-size="18" fill="#FFFFFF" opacity="0.8">AI Lab Console</text>
+  <path d="M420 330 H680" stroke="#FFB08A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M420 360 H640" stroke="#AEE6F7" stroke-width="3" stroke-linecap="round"/>
+  <path d="M420 390 H610" stroke="#556EE6" stroke-width="3" stroke-linecap="round"/>
+</svg>
+

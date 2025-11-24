@@ -1,0 +1,250 @@
+"use client";
+
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+const groups = [
+  {
+    label: "Engineering & Estimation",
+    color: "from-softSkyCyan/30 to-slateBlue/40",
+    services: [
+      {
+        title: "Engineering Design",
+        href: "/services/engineering-design",
+        desc: "Mechanical, electrical and structural design support.",
+      },
+      {
+        title: "Cost Estimation",
+        href: "/services/cost-estimation",
+        desc: "Detailed BOQs and cost breakdowns.",
+      },
+      {
+        title: "Technical Documentation",
+        href: "/services/technical-documentation",
+        desc: "Drawings, reports and compliance records.",
+      },
+    ],
+  },
+  {
+    label: "AI & Digital Solutions",
+    color: "from-sunsetPeach/30 to-slateBlue/40",
+    services: [
+      {
+        title: "AI Automation",
+        href: "/services/ai-automation",
+        desc: "Assistants, workflows and document intelligence.",
+      },
+      {
+        title: "Web Development",
+        href: "/services/web-development",
+        desc: "Websites and dashboards built with modern tools.",
+      },
+      {
+        title: "Social Media Marketing",
+        href: "/services/social-media",
+        desc: "Content, planning and basic reporting.",
+      },
+      {
+        title: "Email Marketing",
+        href: "/services/email-marketing",
+        desc: "Newsletters and nurture flows.",
+      },
+    ],
+  },
+];
+
+export default function ServicesPage() {
+  return (
+    <main className="main-shell">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.18em]">
+          SERVICES
+        </p>
+        <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-white">
+          Everything you need from first sketch to digital launch.
+        </h1>
+        <p className="mt-3 text-sm text-gray-300 max-w-2xl">
+          You don&apos;t have to choose between &quot;traditional&quot;
+          engineering and &quot;modern&quot; digital work. EHM Tech Services
+          helps you bridge both sides inside one relationship.
+        </p>
+      </motion.section>
+
+      <section className="mt-10 space-y-10">
+        {groups.map((group, gi) => (
+          <motion.div
+            key={group.label}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: gi * 0.1 }}
+            className="section-card p-6 md:p-7"
+          >
+            <div className="flex items-center justify-between gap-4 flex-wrap">
+              <h2 className="text-xl md:text-2xl font-semibold text-white">
+                {group.label}
+              </h2>
+              <span className="chip">
+                {group.services.length} services in this group
+              </span>
+            </div>
+            <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {group.services.map((svc) => (
+                <Link
+                  key={svc.title}
+                  href={svc.href}
+                  className="relative rounded-2xl border border-white/10 bg-slate-950/40 p-4 group overflow-hidden"
+                >
+                  <div
+                    className={`pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br ${group.color} transition-opacity`}
+                  />
+                  <div className="relative">
+                    <p className="text-sm font-semibold text-white">
+                      {svc.title}
+                    </p>
+                    <p className="mt-1 text-xs text-gray-300">{svc.desc}</p>
+                    <p className="mt-3 text-[11px] text-softSkyCyan group-hover:translate-x-1 transition-transform">
+                      View details →
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </section>
+
+      <motion.section
+        className="mt-12 grid gap-4 md:grid-cols-3"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        {[
+          { label: "Avg. overlap", value: "4-6 hrs / day", desc: "We align with your timezone so collaboration stays async-first." },
+          { label: "Parallel tracks", value: "3 streams", desc: "Engineering, automation and digital can move together." },
+          { label: "Satisfaction", value: "9.6 / 10", desc: "Rolling feedback score from retained partners." },
+        ].map((stat) => (
+          <div key={stat.label} className="section-card p-5 flex flex-col gap-2">
+            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
+              {stat.label}
+            </p>
+            <p className="text-2xl font-semibold text-white">{stat.value}</p>
+            <p className="text-sm text-gray-300">{stat.desc}</p>
+          </div>
+        ))}
+      </motion.section>
+
+      <motion.section
+        className="mt-12 grid md:grid-cols-3 gap-6"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        {[
+          {
+            title: "Embedded partner",
+            desc: "We join your channels and PM tools, acting as an extension of your team.",
+          },
+          {
+            title: "Project-based sprints",
+            desc: "Perfect for a discrete automation, estimation package or website launch.",
+          },
+          {
+            title: "Advisory retainers",
+            desc: "Monthly access to senior leads for reviews, QA and strategic direction.",
+          },
+        ].map((item) => (
+          <div key={item.title} className="section-card p-5">
+            <p className="text-lg font-semibold text-white">{item.title}</p>
+            <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+          </div>
+        ))}
+      </motion.section>
+
+      <motion.section
+        className="mt-12 section-card p-6 md:p-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.18em]">
+              HOW WE ENGAGE
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold text-white">
+              Mix-and-match the pieces you need.
+            </h2>
+            <p className="mt-2 text-sm text-gray-300">
+              Start with one service, then extend into adjacent support without
+              spinning up a new vendor.
+            </p>
+          </div>
+          <a
+            href="/contact"
+            className="rounded-full bg-slateBlue px-6 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-slateBlue/90"
+          >
+            Plan your stack →
+          </a>
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-3 text-sm text-gray-300">
+          {[
+            "Engineering design ↔ Cost estimation ↔ Documentation cleanup",
+            "Automation pilot ↔ Web refresh ↔ Email nurture",
+            "Estimation retainer ↔ AI workflows ↔ Ongoing reporting",
+          ].map((combo) => (
+            <div key={combo} className="rounded-xl border border-white/10 bg-white/5 p-4">
+              {combo}
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      <motion.section
+        className="mt-12 grid gap-6 md:grid-cols-2"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <MediaPlaceholder
+          label="Services storyboard"
+          caption="Each stream gets a dedicated canvas showing flowcharts, owners and delivery beats."
+          badge="Process"
+          accent="violet"
+          aspect="wide"
+          imageSrc="/images/ops-canvas.svg"
+          imageAlt="Services storyboard canvas"
+        />
+        <div className="section-card p-6">
+          <h2 className="text-xl font-semibold text-white">Frequently asked</h2>
+          <div className="mt-4 space-y-4 text-sm text-gray-300">
+            {[
+              {
+                q: "Can we engage you for just one phase?",
+                a: "Yes. Every service is modular—kick off with a single sprint and extend as needed.",
+              },
+              {
+                q: "How do you handle tooling access?",
+                a: "We use client-provided accounts whenever possible. Otherwise, we spin up isolated workspaces and share credentials securely.",
+              },
+              {
+                q: "What if we need ongoing support?",
+                a: "We can set up quarterly or annual retainers that flex up/down based on workload.",
+              },
+            ].map((item) => (
+              <div key={item.q} className="border-t border-white/10 pt-4 first:border-t-0 first:pt-0">
+                <p className="text-sm font-semibold text-white">{item.q}</p>
+                <p className="mt-1 text-gray-300">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+    </main>
+  );
+}
