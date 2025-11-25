@@ -120,7 +120,7 @@ export default function EngineeringDesignPage() {
     >
       {/* Deliverables */}
       <div>
-        <h2 className="text-2xl font-semibold text-white">What we deliver</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">What we deliver</h2>
         <div className="mt-6 grid md:grid-cols-3 gap-6">
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
@@ -154,7 +154,7 @@ export default function EngineeringDesignPage() {
 
       {/* Process */}
       <div>
-        <h2 className="text-2xl font-semibold text-white">
+        <h2 className="text-2xl font-semibold text-slate-900">
           How our design process works
         </h2>
         <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
@@ -176,7 +176,7 @@ export default function EngineeringDesignPage() {
 
       {/* Quality guardrails */}
       <div>
-        <h2 className="text-2xl font-semibold text-white">Quality guardrails</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">Quality guardrails</h2>
         <div className="mt-6 grid gap-5 md:grid-cols-2">
           {[
             {

@@ -29,7 +29,7 @@ export function ScrollToTopButton() {
           className="fixed bottom-6 right-6 z-40 rounded-full bg-gradient-to-tr from-slateBlue to-softSkyCyan p-[2px] shadow-soft"
           aria-label="Scroll to top"
         >
-          <div className="rounded-full bg-slate-950 px-3 py-2 text-xs font-medium text-gray-100 flex items-center gap-1.5">
+          <div className="rounded-full bg-white px-3 py-2 text-xs font-medium text-slate-800 flex items-center gap-1.5 shadow">
             <span>↑</span>
             <span>Top</span>
           </div>

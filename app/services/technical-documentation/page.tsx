@@ -115,7 +115,7 @@ export default function TechnicalDocumentationPage() {
       ]}
     >
       <div>
-        <h2 className="text-2xl font-semibold text-white">
+        <h2 className="text-2xl font-semibold text-slate-900">
           Documentation services
         </h2>
         <div className="mt-6 grid md:grid-cols-3 gap-6">
@@ -150,7 +150,7 @@ export default function TechnicalDocumentationPage() {
       </div>
 
       <div>
-        <h2 className="text-2xl font-semibold text-white">Compliance-ready add-ons</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">Compliance-ready add-ons</h2>
         <div className="mt-6 grid md:grid-cols-2 gap-5">
           {[
             {

@@ -112,7 +112,7 @@ export default function SocialMediaPage() {
       ]}
     >
       <div>
-        <h2 className="text-2xl font-semibold text-white">
+        <h2 className="text-2xl font-semibold text-slate-900">
           Social media services
         </h2>
         <div className="mt-6 grid md:grid-cols-3 gap-6">
@@ -147,7 +147,7 @@ export default function SocialMediaPage() {
       </div>
 
       <div>
-        <h2 className="text-2xl font-semibold text-white">Content pillars we lean on</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">Content pillars we lean on</h2>
         <div className="mt-6 grid md:grid-cols-2 gap-5">
           {[
             {

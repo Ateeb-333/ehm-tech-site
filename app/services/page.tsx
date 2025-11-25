@@ -61,17 +61,59 @@ export default function ServicesPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.18em]">
-          SERVICES
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label" aria-label="Services section">
+          <span className="sr-only">Services section: </span>SERVICES
         </p>
-        <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-white">
+        <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900">
           Everything you need from first sketch to digital launch.
         </h1>
-        <p className="mt-3 text-sm text-gray-300 max-w-2xl">
+        <p className="mt-3 text-meta max-w-2xl">
           You don&apos;t have to choose between &quot;traditional&quot;
           engineering and &quot;modern&quot; digital work. EHM Tech Services
           helps you bridge both sides inside one relationship.
         </p>
+      </motion.section>
+
+      <motion.section
+        className="mt-10 section-card p-6 md:p-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label" aria-label="Why EHM section">
+          <span className="sr-only">Why EHM section: </span>WHY EHM
+        </p>
+        <h2 className="mt-2 text-2xl font-semibold text-slate-900">
+          One team for engineering, automation & digital.
+        </h2>
+        <p className="mt-3 text-meta font-normal max-w-2xl">
+          Most agencies specialize in one area. We combine engineering rigor with modern automation and web technologies so you don't have to manage multiple vendors or lose context between disciplines.
+        </p>
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          {[
+            {
+              title: "Engineering + Digital in one flow",
+              desc: "Design packages, estimation and documentation work alongside AI automation and web builds—no handoffs, no context loss.",
+            },
+            {
+              title: "Modern tooling, classic discipline",
+              desc: "We use Notion, LangChain, Next.js and Revit with the same attention to detail and documentation standards.",
+            },
+            {
+              title: "Flexible engagement models",
+              desc: "Start with a sprint, embed for a quarter, or keep us on retainer. Every service is modular and can scale up or down.",
+            },
+            {
+              title: "Remote-first, timezone-aware",
+              desc: "We overlap 4-6 hours daily with GCC, EU and APAC teams, so collaboration stays async-first without delays.",
+            },
+          ].map((item) => (
+            <div key={item.title} className="rounded-xl border border-slate-200 bg-white p-4">
+              <p className="text-sm font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600 font-normal">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </motion.section>
 
       <section className="mt-10 space-y-10">
@@ -85,7 +127,7 @@ export default function ServicesPage() {
             className="section-card p-6 md:p-7"
           >
             <div className="flex items-center justify-between gap-4 flex-wrap">
-              <h2 className="text-xl md:text-2xl font-semibold text-white">
+              <h2 className="text-xl md:text-2xl font-semibold text-slate-900">
                 {group.label}
               </h2>
               <span className="chip">
@@ -97,17 +139,17 @@ export default function ServicesPage() {
                 <Link
                   key={svc.title}
                   href={svc.href}
-                  className="relative rounded-2xl border border-white/10 bg-slate-950/40 p-4 group overflow-hidden"
+                  className="relative rounded-2xl border border-slate-200 bg-white p-4 group overflow-hidden"
                 >
                   <div
                     className={`pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br ${group.color} transition-opacity`}
                   />
                   <div className="relative">
-                    <p className="text-sm font-semibold text-white">
+                    <p className="text-sm font-semibold text-slate-900">
                       {svc.title}
                     </p>
-                    <p className="mt-1 text-xs text-gray-300">{svc.desc}</p>
-                    <p className="mt-3 text-[11px] text-softSkyCyan group-hover:translate-x-1 transition-transform">
+                    <p className="mt-1 text-xs text-meta">{svc.desc}</p>
+                    <p className="mt-3 text-[11px] text-slateBlue group-hover:translate-x-1 transition-transform">
                       View details →
                     </p>
                   </div>
@@ -129,12 +171,12 @@ export default function ServicesPage() {
           { label: "Parallel tracks", value: "3 streams", desc: "Engineering, automation and digital can move together." },
           { label: "Satisfaction", value: "9.6 / 10", desc: "Rolling feedback score from retained partners." },
         ].map((stat) => (
-          <div key={stat.label} className="section-card p-5 flex flex-col gap-2">
-            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
+          <div key={stat.label} className="section-card p-4 md:p-6 flex flex-col gap-2">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
               {stat.label}
             </p>
-            <p className="text-2xl font-semibold text-white">{stat.value}</p>
-            <p className="text-sm text-gray-300">{stat.desc}</p>
+            <p className="text-2xl font-semibold text-slate-900">{stat.value}</p>
+            <p className="text-meta font-normal">{stat.desc}</p>
           </div>
         ))}
       </motion.section>
@@ -159,9 +201,9 @@ export default function ServicesPage() {
             desc: "Monthly access to senior leads for reviews, QA and strategic direction.",
           },
         ].map((item) => (
-          <div key={item.title} className="section-card p-5">
-            <p className="text-lg font-semibold text-white">{item.title}</p>
-            <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+          <div key={item.title} className="section-card p-4 md:p-6">
+            <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+            <p className="mt-2 text-meta font-normal">{item.desc}</p>
           </div>
         ))}
       </motion.section>
@@ -174,13 +216,13 @@ export default function ServicesPage() {
       >
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.18em]">
-              HOW WE ENGAGE
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label" aria-label="How we engage section">
+              <span className="sr-only">How we engage section: </span>HOW WE ENGAGE
             </p>
-            <h2 className="mt-2 text-2xl font-semibold text-white">
+            <h2 className="mt-2 text-2xl font-semibold text-slate-900">
               Mix-and-match the pieces you need.
             </h2>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-meta">
               Start with one service, then extend into adjacent support without
               spinning up a new vendor.
             </p>
@@ -192,13 +234,13 @@ export default function ServicesPage() {
             Plan your stack →
           </a>
         </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-3 text-sm text-gray-300">
+        <div className="mt-6 grid gap-4 md:grid-cols-3 text-sm text-meta">
           {[
             "Engineering design ↔ Cost estimation ↔ Documentation cleanup",
             "Automation pilot ↔ Web refresh ↔ Email nurture",
             "Estimation retainer ↔ AI workflows ↔ Ongoing reporting",
           ].map((combo) => (
-            <div key={combo} className="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div key={combo} className="rounded-xl border border-slate-200 bg-white p-3 md:p-4">
               {combo}
             </div>
           ))}
@@ -221,8 +263,8 @@ export default function ServicesPage() {
           imageAlt="Services storyboard canvas"
         />
         <div className="section-card p-6">
-          <h2 className="text-xl font-semibold text-white">Frequently asked</h2>
-          <div className="mt-4 space-y-4 text-sm text-gray-300">
+          <h2 className="text-xl font-semibold text-slate-900">Frequently asked</h2>
+          <div className="mt-4 space-y-4 text-sm text-meta">
             {[
               {
                 q: "Can we engage you for just one phase?",
@@ -237,9 +279,9 @@ export default function ServicesPage() {
                 a: "We can set up quarterly or annual retainers that flex up/down based on workload.",
               },
             ].map((item) => (
-              <div key={item.q} className="border-t border-white/10 pt-4 first:border-t-0 first:pt-0">
-                <p className="text-sm font-semibold text-white">{item.q}</p>
-                <p className="mt-1 text-gray-300">{item.a}</p>
+              <div key={item.q} className="border-t border-slate-200 pt-4 first:border-t-0 first:pt-0">
+                <p className="text-sm font-semibold text-slate-900">{item.q}</p>
+                <p className="mt-1 text-meta">{item.a}</p>
               </div>
             ))}
           </div>

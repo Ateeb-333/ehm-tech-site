@@ -66,13 +66,13 @@ export default function PortfolioPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.18em]">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">
           PORTFOLIO
         </p>
-        <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-white">
+        <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900">
           A sample of work across engineering and digital.
         </h1>
-        <p className="mt-3 text-sm text-gray-300 max-w-2xl">
+        <p className="mt-3 text-sm text-slate-600 max-w-2xl">
           Some projects are purely engineering, some purely digital – many sit
           somewhere in the middle. These examples give a sense of the kind of
           outcomes we support.
@@ -91,7 +91,7 @@ export default function PortfolioPage() {
                 className={`px-4 py-1.5 rounded-full text-xs md:text-sm border transition-colors ${
                   isActive
                     ? "bg-slateBlue text-white border-slateBlue"
-                    : "bg-white/5 text-gray-200 border-white/15 hover:border-softSkyCyan/70"
+                    : "bg-white text-slate-600 border-slate-200 hover:border-softSkyCyan/70"
                 }`}
               >
                 {cat}
@@ -111,17 +111,17 @@ export default function PortfolioPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
-              className="rounded-2xl border border-white/10 bg-slate-950/60 overflow-hidden shadow-soft group"
+              className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-soft group"
             >
               <div className="h-28 bg-gradient-to-tr from-slateBlue via-softSkyCyan to-sunsetPeach group-hover:scale-[1.02] transition-transform" />
               <div className="p-4">
-                <span className="text-[11px] font-semibold text-softSkyCyan uppercase tracking-[0.16em]">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-gradient-label">
                   {p.category}
                 </span>
-                <h3 className="mt-1 text-sm md:text-base font-semibold text-white">
+                <h3 className="mt-1 text-sm md:text-base font-semibold text-slate-900">
                   {p.title}
                 </h3>
-                <p className="mt-2 text-xs md:text-sm text-gray-300">
+                <p className="mt-2 text-xs md:text-sm text-slate-600">
                   {p.description}
                 </p>
               </div>
@@ -151,10 +151,10 @@ export default function PortfolioPage() {
           },
         ].map((metric) => (
           <div key={metric.label} className="section-card p-5">
-            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
               {metric.label}
             </p>
-            <p className="mt-2 text-lg font-semibold text-white">
+            <p className="mt-2 text-lg font-semibold text-slate-900">
               {metric.value}
             </p>
           </div>
@@ -177,20 +177,20 @@ export default function PortfolioPage() {
         />
         <div className="section-card p-6 flex flex-col justify-between">
           <div>
-            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
               HOW WE CAPTURE RESULTS
             </p>
-            <ul className="mt-3 space-y-2 text-sm text-gray-300">
+            <ul className="mt-3 space-y-2 text-sm text-slate-600">
               <li>▹ Before/after metrics for every workflow or page</li>
               <li>▹ Loom walkthroughs so teams can see deliverables in action</li>
               <li>▹ Templates and documentation ready for reuse</li>
             </ul>
           </div>
           <div className="mt-6">
-            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
               WANT TO DIVE DEEPER?
             </p>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Ask for private case studies covering your industry. We redact
               sensitive data, but keep enough context to evaluate fit.
             </p>
@@ -210,17 +210,17 @@ export default function PortfolioPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
           HOW TO GET STARTED
         </p>
-        <div className="mt-4 grid gap-4 md:grid-cols-4 text-sm text-gray-300">
+        <div className="mt-4 grid gap-4 md:grid-cols-4 text-sm text-slate-600">
           {[
             "Share drawings, assets or current tooling.",
             "We highlight opportunities + risks within 48h.",
             "Kick off a sprint or embed us with your team.",
             "Capture outcomes and add them to this gallery.",
           ].map((step, idx) => (
-            <div key={step} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div key={step} className="rounded-2xl border border-slate-200 bg-white p-4">
               <div className="w-6 h-6 flex items-center justify-center rounded-full bg-slateBlue text-white text-xs font-semibold">
                 {idx + 1}
               </div>

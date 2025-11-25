@@ -112,7 +112,7 @@ export default function EmailMarketingPage() {
       ]}
     >
       <div>
-        <h2 className="text-2xl font-semibold text-white">
+        <h2 className="text-2xl font-semibold text-slate-900">
           How we support your email marketing
         </h2>
         <div className="mt-6 grid md:grid-cols-3 gap-6">
@@ -147,7 +147,7 @@ export default function EmailMarketingPage() {
       </div>
 
       <div>
-        <h2 className="text-2xl font-semibold text-white">
+        <h2 className="text-2xl font-semibold text-slate-900">
           Optimization levers
         </h2>
         <div className="mt-6 grid md:grid-cols-3 gap-5">

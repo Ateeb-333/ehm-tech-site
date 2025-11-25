@@ -22,21 +22,21 @@ export default function ContactPage() {
       >
         {/* Left text */}
         <div>
-          <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.18em]">
-            CONTACT
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label" aria-label="Contact section">
+            <span className="sr-only">Contact section: </span>CONTACT
           </p>
-          <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-white">
+          <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900">
             Let&apos;s talk about your next project or workflow.
           </h1>
-          <p className="mt-3 text-sm text-gray-300 max-w-xl">
+          <p className="mt-3 text-sm text-slate-600 max-w-xl">
             A short message is enough to get started. Share where you are today,
             the kind of outcome you&apos;re aiming for, and we&apos;ll suggest
             ways we can help.
           </p>
 
-          <div className="mt-6 space-y-2 text-sm text-gray-300">
+          <div className="mt-6 space-y-2 text-sm text-slate-600">
             <p>Typical topics we discuss:</p>
-            <ul className="list-disc list-inside text-xs md:text-sm text-gray-300">
+            <ul className="list-disc list-inside text-xs md:text-sm text-slate-600">
               <li>Upcoming engineering design or estimation work.</li>
               <li>Ideas for automating internal tasks with AI.</li>
               <li>Plans for a new website or digital refresh.</li>
@@ -53,47 +53,47 @@ export default function ContactPage() {
           transition={{ delay: 0.1 }}
         >
           <div>
-            <label className="block text-xs text-gray-300 mb-1">
+            <label className="block text-xs text-slate-500 mb-1">
               Name
             </label>
             <input
               name="name"
               required
-              className="w-full rounded-xl border border-white/15 bg-slate-950/60 px-3 py-2 text-sm text-gray-100 outline-none focus:border-softSkyCyan"
+              className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan"
               placeholder="Your name"
             />
           </div>
           <div>
-            <label className="block text-xs text-gray-300 mb-1">
+            <label className="block text-xs text-slate-500 mb-1">
               Email
             </label>
             <input
               type="email"
               name="email"
               required
-              className="w-full rounded-xl border border-white/15 bg-slate-950/60 px-3 py-2 text-sm text-gray-100 outline-none focus:border-softSkyCyan"
+              className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan"
               placeholder="you@company.com"
             />
           </div>
           <div>
-            <label className="block text-xs text-gray-300 mb-1">
+            <label className="block text-xs text-slate-500 mb-1">
               Company / Organization (optional)
             </label>
             <input
               name="company"
-              className="w-full rounded-xl border border-white/15 bg-slate-950/60 px-3 py-2 text-sm text-gray-100 outline-none focus:border-softSkyCyan"
+              className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan"
               placeholder="Where you work"
             />
           </div>
           <div>
-            <label className="block text-xs text-gray-300 mb-1">
+            <label className="block text-xs text-slate-500 mb-1">
               What would you like help with?
             </label>
             <textarea
               name="message"
               required
               rows={5}
-              className="w-full rounded-xl border border-white/15 bg-slate-950/60 px-3 py-2 text-sm text-gray-100 outline-none focus:border-softSkyCyan resize-none"
+              className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan resize-none"
               placeholder="Briefly describe your project, current tools and target timeline..."
             />
           </div>
@@ -130,8 +130,8 @@ export default function ContactPage() {
           imageSrc="/images/automation-lab.svg"
           imageAlt="Collaboration workspace preview"
         />
-        <div className="section-card p-5 space-y-3 text-sm text-gray-300">
-          <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
+        <div className="section-card p-5 space-y-3 text-sm text-slate-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
             HOW WE PREP FOR CALLS
           </p>
           <ul className="space-y-2">
@@ -139,7 +139,7 @@ export default function ContactPage() {
             <li>▹ Draft opportunities board with quick wins</li>
             <li>▹ Share collaborative notes immediately after</li>
           </ul>
-          <p className="text-xs text-gray-400">
+          <p className="text-xs text-slate-500">
             Include any relevant files/links above so we can show up ready.
           </p>
         </div>
@@ -169,11 +169,11 @@ export default function ContactPage() {
           },
         ].map((item) => (
           <div key={item.title} className="section-card p-5">
-            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
               {item.title}
             </p>
-            <p className="mt-2 text-lg font-semibold text-white">{item.value}</p>
-            <p className="mt-1 text-sm text-gray-300">{item.caption}</p>
+            <p className="mt-2 text-lg font-semibold text-slate-900">{item.value}</p>
+            <p className="mt-1 text-sm text-slate-600">{item.caption}</p>
           </div>
         ))}
       </motion.section>
@@ -185,10 +185,10 @@ export default function ContactPage() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-card p-6">
-          <h2 className="text-xl font-semibold text-white">
+          <h2 className="text-xl font-semibold text-slate-900">
             Common questions
           </h2>
-          <div className="mt-4 space-y-4 text-sm text-gray-300">
+          <div className="mt-4 space-y-4 text-sm text-slate-600">
             {[
               {
                 q: "Do you sign NDAs?",
@@ -203,21 +203,21 @@ export default function ContactPage() {
                 a: "Absolutely. Mention it above and we’ll send a booking link for a 30-min alignment call.",
               },
             ].map((item) => (
-              <div key={item.q} className="border-t border-white/10 pt-3 first:border-t-0 first:pt-0">
-                <p className="text-sm font-semibold text-white">{item.q}</p>
-                <p className="mt-1 text-gray-300">{item.a}</p>
+              <div key={item.q} className="border-t border-slate-200 pt-3 first:border-t-0 first:pt-0">
+                <p className="text-sm font-semibold text-slate-900">{item.q}</p>
+                <p className="mt-1 text-slate-600">{item.a}</p>
               </div>
             ))}
           </div>
         </div>
         <div className="section-card p-6 space-y-4">
-          <h2 className="text-xl font-semibold text-white">Typical flow</h2>
-          <ul className="space-y-3 text-sm text-gray-300">
+          <h2 className="text-xl font-semibold text-slate-900">Typical flow</h2>
+          <ul className="space-y-3 text-sm text-slate-600">
             <li>• Day 0 – You submit the form (or send an email)</li>
             <li>• Day 1 – We reply with clarifying questions or a call invite</li>
             <li>• Day 3 – You receive a plan with scope, timeline & commercials</li>
           </ul>
-          <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-xs text-gray-400">
+          <div className="rounded-xl border border-slate-200 bg-white p-4 text-xs text-slate-500">
             Need to move faster? Mention your deadline and we’ll prioritize.
           </div>
         </div>
@@ -229,25 +229,25 @@ export default function ContactPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <div className="grid md:grid-cols-2 gap-5 text-sm text-gray-300">
+        <div className="grid md:grid-cols-2 gap-5 text-sm text-meta">
           <div>
-            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
               DIRECT CONTACTS
             </p>
             <ul className="mt-3 space-y-2">
               <li>
-                <span className="text-white font-medium">Projects:</span> eman@ehmtechservices.com
+                <span className="text-slate-900 font-medium">Projects:</span> eman@ehmtechservices.com
               </li>
               <li>
-                <span className="text-white font-medium">Automation:</span> hassan@ehmtechservices.com
+                <span className="text-slate-900 font-medium">Automation:</span> hassan@ehmtechservices.com
               </li>
               <li>
-                <span className="text-white font-medium">Web & Growth:</span> mira@ehmtechservices.com
+                <span className="text-slate-900 font-medium">Web & Growth:</span> mira@ehmtechservices.com
               </li>
             </ul>
           </div>
           <div>
-            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
               FASTEST WAY TO ALIGN
             </p>
             <p className="mt-3">
@@ -255,7 +255,7 @@ export default function ContactPage() {
             </p>
             <a
               href="/contact"
-              className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-[0.2em]"
+              className="mt-4 inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-xs uppercase tracking-[0.2em]"
             >
               Share availability →
             </a>

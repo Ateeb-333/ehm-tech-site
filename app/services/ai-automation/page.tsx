@@ -116,7 +116,7 @@ export default function AiAutomationPage() {
       ]}
     >
       <div>
-        <h2 className="text-2xl font-semibold text-white">
+        <h2 className="text-2xl font-semibold text-slate-900">
           Example automations we build
         </h2>
         <div className="mt-6 grid md:grid-cols-3 gap-6">
@@ -151,7 +151,7 @@ export default function AiAutomationPage() {
       </div>
 
       <div>
-        <h2 className="text-2xl font-semibold text-white">Automation playbooks</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">Automation playbooks</h2>
         <div className="mt-6 grid md:grid-cols-2 gap-5">
           {[
             {

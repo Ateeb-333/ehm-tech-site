@@ -113,7 +113,7 @@ export default function WebDevelopmentPage() {
       ]}
     >
       <div>
-        <h2 className="text-2xl font-semibold text-white">
+        <h2 className="text-2xl font-semibold text-slate-900">
           What you get with EHM web builds
         </h2>
         <div className="mt-6 grid md:grid-cols-3 gap-6">
@@ -148,7 +148,7 @@ export default function WebDevelopmentPage() {
       </div>
 
       <div>
-        <h2 className="text-2xl font-semibold text-white">
+        <h2 className="text-2xl font-semibold text-slate-900">
           Experience enhancers
         </h2>
         <div className="mt-6 grid md:grid-cols-3 gap-5">

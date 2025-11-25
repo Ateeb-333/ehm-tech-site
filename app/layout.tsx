@@ -28,14 +28,17 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-[#050816] text-white">
+      <body className="min-h-screen text-slate-900 bg-transparent">
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         {/* Progress + Navbar */}
         <ScrollProgressBar />
         <Navbar />
 
         {/* Wrapper for all page content */}
         <div className="pt-20 min-h-screen flex flex-col">
-          <main className="flex-1">
+          <main id="main-content" className="flex-1">
             <PageTransition>{children}</PageTransition>
           </main>
 

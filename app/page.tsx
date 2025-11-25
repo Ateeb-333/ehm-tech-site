@@ -149,13 +149,13 @@ export default function HomePage() {
             <span className="mr-2 text-xs">●</span> Engineering • Estimation •
             AI Automation
           </span>
-          <h1 className="text-4xl md:text-5xl font-semibold text-white leading-tight">
+          <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
             Technical projects,
             <span className="block bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent">
               delivered with modern tools.
             </span>
           </h1>
-          <p className="mt-4 text-gray-300 max-w-xl text-sm md:text-base">
+          <p className="mt-4 text-meta max-w-xl text-sm md:text-base">
             EHM Tech Services combines classic engineering discipline with
             modern automation and web technologies. From design and estimation to
             AI-powered digital workflows, we help you move faster with more
@@ -171,13 +171,13 @@ export default function HomePage() {
             </a>
             <a
               href="/services"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-2.5 text-sm font-medium text-gray-200 hover:border-softSkyCyan/80"
+              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-2.5 text-sm font-medium text-slate-700 hover:border-softSkyCyan/80"
             >
               Explore services
             </a>
           </div>
 
-          <div className="mt-5 flex flex-wrap gap-4 text-[11px] text-gray-400">
+          <div className="mt-5 flex flex-wrap gap-4 text-[11px] text-slate-500">
             <span>• Engineering & estimation support</span>
             <span>• AI automation & digital ops</span>
             <span>• Web & marketing execution</span>
@@ -195,21 +195,21 @@ export default function HomePage() {
             imageSrc="/images/hero-workflow.svg"
             imageAlt="EHM workflow canvas mock"
           />
-          <div className="section-card p-4">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-[0.24em]">
+          <div className="section-card p-4 md:p-6">
+            <p className="text-xs font-semibold text-slate-500 uppercase tracking-[0.24em]">
               QUICK GLANCE
             </p>
-            <div className="mt-3 grid grid-cols-3 gap-3 text-xs text-gray-300">
+            <div className="mt-3 grid grid-cols-3 gap-3 text-xs text-meta">
               {[
                 { label: "Weekly ship cadence", value: "3-5 drops" },
                 { label: "Disciplines synced", value: "Engineering · AI · Web" },
                 { label: "Avg. response", value: "< 12 hrs" },
               ].map((item) => (
-                <div key={item.label} className="rounded-xl border border-white/10 bg-white/5 p-3">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
+                <div key={item.label} className="rounded-xl border border-slate-200 bg-white p-3">
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-normal">
                     {item.label}
                   </p>
-                  <p className="mt-1 font-semibold text-white">{item.value}</p>
+                  <p className="mt-1 font-semibold text-slate-900 text-sm">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -219,12 +219,12 @@ export default function HomePage() {
 
       {/* Marquee */}
       <motion.section
-        className="mt-12 overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur"
+        className="mt-12 overflow-hidden rounded-2xl border border-slate-200 bg-white backdrop-blur"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        <div className="marquee-track py-4 text-xs md:text-sm uppercase tracking-[0.3em] text-gray-300">
+        <div className="marquee-track py-4 text-xs md:text-sm uppercase tracking-[0.3em] text-slate-500">
           {[...marqueeItems, ...marqueeItems].map((item, idx) => (
             <span key={`${item}-${idx}`} className="flex items-center gap-3">
               <span>{item}</span>
@@ -236,25 +236,25 @@ export default function HomePage() {
 
       {/* Partners */}
       <motion.section
-        className="mt-14 rounded-2xl border border-white/10 bg-white/5 p-5 md:p-6"
+        className="mt-14 rounded-2xl border border-slate-200 bg-white p-5 md:p-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
       >
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
-              TRUSTED BY OPS & DIGITAL TEAMS
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Trusted by section">
+              <span className="sr-only">Trusted by section: </span>TRUSTED BY OPS & DIGITAL TEAMS
             </p>
-            <p className="mt-1 text-sm text-gray-400">
+            <p className="mt-1 text-meta">
               We embed quietly across industries that need both rigor and speed.
             </p>
           </div>
-          <div className="flex flex-wrap gap-4 text-xs text-gray-200">
+          <div className="flex flex-wrap gap-4 text-xs text-meta">
             {partnerLogos.map((partner) => (
               <span
                 key={partner.name}
-                className="rounded-full border border-white/15 px-3 py-1 text-nowrap"
+                className="rounded-full border border-slate-200 px-3 py-1 text-nowrap bg-slate-50"
               >
                 {partner.name} • {partner.tag}
               </span>
@@ -296,11 +296,11 @@ export default function HomePage() {
             <p className="text-xs font-semibold text-softSkyCyan">
               0{i + 1}
             </p>
-            <h3 className="mt-2 text-lg font-semibold text-white">
+            <h3 className="mt-2 text-lg font-semibold text-slate-900">
               {card.title}
             </h3>
-            <p className="mt-2 text-sm text-gray-300">{card.body}</p>
-            <p className="mt-3 text-xs text-gray-400">{card.accent}</p>
+            <p className="mt-2 text-meta">{card.body}</p>
+            <p className="mt-3 text-xs text-slate-500 font-normal">{card.accent}</p>
           </motion.div>
         ))}
       </motion.section>
@@ -319,11 +319,11 @@ export default function HomePage() {
             custom={idx}
             className="section-card p-5 flex flex-col gap-3"
           >
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
               Capability area
             </p>
-            <h3 className="text-xl font-semibold text-white">{group.label}</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <h3 className="text-xl font-semibold text-slate-900">{group.label}</h3>
+            <ul className="space-y-2 text-sm text-meta">
               {group.pillars.map((pillar) => (
                 <li key={pillar} className="flex items-start gap-2">
                   <span className="text-softSkyCyan mt-1">▹</span>
@@ -386,13 +386,13 @@ export default function HomePage() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <motion.div variants={sectionVariant} custom={0} className="mb-6">
-          <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
-            CHOOSE YOUR MODE
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Choose your mode section">
+            <span className="sr-only">Choose your mode section: </span>CHOOSE YOUR MODE
           </p>
-          <h2 className="mt-2 text-2xl font-semibold text-white">
+          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
             Engagement options tuned to your bandwidth.
           </h2>
-          <p className="mt-2 text-sm text-gray-300 max-w-2xl">
+          <p className="mt-2 text-meta max-w-2xl">
             Start with a sprint, scale into embedded support, or keep us on retainer as fractional leadership.
           </p>
         </motion.div>
@@ -405,13 +405,13 @@ export default function HomePage() {
               className="section-card p-5 flex flex-col gap-3"
             >
               <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-gray-400">
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-500 font-normal">
                   {track.duration}
                 </p>
-                <h3 className="text-lg font-semibold text-white">{track.title}</h3>
-                <p className="text-sm text-gray-300">{track.bestFor}</p>
+                <h3 className="text-lg font-semibold text-slate-900">{track.title}</h3>
+                <p className="text-meta font-normal">{track.bestFor}</p>
               </div>
-              <ul className="text-sm text-gray-200 space-y-2">
+              <ul className="text-sm text-meta space-y-2">
                 {track.includes.map((item) => (
                   <li key={item} className="flex gap-2">
                     <span className="text-softSkyCyan">•</span>
@@ -432,10 +432,10 @@ export default function HomePage() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <motion.div variants={sectionVariant} custom={0}>
-          <h2 className="text-2xl font-semibold text-white">
+          <h2 className="text-2xl font-semibold text-slate-900">
             A simple, structured way of working
           </h2>
-          <p className="mt-2 text-sm text-gray-300 max-w-xl">
+          <p className="mt-2 text-meta max-w-xl">
             Whether we&apos;re helping with engineering design or AI automation,
             we follow a predictable, low-friction flow.
           </p>
@@ -456,7 +456,7 @@ export default function HomePage() {
               <div className="w-7 h-7 flex items-center justify-center rounded-full bg-slateBlue text-white text-xs font-semibold">
                 {idx + 1}
               </div>
-              <p className="mt-3 font-medium text-gray-100">{step}</p>
+              <p className="mt-3 font-semibold text-slate-900">{step}</p>
             </motion.div>
           ))}
         </div>
@@ -474,13 +474,13 @@ export default function HomePage() {
           custom={0}
           className="section-card p-6 md:p-7"
         >
-          <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
-            RECENT HIGHLIGHT
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Recent highlight section">
+            <span className="sr-only">Recent highlight section: </span>RECENT HIGHLIGHT
           </p>
-          <h3 className="mt-2 text-2xl font-semibold text-white">
+          <h3 className="mt-2 text-2xl font-semibold text-slate-900">
             Automated design-review assistant
           </h3>
-          <p className="mt-3 text-sm text-gray-300">
+          <p className="mt-3 text-meta">
             Built a custom AI assistant that ingests drawings, RFIs and specs,
             then answers coordination questions for a manufacturing client. The
             workflow shaved 18 hours per week from the engineering team.
@@ -493,12 +493,12 @@ export default function HomePage() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="rounded-xl border border-white/10 bg-white/5 p-3"
+                className="rounded-xl border border-slate-200 bg-white p-3"
               >
-                <p className="text-gray-400 uppercase tracking-[0.2em] text-[10px]">
+                <p className="text-slate-500 uppercase tracking-[0.2em] text-[10px] font-normal">
                   {item.label}
                 </p>
-                <p className="mt-1 text-white text-sm">{item.value}</p>
+                <p className="mt-1 text-slate-900 text-sm font-semibold">{item.value}</p>
               </div>
             ))}
           </div>
@@ -508,14 +508,14 @@ export default function HomePage() {
           custom={1}
           className="section-card p-6 flex flex-col gap-4"
         >
-          <p className="text-sm font-semibold text-white">Snapshot timeline</p>
+          <p className="text-sm font-semibold text-slate-900">Snapshot timeline</p>
           {[
             "Week 01 – Discovery, KPI alignment, data intake",
             "Week 02 – Prototype & feedback loop with SMEs",
             "Week 03 – Integrations, guardrails, testing",
             "Week 04 – Launch, training, adoption playbook",
           ].map((item) => (
-            <div key={item} className="flex gap-3 text-sm text-gray-300">
+            <div key={item} className="flex gap-3 text-sm text-meta">
               <span className="text-softSkyCyan">●</span>
               <span>{item}</span>
             </div>
@@ -531,10 +531,10 @@ export default function HomePage() {
         viewport={{ once: true, amount: 0.2 }}
       >
         <motion.div variants={sectionVariant} custom={0}>
-          <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
-            TOOLKIT
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Toolkit section">
+            <span className="sr-only">Toolkit section: </span>TOOLKIT
           </p>
-          <h2 className="mt-2 text-2xl font-semibold text-white">
+          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
             A few resources we share with partners.
           </h2>
         </motion.div>
@@ -547,8 +547,8 @@ export default function HomePage() {
               className="section-card p-5 flex flex-col gap-3"
             >
               <span className="chip w-fit">{resource.type}</span>
-              <p className="text-lg font-semibold text-white">{resource.title}</p>
-              <p className="text-sm text-gray-300">{resource.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{resource.title}</p>
+              <p className="text-meta">{resource.desc}</p>
               <a
                 href="/contact"
                 className="text-sm text-softSkyCyan underline underline-offset-4 hover:text-softSkyCyan/80"
@@ -572,10 +572,10 @@ export default function HomePage() {
           custom={0}
           className="mb-6 max-w-2xl"
         >
-          <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
-            PROOF
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Proof section">
+            <span className="sr-only">Proof section: </span>PROOF
           </p>
-          <h2 className="mt-2 text-2xl font-semibold text-white">
+          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
             Teams trust us with the critical bits of their stack.
           </h2>
         </motion.div>
@@ -587,12 +587,12 @@ export default function HomePage() {
               custom={idx + 1}
               className="section-card p-5 flex flex-col gap-4"
             >
-              <p className="text-sm text-gray-300">{item.quote}</p>
+              <p className="text-meta">{item.quote}</p>
               <div>
-                <p className="text-sm font-semibold text-white">
+                <p className="text-sm font-semibold text-slate-900">
                   {item.author}
                 </p>
-                <p className="text-xs text-gray-400">{item.role}</p>
+                <p className="text-xs text-slate-500">{item.role}</p>
               </div>
             </motion.div>
           ))}
@@ -607,10 +607,10 @@ export default function HomePage() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.div variants={sectionVariant} custom={0}>
-          <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.2em]">
-            FAQ
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="FAQ section">
+            <span className="sr-only">FAQ section: </span>FAQ
           </p>
-          <h2 className="mt-2 text-2xl font-semibold text-white">
+          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
             A few things clients ask before we kick off
           </h2>
         </motion.div>
@@ -620,10 +620,10 @@ export default function HomePage() {
               key={faq.question}
               variants={sectionVariant}
               custom={idx + 1}
-              className="border-t border-white/10 pt-4 first:border-t-0 first:pt-0"
+              className="border-t border-slate-200 pt-4 first:border-t-0 first:pt-0"
             >
-              <p className="text-sm font-semibold text-white">{faq.question}</p>
-              <p className="mt-1 text-sm text-gray-300">{faq.answer}</p>
+              <p className="text-sm font-semibold text-slate-900">{faq.question}</p>
+              <p className="mt-1 text-meta">{faq.answer}</p>
             </motion.div>
           ))}
         </div>
@@ -637,13 +637,13 @@ export default function HomePage() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <div>
-          <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.18em]">
-            NEXT STEP
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label" aria-label="Next step section">
+            <span className="sr-only">Next step section: </span>NEXT STEP
           </p>
-          <h2 className="mt-2 text-2xl font-semibold text-white">
+          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
             Have a project or workflow in mind?
           </h2>
-          <p className="mt-2 text-sm text-gray-300 max-w-xl">
+          <p className="mt-2 text-meta max-w-xl">
             Share a bit about your current situation and we&apos;ll respond with
             possible approaches, timelines and ways we can help.
           </p>

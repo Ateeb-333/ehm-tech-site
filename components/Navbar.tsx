@@ -64,7 +64,7 @@ export const Navbar = () => {
       <Link
         href={href}
         className={`relative text-sm font-medium transition-colors ${
-          active ? "text-white" : "text-gray-300 hover:text-white"
+          active ? "text-slate-900" : "text-slate-500 hover:text-slate-900"
         }`}
       >
         {label}
@@ -79,17 +79,19 @@ export const Navbar = () => {
     );
   };
 
+  const servicesActive = pathname.startsWith("/services");
+
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       {/* Glow behind navbar */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/80 via-black/30 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-transparent" />
 
       <nav className="max-w-6xl mx-auto px-4 mt-3">
-        <div className="relative flex items-center justify-between px-4 py-3 rounded-2xl border border-white/10 bg-slate-950/70 backdrop-blur-xl shadow-lg shadow-black/40">
+        <div className="relative flex items-center justify-between px-4 py-3 rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-xl shadow-[0_18px_35px_rgba(15,23,42,0.08)]">
           
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 z-10">
-            <div className="relative h-10 w-10 rounded-2xl overflow-hidden border border-white/10 bg-black/40 shadow-inner shadow-black/70">
+            <div className="relative h-10 w-10 rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-inner">
               <Image
                 src="/logo.svg"
                 alt="EHM Tech logo"
@@ -101,10 +103,10 @@ export const Navbar = () => {
             </div>
 
             <div className="flex flex-col leading-tight">
-              <span className="font-semibold text-white text-sm tracking-wide">
+              <span className="font-semibold text-slate-900 text-sm tracking-wide">
                 EHM Tech Services
               </span>
-              <span className="text-[11px] text-gray-400">
+              <span className="text-[11px] text-slate-500">
                 Engineering • Estimation • AI
               </span>
             </div>
@@ -120,9 +122,25 @@ export const Navbar = () => {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition">
-                Services <span className="text-xs">▾</span>
-              </button>
+              <Link
+                href="/services"
+                className={`relative flex items-center gap-1 text-sm font-medium transition ${
+                  servicesActive || servicesOpen ? "text-slate-900" : "text-slate-500 hover:text-slate-900"
+                }`}
+                onClick={() => setServicesOpen(false)}
+              >
+                Services <motion.span 
+                  className="text-xs"
+                  animate={{ rotate: servicesOpen ? 180 : 0 }}
+                  transition={{ duration: 0.2 }}
+                >▾</motion.span>
+                {(servicesActive || servicesOpen) && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute -bottom-1 left-0 h-[2px] w-full rounded-full bg-gradient-to-r from-slateBlue to-softSkyCyan shadow-[0_0_8px_rgba(94,234,212,0.6)]"
+                  />
+                )}
+              </Link>
 
               <AnimatePresence>
                 {servicesOpen && (
@@ -131,7 +149,7 @@ export const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 12 }}
                     transition={{ duration: 0.18 }}
-                    className="absolute right-0 mt-4 w-[640px] rounded-2xl border border-white/10 bg-slate-950/90 backdrop-blur-xl shadow-xl p-6 space-y-5"
+                    className="absolute right-0 mt-4 w-[640px] rounded-2xl border border-slate-200 bg-white backdrop-blur-xl shadow-2xl p-6 space-y-5"
                   >
                     {/* Two-column categories */}
                     <div className="grid grid-cols-2 gap-6 text-sm">
@@ -140,7 +158,7 @@ export const Navbar = () => {
                         <p className="text-[11px] font-semibold tracking-widest uppercase text-softSkyCyan">
                           Engineering & Estimation
                         </p>
-                        <p className="mt-1 text-xs text-gray-400">
+                        <p className="mt-1 text-xs text-slate-500">
                           Technical depth for accurate, buildable projects.
                         </p>
 
@@ -149,12 +167,12 @@ export const Navbar = () => {
                             <Link
                               key={item.label}
                               href={item.href}
-                              className="block px-3 py-3 rounded-xl bg-white/[0.03] border border-transparent hover:border-softSkyCyan/50 hover:bg-softSkyCyan/10 transition"
+                            className="block px-3 py-3 rounded-xl bg-slate-50 border border-transparent hover:border-softSkyCyan/50 hover:bg-softSkyCyan/10 transition"
                             >
-                              <div className="text-sm font-medium text-gray-100">
+                              <div className="text-sm font-medium text-slate-900">
                                 {item.label}
                               </div>
-                              <p className="text-xs text-gray-400">
+                              <p className="text-xs text-slate-500">
                                 {item.description}
                               </p>
                             </Link>
@@ -167,7 +185,7 @@ export const Navbar = () => {
                         <p className="text-[11px] font-semibold tracking-widest uppercase text-sunsetPeach">
                           AI & Digital Solutions
                         </p>
-                        <p className="mt-1 text-xs text-gray-400">
+                        <p className="mt-1 text-xs text-slate-500">
                           Automation and digital experiences that scale with you.
                         </p>
 
@@ -176,12 +194,12 @@ export const Navbar = () => {
                             <Link
                               key={item.label}
                               href={item.href}
-                              className="block px-3 py-3 rounded-xl bg-white/[0.03] border border-transparent hover:border-slateBlue/60 hover:bg-slateBlue/10 transition"
+                            className="block px-3 py-3 rounded-xl bg-slate-50 border border-transparent hover:border-slateBlue/60 hover:bg-slateBlue/10 transition"
                             >
-                              <div className="text-sm font-medium text-gray-100">
+                              <div className="text-sm font-medium text-slate-900">
                                 {item.label}
                               </div>
-                              <p className="text-xs text-gray-400">
+                              <p className="text-xs text-slate-500">
                                 {item.description}
                               </p>
                             </Link>
@@ -191,7 +209,7 @@ export const Navbar = () => {
                     </div>
 
                     {/* Footer row */}
-                    <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-400">
+                    <div className="pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
                       <span>Not sure what you need? Let’s talk.</span>
                       <Link
                         href="/contact"
@@ -205,8 +223,8 @@ export const Navbar = () => {
               </AnimatePresence>
             </div>
 
-            {navLink("/services", "Services")}
             {navLink("/portfolio", "Portfolio")}
+            {navLink("/careers", "Careers")}
             {navLink("/about", "About")}
             {navLink("/contact", "Contact")}
           </div>
@@ -216,8 +234,8 @@ export const Navbar = () => {
             className="md:hidden z-10 flex flex-col gap-1.5"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
-            <span className="w-6 h-0.5 bg-gray-100 rounded-full" />
-            <span className="w-6 h-0.5 bg-gray-100 rounded-full" />
+            <span className="w-6 h-0.5 bg-slate-900 rounded-full" />
+            <span className="w-6 h-0.5 bg-slate-900 rounded-full" />
           </button>
         </div>
       </nav>
@@ -229,16 +247,16 @@ export const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-slate-950/90 backdrop-blur-xl border-t border-white/10"
+            className="md:hidden bg-white/95 backdrop-blur-xl border-t border-slate-200"
           >
-            <div className="px-4 py-4 space-y-3 text-sm text-gray-100">
+            <div className="px-4 py-4 space-y-3 text-sm text-slate-800">
 
               <Link href="/" onClick={() => setMobileOpen(false)}>Home</Link>
 
               <details className="group">
                 <summary className="flex justify-between items-center cursor-pointer">
                   <span>Services</span>
-                  <span className="text-xs text-gray-400 group-open:rotate-180 transition">▾</span>
+                  <span className="text-xs text-slate-500 group-open:rotate-180 transition">▾</span>
                 </summary>
 
                 <div className="mt-2 pl-3 space-y-4 text-xs">
@@ -251,7 +269,7 @@ export const Navbar = () => {
                       key={item.label}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block text-gray-300"
+                      className="block text-slate-600"
                     >
                       {item.label}
                     </Link>
@@ -265,7 +283,7 @@ export const Navbar = () => {
                       key={item.label}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block text-gray-300"
+                      className="block text-slate-600"
                     >
                       {item.label}
                     </Link>
@@ -278,6 +296,9 @@ export const Navbar = () => {
               </Link>
               <Link href="/portfolio" onClick={() => setMobileOpen(false)}>
                 Portfolio
+              </Link>
+              <Link href="/careers" onClick={() => setMobileOpen(false)}>
+                Careers
               </Link>
               <Link href="/about" onClick={() => setMobileOpen(false)}>
                 About

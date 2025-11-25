@@ -37,7 +37,7 @@ export const MediaPlaceholder = ({
       initial={{ opacity: 0, y: 20, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.4 }}
-      className={`relative overflow-hidden rounded-2xl border border-white/10 bg-slate-950/60 shadow-soft ${aspectClass}`}
+      className={`relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft ${aspectClass}`}
     >
       {imageSrc ? (
         <Image
@@ -51,33 +51,35 @@ export const MediaPlaceholder = ({
       ) : (
         <>
           <div
-            className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-80 blur-[1px]`}
+            className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-60`}
           />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]" />
-          <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.6),_transparent_55%)]" />
+          <div className="absolute inset-0 opacity-20">
             <div className="grid h-full grid-cols-6">
               {Array.from({ length: 6 }).map((_, idx) => (
                 <div
                   key={`col-${idx}`}
-                  className="border-l border-white/5 first:border-l-0"
+                  className="border-l border-white/50 first:border-l-0"
                 />
               ))}
             </div>
           </div>
         </>
       )}
-      <div className="relative z-10 flex h-full flex-col justify-between bg-gradient-to-t from-black/50 via-black/10 to-transparent p-4">
-        <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-gray-200">
-          <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-2 py-0.5 text-[10px] font-semibold text-white">
+      <div className="relative z-10 flex h-full flex-col justify-between bg-gradient-to-t from-white via-white/40 to-transparent p-4">
+        <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-slate-500">
+          <span className="inline-flex items-center rounded-full border border-slate-200 bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-900">
             {badge}
           </span>
-          <span className="text-gray-300">
+          <span className="text-slate-500">
             {imageSrc ? "Live capture" : "Placeholder"}
           </span>
         </div>
         <div>
-          <p className="text-lg font-semibold text-white drop-shadow">{label}</p>
-          <p className="text-sm text-gray-100 drop-shadow">{caption}</p>
+          <p className="text-lg font-semibold text-slate-900 drop-shadow">
+            {label}
+          </p>
+          <p className="text-sm text-slate-700 drop-shadow">{caption}</p>
         </div>
       </div>
     </motion.div>
