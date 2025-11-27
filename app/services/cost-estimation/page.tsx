@@ -2,149 +2,152 @@ import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
 
 export const metadata: Metadata = {
-  title: "Cost Estimation | EHM Tech Services",
+  title: "Construction Estimating Services | EHM Tech Services",
   description:
-    "Detailed BOQs, material take-offs and cost breakdowns to support confident project decisions.",
+    "Accurate construction cost estimates that win bids and protect profits. We cover all project types with clear, reliable numbers you can trust.",
 };
 
 export default function CostEstimationPage() {
   return (
     <ServiceLayout
-      title="Cost Estimation"
-      groupLabel="ENGINEERING & ESTIMATION"
+      title="Construction Estimating Services"
+      groupLabel="CONSTRUCTION"
       accent="engineering"
-      intro="Make confident decisions with clear, structured cost estimates. We prepare BOQs, material take-offs and cost breakdowns that align with real market rates and project risks."
+      intro="A construction project runs smoothly when the numbers behave. When they do not, everything feels like walking on a tightrope with no safety net. At EHM Technology Services, our Construction Estimating Services give you steady ground, accurate figures, and a clear understanding of what your project truly costs. Your project deserves more than guesswork. It deserves clarity. It deserves confidence. It deserves numbers that make sense."
       primaryCta={{ label: "Request an estimate", href: "/contact" }}
-      secondaryCta={{
-        label: "See projects we priced",
-        href: "/portfolio",
-      }}
-      sideHeading="Typical outcomes"
+      sideHeading="What we cover"
       sideItems={[
-        "Detailed BOQs with quantities and units",
-        "Cost build-ups by activity or system",
-        "Clear assumptions & exclusions",
-        "Comparison between options or vendors",
+        "Material takeoff services",
+        "Labor cost estimating",
+        "Equipment cost estimating",
+        "Residential project estimating",
+        "Commercial project estimating",
+        "Industrial project estimating",
+        "Civil and infrastructure estimating",
+        "Renovation and remodeling estimates",
+        "Change order estimating",
+        "Blueprint review",
+        "Value engineering options",
       ]}
       stats={[
         {
-          label: "Bid support delivered",
-          value: "120+",
-          detail: "Packages for contractors & consultants",
+          label: "Project coverage",
+          value: "All types",
+          detail: "Residential, commercial, industrial, and civil projects",
         },
         {
-          label: "Accuracy window",
-          value: "±3-5%",
-          detail: "When paired with current supplier rates",
+          label: "Turnaround time",
+          value: "Fast",
+          detail: "Quick estimates when you need them most",
         },
         {
-          label: "Reporting formats",
-          value: "6 templates",
-          detail: "Aligned with your PM or finance stack",
+          label: "Market pricing",
+          value: "Up to date",
+          detail: "Real-world data and current market rates",
         },
       ]}
       tools={[
-        "Excel / Google Sheets",
-        "CostX",
-        "Bluebeam Revu",
-        "Power BI",
-        "Notion",
-        "Smartsheet",
+        "PlanSwift",
+        "Bluebeam",
+        "RSMeans cost data",
+        "Advanced spreadsheets",
+        "Industry linked databases",
       ]}
       approach={[
         {
-          title: "Scope & data intake",
+          title: "Send project details",
           detail:
-            "We gather drawings, specs and vendor quotes, then flag gaps before numbers are committed.",
+            "Send us your drawings and project details. We review everything and confirm exactly what you need.",
         },
         {
-          title: "Take-off & validation",
+          title: "Team creates estimate",
           detail:
-            "Quantities are measured, peer-reviewed and linked back to sheet references for transparency.",
+            "Our team creates a complete estimate using advanced tools and real world data.",
         },
         {
-          title: "Rate build-up",
+          title: "Receive clean estimate",
           detail:
-            "We combine supplier input, market intel and historical data so your rates reflect current reality.",
+            "You receive a clean and easy to understand estimate ready for bidding, planning, or budgeting.",
         },
         {
-          title: "Scenario reporting",
+          title: "Fast updates",
           detail:
-            "Alternatives, sensitivities and clear assumptions let stakeholders decide quickly.",
+            "Need changes? We update fast so you always stay on track.",
         },
       ]}
       faqs={[
         {
-          question: "Can you work with partial design information?",
+          question: "What types of projects do you estimate?",
           answer:
-            "Yes. We highlight missing data, suggest allowances and keep a live assumptions log so stakeholders know what’s provisional.",
+            "We estimate every kind of construction project including residential homes and remodels, commercial buildings, industrial structures, civil works, institutional buildings, retail and hospitality, and mixed use developments. No matter the size or complexity, EHM Technology Services has you covered.",
         },
         {
-          question: "Do you plug into our estimating templates?",
+          question: "How do you ensure accuracy?",
           answer:
-            "Absolutely. We can work inside your spreadsheets, CostX libraries or PM tools to keep everything in one place.",
+            "We use trusted digital estimating tools like PlanSwift, Bluebeam, and RSMeans cost data. We factor in hours, skill levels, shifts, labor productivity, current market pricing, and real-world conditions so your numbers stay grounded and accurate.",
         },
         {
-          question: "How fast can you turn around an estimate?",
+          question: "Who can benefit from your services?",
           answer:
-            "Simple BOQs can be ready within 3 working days; complex multi-discipline packages are usually 1-2 weeks depending on data quality.",
+            "Our Construction Estimating Services support general contractors, subcontractors, homebuilders, developers, architects, designers, investors, project owners, and government projects. If your work touches construction in any way, we support you.",
         },
       ]}
-      ctaNote="Send drawings, specs or even napkin numbers—we’ll map the gaps and return a structured cost package."
+      ctaNote="If you want accurate estimates, faster bidding, and strong profit protection, we are here and ready. Reach out today and let EHM Technology Services handle your construction estimating needs."
       signals={[
-        "You’re comparing supplier quotes without a single aligned BOQ.",
-        "The client is asking for value engineering proof before sign-off.",
-        "Bid deadlines are tight and quantities change multiple times a week.",
-        "Finance needs dependable cash flow projections tied to real assumptions.",
+        "You need estimates that win bids and protect profits.",
+        "Labor costs are moving around and need to be kept in line.",
+        "Hidden costs show up when projects get real and break budgets.",
+        "You need numbers that make sense and give you confidence.",
       ]}
       packages={[
         {
-          title: "Benchmark pulse",
-          note: "3-5 days",
-          items: ["High-level take-off", "Market rate alignment", "Risk/opportunity notes"],
+          title: "Quick estimate",
+          note: "Fast turnaround",
+          items: ["Review of drawings and details", "Complete estimate with breakdown", "Easy to read reports"],
         },
         {
-          title: "Detailed tender pack",
-          note: "1-2 weeks",
-          items: ["Full BOQ + rates", "Assumptions register", "Scenario comparisons"],
+          title: "Full estimating package",
+          note: "Comprehensive",
+          items: ["Material takeoff", "Labor and equipment costs", "Market pricing alignment", "Value engineering options"],
         },
         {
-          title: "Embedded estimator",
+          title: "Ongoing support",
           note: "Retainer",
-          items: ["Live updates", "Vendor negotiations", "Executive dashboards"],
+          items: ["Change order estimating", "Blueprint reviews", "Fast updates when plans change"],
         },
       ]}
     >
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">
-          Estimation capabilities
+          What Construction Estimating Services Mean For Your Project
         </h2>
-        <div className="mt-6 grid md:grid-cols-3 gap-6">
+        <p className="mt-4 text-slate-600">
+          Think of estimating like the blueprint for your budget. If the numbers are wrong, the whole project leans like a crooked ladder. Accurate estimating keeps you steady. Our estimating services break down every material, every hour of labor, every piece of equipment, and every hidden cost that shows up when projects get real. You stay prepared, in control, and ahead of costly surprises. With our help, you make choices with confidence and bid with power.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-semibold text-slate-900">
+          Why EHM Technology Services Is The Partner You Want
+        </h2>
+        <p className="mt-4 text-slate-600">
+          Your project becomes our mission the moment you reach out. You get a team that treats your estimate like it is our own investment. Working with us feels easy. Like having an estimating expert sitting across the table, answering every question with patience and a smile.
+        </p>
+        <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Pre-Tender Estimates
+              Clear Communication
             </h3>
             <p className="mt-2 text-sm text-gray-300">
-              Early stage estimates to check project feasibility and budget
-              alignment before you go to market.
+              Clear and simple communication, easy to read reports, and friendly support any time you need help.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Detailed BOQs & Take-Offs
+              Fast & Reliable
             </h3>
             <p className="mt-2 text-sm text-gray-300">
-              Accurate quantity take-offs structured for tender and
-              procurement.
-            </p>
-          </div>
-          <div className="section-card p-5">
-            <h3 className="text-lg font-semibold text-softSkyCyan">
-              Value Engineering Support
-            </h3>
-            <p className="mt-2 text-sm text-gray-300">
-              Cost impact analysis of alternative materials, systems or methods
-              to optimize value.
+              Fast turnaround, up to date market pricing, and zero fluff and zero confusion. We help you win more bids and avoid cost surprises.
             </p>
           </div>
         </div>
@@ -152,45 +155,95 @@ export default function CostEstimationPage() {
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">
-          Why accurate estimation matters
+          What We Cover in Our Construction Estimating Services
         </h2>
-        <div className="mt-6 grid md:grid-cols-2 gap-6 text-sm">
+        <p className="mt-4 text-slate-600">
+          We cover everything in the construction world. If it needs materials, labor, time, equipment, or a coffee break, we estimate it. EHM Technology Services covers all project types. All industries. All scopes. No exceptions.
+        </p>
+        <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="section-card p-5">
-            <p className="font-medium text-gray-100">
-              Reduce surprises on site
-            </p>
-            <p className="mt-2 text-gray-300">
-              Good estimates help avoid scope gaps, claims and rushed
-              variations later in the project.
+            <h3 className="text-lg font-semibold text-softSkyCyan">
+              Material Takeoff Services
+            </h3>
+            <p className="mt-2 text-sm text-gray-300">
+              We calculate every piece that goes into your build. Every brick. Every stud. Every panel. Every inch counted accurately. No missed quantities. No overspending.
             </p>
           </div>
           <div className="section-card p-5">
-            <p className="font-medium text-gray-100">
-              Win more competitive bids
+            <h3 className="text-lg font-semibold text-softSkyCyan">
+              Labor Cost Estimating
+            </h3>
+            <p className="mt-2 text-sm text-gray-300">
+              Labor costs can move around like a toddler on sugar. Our estimates keep them in line. We factor hours, skill levels, shifts, and labor productivity so your numbers stay grounded.
             </p>
-            <p className="mt-2 text-gray-300">
-              Contractors can bid confidently with clear cost breakdowns and
-              competitive margins.
+          </div>
+          <div className="section-card p-5">
+            <h3 className="text-lg font-semibold text-softSkyCyan">
+              Equipment Cost Estimating
+            </h3>
+            <p className="mt-2 text-sm text-gray-300">
+              Cranes, lifts, saws, drills, rentals, fuel, maintenance. If it buzzes, rolls, lifts, or cuts, we include it.
+            </p>
+          </div>
+          <div className="section-card p-5">
+            <h3 className="text-lg font-semibold text-softSkyCyan">
+              Residential Projects
+            </h3>
+            <p className="mt-2 text-sm text-gray-300">
+              From small home remodels to luxury builds. Kitchens, additions, basements, decks, roofing, flooring, framing, and every other residential project.
+            </p>
+          </div>
+          <div className="section-card p-5">
+            <h3 className="text-lg font-semibold text-softSkyCyan">
+              Commercial Projects
+            </h3>
+            <p className="mt-2 text-sm text-gray-300">
+              Offices, retail shops, hotels, clinics, educational facilities, restaurants, multi story buildings, warehouses, and more. We help you plan and bid confidently.
+            </p>
+          </div>
+          <div className="section-card p-5">
+            <h3 className="text-lg font-semibold text-softSkyCyan">
+              Industrial & Civil Projects
+            </h3>
+            <p className="mt-2 text-sm text-gray-300">
+              Factories, plants, oil and gas facilities, roads, bridges, pipelines, utilities, drainage, earthwork. Big projects with big stakes. We give you numbers you can trust.
             </p>
           </div>
         </div>
       </div>
 
       <div>
-        <h2 className="text-2xl font-semibold text-slate-900">Reporting add-ons</h2>
+        <h2 className="text-2xl font-semibold text-slate-900">
+          Who Benefits From Our Services
+        </h2>
+        <p className="mt-4 text-slate-600">
+          Our Construction Estimating Services support everyone in the industry. If your work touches construction in any way, we support you.
+        </p>
         <div className="mt-6 grid md:grid-cols-3 gap-5">
           {[
             {
-              title: "Cash flow curves",
-              desc: "Translate estimates into phased cash flow projections for finance review.",
+              title: "General Contractors",
+              desc: "Win more bids with accurate estimates and protect profits.",
             },
             {
-              title: "Risk & opportunity logs",
-              desc: "Surface potential savings or exposure so decision makers see more than the base number.",
+              title: "Subcontractors",
+              desc: "Get reliable numbers for competitive bidding on specialized work.",
             },
             {
-              title: "Executive-ready decks",
-              desc: "Summaries with charts and insights tailored for leadership approvals.",
+              title: "Developers & Investors",
+              desc: "Make confident decisions with clear cost breakdowns and market pricing.",
+            },
+            {
+              title: "Architects & Designers",
+              desc: "Understand project costs early to guide design decisions.",
+            },
+            {
+              title: "Project Owners",
+              desc: "Budget accurately and avoid costly surprises during construction.",
+            },
+            {
+              title: "Government Projects",
+              desc: "Meet procurement requirements with detailed, transparent estimates.",
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
@@ -198,6 +251,33 @@ export default function CostEstimationPage() {
               <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-semibold text-slate-900">
+          Why Businesses Choose EHM Technology Services
+        </h2>
+        <p className="mt-4 text-slate-600">
+          Clients pick us because we help them win more bids, avoid cost surprises, and build stronger profits. We do not treat estimating like numbers on a screen. We treat it like the backbone of your project. Because it is.
+        </p>
+        <div className="mt-6 grid md:grid-cols-2 gap-6">
+          <div className="section-card p-5">
+            <h3 className="text-lg font-semibold text-softSkyCyan">
+              Professional Service
+            </h3>
+            <p className="mt-2 text-sm text-gray-300">
+              Quick estimates, professional service, honest communication, and market driven pricing. A team that cares about your success.
+            </p>
+          </div>
+          <div className="section-card p-5">
+            <h3 className="text-lg font-semibold text-softSkyCyan">
+              Working Made Simple
+            </h3>
+            <p className="mt-2 text-sm text-gray-300">
+              Working with us is simple. No complications. No headaches. Our goal is to keep you moving. Smooth. Steady. Confident.
+            </p>
+          </div>
         </div>
       </div>
     </ServiceLayout>

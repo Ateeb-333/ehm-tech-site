@@ -71,7 +71,7 @@ export function ServiceLayout({
   children,
 }: ServiceLayoutProps) {
   return (
-    <main className="main-shell space-y-14">
+    <main className="main-shell space-y-4">
       {/* Hero */}
       <motion.section
         variants={fadeIn}
@@ -145,51 +145,52 @@ export function ServiceLayout({
         </div>
       </motion.section>
 
-      {stats && stats.length > 0 && (
+      {/* Stats and Content */}
+      {(stats && stats.length > 0) || children ? (
         <motion.section
           variants={fadeIn}
           initial="hidden"
+          animate="visible"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.35 }}
-          className="grid gap-4 md:grid-cols-3"
-        >
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="glass-panel glow-accent p-4 md:p-6 flex flex-col gap-1"
-            >
-              <p className="text-xs uppercase tracking-[0.18em] text-slate-500">
-                {stat.label}
-              </p>
-              <p className="text-2xl font-semibold text-slate-900">{stat.value}</p>
-              {stat.detail && (
-                <p className="text-sm text-slate-600">{stat.detail}</p>
-              )}
-            </div>
-          ))}
-        </motion.section>
-      )}
-
-      {children && (
-        <motion.section
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.4 }}
-          className="space-y-12"
+          className="space-y-4"
         >
-          {children}
-        </motion.section>
-      )}
+          {stats && stats.length > 0 && (
+            <div className="grid gap-4 md:grid-cols-3">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="glass-panel glow-accent p-4 md:p-6 flex flex-col gap-1"
+                >
+                  <p className="text-xs uppercase tracking-[0.18em] text-slate-500">
+                    {stat.label}
+                  </p>
+                  <p className="text-2xl font-semibold text-slate-900">{stat.value}</p>
+                  {stat.detail && (
+                    <p className="text-sm text-slate-600">{stat.detail}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
 
+          {children && (
+            <div className="space-y-8">
+              {children}
+            </div>
+          )}
+        </motion.section>
+      ) : null}
+
+      {/* Signals */}
       {signals && signals.length > 0 && (
         <motion.section
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.4 }}
         >
           <div className="section-card p-6 md:p-7">
             <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.18em]">
@@ -213,12 +214,14 @@ export function ServiceLayout({
         </motion.section>
       )}
 
+      {/* Tools */}
       {tools && tools.length > 0 && (
         <motion.section
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.4 }}
         >
           <div className="section-card p-6 md:p-7">
             <div className="flex items-center justify-between gap-4 flex-wrap">
@@ -246,12 +249,14 @@ export function ServiceLayout({
         </motion.section>
       )}
 
+      {/* Approach */}
       {approach && approach.length > 0 && (
         <motion.section
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.4 }}
         >
           <h2 className="text-2xl font-semibold text-slate-900">{approachTitle}</h2>
           <div className="mt-5 grid gap-4 md:grid-cols-4">
@@ -268,12 +273,14 @@ export function ServiceLayout({
         </motion.section>
       )}
 
+      {/* FAQs */}
       {faqs && faqs.length > 0 && (
         <motion.section
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.4 }}
         >
           <div className="section-card p-6 md:p-7 space-y-4">
             <div>
@@ -286,7 +293,10 @@ export function ServiceLayout({
             </div>
             <div className="space-y-4">
               {faqs.map((faq) => (
-                <div key={faq.question} className="border-t border-slate-200 pt-4 first:border-t-0 first:pt-0">
+                <div
+                  key={faq.question}
+                  className="border-t border-slate-200 pt-4 first:border-t-0 first:pt-0"
+                >
                   <p className="text-sm font-semibold text-slate-900">
                     {faq.question}
                   </p>
@@ -298,12 +308,14 @@ export function ServiceLayout({
         </motion.section>
       )}
 
+      {/* Packages */}
       {packages && packages.length > 0 && (
         <motion.section
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.4 }}
         >
           <div className="section-card p-6 md:p-7 space-y-5">
             <div>
@@ -341,11 +353,13 @@ export function ServiceLayout({
         </motion.section>
       )}
 
+      {/* CTA */}
       <motion.section
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.4 }}
         className="section-card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
       >
         <div>
