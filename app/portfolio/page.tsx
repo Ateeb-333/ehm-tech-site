@@ -88,11 +88,10 @@ export default function PortfolioPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-1.5 rounded-full text-xs md:text-sm border transition-colors ${
-                  isActive
+                className={`px-4 py-1.5 rounded-full text-xs md:text-sm border transition-colors ${isActive
                     ? "bg-slateBlue text-white border-slateBlue"
                     : "bg-white text-slate-600 border-slate-200 hover:border-softSkyCyan/70"
-                }`}
+                  }`}
               >
                 {cat}
               </button>

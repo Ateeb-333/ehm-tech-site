@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Marketing | EHM Tech Services",
@@ -13,7 +14,7 @@ export default function MarketingPage() {
       title="Marketing"
       groupLabel="AI & DIGITAL SOLUTIONS"
       accent="digital"
-      intro="We create and execute digital marketing strategies that grow your audience, engage customers, and drive measurable results. From social media to email campaigns, we handle the full marketing funnel."
+      intro="In the online world, attention is the new currency. If your brand does not catch eyes, hold interest, or spark curiosity, it disappears faster than a cookie at a kids party. That is where EHM Technology Services comes in with powerful Marketing Services that help you get noticed, get clicks, and get results. We help you reach the right people, deliver the right message, and grow your business with strategies that actually work. No guesswork. No confusion. Just smart marketing that builds momentum."
       primaryCta={{ label: "Start a marketing campaign", href: "/contact" }}
       sideHeading="Marketing services"
       sideItems={[
@@ -41,34 +42,32 @@ export default function MarketingPage() {
         },
       ]}
       tools={[
-        "Mailchimp",
-        "HubSpot",
-        "Hootsuite",
-        "Buffer",
-        "Google Analytics",
-        "Meta Business Suite",
-        "Canva",
+        "Social media platforms",
+        "Ad managers",
+        "Content creation tools",
+        "Analytics dashboards",
+        "SEO platforms",
       ]}
       approach={[
         {
-          title: "Strategy & goals",
-          detail:
-            "We define target audiences, KPIs, and channel mix based on your business objectives.",
+          title: "Step One",
+          detail: "We learn your goals, your business, and who you want to reach.",
         },
         {
-          title: "Content creation",
-          detail:
-            "We produce engaging content calendars, visuals, and copy that resonates with your audience.",
+          title: "Step Two",
+          detail: "We build a custom marketing plan based on your needs.",
         },
         {
-          title: "Execution & optimization",
-          detail:
-            "Content goes live with scheduling, automation, and A/B testing to improve performance.",
+          title: "Step Three",
+          detail: "We create content, ads, and strategies that match your goals.",
         },
         {
-          title: "Analysis & iteration",
-          detail:
-            "Regular reporting shows what's working, and we adjust strategy based on data insights.",
+          title: "Step Four",
+          detail: "You get updates, reports, and results you can actually understand.",
+        },
+        {
+          title: "Step Five",
+          detail: "We adjust and improve the strategy as your business grows.",
         },
       ]}
       faqs={[
@@ -88,7 +87,7 @@ export default function MarketingPage() {
             "We track metrics like engagement rates, click-through rates, conversions, and ROI. We provide monthly reports with insights and recommendations.",
         },
       ]}
-      ctaNote="Tell us about your marketing goals and we'll create a strategy that drives results."
+      ctaNote="Your business deserves marketing that gets results. With EHM Technology Services, you get a team that brings creativity, strategy, and energy to every campaign. Let us help you reach more people, build your audience, and grow your brand with confidence."
       signals={[
         "Social media presence is inconsistent or non-existent.",
         "Email campaigns aren't generating the expected engagement.",
@@ -113,35 +112,240 @@ export default function MarketingPage() {
         },
       ]}
     >
-      <div>
-        <h2 className="text-2xl font-semibold text-slate-900">
-          Marketing capabilities
-        </h2>
-        <div className="mt-6 grid md:grid-cols-3 gap-6">
-          <div className="section-card p-5">
-            <h3 className="text-lg font-semibold text-sunsetPeach">
-              Multi-channel strategy
+      <div className="space-y-12">
+        {/* Why Marketing Services Matter */}
+        <div className="section-card p-8">
+          <h2 className="text-2xl font-semibold text-slate-900">
+            Why Marketing Services Matter
+          </h2>
+          <p className="mt-4 text-slate-600 leading-relaxed">
+            You can have the best product in the world, but if no one hears about
+            it, it might as well be hidden under your bed. Marketing brings your
+            brand to the spotlight.
+          </p>
+          <div className="mt-6">
+            <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider">
+              Strong marketing helps you:
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
-              Coordinated campaigns across social media, email, and paid advertising.
+            <ul className="mt-4 grid gap-3 md:grid-cols-2">
+              {[
+                "Grow your audience",
+                "Increase leads and sales",
+                "Build trust and recognition",
+                "Stay ahead of competitors",
+                "Create loyal customers",
+                "Boost your online presence",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-slate-600">
+                  <span className="text-sunsetPeach mt-1">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="mt-6 font-medium text-slate-900">
+            When your marketing is strong, your business grows stronger.
+          </p>
+        </div>
+
+        {/* Why EHM Technology Services Is The Team You Want */}
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-2xl font-semibold text-slate-900">
+              Why EHM Technology Services Is The Team You Want
+            </h2>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              At EHM Technology Services, we mix creativity, strategy, and simple
+              communication to help you promote your business without the usual
+              stress. You tell us your goals. We build the path to reach them.
+            </p>
+            <p className="mt-4 text-slate-600">
+              We make marketing feel easy, not overwhelming.
             </p>
           </div>
-          <div className="section-card p-5">
-            <h3 className="text-lg font-semibold text-sunsetPeach">
-              Data-driven decisions
+          <div className="space-y-4">
+            <MediaPlaceholder
+              label="Marketing Strategy"
+              caption="Creative campaigns that drive results."
+              badge="Our Approach"
+              aspect="wide"
+              accent="peach"
+              imageSrc="/images/automation-lab.svg"
+              imageAlt="Marketing strategy visualization"
+            />
+            <div className="section-card p-6 bg-slate-50/50">
+              <h3 className="text-lg font-semibold text-slate-900 mb-4">
+                You get:
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  "Friendly support",
+                  "Clear strategies",
+                  "Fast delivery",
+                  "Modern methods",
+                  "Consistent communication",
+                  "A team focused on real results",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-slate-700">
+                    <span className="h-1.5 w-1.5 rounded-full bg-sunsetPeach" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* What We Cover In Our Marketing Services */}
+        <div>
+          <h2 className="text-2xl font-semibold text-slate-900 mb-8">
+            What We Cover In Our Marketing Services
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Social Media Marketing",
+                desc: "We create content that grabs attention, builds engagement, and grows your audience across platforms like Facebook, Instagram, TikTok, LinkedIn, and more.",
+              },
+              {
+                title: "Content Creation",
+                desc: "Posts. Captions. Graphics. Ads. Scripts. Stories. We make content that people actually want to read and interact with.",
+              },
+              {
+                title: "Paid Advertising",
+                desc: "Facebook ads. Google ads. Instagram ads. We build ads that bring you leads, sales, and real traffic.",
+              },
+              {
+                title: "SEO and Website Visibility",
+                desc: "We help people find your business on search engines with content and techniques that boost visibility naturally.",
+              },
+              {
+                title: "Email Marketing",
+                desc: "Newsletters. Promotions. Automated sequences. We craft emails that get opened and get results.",
+              },
+              {
+                title: "Branding and Messaging",
+                desc: "We develop your tone, voice, and visual identity so your brand feels consistent everywhere.",
+              },
+              {
+                title: "Campaign Planning",
+                desc: "We plan marketing campaigns from start to finish so you always know what is happening and why.",
+              },
+              {
+                title: "Influencer and Creator Marketing",
+                desc: "We help you connect with influencers who can bring your business in front of the right audience.",
+              },
+              {
+                title: "Market Analysis",
+                desc: "We study your competitors, trends, and audience behavior so your marketing strategy stays sharp and effective.",
+              },
+              {
+                title: "Funnel Building",
+                desc: "We create systems that take people from interest to action in the smoothest way possible.",
+              },
+            ].map((service) => (
+              <div key={service.title} className="section-card p-6 hover:border-sunsetPeach/30 transition-colors">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                  {service.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-center text-slate-600 italic">
+            EHM Technology Services covers every marketing angle so your brand stays ahead.
+          </p>
+        </div>
+
+        {/* Who Benefits & Projects */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="section-card p-6">
+            <h3 className="text-lg font-semibold text-slate-900 mb-4">
+              Who Benefits From Our Marketing Services
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
-              Analytics and reporting to optimize campaigns and maximize ROI.
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Small businesses",
+                "Startups",
+                "Service providers",
+                "Online stores",
+                "Creators and influencers",
+                "Real estate professionals",
+                "Restaurants and local shops",
+                "Contractors and construction companies",
+                "Anyone who wants more leads and sales",
+              ].map((item) => (
+                <span
+                  key={item}
+                  className="px-3 py-1 rounded-full bg-slate-100 text-sm text-slate-700"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+            <p className="mt-4 text-sm text-slate-600">
+              If you want customers, we want to help you get them.
             </p>
           </div>
-          <div className="section-card p-5">
-            <h3 className="text-lg font-semibold text-sunsetPeach">
-              Content that converts
+
+          <div className="section-card p-6">
+            <h3 className="text-lg font-semibold text-slate-900 mb-4">
+              Projects And Campaigns We Work On
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
-              Engaging content tailored to your audience that drives action.
+            <ul className="grid grid-cols-2 gap-y-2 gap-x-4">
+              {[
+                "Social media campaigns",
+                "Brand awareness campaigns",
+                "Product launches",
+                "E commerce promotions",
+                "Lead generation systems",
+                "Monthly content plans",
+                "Paid ad campaigns",
+                "Local marketing strategies",
+              ].map((item) => (
+                <li key={item} className="text-sm text-slate-600 flex items-center gap-2">
+                  <span className="text-sunsetPeach">▪</span> {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm text-slate-600">
+              Every platform. Every industry. Every goal.
             </p>
           </div>
+        </div>
+
+        {/* Why Clients Choose EHM */}
+        <div className="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 text-white">
+          <h2 className="text-2xl font-semibold">
+            Why Clients Choose EHM Technology Services
+          </h2>
+          <p className="mt-2 text-slate-300">
+            Clients love working with us because we make marketing feel simple,
+            fun, and effective.
+          </p>
+          <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              "Consistent results",
+              "Clear communication",
+              "Fast turnaround",
+              "Affordable packages",
+              "Creative ideas",
+              "Real strategies",
+              "A team that cares about your growth",
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-3">
+                <div className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center text-sunsetPeach">
+                  ★
+                </div>
+                <span className="text-sm font-medium">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-slate-300 font-medium">
+            We do not just market your business. We help it grow.
+          </p>
         </div>
       </div>
     </ServiceLayout>

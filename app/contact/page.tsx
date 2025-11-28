@@ -22,7 +22,7 @@ export default function ContactPage() {
       >
         {/* Left text */}
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label" aria-label="Contact section">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Contact section">
             <span className="sr-only">Contact section: </span>CONTACT
           </p>
           <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900">
@@ -185,7 +185,7 @@ export default function ContactPage() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <div className="section-card p-6">
-          <h2 className="text-xl font-semibold text-slate-900">
+          <h2 className="text-2xl font-semibold text-slate-900">
             Common questions
           </h2>
           <div className="mt-4 space-y-4 text-sm text-slate-600">
@@ -211,7 +211,7 @@ export default function ContactPage() {
           </div>
         </div>
         <div className="section-card p-6 space-y-4">
-          <h2 className="text-xl font-semibold text-slate-900">Typical flow</h2>
+          <h2 className="text-2xl font-semibold text-slate-900">Typical flow</h2>
           <ul className="space-y-3 text-sm text-slate-600">
             <li>• Day 0 – You submit the form (or send an email)</li>
             <li>• Day 1 – We reply with clarifying questions or a call invite</li>

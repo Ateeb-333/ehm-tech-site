@@ -20,13 +20,11 @@ html {
 body {
   position: relative;
   min-height: 100vh;
-  background: radial-gradient(
-      circle at 18% -5%,
+  background: radial-gradient(circle at 18% -5%,
       rgba(228, 234, 250, 0.9) 0%,
       rgba(210, 220, 240, 0.92) 35%,
       rgba(192, 204, 228, 0.94) 70%,
-      rgba(178, 191, 219, 0.96) 100%
-    ),
+      rgba(178, 191, 219, 0.96) 100%),
     linear-gradient(180deg, #e3e9f8 0%, #d4dcee 45%, #c4cee3 100%);
   color: var(--foreground);
   font-family: "Space Grotesk", "Inter", system-ui, -apple-system,
@@ -48,23 +46,17 @@ body::after {
 }
 
 body::before {
-  background: radial-gradient(
-      780px circle at 15% 10%,
+  background: radial-gradient(780px circle at 15% 10%,
       rgba(174, 230, 247, 0.25),
-      transparent 60%
-    ),
-    radial-gradient(
-      640px circle at 85% 15%,
+      transparent 60%),
+    radial-gradient(640px circle at 85% 15%,
       rgba(255, 176, 138, 0.25),
-      transparent 60%
-    );
+      transparent 60%);
 }
 
 body::after {
-  background-image: linear-gradient(
-      rgba(15, 23, 42, 0.05) 1px,
-      transparent 1px
-    ),
+  background-image: linear-gradient(rgba(15, 23, 42, 0.05) 1px,
+      transparent 1px),
     linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
   background-size: 160px 160px;
   opacity: 0.35;
@@ -145,6 +137,7 @@ body::after {
 .chip {
   @apply inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-normal text-slate-600 shadow-sm;
 }
+
 .text-gradient-label {
   display: inline-block;
   background-image: linear-gradient(120deg, var(--tw-gradient-from, #2f9fcf), var(--tw-gradient-to, #f0733f));
@@ -200,11 +193,9 @@ body::after {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(
-    135deg,
-    rgba(174, 230, 247, 0.08),
-    rgba(255, 255, 255, 0)
-  );
+  background: linear-gradient(135deg,
+      rgba(174, 230, 247, 0.08),
+      rgba(255, 255, 255, 0));
   pointer-events: none;
 }
 
@@ -218,12 +209,10 @@ body::after {
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(
-    130deg,
-    rgba(174, 230, 247, 0.4),
-    rgba(255, 176, 138, 0.2),
-    transparent 70%
-  );
+  background: linear-gradient(130deg,
+      rgba(174, 230, 247, 0.4),
+      rgba(255, 176, 138, 0.2),
+      transparent 70%);
   -webkit-mask:
     linear-gradient(#fff, #fff) content-box,
     linear-gradient(#fff, #fff);
@@ -254,21 +243,25 @@ body::after {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0) scale(1);
   }
+
   50% {
     transform: translateY(-20px) scale(1.05);
   }
 }
 
 @keyframes pulseSoft {
+
   0%,
   100% {
     opacity: 0.5;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.9;
     transform: scale(1.03);
@@ -298,6 +291,7 @@ body::after {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }

@@ -13,124 +13,56 @@ const sectionVariant = {
 };
 
 const marqueeItems = [
-  "Industrial design support",
-  "AI copilots",
-  "Bespoke dashboards",
-  "Project documentation",
-  "Automation sprints",
-  "Marketing systems",
+  "Engineering Design",
+  "Cost Estimation",
+  "IT Solutions",
+  "AI Automation",
+  "Project Management",
+  "Digital Marketing",
 ];
 
 const capabilityGroups = [
   {
-    label: "Engineering Ops",
+    label: "Engineering Highlights",
     pillars: [
-      "MEP & structural coordination",
-      "Clash detection & markups",
-      "Tender and IFC support",
+      "Civil & structural layouts and design packages",
+      "MEP planning, drawings, and load calculations",
+      "Architectural plans, 2D/3D drafting, and design documentation",
     ],
   },
   {
-    label: "Automation",
+    label: "Estimation Highlights",
     pillars: [
-      "Internal knowledge bots",
-      "Workflow orchestration",
-      "Document understanding",
+      "Quantity takeoff reports for all construction trades",
+      "Detailed cost estimation and bid preparation",
+      "Blueprint reading, drafting corrections, and project coordination",
     ],
   },
   {
-    label: "Digital Experience",
+    label: "IT & AI Highlights",
     pillars: [
-      "Experience-led websites",
-      "Multi-channel campaigns",
-      "Data-informed UX iterations",
+      "Web and application development",
+      "AI-based tools, automation workflows, and chatbots",
+      "UI/UX design, branding, and digital marketing assets",
     ],
-  },
-];
-
-const partnerLogos = [
-  { name: "Apex Build", tag: "Industrial" },
-  { name: "Fluxbyte", tag: "Automation" },
-  { name: "Northwind Ops", tag: "Logistics" },
-  { name: "Kairo Studio", tag: "Creative" },
-  { name: "Linea Developers", tag: "Real estate" },
-];
-
-const engagementTracks = [
-  {
-    title: "Sprint",
-    duration: "2-4 weeks",
-    bestFor: "Defined deliverable with tight scope",
-    includes: ["Daily async updates", "Single milestone review", "Lightweight QA"],
-  },
-  {
-    title: "Embedded",
-    duration: "6-12 weeks",
-    bestFor: "Multiple streams that need one integrated team",
-    includes: ["Shared rituals & tooling", "Rolling backlog", "Flexible priorities"],
-  },
-  {
-    title: "Advisory",
-    duration: "Quarterly",
-    bestFor: "Leadership enablement & ongoing QA",
-    includes: ["Executive reviews", "Playbooks & audits", "Office hours"],
-  },
-];
-
-const resources = [
-  {
-    title: "Engineering handover checklist",
-    desc: "A simple Notion framework to keep authorities and clients aligned.",
-    type: "Template",
-  },
-  {
-    title: "Automation readiness audit",
-    desc: "Questions we use to judge if a workflow is automation-ready.",
-    type: "Guide",
-  },
-  {
-    title: "Website performance playbook",
-    desc: "Checklist for shipping fast, accessible Next.js frontends.",
-    type: "Playbook",
   },
 ];
 
 const testimonials = [
   {
-    quote:
-      "EHM plugged into our engineering team like they’d been here for years. Iterations were quick and documentation spotless.",
-    author: "Farah Siddiqui",
-    role: "Project Director, Apex Build",
+    quote: "Reliable and accurate work every time.",
+    author: "Client",
+    role: "Construction Partner",
   },
   {
-    quote:
-      "Their automation sprint eliminated two full days of manual updates every week. The team finally focuses on high-leverage work.",
-    author: "Liam Ortega",
-    role: "Head of Ops, Fluxbyte",
+    quote: "Great communication and fast delivery.",
+    author: "Client",
+    role: "Business Owner",
   },
   {
-    quote:
-      "From strategy to shipping the site, everything felt intentional. We launched in record time without sacrificing polish.",
-    author: "Nadia Alvi",
-    role: "Managing Partner, Kairo Studio",
-  },
-];
-
-const faqs = [
-  {
-    question: "Do you handle standalone engagements or long-term retainers?",
-    answer:
-      "Both. We can ship a focused project in 3-6 weeks, embed alongside your team for a longer stretch, or set up a monthly retainer for ongoing tweaks.",
-  },
-  {
-    question: "Where are you based and how do collaborations happen?",
-    answer:
-      "We are remote-first with coverage across GCC, EU and APAC time zones. Collaboration happens via Notion, Loom, weekly calls and structured updates.",
-  },
-  {
-    question: "What if we only need part of the stack?",
-    answer:
-      "Totally fine. You can engage us just for estimation, docs cleanup, an automation sprint, or a website refresh—everything is modular.",
+    quote: "Their engineering and estimation support helped us win more bids.",
+    author: "Client",
+    role: "General Contractor",
   },
 ];
 
@@ -146,20 +78,20 @@ export default function HomePage() {
       >
         <div>
           <span className="chip mb-4">
-            <span className="mr-2 text-xs">●</span> Engineering • Estimation •
-            AI Automation
+            <span className="mr-2 text-xs">●</span> Engineering • Estimation • IT
+            Solutions
           </span>
           <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
-            Technical projects,
+            Professional Engineering, Cost Estimation & IT Services
             <span className="block bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent">
-              delivered with modern tools.
+              You Can Rely On.
             </span>
           </h1>
           <p className="mt-4 text-meta max-w-xl text-sm md:text-base">
-            EHM Tech Services combines classic engineering discipline with
-            modern automation and web technologies. From design and estimation to
-            AI-powered digital workflows, we help you move faster with more
-            control.
+            At EHM Technology Services, we provide fully integrated support across
+            engineering, construction estimation, and modern IT solutions —
+            helping our clients plan smarter, build better, and work more
+            efficiently.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -167,7 +99,7 @@ export default function HomePage() {
               href="/contact"
               className="inline-flex items-center justify-center rounded-full bg-slateBlue px-6 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-slateBlue/90"
             >
-              Book a project call
+              Request a Quote
             </a>
             <a
               href="/services"
@@ -176,94 +108,83 @@ export default function HomePage() {
               Explore services
             </a>
           </div>
-
-          <div className="mt-5 flex flex-wrap gap-4 text-[11px] text-slate-500">
-            <span>• Engineering & estimation support</span>
-            <span>• AI automation & digital ops</span>
-            <span>• Web & marketing execution</span>
-          </div>
         </div>
 
         {/* Right visual */}
         <div className="space-y-4">
           <MediaPlaceholder
-            label="EHM control room"
-            caption="Snapshots of dashboards, playbooks and automations we’re currently refining."
-            badge="Live build"
+            label="Integrated Solutions"
+            caption="Engineering, Estimation, and IT workflows in one place."
+            badge="EHM Tech"
             aspect="wide"
             accent="violet"
             imageSrc="/images/hero-workflow.svg"
             imageAlt="EHM workflow canvas mock"
           />
-          <div className="section-card p-4 md:p-6">
-            <p className="text-xs font-semibold text-slate-500 uppercase tracking-[0.24em]">
-              QUICK GLANCE
+        </div>
+      </motion.section>
+
+      {/* About Section */}
+      <motion.section
+        className="mt-16 rounded-2xl border border-slate-200 bg-white p-6 md:p-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={sectionVariant}
+      >
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
+              About Us
             </p>
-            <div className="mt-3 grid grid-cols-3 gap-3 text-xs text-meta">
-              {[
-                { label: "Weekly ship cadence", value: "3-5 drops" },
-                { label: "Disciplines synced", value: "Engineering · AI · Web" },
-                { label: "Avg. response", value: "< 12 hrs" },
-              ].map((item) => (
-                <div key={item.label} className="rounded-xl border border-slate-200 bg-white p-3">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-normal">
-                    {item.label}
-                  </p>
-                  <p className="mt-1 font-semibold text-slate-900 text-sm">{item.value}</p>
-                </div>
-              ))}
+            <h2 className="mt-2 text-2xl font-semibold text-slate-900">
+              About EHM Technology Services
+            </h2>
+            <p className="mt-4 text-meta leading-relaxed">
+              EHM Technology Services is a multi-disciplinary company offering
+              complete solutions that support the growth and operations of
+              contractors, engineering firms, businesses, startups, and
+              developers.
+            </p>
+            <p className="mt-4 text-meta leading-relaxed">
+              Our team brings together expertise in engineering design, cost
+              estimation, drafting, project support, IT development, and AI-based
+              automation to provide reliable results for projects of any scale.
+            </p>
+          </div>
+          <div className="space-y-6">
+            <MediaPlaceholder
+              label="Our Focus"
+              caption="Accuracy, Modern Tools, and Smooth Workflows."
+              badge="Core Values"
+              aspect="wide"
+              accent="cyan"
+              imageSrc="/images/ops-canvas.svg"
+              imageAlt="EHM Focus Areas"
+            />
+            <div className="section-card p-6 bg-slate-50">
+              <h3 className="text-lg font-semibold text-slate-900 mb-4">
+                Our Focus
+              </h3>
+              <ul className="space-y-3 text-sm text-meta">
+                {[
+                  "Accuracy & Clarity",
+                  "Modern Tools",
+                  "Smooth Workflows",
+                  "Concept to Delivery",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <span className="text-sunsetPeach">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </motion.section>
 
-      {/* Marquee */}
-      <motion.section
-        className="mt-12 overflow-hidden rounded-2xl border border-slate-200 bg-white backdrop-blur"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
-      >
-        <div className="marquee-track py-4 text-xs md:text-sm uppercase tracking-[0.3em] text-slate-500">
-          {[...marqueeItems, ...marqueeItems].map((item, idx) => (
-            <span key={`${item}-${idx}`} className="flex items-center gap-3">
-              <span>{item}</span>
-              <span className="text-slateBlue">✺</span>
-            </span>
-          ))}
-        </div>
-      </motion.section>
-
-      {/* Partners */}
-      <motion.section
-        className="mt-14 rounded-2xl border border-slate-200 bg-white p-5 md:p-6"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Trusted by section">
-              <span className="sr-only">Trusted by section: </span>TRUSTED BY OPS & DIGITAL TEAMS
-            </p>
-            <p className="mt-1 text-meta">
-              We embed quietly across industries that need both rigor and speed.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-4 text-xs text-meta">
-            {partnerLogos.map((partner) => (
-              <span
-                key={partner.name}
-                className="rounded-full border border-slate-200 px-3 py-1 text-nowrap bg-slate-50"
-              >
-                {partner.name} • {partner.tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Quick service overview */}
+      {/* Core Areas of Expertise */}
       <motion.section
         className="mt-16 grid md:grid-cols-3 gap-6"
         initial="hidden"
@@ -272,19 +193,19 @@ export default function HomePage() {
       >
         {[
           {
-            title: "Engineering & Estimation",
-            body: "Design, BOQs, documentation and technical support for complex projects.",
-            accent: "Engineering focus with digital speed.",
+            title: "Engineering Services",
+            body: "Well-structured design and technical solutions across civil, structural, MEP, architectural, and industrial engineering.",
+            accent: "Stronger, Smarter Project Development",
           },
           {
-            title: "AI Automation",
-            body: "Chatbots, workflows and smart integrations tailored to your stack.",
-            accent: "Start small, automate the boring work.",
+            title: "Construction Estimation",
+            body: "Accurate quantity takeoffs, detailed bid estimates, drafting assistance, and project cost analysis.",
+            accent: "Clarity for Your Projects",
           },
           {
-            title: "Web & Growth",
-            body: "Websites, landing pages, social media and email that actually support sales.",
-            accent: "Clear messaging, measurable impact.",
+            title: "IT & AI Solutions",
+            body: "Custom development, AI automation, digital design, branding, and marketing support.",
+            accent: "Designed for Modern Business Growth",
           },
         ].map((card, i) => (
           <motion.div
@@ -293,19 +214,58 @@ export default function HomePage() {
             custom={i}
             className="section-card p-5"
           >
-            <p className="text-xs font-semibold text-softSkyCyan">
-              0{i + 1}
-            </p>
+            <p className="text-xs font-semibold text-softSkyCyan">0{i + 1}</p>
             <h3 className="mt-2 text-lg font-semibold text-slate-900">
               {card.title}
             </h3>
             <p className="mt-2 text-meta">{card.body}</p>
-            <p className="mt-3 text-xs text-slate-500 font-normal">{card.accent}</p>
+            <p className="mt-3 text-xs text-slate-500 font-normal">
+              {card.accent}
+            </p>
           </motion.div>
         ))}
       </motion.section>
 
-      {/* Capability matrix */}
+      {/* Why Choose EHM */}
+      <motion.section
+        className="mt-16"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.div variants={sectionVariant} custom={0} className="mb-8">
+          <h2 className="text-2xl font-semibold text-slate-900">
+            Why Choose EHM Technology Services
+          </h2>
+          <p className="mt-2 text-meta max-w-2xl">
+            Choosing EHM means working with a team that values accuracy, quality,
+            and clear communication. We focus on practical needs and deliver
+            results that support long-term success.
+          </p>
+        </motion.div>
+        <div className="grid gap-4 md:grid-cols-3">
+          {[
+            { text: "Multi-disciplinary expertise across engineering, construction, and technology", icon: "✦" },
+            { text: "Accurate and detailed work with modern tools and best practices", icon: "⚡" },
+            { text: "Smooth coordination and transparent communication", icon: "🤝" },
+            { text: "Flexible support for small, medium, and large projects", icon: "🏗️" },
+            { text: "On-time delivery and organized workflows", icon: "⏱️" },
+            { text: "Commitment to reliable, high-quality outcomes", icon: "✅" },
+          ].map((item, idx) => (
+            <motion.div
+              key={idx}
+              variants={sectionVariant}
+              custom={idx}
+              className="section-card p-5 flex items-start gap-3 hover:border-softSkyCyan/50 transition-colors"
+            >
+              <span className="text-lg">{item.icon}</span>
+              <p className="text-sm text-slate-700">{item.text}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Featured Capabilities */}
       <motion.section
         className="mt-16 grid gap-6 md:grid-cols-3"
         initial="hidden"
@@ -320,9 +280,11 @@ export default function HomePage() {
             className="section-card p-5 flex flex-col gap-3"
           >
             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
-              Capability area
+              Capabilities
             </p>
-            <h3 className="text-xl font-semibold text-slate-900">{group.label}</h3>
+            <h3 className="text-xl font-semibold text-slate-900">
+              {group.label}
+            </h3>
             <ul className="space-y-2 text-sm text-meta">
               {group.pillars.map((pillar) => (
                 <li key={pillar} className="flex items-start gap-2">
@@ -335,232 +297,40 @@ export default function HomePage() {
         ))}
       </motion.section>
 
-      {/* Ops snapshots */}
+      {/* Project Highlights */}
       <motion.section
-        className="mt-16 grid gap-6 md:grid-cols-3"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        {[
-          {
-            label: "Blueprint workspace",
-            caption: "Realtime markups, RFIs and approvals for mechanical systems.",
-            badge: "Engineering",
-            accent: "cyan",
-            imageSrc: "/images/ops-canvas.svg",
-          },
-          {
-            label: "Automation cockpit",
-            caption: "Chain-of-thought logs and guardrails for AI copilots.",
-            badge: "AI Ops",
-            accent: "peach",
-            imageSrc: "/images/automation-lab.svg",
-          },
-          {
-            label: "Experience gallery",
-            caption: "Component library previews for upcoming launches.",
-            badge: "Digital",
-            accent: "violet",
-            imageSrc: "/images/hero-workflow.svg",
-          },
-        ].map((item) => (
-          <MediaPlaceholder
-            key={item.label}
-            label={item.label}
-            caption={item.caption}
-            badge={item.badge}
-            accent={item.accent as "cyan" | "peach" | "violet"}
-            aspect="square"
-            imageSrc={item.imageSrc}
-            imageAlt={item.label}
-          />
-        ))}
-      </motion.section>
-
-      {/* Engagement tracks */}
-      <motion.section
-        className="mt-16"
+        className="mt-16 rounded-2xl bg-slate-900 p-8 text-white"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
+        variants={sectionVariant}
       >
-        <motion.div variants={sectionVariant} custom={0} className="mb-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Choose your mode section">
-            <span className="sr-only">Choose your mode section: </span>CHOOSE YOUR MODE
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-            Engagement options tuned to your bandwidth.
-          </h2>
-          <p className="mt-2 text-meta max-w-2xl">
-            Start with a sprint, scale into embedded support, or keep us on retainer as fractional leadership.
-          </p>
-        </motion.div>
-        <div className="grid gap-4 md:grid-cols-3">
-          {engagementTracks.map((track, idx) => (
-            <motion.div
-              key={track.title}
-              variants={sectionVariant}
-              custom={idx + 1}
-              className="section-card p-5 flex flex-col gap-3"
-            >
-              <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-500 font-normal">
-                  {track.duration}
-                </p>
-                <h3 className="text-lg font-semibold text-slate-900">{track.title}</h3>
-                <p className="text-meta font-normal">{track.bestFor}</p>
-              </div>
-              <ul className="text-sm text-meta space-y-2">
-                {track.includes.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <span className="text-softSkyCyan">•</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
-
-      {/* Process */}
-      <motion.section
-        className="mt-16"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <motion.div variants={sectionVariant} custom={0}>
-          <h2 className="text-2xl font-semibold text-slate-900">
-            A simple, structured way of working
-          </h2>
-          <p className="mt-2 text-meta max-w-xl">
-            Whether we&apos;re helping with engineering design or AI automation,
-            we follow a predictable, low-friction flow.
-          </p>
-        </motion.div>
-        <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
+        <h2 className="text-2xl font-semibold">
+          Project Highlights — Work Delivered Across Industries
+        </h2>
+        <p className="mt-2 text-slate-300">
+          This section showcases the variety and quality of our completed tasks.
+        </p>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
           {[
-            "Discovery & scoping",
-            "Design / automation blueprint",
-            "Execution & iteration",
-            "Handover & ongoing support",
-          ].map((step, idx) => (
-            <motion.div
-              key={step}
-              variants={sectionVariant}
-              custom={idx + 1}
-              className="section-card p-4"
+            "Engineering drawing packages for residential, commercial, and industrial projects",
+            "Detailed takeoff sheets and cost estimates for contractors and builders",
+            "Web platforms, automation systems, and digital solutions for businesses",
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="rounded-xl bg-white/10 p-5 backdrop-blur-sm"
             >
-              <div className="w-7 h-7 flex items-center justify-center rounded-full bg-slateBlue text-white text-xs font-semibold">
-                {idx + 1}
-              </div>
-              <p className="mt-3 font-semibold text-slate-900">{step}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
-
-      {/* Case highlight */}
-      <motion.section
-        className="mt-16 grid gap-6 md:grid-cols-[1.2fr,1fr]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <motion.div
-          variants={sectionVariant}
-          custom={0}
-          className="section-card p-6 md:p-7"
-        >
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Recent highlight section">
-            <span className="sr-only">Recent highlight section: </span>RECENT HIGHLIGHT
-          </p>
-          <h3 className="mt-2 text-2xl font-semibold text-slate-900">
-            Automated design-review assistant
-          </h3>
-          <p className="mt-3 text-meta">
-            Built a custom AI assistant that ingests drawings, RFIs and specs,
-            then answers coordination questions for a manufacturing client. The
-            workflow shaved 18 hours per week from the engineering team.
-          </p>
-          <div className="mt-5 grid md:grid-cols-3 gap-3 text-xs">
-            {[
-              { label: "Timeline", value: "4 weeks" },
-              { label: "Stack", value: "Next.js + LangChain + Notion" },
-              { label: "Impact", value: "35% faster approvals" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="rounded-xl border border-slate-200 bg-white p-3"
-              >
-                <p className="text-slate-500 uppercase tracking-[0.2em] text-[10px] font-normal">
-                  {item.label}
-                </p>
-                <p className="mt-1 text-slate-900 text-sm font-semibold">{item.value}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-        <motion.div
-          variants={sectionVariant}
-          custom={1}
-          className="section-card p-6 flex flex-col gap-4"
-        >
-          <p className="text-sm font-semibold text-slate-900">Snapshot timeline</p>
-          {[
-            "Week 01 – Discovery, KPI alignment, data intake",
-            "Week 02 – Prototype & feedback loop with SMEs",
-            "Week 03 – Integrations, guardrails, testing",
-            "Week 04 – Launch, training, adoption playbook",
-          ].map((item) => (
-            <div key={item} className="flex gap-3 text-sm text-meta">
-              <span className="text-softSkyCyan">●</span>
-              <span>{item}</span>
+              <p className="text-sm text-slate-200">{item}</p>
             </div>
           ))}
-        </motion.div>
-      </motion.section>
-
-      {/* Resource highlights */}
-      <motion.section
-        className="mt-16"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <motion.div variants={sectionVariant} custom={0}>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Toolkit section">
-            <span className="sr-only">Toolkit section: </span>TOOLKIT
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-            A few resources we share with partners.
-          </h2>
-        </motion.div>
-        <div className="mt-6 grid gap-5 md:grid-cols-3">
-          {resources.map((resource, idx) => (
-            <motion.div
-              key={resource.title}
-              variants={sectionVariant}
-              custom={idx + 1}
-              className="section-card p-5 flex flex-col gap-3"
-            >
-              <span className="chip w-fit">{resource.type}</span>
-              <p className="text-lg font-semibold text-slate-900">{resource.title}</p>
-              <p className="text-meta">{resource.desc}</p>
-              <a
-                href="/contact"
-                className="text-sm text-softSkyCyan underline underline-offset-4 hover:text-softSkyCyan/80"
-              >
-                Request access →
-              </a>
-            </motion.div>
-          ))}
         </div>
+        <p className="mt-6 text-center text-sm text-slate-400">
+          Each example helps visitors understand the practical value of our work.
+        </p>
       </motion.section>
 
-      {/* Testimonials */}
+      {/* Client Feedback */}
       <motion.section
         className="mt-16"
         initial="hidden"
@@ -572,58 +342,32 @@ export default function HomePage() {
           custom={0}
           className="mb-6 max-w-2xl"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Proof section">
-            <span className="sr-only">Proof section: </span>PROOF
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
+            Testimonials
           </p>
           <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-            Teams trust us with the critical bits of their stack.
+            What Our Clients Appreciate Most
           </h2>
+          <p className="mt-2 text-meta">
+            Our clients trust us for our consistent accuracy, responsible
+            communication, and dedicated project support.
+          </p>
         </motion.div>
         <div className="grid gap-6 md:grid-cols-3">
           {testimonials.map((item, idx) => (
             <motion.div
-              key={item.author}
+              key={idx}
               variants={sectionVariant}
               custom={idx + 1}
               className="section-card p-5 flex flex-col gap-4"
             >
-              <p className="text-meta">{item.quote}</p>
+              <p className="text-meta italic">"{item.quote}"</p>
               <div>
                 <p className="text-sm font-semibold text-slate-900">
                   {item.author}
                 </p>
                 <p className="text-xs text-slate-500">{item.role}</p>
               </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
-
-      {/* FAQ */}
-      <motion.section
-        className="mt-16 section-card p-6 md:p-8"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <motion.div variants={sectionVariant} custom={0}>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="FAQ section">
-            <span className="sr-only">FAQ section: </span>FAQ
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-            A few things clients ask before we kick off
-          </h2>
-        </motion.div>
-        <div className="mt-6 space-y-4">
-          {faqs.map((faq, idx) => (
-            <motion.div
-              key={faq.question}
-              variants={sectionVariant}
-              custom={idx + 1}
-              className="border-t border-slate-200 pt-4 first:border-t-0 first:pt-0"
-            >
-              <p className="text-sm font-semibold text-slate-900">{faq.question}</p>
-              <p className="mt-1 text-meta">{faq.answer}</p>
             </motion.div>
           ))}
         </div>
@@ -637,23 +381,59 @@ export default function HomePage() {
         viewport={{ once: true, amount: 0.3 }}
       >
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label" aria-label="Next step section">
-            <span className="sr-only">Next step section: </span>NEXT STEP
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-            Have a project or workflow in mind?
+          <h2 className="text-2xl font-semibold text-slate-900">
+            Ready to Begin Your Next Project?
           </h2>
           <p className="mt-2 text-meta max-w-xl">
-            Share a bit about your current situation and we&apos;ll respond with
-            possible approaches, timelines and ways we can help.
+            Whether you need engineering support, cost estimation, drafting work,
+            or modern IT solutions, our team is ready to assist. We’re here to
+            help you plan, execute, and deliver with confidence.
           </p>
         </div>
-        <a
-          href="/contact"
-          className="rounded-full bg-slateBlue px-6 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-slateBlue/90"
-        >
-          Start the conversation →
-        </a>
+        <div className="flex gap-3">
+          <a
+            href="/contact"
+            className="rounded-full bg-slateBlue px-6 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-slateBlue/90"
+          >
+            Contact Us
+          </a>
+          <a
+            href="/contact"
+            className="rounded-full border border-slate-200 bg-white px-6 py-2.5 text-sm font-medium text-slate-700 hover:border-softSkyCyan/80"
+          >
+            Request a Quote
+          </a>
+        </div>
+      </motion.section>
+
+      {/* Contact Info */}
+      <motion.section
+        className="mt-16 mb-16 text-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariant}
+      >
+        <h2 className="text-xl font-semibold text-slate-900">
+          Contact EHM Technology Services
+        </h2>
+        <p className="mt-2 text-meta">
+          For inquiries, quotes, or project discussions, feel free to reach out.
+        </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-8 text-sm text-slate-600">
+          <div className="flex items-center gap-2">
+            <span className="text-slateBlue">✉</span>
+            <span>Email: (your email here)</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-slateBlue">📞</span>
+            <span>Phone: (your phone number)</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-slateBlue">💬</span>
+            <span>WhatsApp: (optional)</span>
+          </div>
+        </div>
       </motion.section>
     </main>
   );
