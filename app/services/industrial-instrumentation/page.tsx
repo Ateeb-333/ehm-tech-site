@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Industrial and Instrumentation Engineering Services | EHM Tech Services",
@@ -255,6 +256,12 @@ export default function IndustrialInstrumentationPage() {
         <p className="mt-6 text-slate-600">
           EHM Technology Services covers all industrial fields and systems under one roof.
         </p>
+        <MediaPlaceholder
+          label="Industrial Instrumentation"
+          caption="Precision control for complex industrial systems."
+          badge="Industrial"
+          accent="cyan"
+        />
       </div>
 
       <div>

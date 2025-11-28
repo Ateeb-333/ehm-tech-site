@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Drafting Services | EHM Tech Services",
@@ -244,6 +245,12 @@ export default function DraftingServicesPage() {
           </div>
         </div>
       </div>
+      <MediaPlaceholder
+        label="Drafting Services"
+        caption="Clear, accurate drawings for seamless construction."
+        badge="Drafting"
+        accent="cyan"
+      />
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

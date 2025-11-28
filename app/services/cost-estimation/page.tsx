@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Construction Estimating Services | EHM Tech Services",
@@ -211,6 +212,12 @@ export default function CostEstimationPage() {
           </div>
         </div>
       </div>
+      <MediaPlaceholder
+        label="Cost Estimation"
+        caption="Precise budget planning for every project phase."
+        badge="Finance"
+        accent="cyan"
+      />
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

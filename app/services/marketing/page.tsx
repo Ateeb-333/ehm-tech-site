@@ -115,7 +115,10 @@ export default function MarketingPage() {
       <div className="space-y-12">
         {/* Why Marketing Services Matter */}
         <div className="section-card p-8">
-          <h2 className="text-2xl font-semibold text-slate-900">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
+            BENEFITS
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
             Why Marketing Services Matter
           </h2>
           <p className="mt-4 text-slate-600 leading-relaxed">
@@ -124,7 +127,7 @@ export default function MarketingPage() {
             brand to the spotlight.
           </p>
           <div className="mt-6">
-            <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider">
+            <h3 className="text-lg font-semibold bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent">
               Strong marketing helps you:
             </h3>
             <ul className="mt-4 grid gap-3 md:grid-cols-2">
@@ -151,7 +154,10 @@ export default function MarketingPage() {
         {/* Why EHM Technology Services Is The Team You Want */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-2xl font-semibold text-slate-900">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
+              OUR APPROACH
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold text-slate-900">
               Why EHM Technology Services Is The Team You Want
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
@@ -198,7 +204,10 @@ export default function MarketingPage() {
 
         {/* What We Cover In Our Marketing Services */}
         <div>
-          <h2 className="text-2xl font-semibold text-slate-900 mb-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
+            OUR SERVICES
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-slate-900 mb-6">
             What We Cover In Our Marketing Services
           </h2>
           <div className="grid md:grid-cols-2 gap-6">

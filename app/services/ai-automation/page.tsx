@@ -117,7 +117,10 @@ export default function AiAutomationPage() {
       <div className="space-y-12">
         {/* Why AI Services Matter */}
         <div className="section-card p-8">
-          <h2 className="text-2xl font-semibold text-slate-900">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
+            BENEFITS
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
             Why AI Services Matter
           </h2>
           <p className="mt-4 text-slate-600 leading-relaxed">
@@ -126,7 +129,7 @@ export default function AiAutomationPage() {
             door to possibilities you did not even know you had.
           </p>
           <div className="mt-6">
-            <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider">
+            <h3 className="text-lg font-semibold bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent">
               AI helps you:
             </h3>
             <ul className="mt-4 grid gap-3 md:grid-cols-2">
@@ -154,7 +157,10 @@ export default function AiAutomationPage() {
         {/* Why EHM Technology Services Is The Right AI Partner */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-2xl font-semibold text-slate-900">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
+              OUR APPROACH
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold text-slate-900">
               Why EHM Technology Services Is The Right AI Partner
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
@@ -201,7 +207,10 @@ export default function AiAutomationPage() {
 
         {/* What We Cover In Our AI Services */}
         <div>
-          <h2 className="text-2xl font-semibold text-slate-900 mb-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
+            OUR SERVICES
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-slate-900 mb-6">
             What We Cover In Our AI Services
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -257,6 +266,15 @@ export default function AiAutomationPage() {
               </div>
             ))}
           </div>
+          <MediaPlaceholder
+            label="AI Innovation"
+            caption="Cutting-edge AI solutions that transform your business operations."
+            badge="Technology"
+            aspect="wide"
+            accent="cyan"
+            imageSrc="/images/automation-lab.svg"
+            imageAlt="AI services showcase"
+          />
           <p className="mt-6 text-center text-slate-600 italic">
             EHM Technology Services covers every step of AI development from strategy to execution.
           </p>

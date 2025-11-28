@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Bid Estimating Services | EHM Tech Services",
@@ -247,6 +248,12 @@ export default function BidEstimationPage() {
           </div>
         </div>
       </div>
+      <MediaPlaceholder
+        label="Bid Estimation"
+        caption="Accurate cost forecasting for winning bids."
+        badge="Estimation"
+        accent="cyan"
+      />
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

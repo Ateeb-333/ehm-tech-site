@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Architectural and Design Engineering Services | EHM Tech Services",
@@ -253,6 +254,12 @@ export default function ArchitecturalDesignPage() {
         <p className="mt-6 text-slate-600">
           EHM Technology Services delivers design that feels thoughtful, practical, and visually appealing.
         </p>
+        <MediaPlaceholder
+          label="Architectural Design"
+          caption="Visualizing spaces before they are built."
+          badge="Design"
+          accent="violet"
+        />
       </div>
 
       <div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Project Management Services | EHM Tech Services",
@@ -278,6 +279,12 @@ export default function ProjectManagementPage() {
         <p className="mt-6 text-slate-600">
           EHM Technology Services handles all project types in all industries.
         </p>
+        <MediaPlaceholder
+          label="Project Management"
+          caption="Keeping projects on track, on time, and on budget."
+          badge="Management"
+          accent="cyan"
+        />
       </div>
 
       <div>

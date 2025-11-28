@@ -226,7 +226,7 @@ export function ServiceLayout({
           <div className="section-card p-6 md:p-7">
             <div className="flex items-center justify-between gap-4 flex-wrap">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
                   STACK
                 </p>
                 <h2 className="mt-2 text-2xl font-semibold text-slate-900">
@@ -284,7 +284,7 @@ export function ServiceLayout({
         >
           <div className="section-card p-6 md:p-7 space-y-4">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
                 FAQs
               </p>
               <h2 className="mt-2 text-2xl font-semibold text-slate-900">
@@ -297,10 +297,11 @@ export function ServiceLayout({
                   key={faq.question}
                   className="border-t border-slate-200 pt-4 first:border-t-0 first:pt-0"
                 >
-                  <p className="text-sm font-semibold text-slate-900">
-                    {faq.question}
+                  <p className="text-sm font-semibold text-slate-900 flex items-start gap-2">
+                    <span className="text-lg">❓</span>
+                    <span>{faq.question}</span>
                   </p>
-                  <p className="mt-1 text-sm text-slate-600">{faq.answer}</p>
+                  <p className="mt-1 text-sm text-slate-600 ml-7">{faq.answer}</p>
                 </div>
               ))}
             </div>

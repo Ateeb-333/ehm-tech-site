@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Email Marketing | EHM Tech Services",
@@ -145,6 +146,16 @@ export default function EmailMarketingPage() {
           </div>
         </div>
       </div>
+
+      <MediaPlaceholder
+        label="Email Campaigns"
+        caption="Effective email marketing that keeps your audience engaged."
+        badge="Email Strategy"
+        aspect="wide"
+        accent="peach"
+        imageSrc="/images/ops-canvas.svg"
+        imageAlt="Email marketing showcase"
+      />
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

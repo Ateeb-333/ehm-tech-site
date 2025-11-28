@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Engineering Design | EHM Tech Services",
@@ -151,6 +152,12 @@ export default function EngineeringDesignPage() {
           </div>
         </div>
       </div>
+      <MediaPlaceholder
+        label="Engineering Design"
+        caption="Coordinated systems for build-ready projects."
+        badge="Design"
+        accent="cyan"
+      />
 
       {/* Process */}
       <div>

@@ -167,13 +167,13 @@ export default function CareersPage() {
 
         <div className="space-y-4">
           <MediaPlaceholder
-            label="Inside the delivery room"
-            caption="Async playbacks, markups and AI copilots that keep everyone in sync."
-            badge="Team life"
+            label="Join Our Team"
+            caption="Work with talented professionals on exciting projects worldwide."
+            badge="Team Culture"
             accent="violet"
             aspect="wide"
             imageSrc="/images/ops-canvas.svg"
-            imageAlt="Team workflow board"
+            imageAlt="Team collaboration"
           />
           <div className="section-card p-5 space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Interview flow section">

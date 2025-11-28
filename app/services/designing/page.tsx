@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Designing | EHM Tech Services",
@@ -120,7 +121,10 @@ export default function DesigningPage() {
       <div className="space-y-12">
         {/* Why Good Design Matters */}
         <div className="section-card p-8">
-          <h2 className="text-2xl font-semibold text-slate-900">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
+            BENEFITS
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
             Why Good Design Matters
           </h2>
           <p className="mt-4 text-slate-600 leading-relaxed">
@@ -171,25 +175,36 @@ export default function DesigningPage() {
               your brand.
             </p>
           </div>
-          <div className="section-card p-6 bg-slate-50/50">
-            <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">
-              You get:
-            </h3>
-            <ul className="space-y-3">
-              {[
-                "Clean designs that feel fresh and modern",
-                "Friendly communication",
-                "Fast turnaround",
-                "Unlimited project styles",
-                "Easy revisions",
-                "A team that understands how people think online",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-slate-700">
-                  <span className="h-1.5 w-1.5 rounded-full bg-sunsetPeach" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+          <div className="space-y-4">
+            <MediaPlaceholder
+              label="Design Excellence"
+              caption="Beautiful, functional designs that elevate your brand."
+              badge="Our Designs"
+              aspect="wide"
+              accent="violet"
+              imageSrc="/images/ops-canvas.svg"
+              imageAlt="Design services showcase"
+            />
+            <div className="section-card p-6 bg-slate-50/50">
+              <h3 className="text-lg font-semibold text-slate-900 mb-4">
+                You get:
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  "Clean designs that feel fresh and modern",
+                  "Friendly communication",
+                  "Fast turnaround",
+                  "Unlimited project styles",
+                  "Easy revisions",
+                  "A team that understands how people think online",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-slate-700">
+                    <span className="h-1.5 w-1.5 rounded-full bg-sunsetPeach" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -251,6 +266,15 @@ export default function DesigningPage() {
               </div>
             ))}
           </div>
+          <MediaPlaceholder
+            label="Design Portfolio"
+            caption="From UI/UX to branding - see how we bring ideas to life."
+            badge="Our Work"
+            aspect="wide"
+            accent="violet"
+            imageSrc="/images/hero-workflow.svg"
+            imageAlt="Design portfolio showcase"
+          />
           <p className="mt-6 text-center text-slate-600 italic">
             We design everything needed to build a strong digital presence.
           </p>

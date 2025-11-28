@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Development Services | EHM Tech Services",
@@ -253,6 +254,15 @@ export default function WebDevelopmentPage() {
             </p>
           </div>
         </div>
+        <MediaPlaceholder
+          label="Development Portfolio"
+          caption="See how we build modern, scalable digital solutions for businesses."
+          badge="Projects"
+          aspect="wide"
+          accent="violet"
+          imageSrc="/images/ops-canvas.svg"
+          imageAlt="Development projects showcase"
+        />
         <p className="mt-6 text-slate-600">
           EHM Technology Services handles end to end development for all project types.
         </p>

@@ -89,8 +89,8 @@ export default function PortfolioPage() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-1.5 rounded-full text-xs md:text-sm border transition-colors ${isActive
-                    ? "bg-slateBlue text-white border-slateBlue"
-                    : "bg-white text-slate-600 border-slate-200 hover:border-softSkyCyan/70"
+                  ? "bg-slateBlue text-white border-slateBlue"
+                  : "bg-white text-slate-600 border-slate-200 hover:border-softSkyCyan/70"
                   }`}
               >
                 {cat}
@@ -98,6 +98,19 @@ export default function PortfolioPage() {
             );
           })}
         </div>
+      </section>
+
+      {/* Portfolio Showcase */}
+      <section className="mt-6">
+        <MediaPlaceholder
+          label="Project Showcase"
+          caption="A glimpse of our diverse portfolio across multiple disciplines."
+          badge="Featured Work"
+          aspect="wide"
+          accent="violet"
+          imageSrc="/images/hero-workflow.svg"
+          imageAlt="Portfolio showcase"
+        />
       </section>
 
       {/* Cards */}

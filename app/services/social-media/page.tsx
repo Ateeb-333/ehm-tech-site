@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Social Media Marketing | EHM Tech Services",
@@ -145,6 +146,16 @@ export default function SocialMediaPage() {
           </div>
         </div>
       </div>
+
+      <MediaPlaceholder
+        label="Social Media Strategy"
+        caption="Build a consistent presence across all your social platforms."
+        badge="Social Marketing"
+        aspect="wide"
+        accent="peach"
+        imageSrc="/images/hero-workflow.svg"
+        imageAlt="Social media marketing showcase"
+      />
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">Content pillars we lean on</h2>

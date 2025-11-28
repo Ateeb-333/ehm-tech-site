@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "MEP Engineering Services | EHM Tech Services",
@@ -254,6 +255,12 @@ export default function MEPEngineeringPage() {
         <p className="mt-6 text-slate-600">
           EHM Technology Services handles all MEP scopes under one roof.
         </p>
+        <MediaPlaceholder
+          label="MEP Engineering"
+          caption="Integrated mechanical, electrical, and plumbing systems."
+          badge="Engineering"
+          accent="cyan"
+        />
       </div>
 
       <div>

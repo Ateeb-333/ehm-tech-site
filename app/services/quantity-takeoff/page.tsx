@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Quantity Takeoff Services | EHM Tech Services",
@@ -268,6 +269,12 @@ export default function QuantityTakeoffPage() {
         <p className="mt-6 text-slate-600">
           EHM Technology Services covers every construction discipline. Every scope. Every detail.
         </p>
+        <MediaPlaceholder
+          label="Quantity Takeoff"
+          caption="Detailed material counts for accurate estimating."
+          badge="Estimation"
+          accent="cyan"
+        />
       </div>
 
       <div>

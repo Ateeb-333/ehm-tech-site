@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
 export const Footer = () => {
@@ -9,10 +10,14 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <div className="flex items-center gap-3">
-            <div className="relative h-9 w-9 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-inner flex items-center justify-center">
-              <span className="text-slate-900 font-semibold text-base tracking-wide">
-                E
-              </span>
+            <div className="relative h-14 w-14 flex items-center justify-center">
+              <Image
+                src="/images/ehm-logo-3d.png"
+                alt="EHM Tech logo"
+                fill
+                className="object-contain"
+                sizes="56px"
+              />
             </div>
 
             <div className="leading-tight">
