@@ -269,13 +269,16 @@ export default function QuantityTakeoffPage() {
         <p className="mt-6 text-slate-600">
           EHM Technology Services covers every construction discipline. Every scope. Every detail.
         </p>
-        <MediaPlaceholder
-          label="Quantity Takeoff"
-          caption="Detailed material counts for accurate estimating."
-          badge="Estimation"
-          accent="cyan"
-        />
       </div>
+
+      <MediaPlaceholder
+        label="Quantity Takeoff"
+        caption="Detailed material counts for accurate project planning."
+        badge="Estimation"
+        accent="cyan"
+        imageSrc="/images/quantity-takeoff.jpg"
+        imageAlt="Project management dashboard and planning tools"
+      />
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

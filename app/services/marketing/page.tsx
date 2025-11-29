@@ -176,8 +176,8 @@ export default function MarketingPage() {
               badge="Our Approach"
               aspect="wide"
               accent="peach"
-              imageSrc="/images/automation-lab.svg"
-              imageAlt="Marketing strategy visualization"
+              imageSrc="/images/ai-hand-interface.jpg"
+              imageAlt="Digital marketing interface interaction"
             />
             <div className="section-card p-6 bg-slate-50/50">
               <h3 className="text-lg font-semibold text-slate-900 mb-4">

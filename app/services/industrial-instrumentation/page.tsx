@@ -261,6 +261,8 @@ export default function IndustrialInstrumentationPage() {
           caption="Precision control for complex industrial systems."
           badge="Industrial"
           accent="cyan"
+          imageSrc="/images/industrial-inspection.jpg"
+          imageAlt="Industrial equipment inspection"
         />
       </div>
 

@@ -260,8 +260,8 @@ export default function WebDevelopmentPage() {
           badge="Projects"
           aspect="wide"
           accent="violet"
-          imageSrc="/images/ops-canvas.svg"
-          imageAlt="Development projects showcase"
+          imageSrc="/images/coding-keyboard.jpg"
+          imageAlt="Coding keyboard and development environment"
         />
         <p className="mt-6 text-slate-600">
           EHM Technology Services handles end to end development for all project types.

@@ -182,8 +182,8 @@ export default function DesigningPage() {
               badge="Our Designs"
               aspect="wide"
               accent="violet"
-              imageSrc="/images/ops-canvas.svg"
-              imageAlt="Design services showcase"
+              imageSrc="/images/ai-futuristic-ui.jpg"
+              imageAlt="Futuristic UI design interface"
             />
             <div className="section-card p-6 bg-slate-50/50">
               <h3 className="text-lg font-semibold text-slate-900 mb-4">

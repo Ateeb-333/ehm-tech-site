@@ -147,16 +147,18 @@ export default function EngineeringDesignPage() {
             </h3>
             <p className="mt-2 text-sm text-gray-300">
               Designs aligned with relevant codes, client standards and local
-              authority requirements.
             </p>
           </div>
         </div>
       </div>
+
       <MediaPlaceholder
         label="Engineering Design"
-        caption="Coordinated systems for build-ready projects."
-        badge="Design"
+        caption="Precision-engineered solutions for complex projects."
+        badge="Engineering"
         accent="cyan"
+        imageSrc="/images/engineering-design.jpg"
+        imageAlt="Industrial engineering equipment and pumps"
       />
 
       {/* Process */}

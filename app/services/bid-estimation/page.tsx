@@ -248,11 +248,14 @@ export default function BidEstimationPage() {
           </div>
         </div>
       </div>
+
       <MediaPlaceholder
         label="Bid Estimation"
-        caption="Accurate cost forecasting for winning bids."
+        caption="Competitive and accurate estimates for winning bids."
         badge="Estimation"
         accent="cyan"
+        imageSrc="/images/bid-estimation.jpg"
+        imageAlt="Construction blueprints and cost estimation tools"
       />
 
       <div>

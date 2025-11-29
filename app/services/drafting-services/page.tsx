@@ -249,7 +249,8 @@ export default function DraftingServicesPage() {
         label="Drafting Services"
         caption="Clear, accurate drawings for seamless construction."
         badge="Drafting"
-        accent="cyan"
+        imageSrc="/images/drafting-tablet.jpg"
+        imageAlt="Digital drafting on tablet"
       />
 
       <div>

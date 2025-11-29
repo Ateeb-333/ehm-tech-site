@@ -255,13 +255,16 @@ export default function MEPEngineeringPage() {
         <p className="mt-6 text-slate-600">
           EHM Technology Services handles all MEP scopes under one roof.
         </p>
-        <MediaPlaceholder
-          label="MEP Engineering"
-          caption="Integrated mechanical, electrical, and plumbing systems."
-          badge="Engineering"
-          accent="cyan"
-        />
       </div>
+
+      <MediaPlaceholder
+        label="MEP Engineering"
+        caption="Modern systems designed for efficiency and longevity."
+        badge="Engineering"
+        accent="cyan"
+        imageSrc="/images/mep-engineering.jpg"
+        imageAlt="Industrial MEP piping systems"
+      />
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

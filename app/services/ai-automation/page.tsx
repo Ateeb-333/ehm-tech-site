@@ -179,8 +179,8 @@ export default function AiAutomationPage() {
               badge="Our Technology"
               aspect="wide"
               accent="cyan"
-              imageSrc="/images/automation-lab.svg"
-              imageAlt="AI automation visualization"
+              imageSrc="/images/ai-brain-circuit.jpg"
+              imageAlt="AI brain circuit visualization"
             />
             <div className="section-card p-6 bg-slate-50/50">
               <h3 className="text-lg font-semibold text-slate-900 mb-4">

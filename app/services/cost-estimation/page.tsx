@@ -216,7 +216,8 @@ export default function CostEstimationPage() {
         label="Cost Estimation"
         caption="Precise budget planning for every project phase."
         badge="Finance"
-        accent="cyan"
+        imageSrc="/images/cost-estimation.jpg"
+        imageAlt="Construction cost estimation calculator"
       />
 
       <div>

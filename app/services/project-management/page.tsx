@@ -135,11 +135,11 @@ export default function ProjectManagementPage() {
           <li>Reduce rework</li>
           <li>Improve communication</li>
           <li>Deliver results your clients trust</li>
-        </ul>
+        </ul >
         <p className="mt-4 text-slate-600">
           Good management turns chaos into calm. That is exactly what we do.
         </p>
-      </div>
+      </div >
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">
@@ -279,18 +279,6 @@ export default function ProjectManagementPage() {
         <p className="mt-6 text-slate-600">
           EHM Technology Services handles all project types in all industries.
         </p>
-        <MediaPlaceholder
-          label="Project Management"
-          caption="Keeping projects on track, on time, and on budget."
-          badge="Management"
-          accent="cyan"
-        />
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-semibold text-slate-900">
-          Who Benefits From Our Project Management Services
-        </h2>
         <p className="mt-4 text-slate-600">
           We support everyone who needs professional project management. If your project has moving pieces, we keep them moving together.
         </p>
@@ -398,7 +386,7 @@ export default function ProjectManagementPage() {
           </div>
         </div>
       </div>
-    </ServiceLayout>
+    </ServiceLayout >
   );
 }
 

@@ -153,8 +153,8 @@ export default function SocialMediaPage() {
         badge="Social Marketing"
         aspect="wide"
         accent="peach"
-        imageSrc="/images/hero-workflow.svg"
-        imageAlt="Social media marketing showcase"
+        imageSrc="/images/social-media-dashboard.jpg"
+        imageAlt="Social media analytics dashboard"
       />
 
       <div>
@@ -176,7 +176,7 @@ export default function SocialMediaPage() {
             </div>
           ))}
         </div>
-      </div>
-    </ServiceLayout>
+      </div >
+    </ServiceLayout >
   );
 }

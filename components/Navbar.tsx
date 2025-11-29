@@ -139,10 +139,10 @@ export const Navbar = () => {
                 <span
                   className="text-[20px] md:text-[22px] font-extrabold tracking-tight
                              block bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent"
-                    >
+                >
                   Technology Services
                 </span>
-                </div>
+              </div>
             </div>
           </Link>
 

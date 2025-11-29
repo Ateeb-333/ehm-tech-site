@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
+import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 
 export const metadata: Metadata = {
   title: "Technical Documentation | EHM Tech Services",
@@ -148,6 +149,16 @@ export default function TechnicalDocumentationPage() {
           </div>
         </div>
       </div>
+
+      <MediaPlaceholder
+        label="Documentation Standards"
+        caption="Structured, compliant, and clear technical documentation."
+        badge="Quality"
+        aspect="wide"
+        accent="cyan"
+        imageSrc="/images/technical-docs-checklist.jpg"
+        imageAlt="Technical documentation checklist"
+      />
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">Compliance-ready add-ons</h2>
