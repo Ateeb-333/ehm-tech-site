@@ -171,6 +171,15 @@ export default function CivilStructuralEngineeringPage() {
         </div>
       </div>
 
+      <MediaPlaceholder
+        label="Civil & Structural Engineering"
+        caption="Solid engineering foundations for safe, stable structures."
+        badge="Engineering"
+        accent="cyan"
+        imageSrc="/images/civil-structural.png"
+        imageAlt="Civil engineering structural drawings and infrastructure plans"
+      />
+
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">
           What We Cover In Our Civil and Structural Engineering Services

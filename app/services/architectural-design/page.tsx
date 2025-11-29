@@ -170,6 +170,15 @@ export default function ArchitecturalDesignPage() {
         </div>
       </div>
 
+      <MediaPlaceholder
+        label="Architectural Design"
+        caption="Creative designs that combine beauty with practical engineering."
+        badge="Architecture"
+        accent="cyan"
+        imageSrc="/images/architectural-design.png"
+        imageAlt="Architectural blueprints and technical drawings"
+      />
+
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">
           What We Cover In Our Architectural and Design Engineering Services

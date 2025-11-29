@@ -118,8 +118,8 @@ export default function HomePage() {
             badge="EHM Tech"
             aspect="wide"
             accent="violet"
-            imageSrc="/images/hero-workflow.svg"
-            imageAlt="EHM workflow canvas mock"
+            imageSrc="/images/team-collaboration.png"
+            imageAlt="Professional team collaborating in modern workspace"
           />
         </div>
       </motion.section>
@@ -159,8 +159,8 @@ export default function HomePage() {
               badge="Core Values"
               aspect="wide"
               accent="cyan"
-              imageSrc="/images/ops-canvas.svg"
-              imageAlt="EHM Focus Areas"
+              imageSrc="/images/professional-team.png"
+              imageAlt="Professional team working with modern technology"
             />
             <div className="section-card p-6 bg-slate-50">
               <h3 className="text-lg font-semibold text-slate-900 mb-4">
@@ -386,7 +386,7 @@ export default function HomePage() {
           </h2>
           <p className="mt-2 text-meta max-w-xl">
             Whether you need engineering support, cost estimation, drafting work,
-            or modern IT solutions, our team is ready to assist. We’re here to
+            or modern IT solutions, our team is ready to assist. We're here to
             help you plan, execute, and deliver with confidence.
           </p>
         </div>

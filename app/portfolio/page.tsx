@@ -108,8 +108,8 @@ export default function PortfolioPage() {
           badge="Featured Work"
           aspect="wide"
           accent="violet"
-          imageSrc="/images/hero-workflow.svg"
-          imageAlt="Portfolio showcase"
+          imageSrc="/images/portfolio-showcase.png"
+          imageAlt="Professional portfolio showcase of engineering and digital projects"
         />
       </section>
 
@@ -181,11 +181,11 @@ export default function PortfolioPage() {
       >
         <MediaPlaceholder
           label="Case study gallery"
-          caption="Placeholders for renders and dashboards we’ll showcase publicly soon."
+          caption="Placeholders for renders and dashboards we'll showcase publicly soon."
           badge="Preview"
           accent="peach"
-          imageSrc="/images/hero-workflow.svg"
-          imageAlt="Case study gallery preview"
+          imageSrc="/images/case-study-gallery.png"
+          imageAlt="Project results and success metrics visualization"
         />
         <div className="section-card p-6 flex flex-col justify-between">
           <div>

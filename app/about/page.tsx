@@ -198,8 +198,8 @@ export default function AboutPage() {
           badge="Team"
           accent="violet"
           aspect="wide"
-          imageSrc="/images/ops-canvas.svg"
-          imageAlt="Team collaboration"
+          imageSrc="/images/professional-team.png"
+          imageAlt="Professional diverse team in modern office"
         />
       </motion.section>
     </main>

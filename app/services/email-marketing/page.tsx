@@ -153,8 +153,8 @@ export default function EmailMarketingPage() {
         badge="Email Strategy"
         aspect="wide"
         accent="peach"
-        imageSrc="/images/ops-canvas.svg"
-        imageAlt="Email marketing showcase"
+        imageSrc="/images/email-marketing.png"
+        imageAlt="Email marketing dashboard with campaign analytics"
       />
 
       <div>

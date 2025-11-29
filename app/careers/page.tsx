@@ -172,8 +172,8 @@ export default function CareersPage() {
             badge="Team Culture"
             accent="violet"
             aspect="wide"
-            imageSrc="/images/ops-canvas.svg"
-            imageAlt="Team collaboration"
+            imageSrc="/images/careers-hiring.jpg"
+            imageAlt="Join our team - career opportunities"
           />
           <div className="section-card p-5 space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Interview flow section">
