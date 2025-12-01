@@ -165,7 +165,7 @@ export default function CareersPage() {
           </div>
         </div>
 
-        <div className="section-card p-5space-y-6">
+        <div className="section-card p-5 space-y-6">
           <MediaPlaceholder
             label="Join Our Team"
             caption="Work with talented professionals on exciting projects worldwide."
