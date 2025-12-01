@@ -121,7 +121,7 @@ export default function EmailMarketingPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Strategy & Structure
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Define who you&apos;re emailing, how often and with what type of
               content for each segment.
             </p>
@@ -130,7 +130,7 @@ export default function EmailMarketingPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Copy & Templates
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Simple, branded templates and copy that feel human and easy to
               scan on any device.
             </p>
@@ -139,7 +139,7 @@ export default function EmailMarketingPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Basic Automation
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Set up sequences and triggers inside your chosen email platform so
               messages send automatically.
             </p>
@@ -147,7 +147,7 @@ export default function EmailMarketingPage() {
         </div>
       </div>
 
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="Email Campaigns"
         caption="Effective email marketing that keeps your audience engaged."
         badge="Email Strategy"
@@ -177,8 +177,8 @@ export default function EmailMarketingPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>

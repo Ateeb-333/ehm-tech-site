@@ -124,7 +124,7 @@ export default function TechnicalDocumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Design Documentation
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Clean, consistent documentation that captures the design intent
               and supports technical reviews.
             </p>
@@ -133,7 +133,7 @@ export default function TechnicalDocumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Construction & As-Built
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Site-verified as-built drawings and O&amp;M records for smooth
               handover and facilities management.
             </p>
@@ -142,7 +142,7 @@ export default function TechnicalDocumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Compliance & Handover
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Checklists, certificates and files arranged in a clear structure
               for clients and authorities.
             </p>
@@ -150,7 +150,7 @@ export default function TechnicalDocumentationPage() {
         </div>
       </div>
 
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="Documentation Standards"
         caption="Structured, compliant, and clear technical documentation."
         badge="Quality"
@@ -174,8 +174,8 @@ export default function TechnicalDocumentationPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>

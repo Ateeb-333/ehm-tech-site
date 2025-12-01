@@ -156,7 +156,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Clean & Accurate
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Clean and accurate drawings. Fast turnaround. Unlimited project types. Support from start to finish.
             </p>
           </div>
@@ -164,7 +164,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Easy Revisions
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Easy revisions. A team that listens and understands your goals. We keep the process simple so you stay stress free.
             </p>
           </div>
@@ -183,7 +183,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Architectural Drafting
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Floor plans. Elevations. Sections. Room layouts. Door and window schedules. Every detail your design needs to feel complete.
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Structural Drafting
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Beams. Columns. Foundations. Reinforcements. Load layouts. Everything needed for a safe and stable build.
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               MEP Drafting
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Mechanical layouts. Electrical drawings. Plumbing plans. Clean diagrams that help every trade work efficiently.
             </p>
           </div>
@@ -207,7 +207,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Construction Documents
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Full drawing sets ready for contractors, permitting, bidding, and approvals.
             </p>
           </div>
@@ -215,7 +215,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               As Built Drawings
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We update your drawings to match the final built conditions, so you always have accurate project records.
             </p>
           </div>
@@ -223,7 +223,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Shop Drawings
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Custom fabrications. Millwork. Steel. Cabinets. Fixtures. Everything your suppliers and installers need.
             </p>
           </div>
@@ -231,7 +231,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               2D Drafting
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Clean and simple linework that gives you exact clarity on measurements and design intent.
             </p>
           </div>
@@ -239,13 +239,13 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               3D Drafting
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We create visual models that help you see the project before you build it. A little like giving your imagination superpowers.
             </p>
           </div>
         </div>
       </div>
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="Drafting Services"
         caption="Clear, accurate drawings for seamless construction."
         badge="Drafting"
@@ -262,7 +262,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Residential Drafting
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Homes. Additions. Remodels. Multi family units. Custom homes. Any style. Any scale.
             </p>
           </div>
@@ -270,7 +270,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Commercial Drafting
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Retail spaces. Offices. Restaurants. Clinics. Hotels. Educational spaces. Warehouses.
             </p>
           </div>
@@ -278,7 +278,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Industrial Drafting
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Plants. Factories. Processing facilities. Power buildings. Complex layouts made easy to follow.
             </p>
           </div>
@@ -335,8 +335,8 @@ export default function DraftingServicesPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -361,7 +361,7 @@ export default function DraftingServicesPage() {
             "Custom design concepts",
           ].map((project) => (
             <div key={project} className="section-card p-5">
-              <p className="text-white font-medium">{project}</p>
+              <p className="text-slate-900 font-medium">{project}</p>
             </div>
           ))}
         </div>
@@ -385,7 +385,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Accurate & Quick
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Accurate drawings. Quick delivery. Friendly support. Fair pricing. A simple process.
             </p>
           </div>
@@ -393,7 +393,7 @@ export default function DraftingServicesPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Committed to Your Success
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               A team committed to your success. We give you drawings that help everyone on your project breathe a little easier.
             </p>
           </div>

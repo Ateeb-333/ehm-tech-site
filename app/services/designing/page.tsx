@@ -176,7 +176,7 @@ export default function DesigningPage() {
             </p>
           </div>
           <div className="space-y-4">
-            <MediaPlaceholder
+            <MediaPlaceholder className="mt-12"
               label="Design Excellence"
               caption="Beautiful, functional designs that elevate your brand."
               badge="Our Designs"
@@ -266,7 +266,7 @@ export default function DesigningPage() {
               </div>
             ))}
           </div>
-          <MediaPlaceholder
+          <MediaPlaceholder className="mt-12"
             label="Design Portfolio"
             caption="From UI/UX to branding - see how we bring ideas to life."
             badge="Our Work"
@@ -340,7 +340,7 @@ export default function DesigningPage() {
         </div>
 
         {/* Why Clients Choose EHM */}
-        <div className="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 text-white">
+        <div className="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 text-slate-900">
           <h2 className="text-2xl font-semibold">
             Why Clients Choose EHM Technology Services
           </h2>

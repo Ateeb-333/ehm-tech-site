@@ -114,6 +114,17 @@ export function ServiceLayout({
                 )}
               </div>
             )}
+
+            <div className="mt-8">
+              {heroMedia ?? (
+                <MediaPlaceholder
+                  label={heroMediaLabel ?? `${title} preview`}
+                  caption="Visual references will be updated after the next delivery cycle."
+                  badge={accent === "engineering" ? "Blueprint" : "Digital"}
+                  accent={accent === "engineering" ? "cyan" : "peach"}
+                />
+              )}
+            </div>
           </div>
 
           <div className="space-y-4">
@@ -129,17 +140,6 @@ export function ServiceLayout({
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div>
-              {heroMedia ?? (
-                <MediaPlaceholder
-                  label={heroMediaLabel ?? `${title} preview`}
-                  caption="Visual references will be updated after the next delivery cycle."
-                  badge={accent === "engineering" ? "Blueprint" : "Digital"}
-                  accent={accent === "engineering" ? "cyan" : "peach"}
-                />
-              )}
             </div>
           </div>
         </div>

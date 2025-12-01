@@ -11,6 +11,7 @@ type MediaPlaceholderProps = {
   accent?: "cyan" | "peach" | "violet";
   imageSrc?: string;
   imageAlt?: string;
+  className?: string;
 };
 
 const accentMap = {
@@ -27,6 +28,7 @@ export const MediaPlaceholder = ({
   accent = "cyan",
   imageSrc,
   imageAlt,
+  className = "",
 }: MediaPlaceholderProps) => {
   const gradient = accentMap[accent];
   const aspectClass =
@@ -37,7 +39,7 @@ export const MediaPlaceholder = ({
       initial={{ opacity: 0, y: 20, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.4 }}
-      className={`relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft ${aspectClass}`}
+      className={`relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft ${aspectClass} ${className}`}
     >
       {imageSrc ? (
         <Image

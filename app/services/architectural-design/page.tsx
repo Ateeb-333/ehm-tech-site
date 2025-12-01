@@ -155,7 +155,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Beautiful & Practical
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Beautiful and practical designs. Fast communication. Friendly guidance at every step. Complete support from concept to final plans.
             </p>
           </div>
@@ -163,14 +163,14 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Smart Solutions & Enjoyable Process
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Smart solutions for all project types. A team that makes the process enjoyable. We make design simple and stress free.
             </p>
           </div>
         </div>
       </div>
 
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="Architectural Design"
         caption="Creative designs that combine beauty with practical engineering."
         badge="Architecture"
@@ -191,7 +191,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Conceptual Design
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We turn your ideas into early visuals that help you see your project before any work begins. Simple. Clear. Exciting.
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Space Planning
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We plan every room, area, and pathway so the space flows naturally and feels comfortable for real people.
             </p>
           </div>
@@ -207,7 +207,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Architectural Layouts
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Floor plans. Elevations. Sections. Room details. Designs that blend beauty with functionality.
             </p>
           </div>
@@ -215,7 +215,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               3D Visualization and Renderings
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We create visual models that help you experience the project before construction even starts. It feels like walking through your future space.
             </p>
           </div>
@@ -223,7 +223,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Interior and Exterior Design
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Material choices. Colors. Lighting. Finishes. Exterior features. We make sure your building looks stunning inside and out.
             </p>
           </div>
@@ -231,7 +231,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Structural Coordination
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We align architectural ideas with engineering reality so your project stays safe and buildable.
             </p>
           </div>
@@ -239,7 +239,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Code Compliance Preparation
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We design with local codes, zoning rules, and permitting needs in mind so approval feels smooth instead of stressful.
             </p>
           </div>
@@ -247,7 +247,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Remodel and Renovation Planning
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Old spaces need fresh ideas. We redesign your layout to improve flow, comfort, and function.
             </p>
           </div>
@@ -255,7 +255,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Custom Design Solutions
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Unique homes. Creative commercial spaces. Specialty buildings. If you imagine it, we design it.
             </p>
           </div>
@@ -263,7 +263,7 @@ export default function ArchitecturalDesignPage() {
         <p className="mt-6 text-slate-600">
           EHM Technology Services delivers design that feels thoughtful, practical, and visually appealing.
         </p>
-        <MediaPlaceholder
+        <MediaPlaceholder className="mt-12"
           label="Architectural Design"
           caption="Visualizing spaces before they are built."
           badge="Design"
@@ -318,8 +318,8 @@ export default function ArchitecturalDesignPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -346,7 +346,7 @@ export default function ArchitecturalDesignPage() {
             "Custom architectural concepts",
           ].map((project) => (
             <div key={project} className="section-card p-5">
-              <p className="text-white font-medium">{project}</p>
+              <p className="text-slate-900 font-medium">{project}</p>
             </div>
           ))}
         </div>
@@ -370,7 +370,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Beautiful & Technical
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Beautiful designs. Strong technical planning. Easy communication. Quick delivery.
             </p>
           </div>
@@ -378,7 +378,7 @@ export default function ArchitecturalDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Fair Pricing & Committed Team
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Fair pricing. Friendly, human support. A team committed to your project. We make design feel exciting instead of overwhelming.
             </p>
           </div>

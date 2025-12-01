@@ -229,7 +229,7 @@ export default function ServicesPage() {
           </div>
           <a
             href="/contact"
-            className="rounded-full bg-slateBlue px-6 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-slateBlue/90"
+            className="rounded-full bg-slateBlue px-6 py-2.5 text-sm font-medium text-slate-900 shadow-soft hover:bg-slateBlue/90"
           >
             Plan your stack →
           </a>
@@ -253,7 +253,7 @@ export default function ServicesPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <MediaPlaceholder
+        <MediaPlaceholder className="mt-12"
           label="Services storyboard"
           caption="Each stream gets a dedicated canvas showing flowcharts, owners and delivery beats."
           badge="Process"

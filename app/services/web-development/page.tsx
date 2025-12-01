@@ -158,7 +158,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Clean & Modern
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Clean and modern development. Fast communication. Support for all project sizes. Scalable solutions that grow with your business.
             </p>
           </div>
@@ -166,7 +166,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Easy Collaboration & Clear Communication
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Easy collaboration and smooth updates. A team that explains everything in plain English. We make development feel like a calm walk instead of a stressful sprint.
             </p>
           </div>
@@ -185,7 +185,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Website Development
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Business websites. Service pages. Landing pages. eCommerce stores. Fast, clean, and responsive websites that help you convert visitors into customers.
             </p>
           </div>
@@ -193,7 +193,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Web App Development
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Custom dashboards. Customer portals. Booking systems. SaaS platforms. Tools made exactly for your business needs.
             </p>
           </div>
@@ -201,7 +201,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Mobile App Development
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               iOS and Android apps designed with smooth performance and beautiful interfaces.
             </p>
           </div>
@@ -209,7 +209,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Full Stack Development
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Front end. Back end. Databases. APIs. We create systems that work together without breaking or slowing down.
             </p>
           </div>
@@ -217,7 +217,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               WordPress Development
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Themes. Plugins. Custom pages. Secure setups. Websites you can update easily without any tech stress.
             </p>
           </div>
@@ -225,7 +225,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Shopify and eCommerce Development
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Online stores that are fast, modern, and built to sell. Clean product pages. Smart cart flows. Great user experience.
             </p>
           </div>
@@ -233,7 +233,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Custom Software Development
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We build tools and systems that streamline your workflow, automate tasks, and make your business run smoother.
             </p>
           </div>
@@ -241,7 +241,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               API Integration
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Payment gateways. CRMs. Third party tools. We connect everything so your systems communicate effortlessly.
             </p>
           </div>
@@ -249,12 +249,12 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Maintenance and Support
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Bug fixes. Updates. Performance improvements. Security checks. We keep your digital products running smoothly.
             </p>
           </div>
         </div>
-        <MediaPlaceholder
+        <MediaPlaceholder className="mt-12" className="mt-12"
           label="Development Portfolio"
           caption="See how we build modern, scalable digital solutions for businesses."
           badge="Projects"
@@ -311,8 +311,8 @@ export default function WebDevelopmentPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -338,7 +338,7 @@ export default function WebDevelopmentPage() {
             "Automation tools",
           ].map((project) => (
             <div key={project} className="section-card p-5">
-              <p className="text-white font-medium">{project}</p>
+              <p className="text-slate-900 font-medium">{project}</p>
             </div>
           ))}
         </div>
@@ -362,7 +362,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Fast & Reliable
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Fast and reliable development. Modern and scalable solutions. Clear updates. Smooth collaboration.
             </p>
           </div>
@@ -370,7 +370,7 @@ export default function WebDevelopmentPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Fair Pricing & Dedicated Team
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Fair pricing. A team dedicated to your success. We make development simple, enjoyable, and effective.
             </p>
           </div>

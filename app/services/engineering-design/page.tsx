@@ -127,7 +127,7 @@ export default function EngineeringDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Design Packages
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Complete design packages including drawings, schedules and
               calculations to support tendering and execution.
             </p>
@@ -136,7 +136,7 @@ export default function EngineeringDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Coordination & Reviews
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Coordinated layouts and clash checks across disciplines to reduce
               site changes and rework.
             </p>
@@ -145,14 +145,14 @@ export default function EngineeringDesignPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Compliance & Standards
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Designs aligned with relevant codes, client standards and local
             </p>
           </div>
         </div>
       </div>
 
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="Engineering Design"
         caption="Precision-engineered solutions for complex projects."
         badge="Engineering"
@@ -174,7 +174,7 @@ export default function EngineeringDesignPage() {
             "Review & handover",
           ].map((step, idx) => (
             <div key={step} className="section-card p-4">
-              <div className="w-7 h-7 flex items-center justify-center rounded-full bg-slateBlue text-white text-xs font-semibold">
+              <div className="w-7 h-7 flex items-center justify-center rounded-full bg-slateBlue text-slate-900 text-xs font-semibold">
                 {idx + 1}
               </div>
               <p className="mt-3 font-medium text-gray-100">{step}</p>
@@ -198,8 +198,8 @@ export default function EngineeringDesignPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>

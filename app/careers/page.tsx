@@ -165,7 +165,7 @@ export default function CareersPage() {
           </div>
         </div>
 
-        <div className="space-y-4">
+        <div className="section-card p-5space-y-6">
           <MediaPlaceholder
             label="Join Our Team"
             caption="Work with talented professionals on exciting projects worldwide."
@@ -175,7 +175,7 @@ export default function CareersPage() {
             imageSrc="/images/careers-hiring.jpg"
             imageAlt="Join our team - career opportunities"
           />
-          <div className="section-card p-5 space-y-3">
+          <div className="space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Interview flow section">
               <span className="sr-only">Interview flow section: </span>Interview flow
             </p>

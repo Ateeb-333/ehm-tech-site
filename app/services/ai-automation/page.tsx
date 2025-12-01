@@ -173,7 +173,7 @@ export default function AiAutomationPage() {
             </p>
           </div>
           <div className="space-y-4">
-            <MediaPlaceholder
+            <MediaPlaceholder className="mt-12"
               label="AI Solutions"
               caption="Smart automation that works for you."
               badge="Our Technology"
@@ -266,7 +266,7 @@ export default function AiAutomationPage() {
               </div>
             ))}
           </div>
-          <MediaPlaceholder
+          <MediaPlaceholder className="mt-12"
             label="AI Innovation"
             caption="Cutting-edge AI solutions that transform your business operations."
             badge="Technology"
@@ -338,7 +338,7 @@ export default function AiAutomationPage() {
         </div>
 
         {/* Why Clients Choose EHM */}
-        <div className="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 text-white">
+        <div className="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 text-slate-900">
           <h2 className="text-2xl font-semibold">
             Why Clients Choose EHM Technology Services
           </h2>

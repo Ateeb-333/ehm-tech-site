@@ -139,7 +139,7 @@ export default function CostEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Clear Communication
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Clear and simple communication, easy to read reports, and friendly support any time you need help.
             </p>
           </div>
@@ -147,7 +147,7 @@ export default function CostEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Fast & Reliable
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Fast turnaround, up to date market pricing, and zero fluff and zero confusion. We help you win more bids and avoid cost surprises.
             </p>
           </div>
@@ -166,7 +166,7 @@ export default function CostEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Material Takeoff Services
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We calculate every piece that goes into your build. Every brick. Every stud. Every panel. Every inch counted accurately. No missed quantities. No overspending.
             </p>
           </div>
@@ -174,7 +174,7 @@ export default function CostEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Labor Cost Estimating
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Labor costs can move around like a toddler on sugar. Our estimates keep them in line. We factor hours, skill levels, shifts, and labor productivity so your numbers stay grounded.
             </p>
           </div>
@@ -182,7 +182,7 @@ export default function CostEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Equipment Cost Estimating
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Cranes, lifts, saws, drills, rentals, fuel, maintenance. If it buzzes, rolls, lifts, or cuts, we include it.
             </p>
           </div>
@@ -190,7 +190,7 @@ export default function CostEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Residential Projects
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               From small home remodels to luxury builds. Kitchens, additions, basements, decks, roofing, flooring, framing, and every other residential project.
             </p>
           </div>
@@ -198,7 +198,7 @@ export default function CostEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Commercial Projects
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Offices, retail shops, hotels, clinics, educational facilities, restaurants, multi story buildings, warehouses, and more. We help you plan and bid confidently.
             </p>
           </div>
@@ -206,13 +206,13 @@ export default function CostEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Industrial & Civil Projects
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Factories, plants, oil and gas facilities, roads, bridges, pipelines, utilities, drainage, earthwork. Big projects with big stakes. We give you numbers you can trust.
             </p>
           </div>
         </div>
       </div>
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="Cost Estimation"
         caption="Precise budget planning for every project phase."
         badge="Finance"
@@ -255,8 +255,8 @@ export default function CostEstimationPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -274,7 +274,7 @@ export default function CostEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Professional Service
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Quick estimates, professional service, honest communication, and market driven pricing. A team that cares about your success.
             </p>
           </div>
@@ -282,7 +282,7 @@ export default function CostEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Working Made Simple
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Working with us is simple. No complications. No headaches. Our goal is to keep you moving. Smooth. Steady. Confident.
             </p>
           </div>

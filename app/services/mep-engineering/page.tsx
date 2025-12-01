@@ -156,7 +156,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Clean & Coordinated
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Clean and coordinated MEP drawings. Fast turnaround. Energy efficient solutions. Support for all project types.
             </p>
           </div>
@@ -164,7 +164,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Practical & Adaptable
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Practical designs that installers love. A team that listens and adapts to your needs. We make MEP engineering feel simple, even when the systems behind it are not.
             </p>
           </div>
@@ -183,7 +183,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Mechanical Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Heating. Cooling. Ventilation. Air quality. Duct layouts. Equipment sizing. Our mechanical designs keep your building comfortable in every season.
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Electrical Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Power distribution. Lighting layouts. Emergency systems. Panels. Circuits. Load calculations. Clean electrical designs that keep the lights on and everyone safe.
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Plumbing Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Water supply. Drainage. Gas lines. Pumps. Fixtures. Sanitary layouts. We make plumbing systems run smooth and reliable.
             </p>
           </div>
@@ -207,7 +207,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Fire Protection Planning
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Sprinkler layouts. Fire pump rooms. Safe routing. Detection systems. We help your building stay compliant and prepared.
             </p>
           </div>
@@ -215,7 +215,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               MEP Coordination
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We align all systems so nothing clashes. No ducts fighting pipes. No wires crossing beams. Smooth coordination for easy installation.
             </p>
           </div>
@@ -223,7 +223,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Energy Efficient Designs
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We help reduce long term utility costs with smart equipment choices and efficient layouts.
             </p>
           </div>
@@ -231,7 +231,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               HVAC System Design
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Fan systems. Air handlers. Package units. VAVs. VRV systems. Chillers. Anything your building needs for proper airflow.
             </p>
           </div>
@@ -239,7 +239,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Load Calculations and Sizing
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We use data and software to size equipment correctly so your systems run efficiently without breaking the budget.
             </p>
           </div>
@@ -247,7 +247,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               MEP Renovations and Retrofits
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Old buildings need updates. We modernize systems to improve comfort, safety, and performance.
             </p>
           </div>
@@ -257,7 +257,7 @@ export default function MEPEngineeringPage() {
         </p>
       </div>
 
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="MEP Engineering"
         caption="Modern systems designed for efficiency and longevity."
         badge="Engineering"
@@ -313,8 +313,8 @@ export default function MEPEngineeringPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -341,7 +341,7 @@ export default function MEPEngineeringPage() {
             "Renovation and retrofit projects",
           ].map((project) => (
             <div key={project} className="section-card p-5">
-              <p className="text-white font-medium">{project}</p>
+              <p className="text-slate-900 font-medium">{project}</p>
             </div>
           ))}
         </div>
@@ -365,7 +365,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Accurate & Efficient
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Accurate designs. Efficient layouts. Easy communication. Quick turnaround. Friendly team support.
             </p>
           </div>
@@ -373,7 +373,7 @@ export default function MEPEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Fair Pricing & Real Solutions
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Fair pricing. Real world solutions. We help you build safer, smarter, and more comfortable spaces.
             </p>
           </div>

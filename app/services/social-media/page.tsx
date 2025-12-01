@@ -121,7 +121,7 @@ export default function SocialMediaPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Strategy & Positioning
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We define content pillars, tone of voice and posting rhythm that
               fits your goals and industry.
             </p>
@@ -130,7 +130,7 @@ export default function SocialMediaPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Content & Creatives
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Post copy, simple graphics and repurposed content that stays
               on-brand and consistent.
             </p>
@@ -139,7 +139,7 @@ export default function SocialMediaPage() {
             <h3 className="text-lg font-semibold text-sunsetPeach">
               Reporting & Iteration
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Basic performance reporting so you know which content works and
               where to double down.
             </p>
@@ -147,7 +147,7 @@ export default function SocialMediaPage() {
         </div>
       </div>
 
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="Social Media Strategy"
         caption="Build a consistent presence across all your social platforms."
         badge="Social Marketing"
@@ -171,8 +171,8 @@ export default function SocialMediaPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>

@@ -156,7 +156,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Clear Communication
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Clear communication all the way through. A friendly team that guides and supports you. Smooth coordination between all parties.
             </p>
           </div>
@@ -164,7 +164,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Fast Problem Solving
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Fast problem solving. Upfront planning and clean execution. Support that feels personal and reliable.
             </p>
           </div>
@@ -172,7 +172,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Same Care As Our Own
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We run your project with the same care as if it were our own investment. No stress. No guesswork.
             </p>
           </div>
@@ -180,7 +180,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Stay In Control
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               You stay in control without drowning in the details. We handle the heavy lifting.
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Planning and Scheduling
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We set up the timeline, major milestones, daily tasks, and realistic deadlines so your team stays on track without confusion.
             </p>
           </div>
@@ -207,7 +207,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Cost and Budget Management
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We watch your budget closely and keep costs steady. No surprise expenses. No silent leaks.
             </p>
           </div>
@@ -215,7 +215,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Resource Coordination
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Labor. Materials. Equipment. Deliveries. We make sure everything arrives when it should and everyone knows what to do.
             </p>
           </div>
@@ -223,7 +223,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Quality Control
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We maintain high standards at every step so your work stays sharp and professional.
             </p>
           </div>
@@ -231,7 +231,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Risk Management
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We spot problems early and fix them before they grow teeth. A little prevention saves a lot of stress.
             </p>
           </div>
@@ -239,7 +239,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Communication Management
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We keep everyone updated. Clients. Contractors. Crews. Designers. No one gets left out of the loop.
             </p>
           </div>
@@ -247,7 +247,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               On Site Oversight
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We monitor progress, handle issues, and keep things moving without delays.
             </p>
           </div>
@@ -255,7 +255,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Documentation and Reporting
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Clean reports. Organized files. Everything documented so nothing gets lost or forgotten.
             </p>
           </div>
@@ -263,7 +263,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Change Management
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Changes happen. We handle them smoothly so your project stays flexible and stable at the same time.
             </p>
           </div>
@@ -271,7 +271,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Project Closeout
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We wrap up every detail professionally, leaving you with a clean finish and a satisfied client.
             </p>
           </div>
@@ -322,8 +322,8 @@ export default function ProjectManagementPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -348,7 +348,7 @@ export default function ProjectManagementPage() {
             "Multi phase developments",
           ].map((project) => (
             <div key={project} className="section-card p-5">
-              <p className="text-white font-medium">{project}</p>
+              <p className="text-slate-900 font-medium">{project}</p>
             </div>
           ))}
         </div>
@@ -372,7 +372,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Less Stress, Better Results
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Less stress. Fewer delays. Better communication. Clear planning. Accurate budgeting.
             </p>
           </div>
@@ -380,7 +380,7 @@ export default function ProjectManagementPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Strong Teamwork
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Strong teamwork. A partner who truly cares. We take pride in making your project feel easier, safer, and more organized.
             </p>
           </div>

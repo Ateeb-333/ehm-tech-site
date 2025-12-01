@@ -154,7 +154,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Friendly Guidance
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Friendly guidance at every step. We do not make things complicated. We keep it human and simple. You talk. We listen. We deliver.
             </p>
           </div>
@@ -162,7 +162,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Fast & Accurate
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Fast delivery that beats your deadlines. Market accurate measurements. Clear, organized takeoff sheets.
             </p>
           </div>
@@ -170,7 +170,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Complete Coverage
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Support for every construction category. A team that treats your project like gold.
             </p>
           </div>
@@ -178,7 +178,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Simple Process
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               You stay focused on winning work. We handle the numbers. A process that feels simple and smooth.
             </p>
           </div>
@@ -197,7 +197,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Material Quantity Takeoffs
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Every brick. Every pipe. Every cable. Every tile. Every panel. Every little piece that makes your project possible. Counted with precision.
             </p>
           </div>
@@ -205,7 +205,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Labor Quantity Inputs
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We break down the quantities that help you build realistic labor assumptions. Clear scopes. Clear hours. Clear expectations.
             </p>
           </div>
@@ -213,7 +213,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Equipment Related Quantities
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Concrete volumes. Excavation quantities. Structural steel lengths. Anything that determines equipment usage and planning.
             </p>
           </div>
@@ -221,7 +221,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Residential Quantity Takeoffs
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               New builds. Remodels. Additions. Custom homes. Multi family. Single family. We handle every style and every scale.
             </p>
           </div>
@@ -229,7 +229,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Commercial Quantity Takeoffs
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Retail units. Office buildings. Hospitality projects. Medical facilities. Warehouses. Schools. Anything your crew can build, we can measure.
             </p>
           </div>
@@ -237,7 +237,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Industrial Quantity Takeoffs
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Plants. Factories. Refineries. Processing facilities. High complexity projects with tight accuracy needs.
             </p>
           </div>
@@ -245,7 +245,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Civil Quantity Takeoffs
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Earthwork. Utilities. Roads. Bridges. Drainage. Pavements. Concrete structures. Heavy civil projects welcome.
             </p>
           </div>
@@ -253,7 +253,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Renovation and Retrofit Takeoffs
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Old buildings hide surprises. Our takeoffs reveal the full picture so you avoid shock costs later.
             </p>
           </div>
@@ -261,7 +261,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Blueprint Measurement and Plan Reading
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Send us your drawings and we take care of the rest. No tricky software. No guessing. Just clean measurements.
             </p>
           </div>
@@ -271,7 +271,7 @@ export default function QuantityTakeoffPage() {
         </p>
       </div>
 
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="Quantity Takeoff"
         caption="Detailed material counts for accurate project planning."
         badge="Estimation"
@@ -323,8 +323,8 @@ export default function QuantityTakeoffPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -349,7 +349,7 @@ export default function QuantityTakeoffPage() {
             "Renovations and expansions",
           ].map((project) => (
             <div key={project} className="section-card p-5">
-              <p className="text-white font-medium">{project}</p>
+              <p className="text-slate-900 font-medium">{project}</p>
             </div>
           ))}
         </div>
@@ -373,7 +373,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Accurate & Fast
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Accurate counts. Fast reports. Fair pricing. Clean formatting. Zero headaches.
             </p>
           </div>
@@ -381,7 +381,7 @@ export default function QuantityTakeoffPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Friendly Support
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Friendly support. Easy communication. We treat quantity takeoff as the backbone of your project. Because it is.
             </p>
           </div>

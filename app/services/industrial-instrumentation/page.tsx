@@ -157,7 +157,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Reliable & Clear
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Reliable industrial engineering. Clear communication with no confusing technical talk. Fast response and easy collaboration.
             </p>
           </div>
@@ -165,7 +165,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Practical & Committed
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Practical solutions built for real life conditions. Designs that keep your plant running safely and efficiently. A team that cares about your success.
             </p>
           </div>
@@ -184,7 +184,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Industrial Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We design safe and efficient systems that help your facility operate smoothly. Mechanical layouts. Equipment placement. Process flow. Reliable engineering for every step.
             </p>
           </div>
@@ -192,7 +192,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Instrumentation Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We handle sensors, transmitters, meters, controllers, and every device that gathers data or controls your equipment.
             </p>
           </div>
@@ -200,7 +200,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Control Systems Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We design systems that manage processes automatically. PLC programming. SCADA integration. Automated sequences. Smooth and stable control.
             </p>
           </div>
@@ -208,7 +208,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Process Optimization
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We help your facility run cleaner, faster, and more efficiently. Streamlined workflows. Reduced waste. Better performance.
             </p>
           </div>
@@ -216,7 +216,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Industrial Safety Systems
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Fire suppression integration. Emergency shutdown systems. Pressure monitoring. Alarms. Safe shutdown sequences.
             </p>
           </div>
@@ -224,7 +224,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Electrical and Power Systems
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We design industrial electrical layouts that support heavy equipment, high loads, and continuous operation.
             </p>
           </div>
@@ -232,7 +232,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Equipment Integration
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We make sure your machinery communicates properly with your controls and instrumentation.
             </p>
           </div>
@@ -240,7 +240,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Calibration and Testing
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We ensure every device reads accurately so your process stays reliable and safe.
             </p>
           </div>
@@ -248,7 +248,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Upgrades and Retrofits
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Older facilities need modernization. We redesign outdated systems so they keep up with today's demands.
             </p>
           </div>
@@ -256,7 +256,7 @@ export default function IndustrialInstrumentationPage() {
         <p className="mt-6 text-slate-600">
           EHM Technology Services covers all industrial fields and systems under one roof.
         </p>
-        <MediaPlaceholder
+        <MediaPlaceholder className="mt-12"
           label="Industrial Instrumentation"
           caption="Precision control for complex industrial systems."
           badge="Industrial"
@@ -309,8 +309,8 @@ export default function IndustrialInstrumentationPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -335,7 +335,7 @@ export default function IndustrialInstrumentationPage() {
             "Production line enhancements",
           ].map((project) => (
             <div key={project} className="section-card p-5">
-              <p className="text-white font-medium">{project}</p>
+              <p className="text-slate-900 font-medium">{project}</p>
             </div>
           ))}
         </div>
@@ -359,7 +359,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Precise & Clear
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Precise engineering. Clear documentation. Friendly support. Safe designs.
             </p>
           </div>
@@ -367,7 +367,7 @@ export default function IndustrialInstrumentationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Fair Pricing & Commitment
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Fair pricing. Quick turnaround. Strong commitment to your success. We help your facility run safer, smarter, and smoother.
             </p>
           </div>

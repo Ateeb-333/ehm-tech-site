@@ -156,7 +156,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Reliable Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Reliable engineering from experienced professionals. Clear explanations without confusing jargon. Fast turnaround that matches your schedule.
             </p>
           </div>
@@ -164,14 +164,14 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Complete Support
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Support at every stage of your build. A team that treats your project as if it were our own. We make engineering feel simple and stress free.
             </p>
           </div>
         </div>
       </div>
 
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="Civil & Structural Engineering"
         caption="Solid engineering foundations for safe, stable structures."
         badge="Engineering"
@@ -192,7 +192,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Structural Design
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Beams. Columns. Slabs. Foundations. Load analysis. Reinforcements. We design structures that stand strong and meet all safety standards.
             </p>
           </div>
@@ -200,7 +200,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Civil Site Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Site grading. Drainage planning. Utility layouts. Roadway design. Stormwater management. We prepare your site so construction goes smoothly.
             </p>
           </div>
@@ -208,7 +208,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Foundation Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We design foundations that protect your structure from settlement, shifting soil, water pressure, and other ground level challenges.
             </p>
           </div>
@@ -216,7 +216,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Structural Analysis
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We run calculations and simulations to confirm your structure can handle loads, weather, movement, and everything the real world throws at it.
             </p>
           </div>
@@ -224,7 +224,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Retaining Wall and Support Systems
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We design retaining walls, shoring, and reinforcement systems that keep your site secure and your slopes stable.
             </p>
           </div>
@@ -232,7 +232,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Steel and Concrete Design
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Whether your project is steel framed or concrete heavy, our designs keep everything balanced, safe, and efficient.
             </p>
           </div>
@@ -240,7 +240,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Seismic and Wind Calculations
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We prepare your structure to handle wind loads, storms, and seismic activity based on local requirements.
             </p>
           </div>
@@ -248,13 +248,13 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Construction Support Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We provide on site guidance, review changes, and ensure your structure stays compliant as construction progresses.
             </p>
           </div>
         </div>
       </div>
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="Structural Engineering"
         caption="Ensuring safety and stability for every structure."
         badge="Engineering"
@@ -270,7 +270,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Residential Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               New homes. Remodels. Additions. Decks. Multi family units. Safe and reliable designs for all residential construction.
             </p>
           </div>
@@ -278,7 +278,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Commercial Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Retail buildings. Offices. Warehouses. Restaurants. Schools. Medical spaces. We support all commercial project types.
             </p>
           </div>
@@ -286,7 +286,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Industrial Engineering
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Plants. Factories. Heavy equipment areas. High load facilities. We design for strength, safety, and precision.
             </p>
           </div>
@@ -343,8 +343,8 @@ export default function CivilStructuralEngineeringPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -370,7 +370,7 @@ export default function CivilStructuralEngineeringPage() {
             "Multi phase developments",
           ].map((project) => (
             <div key={project} className="section-card p-5">
-              <p className="text-white font-medium">{project}</p>
+              <p className="text-slate-900 font-medium">{project}</p>
             </div>
           ))}
         </div>
@@ -394,7 +394,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Reliable & Clear
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Reliable structural design. Smooth communication. Quick delivery. Friendly guidance. Clear documents.
             </p>
           </div>
@@ -402,7 +402,7 @@ export default function CivilStructuralEngineeringPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Fair Pricing & Care
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Fair pricing. A team that truly cares about results. We help you build with confidence and peace of mind.
             </p>
           </div>

@@ -159,7 +159,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Quick Turnaround
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Quick turnaround. Clear and organized bid estimates. Updated market pricing. Support for all construction scopes.
             </p>
           </div>
@@ -167,7 +167,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Team That Listens
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               A team that listens and guides you. Zero confusion and zero surprises. Clients feel like they have their own in house estimator.
             </p>
           </div>
@@ -175,7 +175,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               No Heavy Payroll
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               No heavy payroll. No stress. Just results. Your bid arrives strong, organized, and ready to win.
             </p>
           </div>
@@ -183,7 +183,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Simple Process
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We designed a process that keeps you moving fast. With EHM Technology Services, bidding becomes easy.
             </p>
           </div>
@@ -202,7 +202,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Complete Bid Estimates
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We break down materials, labor, equipment, overhead, profit, and every other cost that shapes your bid.
             </p>
           </div>
@@ -210,7 +210,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Scope Review and Clarification
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We study your drawings and spot missing items, unclear notes, risky areas, and potential gaps that could hurt your bid.
             </p>
           </div>
@@ -218,7 +218,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Material Pricing
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We pull accurate prices using current market data and vendor inputs so your number feels real and reliable.
             </p>
           </div>
@@ -226,7 +226,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Labor Costing
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We calculate hours, crew size, productivity, and workload to give you labor rates that keep your bid competitive and safe.
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Equipment Estimating
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Rental costs, operating hours, fuel, transportation, and all equipment needs included.
             </p>
           </div>
@@ -242,14 +242,14 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Value Engineering Suggestions
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               We help you find ways to price smarter without lowering quality.
             </p>
           </div>
         </div>
       </div>
 
-      <MediaPlaceholder
+      <MediaPlaceholder className="mt-12"
         label="Bid Estimation"
         caption="Competitive and accurate estimates for winning bids."
         badge="Estimation"
@@ -279,7 +279,7 @@ export default function BidEstimationPage() {
             "Mechanical",
           ].map((trade) => (
             <div key={trade} className="section-card p-5">
-              <p className="text-white font-medium">{trade}</p>
+              <p className="text-slate-900 font-medium">{trade}</p>
             </div>
           ))}
         </div>
@@ -297,7 +297,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Residential Bid Estimates
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Additions. New builds. Remodels. Multi family. Custom homes. Everything homeowners and builders need.
             </p>
           </div>
@@ -305,7 +305,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Commercial Bid Estimates
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Offices. Retail. Hospitality. Schools. Medical facilities. Restaurants. Malls. Warehouses. All covered.
             </p>
           </div>
@@ -313,7 +313,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Industrial Bid Estimates
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Factories. Processing units. Plants. Oil and gas. High complexity projects with tight deadlines.
             </p>
           </div>
@@ -321,7 +321,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Civil Bid Estimates
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Earthwork. Utilities. Roads. Bridges. Concrete. Sitework. You name it.
             </p>
           </div>
@@ -378,8 +378,8 @@ export default function BidEstimationPage() {
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="mt-2 text-sm text-gray-300">{item.desc}</p>
+              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
+              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -404,7 +404,7 @@ export default function BidEstimationPage() {
             "Mixed use developments",
           ].map((project) => (
             <div key={project} className="section-card p-5">
-              <p className="text-white font-medium">{project}</p>
+              <p className="text-slate-900 font-medium">{project}</p>
             </div>
           ))}
         </div>
@@ -428,7 +428,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Accurate & Fast
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               Accurate bid numbers. Fast delivery. Easy communication. Friendly support. Competitive pricing.
             </p>
           </div>
@@ -436,7 +436,7 @@ export default function BidEstimationPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Committed to Your Success
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
+            <p className="mt-2 text-sm text-slate-600">
               A team committed to your success. We treat every bid like it is our own. Because your win is our win too.
             </p>
           </div>

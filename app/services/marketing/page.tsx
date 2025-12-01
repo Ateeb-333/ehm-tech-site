@@ -170,7 +170,7 @@ export default function MarketingPage() {
             </p>
           </div>
           <div className="space-y-4">
-            <MediaPlaceholder
+            <MediaPlaceholder className="mt-12"
               label="Marketing Strategy"
               caption="Creative campaigns that drive results."
               badge="Our Approach"
@@ -326,7 +326,7 @@ export default function MarketingPage() {
         </div>
 
         {/* Why Clients Choose EHM */}
-        <div className="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 text-white">
+        <div className="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 text-slate-900">
           <h2 className="text-2xl font-semibold">
             Why Clients Choose EHM Technology Services
           </h2>
