@@ -113,18 +113,16 @@ export default function HomePage() {
                 {/* Right visual */}
                 <div className="space-y-4">
                     <MediaPlaceholder
-                        label="Integrated Solutions"
-                        caption="Engineering, Estimation, and IT workflows in one place."
-                        badge="EHM Tech"
-                        aspect="wide"
-                        accent="violet"
-                        imageSrc="/images/team-collaboration.png"
-                        imageAlt="Professional team collaborating in modern workspace"
+                        label="Integrated Workflow"
+                        caption="Seamlessly connecting engineering precision with digital efficiency."
+                        badge="Our Process"
+                        accent="cyan"
+                        aspect="square"
+                        imageSrc="/images/hero-workflow.png"
+                        imageAlt="Engineering and digital workflow visualization"
                     />
                 </div>
             </motion.section>
-
-            {/* About Section */}
             <motion.section
                 className="mt-16 rounded-2xl border border-slate-200 bg-white p-6 md:p-8"
                 initial="hidden"

@@ -22,7 +22,7 @@ export const Footer = () => {
 
             <div className="leading-tight">
               <p className="text-slate-900 font-semibold text-sm">
-                EHM Tech Services
+                EHM Technology Services
               </p>
               <p className="text-slate-500 text-[11px]">
                 Engineering • Estimation • AI & Digital
@@ -81,7 +81,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-10 text-center text-[11px] text-slate-500">
-          © {new Date().getFullYear()} EHM Tech Services — All rights reserved.
+          © {new Date().getFullYear()} EHM Technology Services — All rights reserved.
         </div>
       </div>
     </footer>

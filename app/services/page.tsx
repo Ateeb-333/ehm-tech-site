@@ -259,7 +259,7 @@ export default function ServicesPage() {
           badge="Process"
           accent="violet"
           aspect="wide"
-          imageSrc="/images/ops-canvas.svg"
+          imageSrc="/images/ops-canvas.png"
           imageAlt="Services storyboard canvas"
         />
         <div className="section-card p-6">

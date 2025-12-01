@@ -272,7 +272,7 @@ export default function DesigningPage() {
             badge="Our Work"
             aspect="wide"
             accent="violet"
-            imageSrc="/images/hero-workflow.svg"
+            imageSrc="/images/hero-workflow.png"
             imageAlt="Design portfolio showcase"
           />
           <p className="mt-6 text-center text-slate-600 italic">

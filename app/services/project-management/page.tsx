@@ -139,7 +139,15 @@ export default function ProjectManagementPage() {
         <p className="mt-4 text-slate-600">
           Good management turns chaos into calm. That is exactly what we do.
         </p>
-      </div >
+      </div>
+
+      <MediaPlaceholder className="mt-12"
+        label="Project Oversight"
+        caption="Professional management ensuring your project stays on track and on budget."
+        badge="Management"
+        imageSrc="/images/project-management.png"
+        imageAlt="Construction project manager reviewing plans on site"
+      />
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

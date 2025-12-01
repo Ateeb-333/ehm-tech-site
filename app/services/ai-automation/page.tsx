@@ -272,7 +272,7 @@ export default function AiAutomationPage() {
             badge="Technology"
             aspect="wide"
             accent="cyan"
-            imageSrc="/images/automation-lab.svg"
+            imageSrc="/images/automation-lab.png"
             imageAlt="AI services showcase"
           />
           <p className="mt-6 text-center text-slate-600 italic">
