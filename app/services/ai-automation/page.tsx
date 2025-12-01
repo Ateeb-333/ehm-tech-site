@@ -338,7 +338,7 @@ export default function AiAutomationPage() {
         </div>
 
         {/* Why Clients Choose EHM */}
-        <div className="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 text-slate-900">
+        <div className="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 text-white">
           <h2 className="text-2xl font-semibold">
             Why Clients Choose EHM Technology Services
           </h2>

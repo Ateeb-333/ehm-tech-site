@@ -254,7 +254,7 @@ export default function WebDevelopmentPage() {
             </p>
           </div>
         </div>
-        <MediaPlaceholder className="mt-12" className="mt-12"
+        <MediaPlaceholder className="mt-12"
           label="Development Portfolio"
           caption="See how we build modern, scalable digital solutions for businesses."
           badge="Projects"
