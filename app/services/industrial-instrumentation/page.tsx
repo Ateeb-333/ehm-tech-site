@@ -16,6 +16,15 @@ export default function IndustrialInstrumentationPage() {
       accent="engineering"
       intro="Industrial projects run on precision. One small error can slow production, damage equipment, or turn a smooth day into a headache no one asked for. That is where EHM Technology Services comes in with Industrial and Instrumentation Engineering Services that keep your systems sharp, stable, and ready for real-world performance. Think of us as the people who make sure the machines actually behave. Your plant runs safely. Your controls respond correctly. Your systems communicate without drama. When everything works together, your entire operation feels effortless. Whether your project is a new build, an upgrade, or a full-scale industrial facility, our engineering team keeps your processes running like a fine-tuned machine."
       primaryCta={{ label: "Discuss industrial design", href: "/contact" }}
+      heroMedia={
+        <MediaPlaceholder
+          label="Industrial & Instrumentation Engineering"
+          caption="Precision engineering for industrial facilities"
+          badge="Industrial"
+          imageSrc="/images/industrial-instrumentation-hero.jpg"
+          imageAlt="Industrial facility with processing towers at sunset"
+        />
+      }
       sideHeading="What we cover"
       sideItems={[
         "Industrial engineering",
@@ -261,8 +270,8 @@ export default function IndustrialInstrumentationPage() {
           caption="Precision control for complex industrial systems."
           badge="Industrial"
           accent="cyan"
-          imageSrc="/images/industrial-inspection.jpg"
-          imageAlt="Industrial equipment inspection"
+          imageSrc="/images/industrial-instrumentation-preview.jpg"
+          imageAlt="Industrial processing facility at night with illuminated equipment"
         />
       </div>
 

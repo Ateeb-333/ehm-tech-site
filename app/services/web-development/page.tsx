@@ -119,6 +119,16 @@ export default function WebDevelopmentPage() {
           items: ["Bug fixes", "Updates", "Performance improvements"],
         },
       ]}
+      heroMedia={
+        <MediaPlaceholder
+          label="Development Services"
+          caption="Modern, scalable digital solutions built for growth."
+          badge="Digital"
+          accent="cyan"
+          imageSrc="/images/web-development-hero.png"
+          imageAlt="Web development workspace with code and digital interfaces"
+        />
+      }
     >
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

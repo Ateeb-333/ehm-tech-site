@@ -113,45 +113,66 @@ export default function AiAutomationPage() {
           items: ["Backlog delivery", "Monitoring & analytics", "Continuous improvements"],
         },
       ]}
+      heroMedia={
+        <MediaPlaceholder
+          label="AI Automation"
+          caption="Intelligent systems that work for you 24/7."
+          badge="Digital"
+          accent="cyan"
+          imageSrc="/images/ai-automation-hero.png"
+          imageAlt="Futuristic AI automation concept"
+        />
+      }
     >
       <div className="space-y-12">
         {/* Why AI Services Matter */}
-        <div className="section-card p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-            BENEFITS
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-            Why AI Services Matter
-          </h2>
-          <p className="mt-4 text-slate-600 leading-relaxed">
-            AI is not magic. It is simply a powerful tool that helps your business
-            work better. When used correctly, it boosts productivity and opens the
-            door to possibilities you did not even know you had.
-          </p>
-          <div className="mt-6">
-            <h3 className="text-lg font-semibold bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent">
-              AI helps you:
-            </h3>
-            <ul className="mt-4 grid gap-3 md:grid-cols-2">
-              {[
-                "Save time on repetitive tasks",
-                "Reduce human errors",
-                "Automate workflows",
-                "Improve customer experience",
-                "Make faster and smarter decisions",
-                "Increase revenue and performance",
-                "Stay ahead of competitors",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-slate-600">
-                  <span className="text-sunsetPeach mt-1">✓</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+          <div className="section-card p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
+              BENEFITS
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold text-slate-900">
+              Why AI Services Matter
+            </h2>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              AI is not magic. It is simply a powerful tool that helps your business
+              work better. When used correctly, it boosts productivity and opens the
+              door to possibilities you did not even know you had.
+            </p>
+            <div className="mt-6">
+              <h3 className="text-lg font-semibold bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent">
+                AI helps you:
+              </h3>
+              <ul className="mt-4 grid gap-3">
+                {[
+                  "Save time on repetitive tasks",
+                  "Reduce human errors",
+                  "Automate workflows",
+                  "Improve customer experience",
+                  "Make faster and smarter decisions",
+                  "Increase revenue and performance",
+                  "Stay ahead of competitors",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-slate-600">
+                    <span className="text-sunsetPeach mt-1">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <p className="mt-6 font-medium text-slate-900">
+              When AI works for you, everything in your business becomes easier.
+            </p>
           </div>
-          <p className="mt-6 font-medium text-slate-900">
-            When AI works for you, everything in your business becomes easier.
-          </p>
+          <MediaPlaceholder
+            label="Future Ready"
+            caption="Accelerate your business with intelligent automation."
+            badge="Productivity"
+            accent="violet"
+            imageSrc="/images/ai-automation-3.jpg"
+            imageAlt="AI productivity and workflow visualization"
+            className="h-full min-h-[300px]"
+          />
         </div>
 
         {/* Why EHM Technology Services Is The Right AI Partner */}
@@ -179,7 +200,7 @@ export default function AiAutomationPage() {
               badge="Our Technology"
               aspect="wide"
               accent="cyan"
-              imageSrc="/images/ai-brain-circuit.jpg"
+              imageSrc="/images/ai-automation-1.jpg"
               imageAlt="AI brain circuit visualization"
             />
             <div className="section-card p-6 bg-slate-50/50">
@@ -272,7 +293,7 @@ export default function AiAutomationPage() {
             badge="Technology"
             aspect="wide"
             accent="cyan"
-            imageSrc="/images/automation-lab.png"
+            imageSrc="/images/ai-automation-2.jpg"
             imageAlt="AI services showcase"
           />
           <p className="mt-6 text-center text-slate-600 italic">

@@ -117,6 +117,16 @@ export default function DesigningPage() {
           items: ["Ongoing design updates", "New feature designs", "Design QA"],
         },
       ]}
+      heroMedia={
+        <MediaPlaceholder
+          label="Designing Services"
+          caption="Creative design solutions for digital experiences."
+          badge="Digital"
+          accent="peach"
+          imageSrc="/images/designing-hero.png"
+          imageAlt="Creative design workspace with UI/UX interface"
+        />
+      }
     >
       <div className="space-y-12">
         {/* Why Good Design Matters */}

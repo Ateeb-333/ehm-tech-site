@@ -116,6 +116,17 @@ export default function MEPEngineeringPage() {
           items: ["Installation reviews", "Contractor questions", "Design adjustments"],
         },
       ]}
+      heroMedia={
+        <MediaPlaceholder
+          label="MEP Engineering"
+          caption="Complete mechanical, electrical, and plumbing engineering services."
+          badge="MEP"
+          accent="cyan"
+          imageSrc="/images/mep-engineering.jpg"
+          imageAlt="MEP engineering systems and technical plans"
+          className="h-full min-h-[300px]"
+        />
+      }
     >
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

@@ -119,17 +119,17 @@ export const Navbar = () => {
       {/* Glow behind navbar */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-transparent" />
 
-      <nav className="max-w-6xl mx-auto px-4 mt-3">
+      <nav className="max-w-6xl mx-auto px-4 mt-5">
         <div className="relative flex items-center justify-between px-4 py-3 rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-xl shadow-[0_18px_35px_rgba(15,23,42,0.08)]">
           {/* Logo + Brand */}
           <Link href="/" className="flex items-center gap-2 z-10">
-            <div className="relative h-16 w-16 flex items-center justify-center">
+            <div className="relative h-20 w-20 flex items-center justify-center">
               <Image
-                src="/images/ehm-logo-3d.png"
+                src="/images/ehm-logo.png"
                 alt="EHM Tech logo"
                 fill
                 className="object-contain"
-                sizes="100px"
+                sizes="500px"
                 priority
               />
             </div>
@@ -137,10 +137,11 @@ export const Navbar = () => {
             <div className="leading-tight">
               <div className="flex items-baseline gap-1">
                 <span
-                  className="text-[20px] md:text-[22px] font-extrabold tracking-tight
-                             block bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent"
+                  className="text-[20px] md:text-[24px] font-extrabold tracking-tight
+       block bg-gradient-to-r from-[#0468C8] via-sunsetPeach to-slateBlue 
+       bg-clip-text text-transparent"
                 >
-                  Technology Services
+                  Services
                 </span>
               </div>
             </div>

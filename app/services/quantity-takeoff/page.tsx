@@ -116,6 +116,16 @@ export default function QuantityTakeoffPage() {
           items: ["Revision updates", "Change order takeoffs", "Quick turnaround"],
         },
       ]}
+      heroMedia={
+        <MediaPlaceholder
+          label="Quantity Takeoff"
+          caption="Precision measurements for every construction detail."
+          badge="Construction"
+          accent="cyan"
+          imageSrc="/images/quantity-takeoff-hero.png"
+          imageAlt="Digital quantity takeoff workspace"
+        />
+      }
     >
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

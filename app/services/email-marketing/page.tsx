@@ -111,6 +111,17 @@ export default function EmailMarketingPage() {
           items: ["A/B roadmap", "Revenue tracking", "Quarterly insights"],
         },
       ]}
+      heroMedia={
+        <MediaPlaceholder
+          label="Email Marketing"
+          caption="Simple, effective newsletters and nurture sequences."
+          badge="Email Strategy"
+          accent="peach"
+          imageSrc="/images/email-marketing.png"
+          imageAlt="Email marketing dashboard with campaign analytics"
+          className="h-full min-h-[300px]"
+        />
+      }
     >
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">
@@ -146,16 +157,6 @@ export default function EmailMarketingPage() {
           </div>
         </div>
       </div>
-
-      <MediaPlaceholder className="mt-12"
-        label="Email Campaigns"
-        caption="Effective email marketing that keeps your audience engaged."
-        badge="Email Strategy"
-        aspect="wide"
-        accent="peach"
-        imageSrc="/images/email-marketing.png"
-        imageAlt="Email marketing dashboard with campaign analytics"
-      />
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

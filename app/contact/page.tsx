@@ -154,18 +154,18 @@ export default function ContactPage() {
         {[
           {
             title: "Email",
-            value: "hello@ehmtechservices.com",
+            value: "info@ehmtechservices.com",
             caption: "Best for briefs & sharing files",
           },
           {
-            title: "Response time",
-            value: "< 1 business day",
-            caption: "Urgent work? Mention it in the subject line",
+            title: "Phone",
+            value: "+92 322 628 3848",
+            caption: "Available during business hours",
           },
           {
-            title: "Timezone coverage",
-            value: "GMT+4 ↔ GMT+8",
-            caption: "We overlap with EU + APAC teams daily",
+            title: "Address",
+            value: "Faisalabad, Pakistan",
+            caption: "Office#205, 2nd floor, Regency Plaza Opposite DHQ Hospital",
           },
         ].map((item) => (
           <div key={item.title} className="section-card p-5">
@@ -232,17 +232,11 @@ export default function ContactPage() {
         <div className="grid md:grid-cols-2 gap-5 text-sm text-meta">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-              DIRECT CONTACTS
+              EMAIL US FOR QUERIES
             </p>
-            <ul className="mt-3 space-y-2">
+            <ul className="mt-3 space-y-3">
               <li>
-                <span className="text-slate-900 font-medium">Projects:</span> eman@ehmtechservices.com
-              </li>
-              <li>
-                <span className="text-slate-900 font-medium">Automation:</span> hassan@ehmtechservices.com
-              </li>
-              <li>
-                <span className="text-slate-900 font-medium">Web & Growth:</span> mira@ehmtechservices.com
+                <span className="text-slate-900 font-medium">Email:</span> info@ehmtechservices.com
               </li>
             </ul>
           </div>

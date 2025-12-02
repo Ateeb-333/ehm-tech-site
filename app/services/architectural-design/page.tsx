@@ -16,6 +16,15 @@ export default function ArchitecturalDesignPage() {
       accent="engineering"
       intro="Every beautiful building starts as an idea. But turning that idea into something real takes the right mix of creativity, planning, and engineering. At EHM Technology Services, our Architectural and Design Engineering Services help you shape your vision into a clear plan that builders can follow with confidence. Great design is more than good looks. It is how a space feels, how it works, and how well it supports the people who use it. When design and engineering work together, everything falls into place. That is exactly what we deliver. Whether your project is brand new or a renovation with big dreams, we guide you through every step with clarity and care."
       primaryCta={{ label: "Start design project", href: "/contact" }}
+      heroMedia={
+        <MediaPlaceholder
+          label="Architectural & Design Engineering"
+          caption="Digital workflow and documentation automation"
+          badge="Architecture"
+          imageSrc="/images/architectural-design-preview.jpg"
+          imageAlt="Digital document workflow automation"
+        />
+      }
       sideHeading="What we cover"
       sideItems={[
         "Conceptual design",
@@ -175,7 +184,7 @@ export default function ArchitecturalDesignPage() {
         caption="Creative designs that combine beauty with practical engineering."
         badge="Architecture"
         accent="cyan"
-        imageSrc="/images/architectural-design.png"
+        imageSrc="/images/architectural-design-hero.png"
         imageAlt="Architectural blueprints and technical drawings"
       />
 
@@ -268,6 +277,8 @@ export default function ArchitecturalDesignPage() {
           caption="Visualizing spaces before they are built."
           badge="Design"
           accent="violet"
+          imageSrc="/images/architectural-design-preview.jpg"
+          imageAlt="Digital document workflow automation"
         />
       </div>
 

@@ -16,6 +16,15 @@ export default function DraftingServicesPage() {
       accent="engineering"
       intro="Every great build starts with a great drawing. A clean set of plans keeps your project steady, your team aligned, and your vision crystal clear. At EHM Technology Services, our Drafting Services give you professional, accurate, and easy-to-understand drawings that help you plan, design, and build without confusion. Good drafting is more than lines on paper. It is the language your project speaks. When the drawings are clear, the project feels easy. When they are not, things get messy fast. We save you from the messy part. No matter the project size or type, EHM Technology Services delivers drafting solutions that make your work smoother from day one."
       primaryCta={{ label: "Start a drafting project", href: "/contact" }}
+      heroMedia={
+        <MediaPlaceholder
+          label="Drafting Services"
+          caption="Professional architectural blueprints and planning"
+          badge="Blueprint"
+          imageSrc="/images/drafting-blueprint-preview.jpg"
+          imageAlt="Architectural blueprint floor plan with wooden models"
+        />
+      }
       sideHeading="What we cover"
       sideItems={[
         "Architectural drafting",
@@ -249,8 +258,8 @@ export default function DraftingServicesPage() {
         label="Drafting Services"
         caption="Clear, accurate drawings for seamless construction."
         badge="Drafting"
-        imageSrc="/images/drafting-tablet.jpg"
-        imageAlt="Digital drafting on tablet"
+        imageSrc="/images/drafting-services-hero.png"
+        imageAlt="Architectural drafting workspace with blueprints and tablet"
       />
 
       <div>

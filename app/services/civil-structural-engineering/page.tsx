@@ -16,6 +16,15 @@ export default function CivilStructuralEngineeringPage() {
       accent="engineering"
       intro="Every strong building begins with a strong design. And every strong design begins with solid civil and structural engineering. At EHM Technology Services, we provide engineering solutions that keep your project safe, stable, and built to last. Think of us as the quiet superheroes behind your project. You do not see us swinging from cranes or lifting steel, but you feel our work in every beam, every footing, and every structure that stands firm for decades. No matter what you are building, our engineering team supports you with smart planning, precise calculations, and designs that stand tall."
       primaryCta={{ label: "Discuss your project", href: "/contact" }}
+      heroMedia={
+        <MediaPlaceholder
+          label="Civil & Structural Engineering"
+          caption="3D structural blueprints and engineering plans"
+          badge="Engineering"
+          imageSrc="/images/civil-structural-preview.jpg"
+          imageAlt="3D isometric structural engineering blueprint"
+        />
+      }
       sideHeading="What we cover"
       sideItems={[
         "Structural design",
@@ -176,7 +185,7 @@ export default function CivilStructuralEngineeringPage() {
         caption="Solid engineering foundations for safe, stable structures."
         badge="Engineering"
         accent="cyan"
-        imageSrc="/images/civil-structural.png"
+        imageSrc="/images/civil-structural-hero.png"
         imageAlt="Civil engineering structural drawings and infrastructure plans"
       />
 
@@ -259,6 +268,8 @@ export default function CivilStructuralEngineeringPage() {
         caption="Ensuring safety and stability for every structure."
         badge="Engineering"
         accent="cyan"
+        imageSrc="/images/civil-structural-preview.jpg"
+        imageAlt="3D isometric structural engineering blueprint"
       />
 
       <div>

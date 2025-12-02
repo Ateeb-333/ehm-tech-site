@@ -117,6 +117,16 @@ export default function BidEstimationPage() {
           items: ["Quick adjustments", "Multiple bid preparation", "Deadline support"],
         },
       ]}
+      heroMedia={
+        <MediaPlaceholder
+          label="Bid Estimation"
+          caption="Winning bid strategies backed by accurate data."
+          badge="Construction"
+          accent="cyan"
+          imageSrc="/images/bid-estimation-hero.png"
+          imageAlt="Construction bid estimation proposal"
+        />
+      }
     >
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

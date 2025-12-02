@@ -118,6 +118,17 @@ export default function EngineeringDesignPage() {
           items: ["On-call clash checks", "Authority coordination", "Site change log"],
         },
       ]}
+      heroMedia={
+        <MediaPlaceholder
+          label="Engineering Design"
+          caption="Professional engineering design support for your projects."
+          badge="Engineering"
+          accent="cyan"
+          imageSrc="/images/engineering-design.jpg"
+          imageAlt="Engineering design workspace with technical drawings"
+          className="h-full min-h-[300px]"
+        />
+      }
     >
       {/* Deliverables */}
       <div>

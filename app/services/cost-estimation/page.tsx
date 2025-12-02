@@ -117,6 +117,16 @@ export default function CostEstimationPage() {
           items: ["Change order estimating", "Blueprint reviews", "Fast updates when plans change"],
         },
       ]}
+      heroMedia={
+        <MediaPlaceholder
+          label="Cost Estimation"
+          caption="Accurate budget planning for construction projects."
+          badge="Construction"
+          accent="cyan"
+          imageSrc="/images/cost-estimation-hero.png"
+          imageAlt="Construction cost estimation workspace"
+        />
+      }
     >
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">

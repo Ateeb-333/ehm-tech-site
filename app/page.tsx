@@ -406,7 +406,7 @@ export default function HomePage() {
 
             {/* Contact Info */}
             <motion.section
-                className="mt-16 mb-16 text-center"
+                className="mt-12 mb-12 text-center"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -418,18 +418,18 @@ export default function HomePage() {
                 <p className="mt-2 text-meta">
                     For inquiries, quotes, or project discussions, feel free to reach out.
                 </p>
-                <div className="mt-6 flex flex-wrap justify-center gap-8 text-sm text-slate-600">
-                    <div className="flex items-center gap-2">
+                <div className="mt-2 flex flex-wrap justify-center gap-5 text-sm text-slate-600">
+                    <div className="flex items-center gap-4">
                         <span className="text-slateBlue">✉</span>
-                        <span>Email: (your email here)</span>
+                        <span>Email: info@ehmtechservices.com</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-4">
                         <span className="text-slateBlue">📞</span>
-                        <span>Phone: (your phone number)</span>
+                        <span>Phone: +92 322 628 3848</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-4">
                         <span className="text-slateBlue">💬</span>
-                        <span>WhatsApp: (optional)</span>
+                        <span>WhatsApp: +92 322 628 3848</span>
                     </div>
                 </div>
             </motion.section>

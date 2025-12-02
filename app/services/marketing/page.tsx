@@ -111,6 +111,16 @@ export default function MarketingPage() {
           items: ["Monthly content", "Campaign management", "Performance optimization"],
         },
       ]}
+      heroMedia={
+        <MediaPlaceholder
+          label="Marketing Services"
+          caption="Data-driven strategies to grow your brand."
+          badge="Digital"
+          accent="peach"
+          imageSrc="/images/marketing-hero.png"
+          imageAlt="Digital marketing dashboard and analytics"
+        />
+      }
     >
       <div className="space-y-12">
         {/* Why Marketing Services Matter */}

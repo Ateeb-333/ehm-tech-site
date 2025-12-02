@@ -116,6 +116,17 @@ export default function ProjectManagementPage() {
           items: ["On site monitoring", "Communication management", "Documentation", "Change management"],
         },
       ]}
+      heroMedia={
+        <MediaPlaceholder
+          label="Project Management"
+          caption="Professional project management that keeps everything on track."
+          badge="Management"
+          accent="cyan"
+          imageSrc="/images/project-management.png"
+          imageAlt="Project management dashboard and planning tools"
+          className="h-full min-h-[300px]"
+        />
+      }
     >
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">
