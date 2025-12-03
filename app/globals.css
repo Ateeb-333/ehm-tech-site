@@ -47,10 +47,10 @@ body::after {
 
 body::before {
   background: radial-gradient(780px circle at 15% 10%,
-      rgba(174, 230, 247, 0.25),
+      rgba(1, 108, 200, 0.25),
       transparent 60%),
     radial-gradient(640px circle at 85% 15%,
-      rgba(255, 176, 138, 0.25),
+      rgba(1, 108, 200, 0.25),
       transparent 60%);
 }
 
@@ -140,7 +140,7 @@ body::after {
 
 .text-gradient-label {
   display: inline-block;
-  background-image: linear-gradient(120deg, var(--tw-gradient-from, #2f9fcf), var(--tw-gradient-to, #f0733f));
+  background-image: linear-gradient(120deg, var(--tw-gradient-from, #016CC8), var(--tw-gradient-to, #016CC8));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -194,7 +194,7 @@ body::after {
   inset: 0;
   border-radius: inherit;
   background: linear-gradient(135deg,
-      rgba(174, 230, 247, 0.08),
+      rgba(1, 108, 200, 0.08),
       rgba(255, 255, 255, 0));
   pointer-events: none;
 }
@@ -210,8 +210,8 @@ body::after {
   border-radius: inherit;
   padding: 1px;
   background: linear-gradient(130deg,
-      rgba(174, 230, 247, 0.4),
-      rgba(255, 176, 138, 0.2),
+      rgba(1, 108, 200, 0.4),
+      rgba(1, 108, 200, 0.2),
       transparent 70%);
   -webkit-mask:
     linear-gradient(#fff, #fff) content-box,
@@ -235,11 +235,11 @@ body::after {
 }
 
 .floating-orb--cyan {
-  background: rgba(174, 230, 247, 0.45);
+  background: rgba(1, 108, 200, 0.45);
 }
 
 .floating-orb--peach {
-  background: rgba(255, 176, 138, 0.45);
+  background: rgba(1, 108, 200, 0.45);
 }
 
 @keyframes float {
@@ -296,6 +296,7 @@ body::after {
     transform: translateX(-50%);
   }
 }
+
 /* ============================================
    PROFESSIONAL QUICK WINS ENHANCEMENTS
    ============================================ */
@@ -314,7 +315,7 @@ body::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #3fbfef, #4f60e0);
+  background: linear-gradient(90deg, #016CC8, #016CC8);
   transition: width 0.3s ease;
 }
 
@@ -335,7 +336,7 @@ body::after {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3fbfef, #4f60e0);
+  background: linear-gradient(135deg, #016CC8, #016CC8);
   color: white;
   display: flex;
   align-items: center;

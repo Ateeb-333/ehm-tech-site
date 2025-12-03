@@ -7,14 +7,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        slateBlue: "#3F50D0",
-        softSkyCyan: "#2F9FCF",
+        slateBlue: "#016CC8",
+        softSkyCyan: "#016CC8",
         charcoalGray: "#2E2E2E",
         mistGray: "#D9DDE2",
-        sunsetPeach: "#F0733F",
-        vibrantBlue: "#4F60E0",
-        brightCyan: "#3FBFEF",
-        warmPeach: "#FF835F",
+        sunsetPeach: "#016CC8",
+        vibrantBlue: "#016CC8",
+        brightCyan: "#016CC8",
+        warmPeach: "#016CC8",
       },
       boxShadow: {
         soft: "0 18px 45px rgba(0,0,0,0.08)",

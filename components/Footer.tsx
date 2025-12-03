@@ -10,7 +10,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <div className="flex items-center gap-3">
-            <div className="relative h-14 w-14 flex items-center justify-center">
+            <div className="relative h-20 w-24 flex items-center justify-center">
               <Image
                 src="/images/ehm-logo.png"
                 alt="EHM Tech logo"
@@ -18,15 +18,6 @@ export const Footer = () => {
                 className="object-contain"
                 sizes="56px"
               />
-            </div>
-
-            <div className="leading-tight">
-              <p className="text-slate-900 font-semibold text-sm">
-                EHM Technology Services
-              </p>
-              <p className="text-slate-500 text-[11px]">
-                Engineering • Estimation • AI & Digital
-              </p>
             </div>
           </div>
 
@@ -43,21 +34,6 @@ export const Footer = () => {
             <Link href="/contact" className="hover:text-slate-900 transition">
               Contact
             </Link>
-          </div>
-
-          <div className="flex flex-col gap-2 text-sm text-slate-600">
-            <p className="font-semibold text-slate-900 text-xs uppercase tracking-wider">Contact</p>
-            <a href="mailto:info@ehmtechservices.com" className="hover:text-slate-900 transition">
-              info@ehmtechservices.com
-            </a>
-            <a href="tel:+923226283848" className="hover:text-slate-900 transition">
-              +92 322 628 3848
-            </a>
-            <p className="text-xs text-slate-500 max-w-xs">
-              Office#205, 2nd floor, Regency Plaza<br />
-              Opposite DHQ Hospital<br />
-              Faisalabad, Punjab, Pakistan
-            </p>
           </div>
 
           <div className="flex gap-4 text-slate-500">

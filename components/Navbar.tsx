@@ -12,29 +12,6 @@ type ServiceItem = {
   description?: string;
 };
 
-const aiDigitalServices: ServiceItem[] = [
-  {
-    label: "Development",
-    href: "/services/web-development",
-    description: "Modern, performant websites & dashboards.",
-  },
-  {
-    label: "Designing",
-    href: "/services/designing",
-    description: "Creative design solutions for digital experiences.",
-  },
-  {
-    label: "Marketing",
-    href: "/services/marketing",
-    description: "Social media, email & digital marketing campaigns.",
-  },
-  {
-    label: "AI",
-    href: "/services/ai-automation",
-    description: "Chatbots, workflows and smart assistants.",
-  },
-];
-
 const constructionServices: ServiceItem[] = [
   {
     label: "Cost Estimation",
@@ -85,6 +62,28 @@ const engineeringServices: ServiceItem[] = [
     description: "Industrial systems and instrumentation design.",
   },
 ];
+const aiDigitalServices: ServiceItem[] = [
+  {
+    label: "Development",
+    href: "/services/web-development",
+    description: "Modern, performant websites & dashboards.",
+  },
+  {
+    label: "Designing",
+    href: "/services/designing",
+    description: "Creative design solutions for digital experiences.",
+  },
+  {
+    label: "Marketing",
+    href: "/services/marketing",
+    description: "Social media, email & digital marketing campaigns.",
+  },
+  {
+    label: "AI",
+    href: "/services/ai-automation",
+    description: "Chatbots, workflows and smart assistants.",
+  },
+];
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -123,7 +122,7 @@ export const Navbar = () => {
         <div className="relative flex items-center justify-between px-4 py-3 rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-xl shadow-[0_18px_35px_rgba(15,23,42,0.08)]">
           {/* Logo + Brand */}
           <Link href="/" className="flex items-center gap-2 z-10">
-            <div className="relative h-20 w-20 flex items-center justify-center">
+            <div className="relative h-20 w-32 flex items-center justify-center">
               <Image
                 src="/images/ehm-logo.png"
                 alt="EHM Tech logo"
@@ -132,18 +131,6 @@ export const Navbar = () => {
                 sizes="500px"
                 priority
               />
-            </div>
-
-            <div className="leading-tight">
-              <div className="flex items-baseline gap-1">
-                <span
-                  className="text-[20px] md:text-[24px] font-extrabold tracking-tight
-       block bg-gradient-to-r from-[#0468C8] via-sunsetPeach to-slateBlue 
-       bg-clip-text text-transparent"
-                >
-                  Services
-                </span>
-              </div>
             </div>
           </Link>
 
@@ -157,12 +144,12 @@ export const Navbar = () => {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button
+              <Link
+                href="/services"
                 className={`relative flex items-center gap-1 text-sm font-medium transition ${servicesActive || servicesOpen
                   ? "text-slate-900"
                   : "text-slate-500 hover:text-slate-900"
                   }`}
-                onClick={() => setServicesOpen(false)}
               >
                 Services
                 <motion.span
@@ -178,7 +165,7 @@ export const Navbar = () => {
                     className="absolute -bottom-1 left-0 h-[2px] w-full rounded-full bg-gradient-to-r from-slateBlue to-softSkyCyan shadow-[0_0_8px_rgba(94,234,212,0.6)]"
                   />
                 )}
-              </button>
+              </Link>
 
               <AnimatePresence>
                 {servicesOpen && (
@@ -196,33 +183,6 @@ export const Navbar = () => {
                       >
                         {/* Three-column categories */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
-                          {/* AI & Digital Solutions */}
-                          <div>
-                            <p className="text-[11px] font-semibold tracking-widest uppercase text-sunsetPeach">
-                              AI & Digital Solutions
-                            </p>
-                            <p className="mt-1 text-xs text-slate-500">
-                              Automation and digital experiences that scale with you.
-                            </p>
-
-                            <div className="mt-3 space-y-2">
-                              {aiDigitalServices.map((item) => (
-                                <Link
-                                  key={item.label}
-                                  href={item.href}
-                                  className="block px-3 py-3 rounded-xl bg-slate-50 border border-transparent hover:border-slateBlue/60 hover:bg-slateBlue/10 transition"
-                                >
-                                  <div className="text-sm font-medium text-slate-900">
-                                    {item.label}
-                                  </div>
-                                  <p className="text-xs text-slate-500">
-                                    {item.description}
-                                  </p>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-
                           {/* Construction */}
                           <div>
                             <p className="text-[11px] font-semibold tracking-widest uppercase text-softSkyCyan">
@@ -265,6 +225,33 @@ export const Navbar = () => {
                                   key={item.label}
                                   href={item.href}
                                   className="block px-3 py-3 rounded-xl bg-slate-50 border border-transparent hover:border-softSkyCyan/50 hover:bg-softSkyCyan/10 transition"
+                                >
+                                  <div className="text-sm font-medium text-slate-900">
+                                    {item.label}
+                                  </div>
+                                  <p className="text-xs text-slate-500">
+                                    {item.description}
+                                  </p>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* AI & Digital Solutions */}
+                          <div>
+                            <p className="text-[11px] font-semibold tracking-widest uppercase text-sunsetPeach">
+                              AI & Digital Solutions
+                            </p>
+                            <p className="mt-1 text-xs text-slate-500">
+                              Automation and digital experiences that scale with you.
+                            </p>
+
+                            <div className="mt-3 space-y-2">
+                              {aiDigitalServices.map((item) => (
+                                <Link
+                                  key={item.label}
+                                  href={item.href}
+                                  className="block px-3 py-3 rounded-xl bg-slate-50 border border-transparent hover:border-slateBlue/60 hover:bg-slateBlue/10 transition"
                                 >
                                   <div className="text-sm font-medium text-slate-900">
                                     {item.label}
@@ -357,24 +344,6 @@ export const Navbar = () => {
                     >
                       <div className="pl-4 pt-2 space-y-6 text-sm">
                         <div>
-                          <p className="font-semibold text-sunsetPeach mb-2 text-xs uppercase tracking-wider">
-                            AI & Digital Solutions
-                          </p>
-                          <div className="space-y-3 border-l-2 border-slate-100 pl-3">
-                            {aiDigitalServices.map((item) => (
-                              <Link
-                                key={item.label}
-                                href={item.href}
-                                onClick={() => setMobileOpen(false)}
-                                className="block text-slate-600 hover:text-slate-900 transition-colors"
-                              >
-                                {item.label}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-
-                        <div>
                           <p className="font-semibold text-softSkyCyan mb-2 text-xs uppercase tracking-wider">
                             Construction
                           </p>
@@ -398,6 +367,24 @@ export const Navbar = () => {
                           </p>
                           <div className="space-y-3 border-l-2 border-slate-100 pl-3">
                             {engineeringServices.map((item) => (
+                              <Link
+                                key={item.label}
+                                href={item.href}
+                                onClick={() => setMobileOpen(false)}
+                                className="block text-slate-600 hover:text-slate-900 transition-colors"
+                              >
+                                {item.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div>
+                          <p className="font-semibold text-sunsetPeach mb-2 text-xs uppercase tracking-wider">
+                            AI & Digital Solutions
+                          </p>
+                          <div className="space-y-3 border-l-2 border-slate-100 pl-3">
+                            {aiDigitalServices.map((item) => (
                               <Link
                                 key={item.label}
                                 href={item.href}

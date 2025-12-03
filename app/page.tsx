@@ -77,10 +77,6 @@ export default function HomePage() {
                 className="grid gap-10 md:grid-cols-[1.5fr,1fr] items-center min-h-[80vh]"
             >
                 <div>
-                    <span className="chip mb-4">
-                        <span className="mr-2 text-xs">●</span> Engineering • Estimation • IT
-                        Solutions
-                    </span>
                     <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
                         Professional Engineering, Cost Estimation & IT Services
                         <span className="block bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent">

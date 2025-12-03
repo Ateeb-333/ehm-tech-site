@@ -153,27 +153,29 @@ export default function ContactPage() {
       >
         {[
           {
-            title: "Email",
+            title: "Email :",
             value: "info@ehmtechservices.com",
-            caption: "Best for briefs & sharing files",
+
           },
           {
-            title: "Phone",
+            title: "Phone :",
             value: "+92 322 628 3848",
-            caption: "Available during business hours",
+
           },
           {
-            title: "Address",
-            value: "Faisalabad, Pakistan",
-            caption: "Office#205, 2nd floor, Regency Plaza Opposite DHQ Hospital",
+            title: "Address :",
+            value: "Office#205, 2nd floor, Regency Plaza Opposite PIA Office",
+            caption: "Faisalabad, Pakistan",
           },
         ].map((item) => (
-          <div key={item.title} className="section-card p-5">
+          <div key={item.title} className="section-card p-5 flex flex-col min-h-[160px]">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
               {item.title}
             </p>
-            <p className="mt-2 text-lg font-semibold text-slate-900">{item.value}</p>
-            <p className="mt-1 text-sm text-slate-600">{item.caption}</p>
+            <div className="flex-1 flex flex-col justify-center">
+              <p className="text-lg font-semibold text-slate-900">{item.value}</p>
+              {item.caption && <p className="mt-1 text-sm text-slate-600">{item.caption}</p>}
+            </div>
           </div>
         ))}
       </motion.section>
@@ -232,7 +234,7 @@ export default function ContactPage() {
         <div className="grid md:grid-cols-2 gap-5 text-sm text-meta">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-              EMAIL US FOR QUERIES
+              EMAIL US FOR QUERIES :
             </p>
             <ul className="mt-3 space-y-3">
               <li>
@@ -242,16 +244,13 @@ export default function ContactPage() {
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-              FASTEST WAY TO ALIGN
-            </p>
-            <p className="mt-3">
-              Mention your timezone plus two preferred slots and we’ll drop a calendar invite within a few hours.
+              HAVE A QUESTION ?
             </p>
             <a
               href="/contact"
               className="mt-4 inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-xs uppercase tracking-[0.2em]"
             >
-              Share availability →
+              Contact us →
             </a>
           </div>
         </div>
