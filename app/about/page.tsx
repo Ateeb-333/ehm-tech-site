@@ -59,9 +59,6 @@ export default function AboutPage() {
         animate={{ opacity: 1, y: 0 }}
         className="section-card p-6 md:p-8 space-y-6"
       >
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">
-          ABOUT EHM
-        </p>
         <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900">
           About EHM Technology Services
         </h1>
