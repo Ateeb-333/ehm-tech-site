@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export const Footer = () => {
   return (
@@ -9,7 +12,11 @@ export const Footer = () => {
         <div className="h-[2px] w-full bg-gradient-to-r from-slateBlue via-softSkyCyan to-sunsetPeach opacity-60 rounded-full mb-10" />
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-          <div className="flex items-center gap-3">
+          <motion.div
+            className="flex items-center gap-3"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.2 }}
+          >
             <div className="relative h-20 w-24 flex items-center justify-center">
               <Image
                 src="/images/ehm-logo.png"
@@ -19,55 +26,53 @@ export const Footer = () => {
                 sizes="56px"
               />
             </div>
-          </div>
+          </motion.div>
 
           <div className="flex gap-6 text-sm text-slate-600">
-            <Link href="/services" className="hover:text-slate-900 transition">
-              Services
-            </Link>
-            <Link href="/portfolio" className="hover:text-slate-900 transition">
-              Portfolio
-            </Link>
-            <Link href="/careers" className="hover:text-slate-900 transition">
-              Careers
-            </Link>
-            <Link href="/contact" className="hover:text-slate-900 transition">
-              Contact
-            </Link>
+            {[
+              { href: "/services", label: "Services" },
+              { href: "/portfolio", label: "Portfolio" },
+              { href: "/careers", label: "Careers" },
+              { href: "/contact", label: "Contact" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="relative group"
+              >
+                <motion.span
+                  whileHover={{ y: -2 }}
+                  className="inline-block transition-colors group-hover:text-slate-900"
+                >
+                  {link.label}
+                </motion.span>
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-slateBlue to-softSkyCyan group-hover:w-full transition-all duration-300" />
+              </Link>
+            ))}
           </div>
 
           <div className="flex gap-4 text-slate-500">
-            <Link
-              href="https://linkedin.com"
-              target="_blank"
-              className="hover:text-slate-900 transition"
-            >
-              <FaLinkedin size={18} />
-            </Link>
-
-            <Link
-              href="https://instagram.com"
-              target="_blank"
-              className="hover:text-slate-900 transition"
-            >
-              <FaInstagram size={18} />
-            </Link>
-
-            <Link
-              href="https://facebook.com"
-              target="_blank"
-              className="hover:text-slate-900 transition"
-            >
-              <FaFacebook size={18} />
-            </Link>
-
-            <Link
-              href="https://twitter.com"
-              target="_blank"
-              className="hover:text-slate-900 transition"
-            >
-              <FaTwitter size={18} />
-            </Link>
+            {[
+              { href: "https://linkedin.com", Icon: FaLinkedin, color: "hover:text-[#0077B5]" },
+              { href: "https://instagram.com", Icon: FaInstagram, color: "hover:text-[#E4405F]" },
+              { href: "https://facebook.com", Icon: FaFacebook, color: "hover:text-[#1877F2]" },
+              { href: "https://twitter.com", Icon: FaTwitter, color: "hover:text-[#1DA1F2]" },
+            ].map(({ href, Icon, color }) => (
+              <Link
+                key={href}
+                href={href}
+                target="_blank"
+                className={`transition-colors ${color}`}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Icon size={18} />
+                </motion.div>
+              </Link>
+            ))}
           </div>
         </div>
 

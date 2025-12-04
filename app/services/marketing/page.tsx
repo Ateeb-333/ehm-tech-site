@@ -14,7 +14,7 @@ export default function MarketingPage() {
       title="Marketing"
       groupLabel="AI & DIGITAL SOLUTIONS"
       accent="digital"
-      intro="In the online world, attention is the new currency. If your brand does not catch eyes, hold interest, or spark curiosity, it disappears faster than a cookie at a kids party. That is where EHM Technology Services comes in with powerful Marketing Services that help you get noticed, get clicks, and get results. We help you reach the right people, deliver the right message, and grow your business with strategies that actually work. No guesswork. No confusion. Just smart marketing that builds momentum."
+      intro="In the online world, attention is currency. If your brand does not catch eyes, it disappears. EHM Technology Services helps you get noticed, get clicks, and get results. We reach the right people with the right message. No guesswork. Just smart marketing that builds momentum."
       primaryCta={{ label: "Start a marketing campaign", href: "/contact" }}
       sideHeading="Marketing services"
       sideItems={[
@@ -51,48 +51,48 @@ export default function MarketingPage() {
       approach={[
         {
           title: "Step One",
-          detail: "We learn your goals, your business, and who you want to reach.",
+          detail: "We learn your goals and audience.",
         },
         {
           title: "Step Two",
-          detail: "We build a custom marketing plan based on your needs.",
+          detail: "We build a custom marketing plan.",
         },
         {
           title: "Step Three",
-          detail: "We create content, ads, and strategies that match your goals.",
+          detail: "We create content and launch strategies.",
         },
         {
           title: "Step Four",
-          detail: "You get updates, reports, and results you can actually understand.",
+          detail: "You get clear updates and results.",
         },
         {
           title: "Step Five",
-          detail: "We adjust and improve the strategy as your business grows.",
+          detail: "We adjust and improve as you grow.",
         },
       ]}
       faqs={[
         {
           question: "Do you manage social media accounts?",
           answer:
-            "Yes. We can handle full social media management including content creation, posting, community engagement, and response management across platforms.",
+            "Yes. We handle content creation, posting, and engagement across all major platforms.",
         },
         {
           question: "Can you work with our existing marketing tools?",
           answer:
-            "Absolutely. We integrate with your current CRM, email platform, and analytics tools, or recommend and set up new ones if needed.",
+            "Absolutely. We integrate with your current CRM and tools, or recommend new ones if needed.",
         },
         {
           question: "How do you measure marketing success?",
           answer:
-            "We track metrics like engagement rates, click-through rates, conversions, and ROI. We provide monthly reports with insights and recommendations.",
+            "We track engagement, clicks, conversions, and ROI. You get monthly reports with clear insights.",
         },
       ]}
-      ctaNote="Your business deserves marketing that gets results. With EHM Technology Services, you get a team that brings creativity, strategy, and energy to every campaign. Let us help you reach more people, build your audience, and grow your brand with confidence."
+      ctaNote="Your business deserves marketing that gets results. Let us help you reach more people and grow your brand with confidence."
       signals={[
-        "Social media presence is inconsistent or non-existent.",
-        "Email campaigns aren't generating the expected engagement.",
-        "Marketing efforts aren't tracking toward clear business goals.",
-        "You need professional content but lack in-house marketing resources.",
+        "Social media presence is inconsistent.",
+        "Email campaigns aren't generating engagement.",
+        "Marketing efforts aren't tracking toward goals.",
+        "You need professional content but lack resources.",
       ]}
       packages={[
         {
@@ -132,9 +132,7 @@ export default function MarketingPage() {
             Why Marketing Services Matter
           </h2>
           <p className="mt-4 text-slate-600 leading-relaxed">
-            You can have the best product in the world, but if no one hears about
-            it, it might as well be hidden under your bed. Marketing brings your
-            brand to the spotlight.
+            You can have the best product, but if no one hears about it, it stays hidden. Marketing brings your brand to the spotlight.
           </p>
           <div className="mt-6">
             <h3 className="text-lg font-semibold bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent">
@@ -171,12 +169,10 @@ export default function MarketingPage() {
               Why EHM Technology Services Is The Team You Want
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              At EHM Technology Services, we mix creativity, strategy, and simple
-              communication to help you promote your business without the usual
-              stress. You tell us your goals. We build the path to reach them.
+              We mix creativity, strategy, and simple communication. You tell us your goals. We build the path to reach them.
             </p>
             <p className="mt-4 text-slate-600">
-              We make marketing feel easy, not overwhelming.
+              We make marketing feel easy.
             </p>
           </div>
           <div className="space-y-4">
@@ -224,43 +220,43 @@ export default function MarketingPage() {
             {[
               {
                 title: "Social Media Marketing",
-                desc: "We create content that grabs attention, builds engagement, and grows your audience across platforms like Facebook, Instagram, TikTok, LinkedIn, and more.",
+                desc: "Content that grabs attention and grows your audience across all platforms.",
               },
               {
                 title: "Content Creation",
-                desc: "Posts. Captions. Graphics. Ads. Scripts. Stories. We make content that people actually want to read and interact with.",
+                desc: "Posts, captions, graphics, and ads that people actually want to read.",
               },
               {
                 title: "Paid Advertising",
-                desc: "Facebook ads. Google ads. Instagram ads. We build ads that bring you leads, sales, and real traffic.",
+                desc: "Facebook, Google, and Instagram ads that bring you leads and sales.",
               },
               {
                 title: "SEO and Website Visibility",
-                desc: "We help people find your business on search engines with content and techniques that boost visibility naturally.",
+                desc: "We help people find your business on search engines naturally.",
               },
               {
                 title: "Email Marketing",
-                desc: "Newsletters. Promotions. Automated sequences. We craft emails that get opened and get results.",
+                desc: "Newsletters and automated sequences that get opened and get results.",
               },
               {
                 title: "Branding and Messaging",
-                desc: "We develop your tone, voice, and visual identity so your brand feels consistent everywhere.",
+                desc: "We develop your tone and visual identity for consistency everywhere.",
               },
               {
                 title: "Campaign Planning",
-                desc: "We plan marketing campaigns from start to finish so you always know what is happening and why.",
+                desc: "We plan campaigns from start to finish so you always know what is happening.",
               },
               {
-                title: "Influencer and Creator Marketing",
-                desc: "We help you connect with influencers who can bring your business in front of the right audience.",
+                title: "Influencer Marketing",
+                desc: "Connect with influencers who put your business in front of the right audience.",
               },
               {
                 title: "Market Analysis",
-                desc: "We study your competitors, trends, and audience behavior so your marketing strategy stays sharp and effective.",
+                desc: "We study competitors and trends so your strategy stays sharp.",
               },
               {
                 title: "Funnel Building",
-                desc: "We create systems that take people from interest to action in the smoothest way possible.",
+                desc: "Systems that take people from interest to action smoothly.",
               },
             ].map((service) => (
               <div key={service.title} className="section-card p-6 hover:border-sunsetPeach/30 transition-colors">
@@ -274,7 +270,7 @@ export default function MarketingPage() {
             ))}
           </div>
           <p className="mt-6 text-center text-slate-600 italic">
-            EHM Technology Services covers every marketing angle so your brand stays ahead.
+            EHM Technology Services covers every marketing angle.
           </p>
         </div>
 
@@ -293,8 +289,8 @@ export default function MarketingPage() {
                 "Creators and influencers",
                 "Real estate professionals",
                 "Restaurants and local shops",
-                "Contractors and construction companies",
-                "Anyone who wants more leads and sales",
+                "Contractors",
+                "Anyone who wants more leads",
               ].map((item) => (
                 <span
                   key={item}
@@ -305,7 +301,7 @@ export default function MarketingPage() {
               ))}
             </div>
             <p className="mt-4 text-sm text-slate-600">
-              If you want customers, we want to help you get them.
+              If you want customers, we help you get them.
             </p>
           </div>
 
@@ -316,13 +312,13 @@ export default function MarketingPage() {
             <ul className="grid grid-cols-2 gap-y-2 gap-x-4">
               {[
                 "Social media campaigns",
-                "Brand awareness campaigns",
+                "Brand awareness",
                 "Product launches",
-                "E commerce promotions",
-                "Lead generation systems",
+                "E-commerce promotions",
+                "Lead generation",
                 "Monthly content plans",
                 "Paid ad campaigns",
-                "Local marketing strategies",
+                "Local marketing",
               ].map((item) => (
                 <li key={item} className="text-sm text-slate-600 flex items-center gap-2">
                   <span className="text-sunsetPeach">▪</span> {item}
@@ -341,8 +337,7 @@ export default function MarketingPage() {
             Why Clients Choose EHM Technology Services
           </h2>
           <p className="mt-2 text-slate-300">
-            Clients love working with us because we make marketing feel simple,
-            fun, and effective.
+            Clients love working with us because we make marketing feel simple, fun, and effective.
           </p>
           <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
@@ -352,7 +347,7 @@ export default function MarketingPage() {
               "Affordable packages",
               "Creative ideas",
               "Real strategies",
-              "A team that cares about your growth",
+              "A team that cares",
             ].map((item) => (
               <div key={item} className="flex items-center gap-3">
                 <div className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center text-sunsetPeach">

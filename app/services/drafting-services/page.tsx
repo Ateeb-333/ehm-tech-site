@@ -14,7 +14,7 @@ export default function DraftingServicesPage() {
       title="Drafting Services"
       groupLabel="CONSTRUCTION"
       accent="engineering"
-      intro="Every great build starts with a great drawing. A clean set of plans keeps your project steady, your team aligned, and your vision crystal clear. At EHM Technology Services, our Drafting Services give you professional, accurate, and easy-to-understand drawings that help you plan, design, and build without confusion. Good drafting is more than lines on paper. It is the language your project speaks. When the drawings are clear, the project feels easy. When they are not, things get messy fast. We save you from the messy part. No matter the project size or type, EHM Technology Services delivers drafting solutions that make your work smoother from day one."
+      intro="Every great build starts with a great drawing. Clear plans keep your project steady and your vision clear. EHM Technology Services provides professional, accurate drawings that help you plan, design, and build without confusion. Good drafting is the language your project speaks. We save you from the mess. No matter the size, we deliver drafting solutions that make your work smoother from day one."
       primaryCta={{ label: "Start a drafting project", href: "/contact" }}
       heroMedia={
         <MediaPlaceholder
@@ -67,47 +67,47 @@ export default function DraftingServicesPage() {
         {
           title: "Share project details or ideas",
           detail:
-            "Send us your sketches, markups, ideas, or existing drawings. We work with whatever you have to get started.",
+            "Send sketches, markups, or ideas. We work with what you have.",
         },
         {
           title: "Review needs & confirm scope",
           detail:
-            "We review your requirements, understand your goals, and confirm exactly what drawings and details you need.",
+            "We review requirements and confirm exactly what drawings you need.",
         },
         {
           title: "Prepare clean & accurate drawings",
           detail:
-            "Using AutoCAD, Revit, SketchUp, and other professional tools, we create precise, industry-standard drawings.",
+            "Using professional tools, we create precise, industry-standard drawings.",
         },
         {
           title: "Deliver organized & easy plans",
           detail:
-            "You get well-organized drawing sets that are clear, accurate, and ready for construction, permitting, or bidding.",
+            "You get clear, organized drawing sets ready for construction or bidding.",
         },
       ]}
       faqs={[
         {
           question: "What types of drafting services do you provide?",
           answer:
-            "We draft everything needed to guide your project from concept to completion including architectural drafting (floor plans, elevations, sections), structural drafting (beams, columns, foundations), MEP drafting (mechanical, electrical, plumbing), construction documents, as built drawings, shop drawings, 2D and 3D drafting. EHM Technology Services covers every discipline and every industry. If you need it drawn, we can draw it.",
+            "We draft everything from concept to completion: architectural, structural, MEP, construction documents, as-builts, and shop drawings. If you need it drawn, we can draw it.",
         },
         {
           question: "What tools do you use for drafting?",
           answer:
-            "We use modern drafting tools including AutoCAD, Revit, SketchUp, Bluebeam, and advanced modeling software. These tools help us deliver drawings that look sharp and perform even sharper on site.",
+            "We use AutoCAD, Revit, SketchUp, Bluebeam, and advanced modeling software for sharp, accurate drawings.",
         },
         {
           question: "Who can benefit from your drafting services?",
           answer:
-            "Our services support contractors, architects, homebuilders, developers, designers, engineers, real estate investors, homeowners, and commercial owners. If your project needs drawings, we have your back.",
+            "Contractors, architects, homebuilders, developers, designers, engineers, and homeowners. We have your back.",
         },
       ]}
-      ctaNote="Clear drawings build clear results. With EHM Technology Services, your project starts strong, stays organized, and moves forward without confusion. Let us bring your design to life with drafting that feels clean, professional, and effortless."
+      ctaNote="Clear drawings build clear results. Start strong and stay organized with drafting that feels clean, professional, and effortless."
       signals={[
-        "Imagine building a piece of furniture with instructions written by someone half asleep.",
-        "When the drawings are clear, the project feels easy. When they are not, things get messy fast.",
-        "You need drawings that communicate the design clearly and avoid misinterpretation on site.",
-        "Good drafting is more than lines on paper. It is the language your project speaks.",
+        "Building without clear drawings is like building blind.",
+        "Clear drawings prevent messy projects.",
+        "You need drawings that communicate clearly.",
+        "Good drafting is the language your project speaks.",
       ]}
       packages={[
         {
@@ -132,7 +132,7 @@ export default function DraftingServicesPage() {
           Why Drafting Services Matter
         </h2>
         <p className="mt-4 text-slate-600">
-          Imagine building a piece of furniture with instructions written by someone half asleep. That is how a project feels without proper drafting. Clear drawings remove the guesswork, reduce mistakes, and keep everyone in sync.
+          Building without proper drafting is risky. Clear drawings remove guesswork, reduce mistakes, and keep everyone in sync.
         </p>
         <p className="mt-4 text-slate-600">
           Strong drafting helps you:
@@ -142,11 +142,11 @@ export default function DraftingServicesPage() {
           <li>Avoid misinterpretation on site</li>
           <li>Speed up approval and permitting</li>
           <li>Plan materials and budgets accurately</li>
-          <li>Present a professional impression to clients</li>
+          <li>Present a professional impression</li>
           <li>Prevent rework and costly delays</li>
         </ul>
         <p className="mt-4 text-slate-600">
-          When your drawings are clear, your project runs smoothly as warm butter on toast.
+          When your drawings are clear, your project runs smoothly.
         </p>
       </div>
 
@@ -155,7 +155,7 @@ export default function DraftingServicesPage() {
           Why EHM Technology Services Is Your Trusted Drafting Partner
         </h2>
         <p className="mt-4 text-slate-600">
-          At EHM Technology Services, you get friendly communication, fast results, and crisp drawings that make everyone's job easier. We treat your project with the same care we would give our own.
+          You get friendly communication, fast results, and crisp drawings. We treat your project with the same care we would give our own.
         </p>
         <p className="mt-4 text-slate-600">
           You get:
@@ -166,7 +166,7 @@ export default function DraftingServicesPage() {
               Clean & Accurate
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Clean and accurate drawings. Fast turnaround. Unlimited project types. Support from start to finish.
+              Clean drawings. Fast turnaround. Unlimited project types. Support from start to finish.
             </p>
           </div>
           <div className="section-card p-5">
@@ -174,7 +174,7 @@ export default function DraftingServicesPage() {
               Easy Revisions
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Easy revisions. A team that listens and understands your goals. We keep the process simple so you stay stress free.
+              Easy revisions. A team that listens. We keep the process simple and stress-free.
             </p>
           </div>
         </div>
@@ -193,7 +193,7 @@ export default function DraftingServicesPage() {
               Architectural Drafting
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Floor plans. Elevations. Sections. Room layouts. Door and window schedules. Every detail your design needs to feel complete.
+              Floor plans, elevations, sections, and room layouts. Every detail needed.
             </p>
           </div>
           <div className="section-card p-5">
@@ -201,7 +201,7 @@ export default function DraftingServicesPage() {
               Structural Drafting
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Beams. Columns. Foundations. Reinforcements. Load layouts. Everything needed for a safe and stable build.
+              Beams, columns, foundations, and reinforcements. Safe and stable builds.
             </p>
           </div>
           <div className="section-card p-5">
@@ -209,7 +209,7 @@ export default function DraftingServicesPage() {
               MEP Drafting
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Mechanical layouts. Electrical drawings. Plumbing plans. Clean diagrams that help every trade work efficiently.
+              Mechanical, electrical, and plumbing plans. Clean diagrams for efficient work.
             </p>
           </div>
           <div className="section-card p-5">
@@ -217,7 +217,7 @@ export default function DraftingServicesPage() {
               Construction Documents
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Full drawing sets ready for contractors, permitting, bidding, and approvals.
+              Full sets ready for contractors, permitting, bidding, and approvals.
             </p>
           </div>
           <div className="section-card p-5">
@@ -225,7 +225,7 @@ export default function DraftingServicesPage() {
               As Built Drawings
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We update your drawings to match the final built conditions, so you always have accurate project records.
+              Updated drawings matching final built conditions for accurate records.
             </p>
           </div>
           <div className="section-card p-5">
@@ -233,7 +233,7 @@ export default function DraftingServicesPage() {
               Shop Drawings
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Custom fabrications. Millwork. Steel. Cabinets. Fixtures. Everything your suppliers and installers need.
+              Custom fabrications, millwork, steel, and fixtures for suppliers and installers.
             </p>
           </div>
           <div className="section-card p-5">
@@ -241,7 +241,7 @@ export default function DraftingServicesPage() {
               2D Drafting
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Clean and simple linework that gives you exact clarity on measurements and design intent.
+              Clean, simple linework for exact clarity on measurements and design.
             </p>
           </div>
           <div className="section-card p-5">
@@ -249,7 +249,7 @@ export default function DraftingServicesPage() {
               3D Drafting
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We create visual models that help you see the project before you build it. A little like giving your imagination superpowers.
+              Visual models to see the project before you build it.
             </p>
           </div>
         </div>
@@ -269,31 +269,31 @@ export default function DraftingServicesPage() {
         <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Residential Drafting
+              Residential
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Homes. Additions. Remodels. Multi family units. Custom homes. Any style. Any scale.
+              Homes, additions, remodels, and multi-family units. Any style.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Commercial Drafting
+              Commercial
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Retail spaces. Offices. Restaurants. Clinics. Hotels. Educational spaces. Warehouses.
+              Retail, offices, restaurants, hotels, and warehouses.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Industrial Drafting
+              Industrial
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Plants. Factories. Processing facilities. Power buildings. Complex layouts made easy to follow.
+              Plants, factories, and complex layouts made easy to follow.
             </p>
           </div>
         </div>
         <p className="mt-6 text-slate-600">
-          EHM Technology Services covers every discipline and every industry. If you need it drawn, we can draw it.
+          EHM Technology Services covers every discipline and industry.
         </p>
       </div>
 
@@ -302,7 +302,7 @@ export default function DraftingServicesPage() {
           Who Benefits From Our Drafting Services
         </h2>
         <p className="mt-4 text-slate-600">
-          Our services support everyone who needs professional drawings. If your project needs drawings, we have your back.
+          If your project needs drawings, we have your back.
         </p>
         <div className="mt-6 grid md:grid-cols-3 gap-5">
           {[
@@ -312,19 +312,19 @@ export default function DraftingServicesPage() {
             },
             {
               title: "Architects",
-              desc: "Professional drafting support for design development and documentation.",
+              desc: "Professional drafting support for design development.",
             },
             {
               title: "Homebuilders",
-              desc: "Accurate plans for residential construction projects of all sizes.",
+              desc: "Accurate plans for residential construction projects.",
             },
             {
               title: "Developers",
-              desc: "Complete drawing sets for project planning and approvals.",
+              desc: "Complete drawing sets for planning and approvals.",
             },
             {
               title: "Designers",
-              desc: "Technical drawings that bring design concepts to life.",
+              desc: "Technical drawings that bring concepts to life.",
             },
             {
               title: "Engineers",
@@ -332,15 +332,15 @@ export default function DraftingServicesPage() {
             },
             {
               title: "Real Estate Investors",
-              desc: "Professional drawings for property development and renovations.",
+              desc: "Professional drawings for development and renovations.",
             },
             {
               title: "Homeowners",
-              desc: "Clear plans for home projects, additions, and remodels.",
+              desc: "Clear plans for home projects and remodels.",
             },
             {
               title: "Commercial Owners",
-              desc: "Accurate drawings for commercial building projects and tenant improvements.",
+              desc: "Accurate drawings for commercial projects.",
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
@@ -375,7 +375,7 @@ export default function DraftingServicesPage() {
           ))}
         </div>
         <p className="mt-6 text-slate-600">
-          Nothing too big. Nothing too small. Nothing too complex.
+          Nothing too big, small, or complex.
         </p>
       </div>
 
@@ -395,7 +395,7 @@ export default function DraftingServicesPage() {
               Accurate & Quick
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Accurate drawings. Quick delivery. Friendly support. Fair pricing. A simple process.
+              Accurate drawings. Quick delivery. Friendly support. Fair pricing. Simple process.
             </p>
           </div>
           <div className="section-card p-5">
@@ -403,7 +403,7 @@ export default function DraftingServicesPage() {
               Committed to Your Success
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              A team committed to your success. We give you drawings that help everyone on your project breathe a little easier.
+              We give you drawings that help everyone on your project breathe easier.
             </p>
           </div>
         </div>

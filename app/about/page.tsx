@@ -1,7 +1,37 @@
 "use client";
 
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import Image from "next/image";
+
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const staggerContainer: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariant: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 const values = [
   {
@@ -55,29 +85,16 @@ export default function AboutPage() {
     <main className="main-shell space-y-12">
       {/* Intro Section */}
       <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
         className="section-card p-6 md:p-8 space-y-6"
       >
         <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900">
           About EHM Technology Services
         </h1>
         <p className="mt-4 text-meta md:text-base max-w-3xl">
-          EHM Technology Services is a multi-disciplinary company providing
-          complete Engineering, Construction Estimation, and IT/AI solutions to
-          clients across various industries. We combine technical expertise,
-          modern tools, and practical industry knowledge to deliver work that is
-          accurate, reliable, and aligned with real-world project needs.
-        </p>
-        <p className="mt-4 text-meta md:text-base max-w-3xl">
-          Our approach is simple: We understand what each project requires, plan
-          the right solution, and deliver work that supports confident
-          decision-making, smooth execution, and long-term success.
-        </p>
-        <p className="mt-4 text-meta md:text-base max-w-3xl">
-          From contractors and builders to engineering firms, businesses, and
-          startups — we support clients of all sizes with services that help them
-          work smarter and achieve better outcomes.
+          EHM Technology Services provides complete Engineering, Construction Estimation, and IT/AI solutions. We combine technical expertise with modern tools to deliver accurate, reliable results for clients across all industries.
         </p>
 
         <div className="grid gap-4 md:grid-cols-2 mt-8">
@@ -87,9 +104,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-xl font-semibold text-slate-900 mb-2">Our Mission</h3>
             <p className="text-meta">
-              To deliver dependable engineering, estimation, and technology
-              services that bring clarity, efficiency, and structure to every
-              project — helping our clients move forward with confidence.
+              To deliver dependable services that bring clarity, efficiency, and structure to every project.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white p-6 hover:border-softSkyCyan/50 transition-colors">
@@ -98,10 +113,7 @@ export default function AboutPage() {
             </div>
             <h3 className="text-xl font-semibold text-slate-900 mb-2">Our Vision</h3>
             <p className="text-meta">
-              To be a trusted partner known for accuracy, professionalism, and
-              multi-disciplinary technical expertise, while continually advancing
-              with modern tools, innovative systems, and evolving industry
-              standards.
+              To be a trusted partner known for accuracy, professionalism, and innovation in engineering and technology.
             </p>
           </div>
         </div>
@@ -110,94 +122,125 @@ export default function AboutPage() {
       {/* What We Do */}
       <motion.section
         className="grid gap-6 md:grid-cols-3"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
       >
         {services.map((service) => (
-          <div key={service.title} className="section-card p-6 space-y-3">
+          <motion.div
+            key={service.title}
+            variants={itemVariant}
+            whileHover={{ y: -5 }}
+            className="section-card p-6 space-y-3 transition-all duration-300 hover:shadow-md"
+          >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
               WHAT WE DO
             </p>
             <h3 className="text-lg font-semibold text-slate-900">{service.title}</h3>
             <p className="text-meta text-sm leading-relaxed">{service.detail}</p>
-          </div>
+          </motion.div>
         ))}
       </motion.section>
 
       {/* Core Values */}
       <motion.section
         className="section-card p-6 md:p-8"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
       >
         <h2 className="text-2xl font-semibold text-slate-900 mb-6">Our Core Values</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+        <motion.div
+          className="grid md:grid-cols-3 gap-6"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {values.map((value) => (
-            <div key={value.title} className="flex flex-col gap-2">
+            <motion.div
+              key={value.title}
+              variants={itemVariant}
+              className="flex flex-col gap-2"
+            >
               <h3 className="text-lg font-semibold text-slate-900">{value.title}</h3>
               <p className="text-meta text-sm">{value.detail}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </motion.section>
 
       {/* Why Choose EHM */}
       <motion.section
-        className="grid md:grid-cols-2 gap-8"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        className="space-y-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="section-card p-6">
-          <h2 className="text-xl font-semibold text-slate-900 mb-4">
+        <motion.div
+          variants={fadeInUp}
+          className="text-center max-w-2xl mx-auto"
+        >
+          <h2 className="text-2xl font-semibold text-slate-900 mb-4">
             Why Clients Choose EHM
           </h2>
-          <ul className="space-y-3 text-sm text-meta">
-            {reasons.map((reason) => (
-              <li key={reason} className="flex gap-2 items-start">
-                <span className="text-softSkyCyan mt-1">★</span>
-                <span>{reason}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="section-card p-6 flex flex-col justify-center space-y-4 bg-slate-50">
-          <h2 className="text-xl font-semibold text-slate-900">
-            Our Commitment
-          </h2>
           <p className="text-meta">
-            At EHM Technology Services, we believe in offering practical,
-            dependable, and long-lasting solutions.
+            We aim to be not just a service provider — but a long-term partner you can trust.
           </p>
-          <p className="text-meta">
-            Our team works closely with clients to understand their goals,
-            overcome challenges, and deliver results that add real value to their
-            projects and operations.
-          </p>
-          <p className="text-meta font-medium text-slate-900">
-            We aim to be not just a service provider — but a long-term partner our
-            clients can trust.
-          </p>
-        </div>
+        </motion.div>
+
+        <motion.div
+          className="grid md:grid-cols-3 gap-6"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {reasons.map((reason, idx) => (
+            <motion.div
+              key={idx}
+              variants={itemVariant}
+              whileHover={{ scale: 1.02 }}
+              className="section-card p-5 flex items-start gap-3 hover:border-softSkyCyan/50 transition-all duration-300"
+            >
+              <span className="text-softSkyCyan mt-1">★</span>
+              <span className="text-sm text-slate-700 font-medium">{reason}</span>
+            </motion.div>
+          ))}
+        </motion.div>
       </motion.section>
 
       {/* Visual Placeholder */}
       <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInUp}
       >
-        <MediaPlaceholder
-          label="EHM Team"
-          caption="Dedicated professionals working together to deliver excellence."
-          badge="Team"
-          accent="violet"
-          aspect="wide"
-          imageSrc="/images/professional-team.png"
-          imageAlt="Professional diverse team in modern office"
-        />
+        <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-soft group">
+          <Image
+            src="/images/about-team.png"
+            alt="Professional diverse team in modern office"
+            fill
+            className="object-cover"
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
+          <div className="absolute top-4 left-4 flex gap-2">
+            <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-white/90 text-slate-700 rounded-full">
+              Team
+            </span>
+            <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider text-slate-500">
+              Our People
+            </span>
+          </div>
+          <div className="absolute bottom-4 left-4 right-4">
+            <h3 className="text-xl font-semibold text-white">EHM Team</h3>
+            <p className="text-sm text-white/80 mt-1">Dedicated professionals working together to deliver excellence.</p>
+          </div>
+        </div>
       </motion.section>
     </main>
   );

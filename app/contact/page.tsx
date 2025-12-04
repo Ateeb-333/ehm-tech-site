@@ -127,7 +127,7 @@ export default function ContactPage() {
           badge="Live notes"
           accent="cyan"
           aspect="wide"
-          imageSrc="/images/automation-lab.png"
+          imageSrc="/images/contact-communication.png"
           imageAlt="Collaboration workspace preview"
         />
         <div className="section-card p-5 space-y-3 text-sm text-slate-600">

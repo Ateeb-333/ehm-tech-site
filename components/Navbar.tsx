@@ -95,17 +95,25 @@ export const Navbar = () => {
     return (
       <Link
         href={href}
-        className={`relative text-sm font-medium transition-colors ${active
-          ? "text-slate-900"
-          : "text-slate-500 hover:text-slate-900"
-          }`}
+        className="relative group"
       >
-        {label}
+        <motion.span
+          whileHover={{ y: -2 }}
+          className={`inline-block text-sm font-medium transition-colors ${active
+            ? "text-slate-900"
+            : "text-slate-500 group-hover:text-slate-900"
+            }`}
+        >
+          {label}
+        </motion.span>
         {active && (
           <motion.span
             layoutId="nav-underline"
             className="absolute -bottom-1 left-0 h-[2px] w-full rounded-full bg-gradient-to-r from-slateBlue to-softSkyCyan shadow-[0_0_8px_rgba(94,234,212,0.6)]"
           />
+        )}
+        {!active && (
+          <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-slateBlue to-softSkyCyan group-hover:w-full transition-all duration-300" />
         )}
       </Link>
     );
@@ -197,14 +205,19 @@ export const Navbar = () => {
                                 <Link
                                   key={item.label}
                                   href={item.href}
-                                  className="block px-3 py-3 rounded-xl bg-slate-50 border border-transparent hover:border-softSkyCyan/50 hover:bg-softSkyCyan/10 transition"
+                                  className="block group"
                                 >
-                                  <div className="text-sm font-medium text-slate-900">
-                                    {item.label}
-                                  </div>
-                                  <p className="text-xs text-slate-500">
-                                    {item.description}
-                                  </p>
+                                  <motion.div
+                                    whileHover={{ y: -2, scale: 1.01 }}
+                                    className="px-3 py-3 rounded-xl bg-slate-50 border border-transparent group-hover:border-softSkyCyan/50 group-hover:bg-softSkyCyan/10 transition-all duration-300 group-hover:shadow-md"
+                                  >
+                                    <div className="text-sm font-medium text-slate-900">
+                                      {item.label}
+                                    </div>
+                                    <p className="text-xs text-slate-500">
+                                      {item.description}
+                                    </p>
+                                  </motion.div>
                                 </Link>
                               ))}
                             </div>
@@ -224,14 +237,19 @@ export const Navbar = () => {
                                 <Link
                                   key={item.label}
                                   href={item.href}
-                                  className="block px-3 py-3 rounded-xl bg-slate-50 border border-transparent hover:border-softSkyCyan/50 hover:bg-softSkyCyan/10 transition"
+                                  className="block group"
                                 >
-                                  <div className="text-sm font-medium text-slate-900">
-                                    {item.label}
-                                  </div>
-                                  <p className="text-xs text-slate-500">
-                                    {item.description}
-                                  </p>
+                                  <motion.div
+                                    whileHover={{ y: -2, scale: 1.01 }}
+                                    className="px-3 py-3 rounded-xl bg-slate-50 border border-transparent group-hover:border-softSkyCyan/50 group-hover:bg-softSkyCyan/10 transition-all duration-300 group-hover:shadow-md"
+                                  >
+                                    <div className="text-sm font-medium text-slate-900">
+                                      {item.label}
+                                    </div>
+                                    <p className="text-xs text-slate-500">
+                                      {item.description}
+                                    </p>
+                                  </motion.div>
                                 </Link>
                               ))}
                             </div>
@@ -251,14 +269,19 @@ export const Navbar = () => {
                                 <Link
                                   key={item.label}
                                   href={item.href}
-                                  className="block px-3 py-3 rounded-xl bg-slate-50 border border-transparent hover:border-slateBlue/60 hover:bg-slateBlue/10 transition"
+                                  className="block group"
                                 >
-                                  <div className="text-sm font-medium text-slate-900">
-                                    {item.label}
-                                  </div>
-                                  <p className="text-xs text-slate-500">
-                                    {item.description}
-                                  </p>
+                                  <motion.div
+                                    whileHover={{ y: -2, scale: 1.01 }}
+                                    className="px-3 py-3 rounded-xl bg-slate-50 border border-transparent group-hover:border-slateBlue/60 group-hover:bg-slateBlue/10 transition-all duration-300 group-hover:shadow-md"
+                                  >
+                                    <div className="text-sm font-medium text-slate-900">
+                                      {item.label}
+                                    </div>
+                                    <p className="text-xs text-slate-500">
+                                      {item.description}
+                                    </p>
+                                  </motion.div>
                                 </Link>
                               ))}
                             </div>

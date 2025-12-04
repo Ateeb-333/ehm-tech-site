@@ -14,7 +14,7 @@ export default function MEPEngineeringPage() {
       title="MEP Engineering Services"
       groupLabel="ENGINEERING"
       accent="engineering"
-      intro="A building only feels complete when everything inside works the way it should. Lights that turn on. Air that flows right. Water that runs where it belongs. That comfort, safety, and efficiency all come from proper MEP engineering. At EHM Technology Services, we deliver MEP Engineering Services that keep your building running smoothly from the inside out. MEP stands for Mechanical, Electrical, and Plumbing. In simple words, it is everything that makes a building livable. Without it, even the nicest structure feels like an empty shell. We make sure every system works together like a well rehearsed orchestra. Whatever you are building, our MEP engineers give you smart designs that save money, reduce problems, and make your project shine."
+      intro="A building only feels complete when everything inside works. Lights on. Air flowing. Water running. EHM Technology Services delivers MEP Engineering Services that keep your building running smoothly. We make sure every system works together like a well-rehearsed orchestra."
       primaryCta={{ label: "Start MEP design", href: "/contact" }}
       sideHeading="What we cover"
       sideItems={[
@@ -57,46 +57,46 @@ export default function MEPEngineeringPage() {
         {
           title: "Share project details & drawings",
           detail:
-            "You share your project details and drawings with us to begin the MEP engineering process.",
+            "Share your project details and drawings to begin the process.",
         },
         {
           title: "Review & confirm scope",
           detail:
-            "We review everything and confirm the full scope of MEP systems needed for your project.",
+            "We review everything and confirm the full scope of MEP systems needed.",
         },
         {
           title: "Prepare coordinated MEP designs",
           detail:
-            "Our team prepares coordinated MEP designs based on your needs, ensuring all systems work together smoothly.",
+            "Our team prepares coordinated MEP designs, ensuring all systems work together.",
         },
         {
           title: "Receive clear drawings & documents",
           detail:
-            "You receive easy to read drawings and documents ready for permitting or installation.",
+            "You receive easy-to-read drawings ready for permitting or installation.",
         },
       ]}
       faqs={[
         {
           question: "What types of MEP services do you provide?",
           answer:
-            "We provide full MEP engineering services including mechanical engineering (heating, cooling, ventilation, air quality, duct layouts, equipment sizing), electrical engineering (power distribution, lighting layouts, emergency systems, panels, circuits, load calculations), plumbing engineering (water supply, drainage, gas lines, pumps, fixtures, sanitary layouts), fire protection planning, MEP coordination, energy efficient designs, HVAC system design, load calculations and sizing, MEP renovations and retrofits, and MEP support through construction. EHM Technology Services handles all MEP scopes under one roof.",
+            "We provide mechanical, electrical, and plumbing engineering, fire protection, coordination, energy-efficient designs, and HVAC design. EHM Technology Services handles all MEP scopes.",
         },
         {
           question: "What tools do you use for MEP design?",
           answer:
-            "We use modern tools that help us design systems accurately including AutoCAD, Revit, MEP modeling software, load calculation software, and blueprint review tools. These help us design systems that are efficient, compliant, and installation friendly.",
+            "We use AutoCAD, Revit, and load calculation software to design efficient, compliant, and installation-friendly systems.",
         },
         {
           question: "Who can benefit from your MEP services?",
           answer:
-            "Our services support general contractors, subcontractors, developers, architects, homeowners, engineers, commercial owners, investors, and government projects. If your building needs air, power, or water, you need us.",
+            "Contractors, developers, architects, homeowners, and investors. If your building needs air, power, or water, you need us.",
         },
       ]}
-      ctaNote="Your building deserves systems that work flawlessly. With EHM Technology Services, you get MEP engineering that keeps your project safe, comfortable, and efficient from day one. Let us bring your building to life with clean and smart MEP design."
+      ctaNote="Your building deserves systems that work flawlessly. Let us bring your building to life with clean and smart MEP design."
       signals={[
-        "A building only feels complete when everything inside works the way it should.",
-        "Without proper MEP, even the nicest structure feels like an empty shell.",
-        "You need systems that work together like a well rehearsed orchestra.",
+        "A building only feels complete when everything inside works.",
+        "Without proper MEP, a structure feels like an empty shell.",
+        "You need systems that work together perfectly.",
         "Your building deserves systems that work flawlessly.",
       ]}
       packages={[
@@ -133,7 +133,7 @@ export default function MEPEngineeringPage() {
           Why MEP Engineering Matters
         </h2>
         <p className="mt-4 text-slate-600">
-          Imagine a building with poor airflow, flickering lights, or plumbing that decides to misbehave at the worst moment. Not fun. Good MEP engineering keeps your project safe, comfortable, and efficient.
+          Imagine a building with poor airflow or flickering lights. Not fun. Good MEP engineering keeps your project safe, comfortable, and efficient.
         </p>
         <p className="mt-4 text-slate-600">
           Proper MEP planning helps you:
@@ -157,10 +157,7 @@ export default function MEPEngineeringPage() {
           Why EHM Technology Services Is The Partner You Need
         </h2>
         <p className="mt-4 text-slate-600">
-          At EHM Technology Services, we take the complexity out of MEP engineering. You get clear communication, friendly support, and designs that make sense without confusing technical talk.
-        </p>
-        <p className="mt-4 text-slate-600">
-          You get:
+          We take the complexity out of MEP engineering. You get clear communication, friendly support, and designs that make sense without confusing technical talk.
         </p>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="section-card p-5">
@@ -168,7 +165,7 @@ export default function MEPEngineeringPage() {
               Clean & Coordinated
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Clean and coordinated MEP drawings. Fast turnaround. Energy efficient solutions. Support for all project types.
+              Clean, coordinated drawings. Fast turnaround. Energy efficient solutions.
             </p>
           </div>
           <div className="section-card p-5">
@@ -176,7 +173,7 @@ export default function MEPEngineeringPage() {
               Practical & Adaptable
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Practical designs that installers love. A team that listens and adapts to your needs. We make MEP engineering feel simple, even when the systems behind it are not.
+              Practical designs installers love. We make MEP engineering feel simple.
             </p>
           </div>
         </div>
@@ -195,7 +192,7 @@ export default function MEPEngineeringPage() {
               Mechanical Engineering
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Heating. Cooling. Ventilation. Air quality. Duct layouts. Equipment sizing. Our mechanical designs keep your building comfortable in every season.
+              Heating, cooling, ventilation. Our designs keep your building comfortable.
             </p>
           </div>
           <div className="section-card p-5">
@@ -203,7 +200,7 @@ export default function MEPEngineeringPage() {
               Electrical Engineering
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Power distribution. Lighting layouts. Emergency systems. Panels. Circuits. Load calculations. Clean electrical designs that keep the lights on and everyone safe.
+              Power, lighting, emergency systems. Clean designs that keep the lights on.
             </p>
           </div>
           <div className="section-card p-5">
@@ -211,7 +208,7 @@ export default function MEPEngineeringPage() {
               Plumbing Engineering
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Water supply. Drainage. Gas lines. Pumps. Fixtures. Sanitary layouts. We make plumbing systems run smooth and reliable.
+              Water, drainage, gas. We make plumbing systems run smooth and reliable.
             </p>
           </div>
           <div className="section-card p-5">
@@ -219,7 +216,7 @@ export default function MEPEngineeringPage() {
               Fire Protection Planning
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Sprinkler layouts. Fire pump rooms. Safe routing. Detection systems. We help your building stay compliant and prepared.
+              Sprinklers, pumps, detection. We help your building stay compliant and safe.
             </p>
           </div>
           <div className="section-card p-5">
@@ -227,7 +224,7 @@ export default function MEPEngineeringPage() {
               MEP Coordination
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We align all systems so nothing clashes. No ducts fighting pipes. No wires crossing beams. Smooth coordination for easy installation.
+              We align all systems so nothing clashes. Smooth coordination for easy installation.
             </p>
           </div>
           <div className="section-card p-5">
@@ -235,7 +232,7 @@ export default function MEPEngineeringPage() {
               Energy Efficient Designs
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We help reduce long term utility costs with smart equipment choices and efficient layouts.
+              Reduce utility costs with smart equipment choices and efficient layouts.
             </p>
           </div>
           <div className="section-card p-5">
@@ -243,7 +240,7 @@ export default function MEPEngineeringPage() {
               HVAC System Design
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Fan systems. Air handlers. Package units. VAVs. VRV systems. Chillers. Anything your building needs for proper airflow.
+              Fans, air handlers, chillers. Anything your building needs for proper airflow.
             </p>
           </div>
           <div className="section-card p-5">
@@ -251,7 +248,7 @@ export default function MEPEngineeringPage() {
               Load Calculations and Sizing
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We use data and software to size equipment correctly so your systems run efficiently without breaking the budget.
+              Correct sizing for efficient operation without breaking the budget.
             </p>
           </div>
           <div className="section-card p-5">
@@ -259,7 +256,7 @@ export default function MEPEngineeringPage() {
               MEP Renovations and Retrofits
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Old buildings need updates. We modernize systems to improve comfort, safety, and performance.
+              Modernize systems to improve comfort, safety, and performance.
             </p>
           </div>
         </div>
@@ -282,45 +279,45 @@ export default function MEPEngineeringPage() {
           Who Benefits From Our MEP Services
         </h2>
         <p className="mt-4 text-slate-600">
-          Our services support everyone who needs reliable MEP engineering. If your building needs air, power, or water, you need us.
+          If your building needs air, power, or water, you need us.
         </p>
         <div className="mt-6 grid md:grid-cols-3 gap-5">
           {[
             {
               title: "General Contractors",
-              desc: "Complete MEP coordination and design support for all project phases.",
+              desc: "Complete MEP coordination and design support.",
             },
             {
               title: "Subcontractors",
-              desc: "Specialized MEP design for mechanical, electrical, or plumbing trades.",
+              desc: "Specialized MEP design for trades.",
             },
             {
               title: "Developers",
-              desc: "Full MEP engineering support for all phases of development projects.",
+              desc: "Full MEP engineering support for all phases.",
             },
             {
               title: "Architects",
-              desc: "MEP engineering that brings your designs to life with working systems.",
+              desc: "MEP engineering that brings designs to life.",
             },
             {
               title: "Homeowners",
-              desc: "Safe and reliable MEP systems for home projects and renovations.",
+              desc: "Safe and reliable MEP systems for homes.",
             },
             {
               title: "Engineers",
-              desc: "Professional MEP design support and coordination services.",
+              desc: "Professional MEP design support.",
             },
             {
               title: "Commercial Owners",
-              desc: "Protect your investment with efficient and compliant MEP systems.",
+              desc: "Protect your investment with efficient systems.",
             },
             {
               title: "Investors",
-              desc: "Ensure projects have reliable MEP systems that add value.",
+              desc: "Ensure projects have reliable MEP systems.",
             },
             {
               title: "Government Projects",
-              desc: "Meet compliance requirements with professional MEP engineering services.",
+              desc: "Meet compliance requirements with professional services.",
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
@@ -368,16 +365,13 @@ export default function MEPEngineeringPage() {
         <p className="mt-4 text-slate-600">
           Clients choose us because our MEP designs make construction easier and building operations smoother.
         </p>
-        <p className="mt-4 text-slate-600">
-          You get:
-        </p>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Accurate & Efficient
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Accurate designs. Efficient layouts. Easy communication. Quick turnaround. Friendly team support.
+              Accurate designs, efficient layouts, and quick turnaround.
             </p>
           </div>
           <div className="section-card p-5">
@@ -385,7 +379,7 @@ export default function MEPEngineeringPage() {
               Fair Pricing & Real Solutions
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Fair pricing. Real world solutions. We help you build safer, smarter, and more comfortable spaces.
+              Fair pricing and real-world solutions. We help you build safer, smarter spaces.
             </p>
           </div>
         </div>

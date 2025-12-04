@@ -14,7 +14,7 @@ export default function TechnicalDocumentationPage() {
       title="Technical Documentation"
       groupLabel="ENGINEERING & ESTIMATION"
       accent="engineering"
-      intro="Clear documentation keeps projects moving. We prepare drawings, specifications, reports and handover records that make life easier for consultants, contractors and authorities."
+      intro="Clear documentation keeps projects moving. We prepare drawings, specifications, reports and handover records that make life easier for everyone."
       primaryCta={{
         label: "Talk about your documentation needs",
         href: "/contact",
@@ -55,47 +55,47 @@ export default function TechnicalDocumentationPage() {
         {
           title: "Gather & organize inputs",
           detail:
-            "We align on templates, authority requirements and version control before drafting begins.",
+            "We align on templates and requirements before drafting begins.",
         },
         {
           title: "Draft & structure",
           detail:
-            "Content is written or compiled with clear labeling, hyperlinks and traceable references.",
+            "Content is compiled with clear labeling and traceable references.",
         },
         {
           title: "Review & polish",
           detail:
-            "Built-in QA ensures formatting consistency, data accuracy and cross-referencing.",
+            "Built-in QA ensures formatting consistency and accuracy.",
         },
         {
           title: "Package & deliver",
           detail:
-            "Files are delivered in your folder structure with trackers so everyone knows what’s final.",
+            "Files are delivered in your folder structure with trackers.",
         },
       ]}
       faqs={[
         {
           question: "Can you turn messy folders into clean handover packs?",
           answer:
-            "Yes. We audit what exists, map missing items, then rebuild the structure with intuitive naming so anyone can find what they need.",
+            "Yes. We audit what exists, map missing items, and rebuild the structure with intuitive naming.",
         },
         {
           question: "Do you support bilingual documentation?",
           answer:
-            "We can produce English primary documentation and coordinate translation-ready files or partner translators as required.",
+            "We can produce English primary documentation and coordinate translation-ready files.",
         },
         {
           question: "How do you manage revisions?",
           answer:
-            "Every document gets a change log, version number and reviewer sign-off so there’s a single source of truth.",
+            "Every document gets a change log, version number and reviewer sign-off.",
         },
       ]}
       ctaNote="Need help closing out a project? We’ll whip scattered files into a clean, review-proof documentation set."
       signals={[
         "Handovers keep slipping because files live in random folders.",
         "Authorities request re-submissions due to inconsistent formatting.",
-        "Site teams rely on outdated markups and don’t trust the latest sets.",
-        "Clients demand structured as-built records before releasing retention.",
+        "Site teams rely on outdated markups.",
+        "Clients demand structured as-built records.",
       ]}
       packages={[
         {
@@ -125,8 +125,7 @@ export default function TechnicalDocumentationPage() {
               Design Documentation
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Clean, consistent documentation that captures the design intent
-              and supports technical reviews.
+              Clean, consistent documentation that captures design intent and supports reviews.
             </p>
           </div>
           <div className="section-card p-5">
@@ -134,8 +133,7 @@ export default function TechnicalDocumentationPage() {
               Construction & As-Built
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Site-verified as-built drawings and O&amp;M records for smooth
-              handover and facilities management.
+              Site-verified as-built drawings and O&amp;M records for smooth handover.
             </p>
           </div>
           <div className="section-card p-5">
@@ -143,8 +141,7 @@ export default function TechnicalDocumentationPage() {
               Compliance & Handover
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Checklists, certificates and files arranged in a clear structure
-              for clients and authorities.
+              Checklists, certificates and files arranged in a clear structure.
             </p>
           </div>
         </div>
@@ -166,11 +163,11 @@ export default function TechnicalDocumentationPage() {
           {[
             {
               title: "Traceable registers",
-              desc: "We build equipment, drawing and inspection registers linked directly to source documents.",
+              desc: "Registers linked directly to source documents.",
             },
             {
               title: "Review dashboards",
-              desc: "Living dashboards outlining review status, outstanding comments and ownership.",
+              desc: "Living dashboards outlining review status and ownership.",
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">

@@ -14,7 +14,7 @@ export default function SocialMediaPage() {
       title="Social Media Marketing"
       groupLabel="AI & DIGITAL SOLUTIONS"
       accent="digital"
-      intro="Build a consistent, professional presence across the platforms your customers actually use. We help with content planning, creatives and reporting so you can focus on running the business."
+      intro="Build a consistent presence on the platforms your customers use. We handle planning, creatives, and reporting so you can focus on your business."
       primaryCta={{ label: "Plan a content calendar", href: "/contact" }}
       sideHeading="Platforms we support"
       sideItems={[
@@ -52,47 +52,47 @@ export default function SocialMediaPage() {
         {
           title: "Strategic foundation",
           detail:
-            "We define goals, voice, visual direction and KPIs so every post has a purpose.",
+            "We define goals, voice, and KPIs so every post has a purpose.",
         },
         {
           title: "Calendar build",
           detail:
-            "Monthly or quarterly calendars map topics, hooks and asset formats before production starts.",
+            "Calendars map topics, hooks and formats before production starts.",
         },
         {
           title: "Production & approvals",
           detail:
-            "Copy, design and repurposed content are created in collaborative tools with version control.",
+            "Copy, design and content are created in collaborative tools.",
         },
         {
           title: "Launch & learn",
           detail:
-            "We schedule posts, monitor performance and adjust the next batch based on real numbers.",
+            "We schedule posts, monitor performance and adjust based on numbers.",
         },
       ]}
       faqs={[
         {
           question: "Do you handle community management?",
           answer:
-            "We provide suggested responses, escalate critical comments and keep a log of FAQs so in-house teams can reply faster.",
+            "We provide suggested responses and escalate critical comments so your team can reply faster.",
         },
         {
           question: "Can you work with our brand team?",
           answer:
-            "Yes. We sync with brand or comms leads weekly to ensure tone, visuals and campaigns stay on-message.",
+            "Yes. We sync with brand leads to ensure tone and visuals stay on-message.",
         },
         {
           question: "How do you report results?",
           answer:
-            "A concise dashboard tracks reach, engagement, top posts and recommendations so you can iterate with confidence.",
+            "A concise dashboard tracks reach, engagement, and top posts so you can iterate with confidence.",
         },
       ]}
-      ctaNote="Share your handles and goals—we’ll craft a calendar, creative system and reporting loop that fits."
+      ctaNote="Share your handles and goals—we’ll craft a calendar and creative system that fits."
       signals={[
-        "Publishing cadence is inconsistent and relies on a single person.",
-        "Sales asks for proof of social ROI but nothing is tracked properly.",
-        "Brand voice looks different on every platform or asset.",
-        "You have plenty of raw ideas but no system to package them.",
+        "Publishing cadence is inconsistent.",
+        "Sales asks for proof of social ROI.",
+        "Brand voice looks different on every platform.",
+        "You have ideas but no system to package them.",
       ]}
       packages={[
         {
@@ -122,8 +122,7 @@ export default function SocialMediaPage() {
               Strategy & Positioning
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We define content pillars, tone of voice and posting rhythm that
-              fits your goals and industry.
+              We define content pillars, tone, and rhythm that fits your goals.
             </p>
           </div>
           <div className="section-card p-5">
@@ -131,8 +130,7 @@ export default function SocialMediaPage() {
               Content & Creatives
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Post copy, simple graphics and repurposed content that stays
-              on-brand and consistent.
+              Post copy, simple graphics and repurposed content that stays on-brand.
             </p>
           </div>
           <div className="section-card p-5">
@@ -140,8 +138,7 @@ export default function SocialMediaPage() {
               Reporting & Iteration
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Basic performance reporting so you know which content works and
-              where to double down.
+              Basic performance reporting so you know what works.
             </p>
           </div>
         </div>
@@ -163,7 +160,7 @@ export default function SocialMediaPage() {
           {[
             {
               title: "Authority & insights",
-              desc: "Explain your POV on industry trends, break down case studies and highlight internal expertise.",
+              desc: "Explain your POV on industry trends and highlight internal expertise.",
             },
             {
               title: "Proof & personality",

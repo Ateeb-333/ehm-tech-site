@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import type { ReactNode } from "react";
 import { MediaPlaceholder } from "./MediaPlaceholder";
 
@@ -40,9 +40,33 @@ const accentClass = (accent: ServiceLayoutProps["accent"]) => {
   return "text-sunsetPeach";
 };
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0 },
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const staggerContainer: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariant: Variants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 export function ServiceLayout({
@@ -74,10 +98,9 @@ export function ServiceLayout({
     <main className="main-shell space-y-4">
       {/* Hero */}
       <motion.section
-        variants={fadeIn}
+        variants={fadeInUp}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 0.4 }}
         className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-gradient-to-r from-white via-white to-slate-50 p-6 md:p-10 shadow-soft"
       >
         <div className="floating-orb floating-orb--cyan -top-16 -right-10 opacity-20" />
@@ -99,7 +122,7 @@ export function ServiceLayout({
                 {primaryCta && (
                   <a
                     href={primaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full bg-slateBlue px-6 py-2.5 font-medium text-white shadow-soft hover:bg-slateBlue/90 transition-colors"
+                    className="inline-flex items-center justify-center rounded-full bg-slateBlue px-6 py-2.5 font-medium text-white shadow-soft hover:bg-slateBlue/90 hover:scale-105 transition-all duration-300"
                   >
                     {primaryCta.label}
                   </a>
@@ -107,7 +130,7 @@ export function ServiceLayout({
                 {secondaryCta && (
                   <a
                     href={secondaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-2.5 font-medium text-slate-700 hover:border-softSkyCyan/80 transition-colors"
+                    className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-2.5 font-medium text-slate-700 hover:border-softSkyCyan/80 hover:bg-slate-50 transition-all duration-300"
                   >
                     {secondaryCta.label}
                   </a>
@@ -128,19 +151,28 @@ export function ServiceLayout({
           </div>
 
           <div className="space-y-4">
-            <div className="section-card p-6 backdrop-blur">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              animate="visible"
+              className="section-card p-6 backdrop-blur"
+            >
               <h3 className="text-sm font-semibold text-slate-900">
                 {sideHeading}
               </h3>
               <ul className="mt-4 space-y-3 text-sm text-slate-600">
                 {sideItems.map((item) => (
-                  <li key={item} className="flex gap-2">
+                  <motion.li
+                    key={item}
+                    variants={itemVariant}
+                    className="flex gap-2 p-2 rounded-lg hover:bg-slate-50 transition-colors"
+                  >
                     <span className="text-softSkyCyan">•</span>
                     <span>{item}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.section>
@@ -148,20 +180,20 @@ export function ServiceLayout({
       {/* Stats and Content */}
       {(stats && stats.length > 0) || children ? (
         <motion.section
-          variants={fadeIn}
+          variants={staggerContainer}
           initial="hidden"
-          animate="visible"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.4 }}
           className="space-y-4"
         >
           {stats && stats.length > 0 && (
             <div className="grid gap-4 md:grid-cols-3">
               {stats.map((stat) => (
-                <div
+                <motion.div
                   key={stat.label}
-                  className="glass-panel glow-accent p-4 md:p-6 flex flex-col gap-1"
+                  variants={itemVariant}
+                  whileHover={{ y: -5 }}
+                  className="glass-panel glow-accent p-4 md:p-6 flex flex-col gap-1 transition-all duration-300"
                 >
                   <p className="text-xs uppercase tracking-[0.18em] text-slate-500">
                     {stat.label}
@@ -170,15 +202,15 @@ export function ServiceLayout({
                   {stat.detail && (
                     <p className="text-sm text-slate-600">{stat.detail}</p>
                   )}
-                </div>
+                </motion.div>
               ))}
             </div>
           )}
 
           {children && (
-            <div className="space-y-8">
+            <motion.div variants={fadeInUp} className="space-y-8">
               {children}
-            </div>
+            </motion.div>
           )}
         </motion.section>
       ) : null}
@@ -186,11 +218,10 @@ export function ServiceLayout({
       {/* Signals */}
       {signals && signals.length > 0 && (
         <motion.section
-          variants={fadeIn}
+          variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <div className="section-card p-6 md:p-7">
             <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.18em]">
@@ -199,17 +230,24 @@ export function ServiceLayout({
             <h2 className="mt-2 text-2xl font-semibold text-slate-900">
               {signalsTitle}
             </h2>
-            <div className="mt-4 grid gap-3 text-sm text-slate-600 md:grid-cols-2">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              className="mt-4 grid gap-3 text-sm text-slate-600 md:grid-cols-2"
+            >
               {signals.map((signal) => (
-                <div
+                <motion.div
                   key={signal}
-                  className="flex items-start gap-2 rounded-xl border border-slate-200 bg-white p-3"
+                  variants={itemVariant}
+                  className="flex items-start gap-2 rounded-xl border border-slate-200 bg-white p-3 hover:border-softSkyCyan/50 transition-colors duration-300"
                 >
                   <span className="mt-1 text-softSkyCyan">▹</span>
                   <span>{signal}</span>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </motion.section>
       )}
@@ -217,11 +255,10 @@ export function ServiceLayout({
       {/* Tools */}
       {tools && tools.length > 0 && (
         <motion.section
-          variants={fadeIn}
+          variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <div className="section-card p-6 md:p-7">
             <div className="flex items-center justify-between gap-4 flex-wrap">
@@ -235,16 +272,24 @@ export function ServiceLayout({
               </div>
               <span className="chip">Updated quarterly</span>
             </div>
-            <div className="mt-5 flex flex-wrap gap-3">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              className="mt-5 flex flex-wrap gap-3"
+            >
               {tools.map((tool) => (
-                <span
+                <motion.span
                   key={tool}
-                  className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-xs font-normal text-slate-700"
+                  variants={itemVariant}
+                  whileHover={{ scale: 1.05 }}
+                  className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-xs font-normal text-slate-700 transition-transform duration-200"
                 >
                   {tool}
-                </span>
+                </motion.span>
               ))}
-            </div>
+            </motion.div>
           </div>
         </motion.section>
       )}
@@ -252,35 +297,44 @@ export function ServiceLayout({
       {/* Approach */}
       {approach && approach.length > 0 && (
         <motion.section
-          variants={fadeIn}
+          variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <h2 className="text-2xl font-semibold text-slate-900">{approachTitle}</h2>
-          <div className="mt-5 grid gap-4 md:grid-cols-4">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="mt-5 grid gap-4 md:grid-cols-4"
+          >
             {approach.map((step, idx) => (
-              <div key={step.title} className="section-card p-4">
-                <div className="w-7 h-7 flex items-center justify-center rounded-full bg-slateBlue text-white text-xs font-semibold">
+              <motion.div
+                key={step.title}
+                variants={itemVariant}
+                whileHover={{ y: -5 }}
+                className="section-card p-4 transition-all duration-300"
+              >
+                <div className="w-7 h-7 flex items-center justify-center rounded-full bg-slateBlue text-white text-xs font-semibold shadow-md">
                   {idx + 1}
                 </div>
                 <p className="mt-3 font-medium text-slate-900">{step.title}</p>
                 <p className="mt-2 text-sm text-slate-600">{step.detail}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </motion.section>
       )}
 
       {/* FAQs */}
       {faqs && faqs.length > 0 && (
         <motion.section
-          variants={fadeIn}
+          variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <div className="section-card p-6 md:p-7 space-y-4">
             <div>
@@ -291,10 +345,17 @@ export function ServiceLayout({
                 {faqsTitle}
               </h2>
             </div>
-            <div className="space-y-4">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              className="space-y-4"
+            >
               {faqs.map((faq) => (
-                <div
+                <motion.div
                   key={faq.question}
+                  variants={itemVariant}
                   className="border-t border-slate-200 pt-4 first:border-t-0 first:pt-0"
                 >
                   <p className="text-sm font-semibold text-slate-900 flex items-start gap-2">
@@ -302,9 +363,9 @@ export function ServiceLayout({
                     <span>{faq.question}</span>
                   </p>
                   <p className="mt-1 text-sm text-slate-600 ml-7">{faq.answer}</p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </motion.section>
       )}
@@ -312,11 +373,10 @@ export function ServiceLayout({
       {/* Packages */}
       {packages && packages.length > 0 && (
         <motion.section
-          variants={fadeIn}
+          variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <div className="section-card p-6 md:p-7 space-y-5">
             <div>
@@ -327,11 +387,19 @@ export function ServiceLayout({
                 {packagesTitle}
               </h2>
             </div>
-            <div className="grid gap-4 md:grid-cols-3">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              className="grid gap-4 md:grid-cols-3"
+            >
               {packages.map((pkg) => (
-                <div
+                <motion.div
                   key={pkg.title}
-                  className="rounded-2xl border border-slate-200 bg-white p-3 md:p-4 flex flex-col gap-3"
+                  variants={itemVariant}
+                  whileHover={{ y: -5 }}
+                  className="rounded-2xl border border-slate-200 bg-white p-3 md:p-4 flex flex-col gap-3 transition-all duration-300 hover:shadow-md"
                 >
                   <div>
                     <p className="text-sm font-semibold text-slate-900">{pkg.title}</p>
@@ -347,20 +415,19 @@ export function ServiceLayout({
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </motion.section>
       )}
 
       {/* CTA */}
       <motion.section
-        variants={fadeIn}
+        variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.4 }}
         className="section-card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
       >
         <div>
@@ -374,7 +441,7 @@ export function ServiceLayout({
         </div>
         <a
           href="/contact"
-          className="rounded-full bg-slateBlue px-6 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-slateBlue/90 transition-colors"
+          className="rounded-full bg-slateBlue px-6 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-slateBlue/90 hover:scale-105 transition-all duration-300"
         >
           Book a call
         </a>

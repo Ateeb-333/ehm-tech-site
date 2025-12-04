@@ -14,7 +14,7 @@ export default function CivilStructuralEngineeringPage() {
       title="Civil and Structural Engineering Services"
       groupLabel="ENGINEERING"
       accent="engineering"
-      intro="Every strong building begins with a strong design. And every strong design begins with solid civil and structural engineering. At EHM Technology Services, we provide engineering solutions that keep your project safe, stable, and built to last. Think of us as the quiet superheroes behind your project. You do not see us swinging from cranes or lifting steel, but you feel our work in every beam, every footing, and every structure that stands firm for decades. No matter what you are building, our engineering team supports you with smart planning, precise calculations, and designs that stand tall."
+      intro="Every strong building begins with a strong design. EHM Technology Services provides engineering solutions that keep your project safe, stable, and built to last. We are the quiet superheroes behind your project—ensuring every beam and footing stands firm."
       primaryCta={{ label: "Discuss your project", href: "/contact" }}
       heroMedia={
         <MediaPlaceholder
@@ -67,47 +67,47 @@ export default function CivilStructuralEngineeringPage() {
         {
           title: "Share project details & ideas",
           detail:
-            "You share your project details, drawings, or ideas with us to begin the engineering process.",
+            "Share your project details and ideas to start the process.",
         },
         {
           title: "Study goals & requirements",
           detail:
-            "We study your project goals, challenges, and specific requirements to inform our engineering solutions.",
+            "We study your goals and requirements to inform our solutions.",
         },
         {
           title: "Prepare calculations & designs",
           detail:
-            "Our engineers prepare precise calculations, detailed designs, and plans tailored to your project's needs.",
+            "Our engineers prepare precise calculations and detailed designs.",
         },
         {
           title: "Deliver clear drawings & documents",
           detail:
-            "You receive clear, organized drawings and documents ready for construction, permitting, and approvals.",
+            "You receive clear drawings ready for construction and permitting.",
         },
       ]}
       faqs={[
         {
           question: "What types of engineering services do you provide?",
           answer:
-            "We provide full support for every part of your project including structural design (beams, columns, slabs, foundations), civil site engineering (grading, drainage, utilities), foundation engineering, structural analysis, retaining walls, steel and concrete design, seismic and wind calculations, and construction support. EHM Technology Services covers every engineering need under one roof.",
+            "We provide structural design, civil site engineering, foundation engineering, analysis, retaining walls, and construction support. EHM Technology Services covers every engineering need.",
         },
         {
           question: "What tools do you use for engineering?",
           answer:
-            "We use modern engineering and drafting tools including AutoCAD, Revit, civil engineering software, structural analysis software, and blueprint review tools. These tools help us deliver designs that are safe, efficient, and code compliant.",
+            "We use AutoCAD, Revit, and advanced analysis software to deliver safe, efficient, and code-compliant designs.",
         },
         {
           question: "Who can benefit from your engineering services?",
           answer:
-            "Our services support contractors, developers, architects, designers, homeowners, builders, commercial owners, investors, and government projects. If your project needs strength and stability, we are here to help.",
+            "Contractors, developers, architects, homeowners, and investors. If your project needs strength, we are here to help.",
         },
       ]}
-      ctaNote="Your structure deserves more than a rough guess. It deserves smart engineering, careful planning, and strong support. That is exactly what EHM Technology Services delivers. Let us make your next project safe, stable, and built to last."
+      ctaNote="Your structure deserves smart engineering and strong support. Let us make your next project safe, stable, and built to last."
       signals={[
-        "A project without proper engineering is like a bridge without support.",
-        "Good engineering prevents risks and gives your project the backbone it needs.",
+        "A project without proper engineering is risky.",
+        "Good engineering gives your project the backbone it needs.",
         "You need reliable engineering from experienced professionals.",
-        "Your structure deserves smart engineering, careful planning, and strong support.",
+        "Your structure deserves smart planning and strong support.",
       ]}
       packages={[
         {
@@ -132,7 +132,7 @@ export default function CivilStructuralEngineeringPage() {
           Why Civil and Structural Engineering Matters
         </h2>
         <p className="mt-4 text-slate-600">
-          A project without proper engineering is like a bridge without support. It might look fine at first, but one little shake and things get risky. Good engineering prevents those risks. It gives your project the backbone it needs to stay safe and strong.
+          A project without proper engineering is like a bridge without support. Good engineering prevents risks and gives your project the backbone it needs to stay safe and strong.
         </p>
         <p className="mt-4 text-slate-600">
           Proper engineering helps you:
@@ -146,7 +146,7 @@ export default function CivilStructuralEngineeringPage() {
           <li>Keep your project running smoothly</li>
         </ul>
         <p className="mt-4 text-slate-600">
-          Strong engineering does not just protect your project. It protects your reputation.
+          Strong engineering protects your project and your reputation.
         </p>
       </div>
 
@@ -155,10 +155,7 @@ export default function CivilStructuralEngineeringPage() {
           Why EHM Technology Services Is Your Ideal Engineering Partner
         </h2>
         <p className="mt-4 text-slate-600">
-          At EHM Technology Services, we combine experience, advanced tools, and friendly communication to make engineering easy for you. Our team studies your project carefully, explains everything clearly, and designs solutions that fit your goals.
-        </p>
-        <p className="mt-4 text-slate-600">
-          You get:
+          We combine experience, advanced tools, and friendly communication to make engineering easy. We study your project and design solutions that fit your goals.
         </p>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="section-card p-5">
@@ -166,7 +163,7 @@ export default function CivilStructuralEngineeringPage() {
               Reliable Engineering
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Reliable engineering from experienced professionals. Clear explanations without confusing jargon. Fast turnaround that matches your schedule.
+              Reliable engineering, clear explanations, and fast turnaround.
             </p>
           </div>
           <div className="section-card p-5">
@@ -174,7 +171,7 @@ export default function CivilStructuralEngineeringPage() {
               Complete Support
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Support at every stage of your build. A team that treats your project as if it were our own. We make engineering feel simple and stress free.
+              Support at every stage. We make engineering feel simple and stress-free.
             </p>
           </div>
         </div>
@@ -202,7 +199,7 @@ export default function CivilStructuralEngineeringPage() {
               Structural Design
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Beams. Columns. Slabs. Foundations. Load analysis. Reinforcements. We design structures that stand strong and meet all safety standards.
+              Beams, columns, slabs, foundations. We design structures that stand strong.
             </p>
           </div>
           <div className="section-card p-5">
@@ -210,7 +207,7 @@ export default function CivilStructuralEngineeringPage() {
               Civil Site Engineering
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Site grading. Drainage planning. Utility layouts. Roadway design. Stormwater management. We prepare your site so construction goes smoothly.
+              Grading, drainage, utilities. We prepare your site for smooth construction.
             </p>
           </div>
           <div className="section-card p-5">
@@ -218,7 +215,7 @@ export default function CivilStructuralEngineeringPage() {
               Foundation Engineering
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We design foundations that protect your structure from settlement, shifting soil, water pressure, and other ground level challenges.
+              Foundations that protect against settlement and shifting soil.
             </p>
           </div>
           <div className="section-card p-5">
@@ -226,7 +223,7 @@ export default function CivilStructuralEngineeringPage() {
               Structural Analysis
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We run calculations and simulations to confirm your structure can handle loads, weather, movement, and everything the real world throws at it.
+              Calculations to confirm your structure handles loads and weather.
             </p>
           </div>
           <div className="section-card p-5">
@@ -234,7 +231,7 @@ export default function CivilStructuralEngineeringPage() {
               Retaining Wall and Support Systems
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We design retaining walls, shoring, and reinforcement systems that keep your site secure and your slopes stable.
+              Walls and shoring to keep your site secure and slopes stable.
             </p>
           </div>
           <div className="section-card p-5">
@@ -242,7 +239,7 @@ export default function CivilStructuralEngineeringPage() {
               Steel and Concrete Design
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Whether your project is steel framed or concrete heavy, our designs keep everything balanced, safe, and efficient.
+              Balanced, safe, and efficient designs for steel or concrete projects.
             </p>
           </div>
           <div className="section-card p-5">
@@ -250,7 +247,7 @@ export default function CivilStructuralEngineeringPage() {
               Seismic and Wind Calculations
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We prepare your structure to handle wind loads, storms, and seismic activity based on local requirements.
+              Preparing your structure for wind, storms, and seismic activity.
             </p>
           </div>
           <div className="section-card p-5">
@@ -258,7 +255,7 @@ export default function CivilStructuralEngineeringPage() {
               Construction Support Engineering
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We provide on site guidance, review changes, and ensure your structure stays compliant as construction progresses.
+              On-site guidance and compliance checks as construction progresses.
             </p>
           </div>
         </div>
@@ -282,7 +279,7 @@ export default function CivilStructuralEngineeringPage() {
               Residential Engineering
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              New homes. Remodels. Additions. Decks. Multi family units. Safe and reliable designs for all residential construction.
+              Safe designs for homes, remodels, and additions.
             </p>
           </div>
           <div className="section-card p-5">
@@ -290,7 +287,7 @@ export default function CivilStructuralEngineeringPage() {
               Commercial Engineering
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Retail buildings. Offices. Warehouses. Restaurants. Schools. Medical spaces. We support all commercial project types.
+              Support for retail, offices, warehouses, and more.
             </p>
           </div>
           <div className="section-card p-5">
@@ -298,7 +295,7 @@ export default function CivilStructuralEngineeringPage() {
               Industrial Engineering
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Plants. Factories. Heavy equipment areas. High load facilities. We design for strength, safety, and precision.
+              Strength and safety for plants and heavy equipment areas.
             </p>
           </div>
         </div>
@@ -312,45 +309,45 @@ export default function CivilStructuralEngineeringPage() {
           Who Benefits From Our Engineering Services
         </h2>
         <p className="mt-4 text-slate-600">
-          Our services support everyone who needs reliable engineering. If your project needs strength and stability, we are here to help.
+          If your project needs strength and stability, we are here to help.
         </p>
         <div className="mt-6 grid md:grid-cols-3 gap-5">
           {[
             {
               title: "Contractors",
-              desc: "Reliable structural designs that keep projects safe and compliant.",
+              desc: "Reliable structural designs for safe projects.",
             },
             {
               title: "Developers",
-              desc: "Complete engineering support for all phases of development.",
+              desc: "Complete engineering support for all phases.",
             },
             {
               title: "Architects",
-              desc: "Structural engineering that brings your designs to life safely.",
+              desc: "Engineering that brings designs to life safely.",
             },
             {
               title: "Designers",
-              desc: "Engineering solutions that support your design vision.",
+              desc: "Solutions that support your design vision.",
             },
             {
               title: "Homeowners",
-              desc: "Safe and reliable engineering for home projects and additions.",
+              desc: "Safe engineering for homes and additions.",
             },
             {
               title: "Builders",
-              desc: "Professional engineering support for residential and commercial builds.",
+              desc: "Professional support for all builds.",
             },
             {
               title: "Commercial Owners",
-              desc: "Protect your investment with sound structural engineering.",
+              desc: "Protect your investment with sound engineering.",
             },
             {
               title: "Investors",
-              desc: "Ensure projects are built safely and to code standards.",
+              desc: "Ensure projects are built safely and to code.",
             },
             {
               title: "Government Projects",
-              desc: "Meet compliance requirements with professional engineering services.",
+              desc: "Meet compliance requirements with professional services.",
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
@@ -397,9 +394,6 @@ export default function CivilStructuralEngineeringPage() {
         <p className="mt-4 text-slate-600">
           Clients trust us because our engineering keeps their projects safe and predictable.
         </p>
-        <p className="mt-4 text-slate-600">
-          You get:
-        </p>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
@@ -422,4 +416,3 @@ export default function CivilStructuralEngineeringPage() {
     </ServiceLayout>
   );
 }
-

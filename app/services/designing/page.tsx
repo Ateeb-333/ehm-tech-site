@@ -14,7 +14,7 @@ export default function DesigningPage() {
       title="Designing"
       groupLabel="AI & DIGITAL SOLUTIONS"
       accent="digital"
-      intro="In the digital world, first impressions hit fast. A messy design scares people away. A clean design pulls them in. At EHM Technology Services, our Designing Services help you look sharp, modern, and professional across every platform you use. Whether you need UI and UX design, social media graphics, brand visuals, or full Figma layouts, we turn your ideas into designs that feel smooth, modern, and easy for people to love. We create visuals that speak for you before you even say a word."
+      intro="First impressions matter. A messy design scares people away; a clean one pulls them in. EHM Technology Services helps you look sharp and professional across every platform. Whether you need UI/UX, social media graphics, or brand visuals, we create designs that feel modern and easy to love. We make visuals that speak for you."
       primaryCta={{ label: "Start a design project", href: "/contact" }}
       sideHeading="Design services"
       sideItems={[
@@ -51,50 +51,50 @@ export default function DesigningPage() {
       approach={[
         {
           title: "Step One",
-          detail: "You share your ideas, goals, references, and preferred styles.",
+          detail: "Share your ideas, goals, and style preferences.",
         },
         {
           title: "Step Two",
           detail:
-            "We sketch the concept and send early drafts so you can guide the direction.",
+            "We sketch concepts and send early drafts for your feedback.",
         },
         {
           title: "Step Three",
           detail:
-            "Our team designs your complete UI, UX, or visual graphics in a clean format.",
+            "Our team designs the complete UI, UX, or graphics.",
         },
         {
           title: "Step Four",
-          detail: "You receive polished and ready to use designs with organized files.",
+          detail: "You receive polished designs with organized files.",
         },
         {
           title: "Step Five",
-          detail: "Need tweaks? We update fast until it feels perfect.",
+          detail: "We tweak until it feels perfect.",
         },
       ]}
       faqs={[
         {
           question: "Do you provide design assets for development?",
           answer:
-            "Yes. We deliver design files in Figma with detailed specs, export assets, and provide component documentation for seamless handoff to developers.",
+            "Yes. We deliver Figma files with specs, assets, and documentation for seamless developer handoff.",
         },
         {
           question: "Can you work with our existing brand guidelines?",
           answer:
-            "Absolutely. We adapt and extend your existing brand system, or create new guidelines that align with your brand values and objectives.",
+            "Absolutely. We adapt to your existing system or create new guidelines aligned with your brand.",
         },
         {
           question: "How do you ensure designs are accessible?",
           answer:
-            "We follow WCAG guidelines, check color contrast ratios, consider keyboard navigation, and test with screen readers to ensure inclusive design.",
+            "We follow WCAG guidelines, check contrast, and consider navigation to ensure inclusive design.",
         },
       ]}
-      ctaNote="Your brand deserves visuals that stand out and leave a lasting impression. With EHM Technology Services, you get designs that feel clean, modern, and built for real results. Let us bring your ideas to life with creativity and strategy."
+      ctaNote="Your brand deserves visuals that stand out. Get designs that feel clean, modern, and built for results. Let us bring your ideas to life."
       signals={[
-        "Current design doesn't reflect your brand or industry standards.",
-        "User feedback indicates confusion or friction in the experience.",
-        "Designs exist in scattered files without a cohesive system.",
-        "You need a design partner to scale visual work efficiently.",
+        "Current design doesn't reflect your brand.",
+        "User feedback indicates confusion.",
+        "Designs are scattered without a system.",
+        "You need a partner to scale visual work.",
       ]}
       packages={[
         {
@@ -138,10 +138,7 @@ export default function DesigningPage() {
             Why Good Design Matters
           </h2>
           <p className="mt-4 text-slate-600 leading-relaxed">
-            Your design is usually the first thing people notice. Sometimes it is
-            also the thing that makes them stay, click, buy, or trust your brand.
-            A good design feels inviting. A bad design feels like a broken
-            shopping cart.
+            Design is the first thing people notice. It makes them stay, trust, or buy. Good design invites; bad design repels.
           </p>
           <div className="mt-6">
             <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider">
@@ -150,11 +147,11 @@ export default function DesigningPage() {
             <ul className="mt-4 grid gap-3 md:grid-cols-2">
               {[
                 "Look professional and credible",
-                "Capture attention on every platform",
+                "Capture attention everywhere",
                 "Improve user experience",
                 "Increase engagement and conversions",
-                "Keep viewers scrolling instead of leaving",
-                "Strengthen your visual identity",
+                "Keep viewers scrolling",
+                "Strengthen your identity",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-slate-600">
                   <span className="text-sunsetPeach mt-1">✓</span>
@@ -164,8 +161,7 @@ export default function DesigningPage() {
             </ul>
           </div>
           <p className="mt-6 font-medium text-slate-900">
-            Great design does not just look pretty. It sells. It communicates. It
-            creates trust.
+            Great design sells, communicates, and creates trust.
           </p>
         </div>
 
@@ -176,13 +172,10 @@ export default function DesigningPage() {
               Why EHM Technology Services Is The Right Choice
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              We mix creativity, strategy, and tech experience to deliver designs
-              that feel clean, modern, and user friendly. You explain your vision.
-              We turn it into visuals that actually match what you imagined.
+              We mix creativity and strategy to deliver clean, modern designs. You explain your vision; we turn it into visuals that match what you imagined.
             </p>
             <p className="mt-4 text-slate-600">
-              We keep the process simple so you stay relaxed and excited about
-              your brand.
+              We keep the process simple so you stay excited about your brand.
             </p>
           </div>
           <div className="space-y-4">
@@ -201,12 +194,12 @@ export default function DesigningPage() {
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Clean designs that feel fresh and modern",
+                  "Clean, modern designs",
                   "Friendly communication",
                   "Fast turnaround",
-                  "Unlimited project styles",
+                  "Unlimited styles",
                   "Easy revisions",
-                  "A team that understands how people think online",
+                  "User-focused approach",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-slate-700">
                     <span className="h-1.5 w-1.5 rounded-full bg-sunsetPeach" />
@@ -227,43 +220,43 @@ export default function DesigningPage() {
             {[
               {
                 title: "UI Design",
-                desc: "We design clean and intuitive user interfaces for apps, websites, dashboards, and software. Buttons that make sense. Layouts that feel natural. Screens that look beautiful.",
+                desc: "Clean, intuitive interfaces for apps and websites. Buttons that make sense. Layouts that feel natural.",
               },
               {
                 title: "UX Design",
-                desc: "We map out user journeys, flows, wireframes, and interactions so people enjoy using your platform instead of getting lost.",
+                desc: "User journeys, flows, and wireframes that make using your platform a joy.",
               },
               {
                 title: "Figma Design",
-                desc: "We use Figma to create modern layouts, full prototypes, and design systems. Everything stays organized, editable, and easy to share.",
+                desc: "Modern layouts, prototypes, and design systems. Organized and ready to share.",
               },
               {
                 title: "Website Layout Design",
-                desc: "Home pages. Landing pages. Service pages. Blog layouts. We design screens that keep visitors reading and clicking.",
+                desc: "Home pages, landing pages, and service pages designed to keep visitors clicking.",
               },
               {
                 title: "Social Media Design",
-                desc: "We create eye catching posts, banners, ads, covers, and story templates that help your brand stand out in crowded feeds.",
+                desc: "Eye-catching posts and banners that stand out in crowded feeds.",
               },
               {
                 title: "Branding and Visual Identity",
-                desc: "Logos. Fonts. Colors. Brand style guides. We give your brand a look and personality people remember.",
+                desc: "Logos, fonts, and colors that give your brand a memorable personality.",
               },
               {
                 title: "Marketing Materials",
-                desc: "Flyers. Brochures. Business cards. Pitch decks. Presentations. We design marketing tools that help you make a strong impression.",
+                desc: "Flyers, brochures, and decks that make a strong impression.",
               },
               {
                 title: "App and Dashboard Design",
-                desc: "Mobile apps. Web apps. SaaS dashboards. Admin panels. User systems. Everything modern and easy to navigate.",
+                desc: "Mobile and web apps, dashboards, and panels. Modern and easy to navigate.",
               },
               {
                 title: "Product Mockups",
-                desc: "Professional mockups that help you show off your apps, websites, and digital products.",
+                desc: "Professional mockups to showcase your digital products.",
               },
               {
                 title: "Icon and Illustration Design",
-                desc: "Custom icons. Simple illustrations. Visual elements that match your style perfectly.",
+                desc: "Custom icons and illustrations that match your style perfectly.",
               },
             ].map((service) => (
               <div key={service.title} className="section-card p-6 hover:border-sunsetPeach/30 transition-colors">
@@ -355,8 +348,7 @@ export default function DesigningPage() {
             Why Clients Choose EHM Technology Services
           </h2>
           <p className="mt-2 text-slate-300">
-            Clients stay with us because our designs make their brand stronger and
-            their customers happier.
+            Clients stay with us because our designs make their brand stronger and customers happier.
           </p>
           <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
@@ -364,8 +356,8 @@ export default function DesigningPage() {
               "Simple communication",
               "Fast and friendly service",
               "Affordable packages",
-              "A team that actually listens",
-              "Visuals that convert and engage",
+              "A team that listens",
+              "Visuals that convert",
             ].map((item) => (
               <div key={item} className="flex items-center gap-3">
                 <div className="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center text-sunsetPeach">

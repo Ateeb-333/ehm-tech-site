@@ -65,12 +65,10 @@ export default function ServicesPage() {
           <span className="sr-only">Services section: </span>SERVICES
         </p>
         <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900">
-          Everything you need from first sketch to digital launch.
+          From first sketch to digital launch.
         </h1>
         <p className="mt-3 text-meta max-w-2xl">
-          You don&apos;t have to choose between &quot;traditional&quot;
-          engineering and &quot;modern&quot; digital work. EHM Tech Services
-          helps you bridge both sides inside one relationship.
+          Traditional engineering meets modern digital work. We bridge both sides so you don't have to choose.
         </p>
       </motion.section>
 
@@ -84,28 +82,28 @@ export default function ServicesPage() {
           <span className="sr-only">Why EHM section: </span>WHY EHM
         </p>
         <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-          One team for engineering, automation & digital.
+          One team. Complete context.
         </h2>
         <p className="mt-3 text-meta font-normal max-w-2xl">
-          Most agencies specialize in one area. We combine engineering rigor with modern automation and web technologies so you don't have to manage multiple vendors or lose context between disciplines.
+          We combine engineering rigor with automation and web tech. No multiple vendors. No lost context. Just one team getting it done.
         </p>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {[
             {
-              title: "Engineering + Digital in one flow",
-              desc: "Design packages, estimation and documentation work alongside AI automation and web builds—no handoffs, no context loss.",
+              title: "Engineering + Digital",
+              desc: "Design, estimation, and automation in one flow. No handoffs.",
             },
             {
-              title: "Modern tooling, classic discipline",
-              desc: "We use Notion, LangChain, Next.js and Revit with the same attention to detail and documentation standards.",
+              title: "Modern tools, classic discipline",
+              desc: "We use Notion, LangChain, and Revit with the same high standards.",
             },
             {
-              title: "Flexible engagement models",
-              desc: "Start with a sprint, embed for a quarter, or keep us on retainer. Every service is modular and can scale up or down.",
+              title: "Flexible engagement",
+              desc: "Sprints, quarters, or retainers. We scale with you.",
             },
             {
-              title: "Remote-first, timezone-aware",
-              desc: "We overlap 4-6 hours daily with GCC, EU and APAC teams, so collaboration stays async-first without delays.",
+              title: "Remote-first",
+              desc: "Async-first collaboration that respects your time.",
             },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-slate-200 bg-white p-4">

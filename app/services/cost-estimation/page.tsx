@@ -14,7 +14,7 @@ export default function CostEstimationPage() {
       title="Construction Estimating Services"
       groupLabel="CONSTRUCTION"
       accent="engineering"
-      intro="A construction project runs smoothly when the numbers behave. When they do not, everything feels like walking on a tightrope with no safety net. At EHM Technology Services, our Construction Estimating Services give you steady ground, accurate figures, and a clear understanding of what your project truly costs. Your project deserves more than guesswork. It deserves clarity. It deserves confidence. It deserves numbers that make sense."
+      intro="A construction project runs smoothly when the numbers behave. EHM Technology Services provides accurate Construction Estimating Services to give you steady ground and clear figures. We turn guesswork into confidence."
       primaryCta={{ label: "Request an estimate", href: "/contact" }}
       sideHeading="What we cover"
       sideItems={[
@@ -58,7 +58,7 @@ export default function CostEstimationPage() {
         {
           title: "Send project details",
           detail:
-            "Send us your drawings and project details. We review everything and confirm exactly what you need.",
+            "Send us your drawings and details. We review everything to confirm your needs.",
         },
         {
           title: "Team creates estimate",
@@ -68,7 +68,7 @@ export default function CostEstimationPage() {
         {
           title: "Receive clean estimate",
           detail:
-            "You receive a clean and easy to understand estimate ready for bidding, planning, or budgeting.",
+            "You receive a clean, easy-to-read estimate ready for bidding or budgeting.",
         },
         {
           title: "Fast updates",
@@ -80,25 +80,25 @@ export default function CostEstimationPage() {
         {
           question: "What types of projects do you estimate?",
           answer:
-            "We estimate every kind of construction project including residential homes and remodels, commercial buildings, industrial structures, civil works, institutional buildings, retail and hospitality, and mixed use developments. No matter the size or complexity, EHM Technology Services has you covered.",
+            "We estimate residential, commercial, industrial, civil, institutional, and retail projects. No matter the size or complexity, we have you covered.",
         },
         {
           question: "How do you ensure accuracy?",
           answer:
-            "We use trusted digital estimating tools like PlanSwift, Bluebeam, and RSMeans cost data. We factor in hours, skill levels, shifts, labor productivity, current market pricing, and real-world conditions so your numbers stay grounded and accurate.",
+            "We use trusted tools like PlanSwift and RSMeans data. We factor in labor hours, skill levels, and current market pricing so your numbers stay grounded.",
         },
         {
           question: "Who can benefit from your services?",
           answer:
-            "Our Construction Estimating Services support general contractors, subcontractors, homebuilders, developers, architects, designers, investors, project owners, and government projects. If your work touches construction in any way, we support you.",
+            "General contractors, subcontractors, homebuilders, developers, architects, and investors. If your work touches construction, we support you.",
         },
       ]}
-      ctaNote="If you want accurate estimates, faster bidding, and strong profit protection, we are here and ready. Reach out today and let EHM Technology Services handle your construction estimating needs."
+      ctaNote="If you want accurate estimates and strong profit protection, we are ready. Reach out today."
       signals={[
         "You need estimates that win bids and protect profits.",
-        "Labor costs are moving around and need to be kept in line.",
-        "Hidden costs show up when projects get real and break budgets.",
-        "You need numbers that make sense and give you confidence.",
+        "Labor costs need to be kept in line.",
+        "Hidden costs are breaking your budgets.",
+        "You need numbers that make sense.",
       ]}
       packages={[
         {
@@ -133,7 +133,7 @@ export default function CostEstimationPage() {
           What Construction Estimating Services Mean For Your Project
         </h2>
         <p className="mt-4 text-slate-600">
-          Think of estimating like the blueprint for your budget. If the numbers are wrong, the whole project leans like a crooked ladder. Accurate estimating keeps you steady. Our estimating services break down every material, every hour of labor, every piece of equipment, and every hidden cost that shows up when projects get real. You stay prepared, in control, and ahead of costly surprises. With our help, you make choices with confidence and bid with power.
+          Estimating is the blueprint for your budget. Accurate estimating keeps you steady. We break down every material, labor hour, and hidden cost so you stay prepared and in control.
         </p>
       </div>
 
@@ -142,7 +142,7 @@ export default function CostEstimationPage() {
           Why EHM Technology Services Is The Partner You Want
         </h2>
         <p className="mt-4 text-slate-600">
-          Your project becomes our mission the moment you reach out. You get a team that treats your estimate like it is our own investment. Working with us feels easy. Like having an estimating expert sitting across the table, answering every question with patience and a smile.
+          Your project becomes our mission. You get a team that treats your estimate like our own investment. Working with us is easy—like having an expert at your table.
         </p>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="section-card p-5">
@@ -150,7 +150,7 @@ export default function CostEstimationPage() {
               Clear Communication
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Clear and simple communication, easy to read reports, and friendly support any time you need help.
+              Simple communication, easy reports, and friendly support.
             </p>
           </div>
           <div className="section-card p-5">
@@ -158,7 +158,7 @@ export default function CostEstimationPage() {
               Fast & Reliable
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Fast turnaround, up to date market pricing, and zero fluff and zero confusion. We help you win more bids and avoid cost surprises.
+              Fast turnaround and up-to-date pricing. No fluff, no confusion.
             </p>
           </div>
         </div>
@@ -169,7 +169,7 @@ export default function CostEstimationPage() {
           What We Cover in Our Construction Estimating Services
         </h2>
         <p className="mt-4 text-slate-600">
-          We cover everything in the construction world. If it needs materials, labor, time, equipment, or a coffee break, we estimate it. EHM Technology Services covers all project types. All industries. All scopes. No exceptions.
+          We cover everything in the construction world. All project types, all industries.
         </p>
         <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="section-card p-5">
@@ -177,7 +177,7 @@ export default function CostEstimationPage() {
               Material Takeoff Services
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We calculate every piece that goes into your build. Every brick. Every stud. Every panel. Every inch counted accurately. No missed quantities. No overspending.
+              We calculate every piece—bricks, studs, panels. No missed quantities.
             </p>
           </div>
           <div className="section-card p-5">
@@ -185,7 +185,7 @@ export default function CostEstimationPage() {
               Labor Cost Estimating
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Labor costs can move around like a toddler on sugar. Our estimates keep them in line. We factor hours, skill levels, shifts, and labor productivity so your numbers stay grounded.
+              We factor hours, skill levels, and productivity to keep labor costs in line.
             </p>
           </div>
           <div className="section-card p-5">
@@ -193,7 +193,7 @@ export default function CostEstimationPage() {
               Equipment Cost Estimating
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Cranes, lifts, saws, drills, rentals, fuel, maintenance. If it buzzes, rolls, lifts, or cuts, we include it.
+              Rentals, fuel, maintenance. If it works on site, we include it.
             </p>
           </div>
           <div className="section-card p-5">
@@ -201,7 +201,7 @@ export default function CostEstimationPage() {
               Residential Projects
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              From small home remodels to luxury builds. Kitchens, additions, basements, decks, roofing, flooring, framing, and every other residential project.
+              From remodels to luxury builds. Kitchens, additions, roofing, and more.
             </p>
           </div>
           <div className="section-card p-5">
@@ -209,7 +209,7 @@ export default function CostEstimationPage() {
               Commercial Projects
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Offices, retail shops, hotels, clinics, educational facilities, restaurants, multi story buildings, warehouses, and more. We help you plan and bid confidently.
+              Offices, retail, hotels, and more. We help you bid confidently.
             </p>
           </div>
           <div className="section-card p-5">
@@ -217,7 +217,7 @@ export default function CostEstimationPage() {
               Industrial & Civil Projects
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Factories, plants, oil and gas facilities, roads, bridges, pipelines, utilities, drainage, earthwork. Big projects with big stakes. We give you numbers you can trust.
+              Factories, roads, bridges, utilities. Big projects, trusted numbers.
             </p>
           </div>
         </div>
@@ -235,33 +235,33 @@ export default function CostEstimationPage() {
           Who Benefits From Our Services
         </h2>
         <p className="mt-4 text-slate-600">
-          Our Construction Estimating Services support everyone in the industry. If your work touches construction in any way, we support you.
+          If your work touches construction, we support you.
         </p>
         <div className="mt-6 grid md:grid-cols-3 gap-5">
           {[
             {
               title: "General Contractors",
-              desc: "Win more bids with accurate estimates and protect profits.",
+              desc: "Win more bids and protect profits.",
             },
             {
               title: "Subcontractors",
-              desc: "Get reliable numbers for competitive bidding on specialized work.",
+              desc: "Reliable numbers for competitive bidding.",
             },
             {
               title: "Developers & Investors",
-              desc: "Make confident decisions with clear cost breakdowns and market pricing.",
+              desc: "Confident decisions with clear cost breakdowns.",
             },
             {
               title: "Architects & Designers",
-              desc: "Understand project costs early to guide design decisions.",
+              desc: "Understand costs early to guide design.",
             },
             {
               title: "Project Owners",
-              desc: "Budget accurately and avoid costly surprises during construction.",
+              desc: "Budget accurately and avoid surprises.",
             },
             {
               title: "Government Projects",
-              desc: "Meet procurement requirements with detailed, transparent estimates.",
+              desc: "Meet requirements with transparent estimates.",
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
@@ -277,7 +277,7 @@ export default function CostEstimationPage() {
           Why Businesses Choose EHM Technology Services
         </h2>
         <p className="mt-4 text-slate-600">
-          Clients pick us because we help them win more bids, avoid cost surprises, and build stronger profits. We do not treat estimating like numbers on a screen. We treat it like the backbone of your project. Because it is.
+          We help clients win bids, avoid surprises, and build profits. We treat estimating as the backbone of your project.
         </p>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="section-card p-5">
@@ -285,7 +285,7 @@ export default function CostEstimationPage() {
               Professional Service
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Quick estimates, professional service, honest communication, and market driven pricing. A team that cares about your success.
+              Quick estimates, honest communication, and a team that cares.
             </p>
           </div>
           <div className="section-card p-5">
@@ -293,7 +293,7 @@ export default function CostEstimationPage() {
               Working Made Simple
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Working with us is simple. No complications. No headaches. Our goal is to keep you moving. Smooth. Steady. Confident.
+              No complications. Just smooth, steady, and confident progress.
             </p>
           </div>
         </div>

@@ -14,7 +14,7 @@ export default function ArchitecturalDesignPage() {
       title="Architectural and Design Engineering Services"
       groupLabel="ENGINEERING"
       accent="engineering"
-      intro="Every beautiful building starts as an idea. But turning that idea into something real takes the right mix of creativity, planning, and engineering. At EHM Technology Services, our Architectural and Design Engineering Services help you shape your vision into a clear plan that builders can follow with confidence. Great design is more than good looks. It is how a space feels, how it works, and how well it supports the people who use it. When design and engineering work together, everything falls into place. That is exactly what we deliver. Whether your project is brand new or a renovation with big dreams, we guide you through every step with clarity and care."
+      intro="Every beautiful building starts as an idea. EHM Technology Services helps you shape your vision into a clear plan that builders can follow with confidence. We ensure your design looks great, works well, and supports the people who use it."
       primaryCta={{ label: "Start design project", href: "/contact" }}
       heroMedia={
         <MediaPlaceholder
@@ -66,47 +66,47 @@ export default function ArchitecturalDesignPage() {
         {
           title: "Discuss vision & goals",
           detail:
-            "We talk about your vision and understand your style and project goals to inform our design approach.",
+            "We discuss your vision and goals to inform our design approach.",
         },
         {
           title: "Create concepts & layouts",
           detail:
-            "We create concepts and early layouts that bring your ideas to life and help you visualize the project.",
+            "We create concepts and layouts to help you visualize the project.",
         },
         {
           title: "Refine design with feedback",
           detail:
-            "We refine the design with your feedback and finalize the details to match your vision perfectly.",
+            "We refine the design with your feedback to match your vision.",
         },
         {
           title: "Prepare full drawings & documents",
           detail:
-            "Our team prepares full drawings ready for permitting and construction, ensuring everything is build ready.",
+            "We prepare full drawings ready for permitting and construction.",
         },
       ]}
       faqs={[
         {
           question: "What types of architectural and design services do you provide?",
           answer:
-            "We provide full service design from the first sketch to the final blueprint including conceptual design, space planning, architectural layouts (floor plans, elevations, sections, room details), 3D visualization and renderings, interior and exterior design, structural coordination, code compliance preparation, remodel and renovation planning, custom design solutions, and full construction document sets. EHM Technology Services delivers design that feels thoughtful, practical, and visually appealing.",
+            "We provide conceptual design, space planning, architectural layouts, 3D visualization, interior/exterior design, and construction documents. EHM Technology Services delivers thoughtful, practical designs.",
         },
         {
           question: "What tools do you use for architectural design?",
           answer:
-            "We use modern design and drafting tools that help us bring your ideas to life including AutoCAD, Revit, SketchUp, rendering software, and blueprint review tools. These tools help us create designs that are visually appealing and technically sound.",
+            "We use AutoCAD, Revit, SketchUp, and rendering software to create visually appealing and technically sound designs.",
         },
         {
           question: "Who can benefit from your architectural and design services?",
           answer:
-            "We support homeowners, contractors, developers, architects, designers, commercial property owners, investors, builders, and government and public projects. Anyone who wants to create a functional and beautiful space can rely on us.",
+            "Homeowners, contractors, developers, architects, and investors. Anyone who wants a functional and beautiful space can rely on us.",
         },
       ]}
-      ctaNote="Your building deserves a design that feels thoughtful, functional, and inspiring. With EHM Technology Services, you get architectural and design engineering that turns ideas into something real and buildable. Let us help you shape your next project with confidence and creativity."
+      ctaNote="Your building deserves a design that feels thoughtful and inspiring. Let us help you shape your next project with confidence and creativity."
       signals={[
-        "Every beautiful building starts as an idea that needs to become real.",
-        "A project without proper design is like a road trip without a map.",
-        "Great design is more than good looks. It is how a space feels, how it works, and how well it supports the people who use it.",
-        "Your building deserves a design that feels thoughtful, functional, and inspiring.",
+        "Every beautiful building starts as an idea.",
+        "A project without proper design is like a trip without a map.",
+        "Great design is about how a space feels and works.",
+        "Your building deserves a thoughtful and functional design.",
       ]}
       packages={[
         {
@@ -131,7 +131,7 @@ export default function ArchitecturalDesignPage() {
           Why Architectural and Design Engineering Matters
         </h2>
         <p className="mt-4 text-slate-600">
-          A project without proper design is like a road trip without a map. You might move forward, but where you end up is anyone's guess. Strong architectural and design engineering keeps your project on the right path.
+          A project without proper design is like a road trip without a map. Strong architectural and design engineering keeps your project on the right path.
         </p>
         <p className="mt-4 text-slate-600">
           Good design helps you:
@@ -154,10 +154,7 @@ export default function ArchitecturalDesignPage() {
           Why EHM Technology Services Is The Perfect Fit
         </h2>
         <p className="mt-4 text-slate-600">
-          At EHM Technology Services, we combine creativity with engineering logic. Our team listens to your ideas, understands your goals, and develops designs that look good, feel right, and meet every technical requirement.
-        </p>
-        <p className="mt-4 text-slate-600">
-          You get:
+          We combine creativity with engineering logic. Our team listens to your ideas and develops designs that look good, feel right, and meet every technical requirement.
         </p>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="section-card p-5">
@@ -165,15 +162,15 @@ export default function ArchitecturalDesignPage() {
               Beautiful & Practical
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Beautiful and practical designs. Fast communication. Friendly guidance at every step. Complete support from concept to final plans.
+              Beautiful designs, fast communication, and friendly guidance.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Smart Solutions & Enjoyable Process
+              Smart Solutions
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Smart solutions for all project types. A team that makes the process enjoyable. We make design simple and stress free.
+              Smart solutions for all projects. We make design simple and stress-free.
             </p>
           </div>
         </div>
@@ -201,7 +198,7 @@ export default function ArchitecturalDesignPage() {
               Conceptual Design
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We turn your ideas into early visuals that help you see your project before any work begins. Simple. Clear. Exciting.
+              We turn your ideas into early visuals that help you see your project. Simple. Clear. Exciting.
             </p>
           </div>
           <div className="section-card p-5">
@@ -209,7 +206,7 @@ export default function ArchitecturalDesignPage() {
               Space Planning
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We plan every room, area, and pathway so the space flows naturally and feels comfortable for real people.
+              We plan every room and pathway so the space flows naturally and feels comfortable.
             </p>
           </div>
           <div className="section-card p-5">
@@ -217,7 +214,7 @@ export default function ArchitecturalDesignPage() {
               Architectural Layouts
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Floor plans. Elevations. Sections. Room details. Designs that blend beauty with functionality.
+              Floor plans, elevations, and sections. Designs that blend beauty with functionality.
             </p>
           </div>
           <div className="section-card p-5">
@@ -225,7 +222,7 @@ export default function ArchitecturalDesignPage() {
               3D Visualization and Renderings
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We create visual models that help you experience the project before construction even starts. It feels like walking through your future space.
+              Visual models that help you experience the project before construction starts.
             </p>
           </div>
           <div className="section-card p-5">
@@ -233,7 +230,7 @@ export default function ArchitecturalDesignPage() {
               Interior and Exterior Design
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Material choices. Colors. Lighting. Finishes. Exterior features. We make sure your building looks stunning inside and out.
+              Materials, colors, lighting. We make sure your building looks stunning inside and out.
             </p>
           </div>
           <div className="section-card p-5">
@@ -241,7 +238,7 @@ export default function ArchitecturalDesignPage() {
               Structural Coordination
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We align architectural ideas with engineering reality so your project stays safe and buildable.
+              We align architectural ideas with engineering reality so your project stays safe.
             </p>
           </div>
           <div className="section-card p-5">
@@ -249,7 +246,7 @@ export default function ArchitecturalDesignPage() {
               Code Compliance Preparation
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We design with local codes, zoning rules, and permitting needs in mind so approval feels smooth instead of stressful.
+              We design with codes and zoning in mind so approval feels smooth.
             </p>
           </div>
           <div className="section-card p-5">
@@ -257,7 +254,7 @@ export default function ArchitecturalDesignPage() {
               Remodel and Renovation Planning
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Old spaces need fresh ideas. We redesign your layout to improve flow, comfort, and function.
+              We redesign your layout to improve flow, comfort, and function.
             </p>
           </div>
           <div className="section-card p-5">
@@ -265,7 +262,7 @@ export default function ArchitecturalDesignPage() {
               Custom Design Solutions
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Unique homes. Creative commercial spaces. Specialty buildings. If you imagine it, we design it.
+              Unique homes, commercial spaces, or specialty buildings. If you imagine it, we design it.
             </p>
           </div>
         </div>
@@ -287,21 +284,21 @@ export default function ArchitecturalDesignPage() {
           Who Benefits From Our Architectural and Design Services
         </h2>
         <p className="mt-4 text-slate-600">
-          We support everyone who wants to create functional and beautiful spaces. Anyone who wants to create a functional and beautiful space can rely on us.
+          We support everyone who wants to create functional and beautiful spaces.
         </p>
         <div className="mt-6 grid md:grid-cols-3 gap-5">
           {[
             {
               title: "Homeowners",
-              desc: "Turn your vision into a clear plan for your dream home or renovation.",
+              desc: "Turn your vision into a clear plan for your dream home.",
             },
             {
               title: "Contractors",
-              desc: "Clear, buildable designs that make construction smooth and efficient.",
+              desc: "Clear, buildable designs for smooth construction.",
             },
             {
               title: "Developers",
-              desc: "Complete architectural design support for all phases of development.",
+              desc: "Complete architectural design support for all phases.",
             },
             {
               title: "Architects",
@@ -309,23 +306,23 @@ export default function ArchitecturalDesignPage() {
             },
             {
               title: "Designers",
-              desc: "Technical design services that bring your creative concepts to life.",
+              desc: "Technical design services that bring concepts to life.",
             },
             {
               title: "Commercial Property Owners",
-              desc: "Protect your investment with thoughtful and functional designs.",
+              desc: "Protect your investment with functional designs.",
             },
             {
               title: "Investors",
-              desc: "Ensure projects have designs that add value and appeal.",
+              desc: "Ensure projects have designs that add value.",
             },
             {
               title: "Builders",
-              desc: "Professional design support for residential and commercial builds.",
+              desc: "Professional design support for all builds.",
             },
             {
               title: "Government and Public Projects",
-              desc: "Meet compliance requirements with professional architectural design services.",
+              desc: "Meet compliance requirements with professional services.",
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
@@ -373,16 +370,13 @@ export default function ArchitecturalDesignPage() {
         <p className="mt-4 text-slate-600">
           Clients love working with us because we blend creativity with practical engineering.
         </p>
-        <p className="mt-4 text-slate-600">
-          You get:
-        </p>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Beautiful & Technical
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Beautiful designs. Strong technical planning. Easy communication. Quick delivery.
+              Beautiful designs, strong technical planning, and easy communication.
             </p>
           </div>
           <div className="section-card p-5">
@@ -390,7 +384,7 @@ export default function ArchitecturalDesignPage() {
               Fair Pricing & Committed Team
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Fair pricing. Friendly, human support. A team committed to your project. We make design feel exciting instead of overwhelming.
+              Fair pricing and a team committed to your project. We make design exciting.
             </p>
           </div>
         </div>

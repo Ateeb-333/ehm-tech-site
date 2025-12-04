@@ -14,174 +14,158 @@ export default function EmailMarketingPage() {
       title="Email Marketing"
       groupLabel="AI & DIGITAL SOLUTIONS"
       accent="digital"
-      intro="Stay in touch with leads and customers using simple, effective email marketing. We help you structure newsletters, nurture sequences and campaigns that actually get read."
-      primaryCta={{ label: "Design a basic funnel", href: "/contact" }}
-      sideHeading="Email use-cases"
+      intro="Email is the direct line to your customers. No algorithms. No noise. Just you and them. EHM Technology Services helps you send emails that people actually want to open. We build campaigns that nurture relationships, drive sales, and keep your brand top of mind. From welcome sequences to weekly newsletters, we make sure your message lands in the right inbox at the right time."
+      primaryCta={{ label: "Start your campaign", href: "/contact" }}
+      heroMedia={
+        <MediaPlaceholder
+          label="Email Marketing"
+          caption="Direct connection with your audience"
+          badge="Digital"
+          accent="violet"
+          imageSrc="/images/email-marketing-hero.jpg"
+          imageAlt="Email marketing campaign dashboard on laptop"
+        />
+      }
+      sideHeading="What we cover"
       sideItems={[
-        "Welcome flows for new leads",
-        "Regular company or product updates",
-        "Educational content sequences",
-        "Launch / promotion campaigns",
+        "Newsletter strategy",
+        "Automated flows",
+        "List building",
+        "Campaign management",
+        "Copywriting & design",
+        "A/B testing",
+        "Analytics & reporting",
       ]}
       stats={[
         {
-          label: "Average open uplift",
-          value: "+17%",
-          detail: "After refreshing strategy & copy",
+          label: "Open rates",
+          value: "High",
+          detail: "Strategies to boost engagement",
         },
         {
-          label: "Sequence length",
-          value: "3-8 emails",
-          detail: "Per nurture journey, tailored per segment",
+          label: "Setup time",
+          value: "Fast",
+          detail: "Quick launch for new campaigns",
         },
         {
-          label: "Setup timeline",
-          value: "2-4 weeks",
-          detail: "From brief to first automated send",
+          label: "ROI",
+          value: "Proven",
+          detail: "Email remains the highest ROI channel",
         },
       ]}
       tools={[
-        "MailerLite",
         "Mailchimp",
-        "HubSpot",
         "Klaviyo",
-        "ConvertKit",
-        "Zapier",
+        "HubSpot",
+        "ActiveCampaign",
+        "Custom HTML templates",
       ]}
       approach={[
         {
-          title: "List & segment audit",
+          title: "Audit & Strategy",
           detail:
-            "We analyze current contacts, engagement and tagging to decide where to start.",
+            "We look at what you have and plan where you need to go.",
         },
         {
-          title: "Messaging architecture",
+          title: "Build & Design",
           detail:
-            "Each sequence gets a clear narrative arc, value props and CTAs aligned with your funnel.",
+            "We create templates and write copy that fits your voice.",
         },
         {
-          title: "Build & QA",
+          title: "Launch & Monitor",
           detail:
-            "Copy, design, automations and conditional logic are built directly in your ESP.",
+            "We send the campaigns and watch the results roll in.",
         },
         {
-          title: "Launch & optimize",
+          title: "Optimize",
           detail:
-            "We monitor metrics, run subject line tests and suggest ongoing improvements.",
+            "We tweak and improve to get better results every time.",
         },
       ]}
       faqs={[
         {
-          question: "Do you provide ongoing newsletter support?",
+          question: "Do I need a big list to start?",
           answer:
-            "Yes. We can operate as an extension of your team—planning topics, drafting copy and sending campaigns every week or month.",
+            "No. We help you build your list from scratch or grow the one you have. Quality matters more than quantity.",
         },
         {
-          question: "Can you integrate with our CRM or product usage data?",
+          question: "How often should I email my list?",
           answer:
-            "We connect ESPs to CRMs, payment tools or product databases so messaging reflects real customer behavior.",
+            "It depends on your audience. We help you find the sweet spot—enough to stay relevant, but not enough to be annoying.",
         },
         {
-          question: "What about deliverability?",
+          question: "Can you automate my emails?",
           answer:
-            "We implement best practices like custom domains, warmed IPs, list hygiene and spam testing to keep inbox placement solid.",
+            "Yes. We set up welcome series, abandoned cart flows, and nurture sequences that run on autopilot.",
         },
       ]}
-      ctaNote="Send us a recent campaign or sequence— we’ll show you how to simplify, automate and improve results."
+      ctaNote="Don't let your leads go cold. Warm them up with email marketing that works. Let's start the conversation."
       signals={[
-        "Open/click rates are slipping and no one knows why.",
-        "Segments are outdated so everyone receives the same message.",
-        "Sales can’t see how email activity influences pipeline.",
-        "Automation logic is brittle or lives in spreadsheets.",
+        "You have a list but never email them.",
+        "Your open rates are dropping.",
+        "You don't have time to write newsletters.",
+        "You want to own your audience, not rent it from social media.",
       ]}
       packages={[
         {
-          title: "Audit & revive",
-          note: "1 week",
-          items: ["ESP health check", "Segmentation fixes", "Subject line tests"],
-        },
-        {
-          title: "Lifecycle build",
-          note: "3 weeks",
-          items: ["Journey strategy", "Copy + design", "Automation setup"],
-        },
-        {
-          title: "Optimization pod",
+          title: "Starter",
           note: "Monthly",
-          items: ["A/B roadmap", "Revenue tracking", "Quarterly insights"],
+          items: ["1 Newsletter/month", "List management", "Basic reporting"],
+        },
+        {
+          title: "Growth",
+          note: "Monthly",
+          items: ["4 Newsletters/month", "Automated flows", "Advanced segmentation"],
+        },
+        {
+          title: "Pro",
+          note: "Custom",
+          items: ["Full management", "Daily emails", "Dedicated copywriter"],
         },
       ]}
-      heroMedia={
-        <MediaPlaceholder
-          label="Email Marketing"
-          caption="Simple, effective newsletters and nurture sequences."
-          badge="Email Strategy"
-          accent="peach"
-          imageSrc="/images/email-marketing.png"
-          imageAlt="Email marketing dashboard with campaign analytics"
-          className="h-full min-h-[300px]"
-        />
-      }
     >
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">
-          How we support your email marketing
+          Why Email Marketing Matters
         </h2>
-        <div className="mt-6 grid md:grid-cols-3 gap-6">
-          <div className="section-card p-5">
-            <h3 className="text-lg font-semibold text-sunsetPeach">
-              Strategy & Structure
-            </h3>
-            <p className="mt-2 text-sm text-slate-600">
-              Define who you&apos;re emailing, how often and with what type of
-              content for each segment.
-            </p>
-          </div>
-          <div className="section-card p-5">
-            <h3 className="text-lg font-semibold text-sunsetPeach">
-              Copy & Templates
-            </h3>
-            <p className="mt-2 text-sm text-slate-600">
-              Simple, branded templates and copy that feel human and easy to
-              scan on any device.
-            </p>
-          </div>
-          <div className="section-card p-5">
-            <h3 className="text-lg font-semibold text-sunsetPeach">
-              Basic Automation
-            </h3>
-            <p className="mt-2 text-sm text-slate-600">
-              Set up sequences and triggers inside your chosen email platform so
-              messages send automatically.
-            </p>
-          </div>
-        </div>
+        <p className="mt-4 text-slate-600">
+          Social media is rented land. Email is your home. It is the most reliable way to reach your audience without fighting an algorithm.
+        </p>
+        <p className="mt-4 text-slate-600">
+          Good email marketing:
+        </p>
+        <ul className="mt-4 space-y-2 text-slate-600 list-disc list-inside">
+          <li>Builds trust over time</li>
+          <li>Drives repeat sales</li>
+          <li>Keeps your brand top of mind</li>
+          <li>Delivers high ROI</li>
+        </ul>
       </div>
 
       <div>
         <h2 className="text-2xl font-semibold text-slate-900">
-          Optimization levers
+          Why Choose EHM Technology Services
         </h2>
-        <div className="mt-6 grid md:grid-cols-3 gap-5">
-          {[
-            {
-              title: "Lifecycle mapping",
-              desc: "Define the exact triggers that move a lead from awareness to purchase and beyond.",
-            },
-            {
-              title: "Personalization",
-              desc: "Conditional content blocks speak directly to audience segments without duplicating work.",
-            },
-            {
-              title: "Reporting dashboards",
-              desc: "We surface cohort, revenue and content insights so you know what’s working.",
-            },
-          ].map((item) => (
-            <div key={item.title} className="section-card p-5">
-              <p className="text-lg font-semibold text-slate-900">{item.title}</p>
-              <p className="mt-2 text-sm text-slate-600">{item.desc}</p>
-            </div>
-          ))}
+        <p className="mt-4 text-slate-600">
+          We don't just send emails. We build relationships. We write like humans, not robots. We design for clarity, not clutter.
+        </p>
+        <div className="mt-6 grid md:grid-cols-2 gap-6">
+          <div className="section-card p-5">
+            <h3 className="text-lg font-semibold text-softSkyCyan">
+              Human Touch
+            </h3>
+            <p className="mt-2 text-sm text-slate-600">
+              Copy that sounds like you. Designs that look like you.
+            </p>
+          </div>
+          <div className="section-card p-5">
+            <h3 className="text-lg font-semibold text-softSkyCyan">
+              Data Driven
+            </h3>
+            <p className="mt-2 text-sm text-slate-600">
+              We watch the numbers. If it works, we do more of it. If it doesn't, we fix it.
+            </p>
+          </div>
         </div>
       </div>
     </ServiceLayout>

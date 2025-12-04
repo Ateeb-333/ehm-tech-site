@@ -14,7 +14,7 @@ export default function WebDevelopmentPage() {
       title="Development Services"
       groupLabel="AI & DIGITAL SOLUTIONS"
       accent="digital"
-      intro="In today's world, your digital presence is your storefront, your office, and sometimes even your whole business. If it is slow, buggy, or outdated, people leave faster than a cat hearing a vacuum. At EHM Technology Services, our Development Services help you build websites, apps, and digital platforms that work smoothly, look modern, and feel amazing to use. We turn your ideas into functional, user friendly digital products built for real results. Clean code. Smart structure. Fast performance. Everything your business needs to grow online."
+      intro="Your digital presence is your storefront. If it's slow or outdated, people leave. EHM Technology Services builds websites and apps that work smoothly and look modern. Clean code. Smart structure. Fast performance. Everything your business needs to grow online."
       primaryCta={{ label: "Start a development project", href: "/contact" }}
       sideHeading="What we cover"
       sideItems={[
@@ -60,47 +60,47 @@ export default function WebDevelopmentPage() {
         {
           title: "Discuss goals & features",
           detail:
-            "We talk about your goals, features, and project needs to understand exactly what you want to build.",
+            "We talk about your goals and needs to understand exactly what you want to build.",
         },
         {
           title: "Create UI & UX layouts",
           detail:
-            "Our design team creates UI and UX layouts so you know exactly what your platform will look like.",
+            "Our design team creates layouts so you know exactly what your platform will look like.",
         },
         {
           title: "Develop with clean code",
           detail:
-            "We start development and bring your idea to life with clean and reliable code that performs well.",
+            "We bring your idea to life with clean, reliable code that performs well.",
         },
         {
           title: "Test, adjust & launch",
           detail:
-            "You test the product and tell us what you want adjusted. We launch your project smoothly and stay with you for support.",
+            "You test, we adjust. Then we launch your project smoothly and stay for support.",
         },
       ]}
       faqs={[
         {
           question: "What types of development services do you provide?",
           answer:
-            "We build digital solutions for all industries and all types of platforms including website development (business websites, service pages, landing pages, eCommerce stores), web app development (custom dashboards, customer portals, booking systems, SaaS platforms), mobile app development (iOS and Android apps), full stack development (front end, back end, databases, APIs), WordPress development (themes, plugins, custom pages, secure setups), Shopify and eCommerce development (online stores, product pages, cart flows), custom software development (tools and systems that streamline workflow, automate tasks), API integration (payment gateways, CRMs, third party tools), and maintenance and support (bug fixes, updates, performance improvements, security checks). EHM Technology Services handles end to end development for all project types.",
+            "We build everything: business websites, web apps, mobile apps, full stack systems, WordPress sites, Shopify stores, custom software, and API integrations. We also handle maintenance.",
         },
         {
           question: "What tools and technologies do you use?",
           answer:
-            "We use modern tech stacks and tools such as React, Node, HTML and CSS, JavaScript, PHP, WordPress, Shopify, SQL and NoSQL databases, and Figma for design handoff. These tools help us create fast, reliable, and scalable digital products.",
+            "We use modern stacks like React, Node, PHP, WordPress, Shopify, and SQL/NoSQL databases. These tools help us create fast, scalable products.",
         },
         {
           question: "Who can benefit from your development services?",
           answer:
-            "We support startups, business owners, e commerce brands, marketing agencies, software companies, influencers, service providers, enterprise businesses, and anyone who needs a digital platform. If you want something developed, we can build it.",
+            "Startups, business owners, eCommerce brands, agencies, and enterprises. If you need a digital platform, we can build it.",
         },
       ]}
-      ctaNote="Your digital platform deserves expert development that works flawlessly. With EHM Technology Services, you get clean code, modern designs, and a team that truly cares. Bring your idea to life with development that helps your business grow stronger."
+      ctaNote="Your digital platform deserves expert development. Get clean code, modern designs, and a team that truly cares. Bring your idea to life."
       signals={[
-        "In today's world, your digital presence is your storefront, your office, and sometimes even your whole business.",
-        "A good platform keeps your business moving forward. A bad one feels like driving a car with square wheels.",
-        "If it is slow, buggy, or outdated, people leave faster than a cat hearing a vacuum.",
-        "Your digital platform deserves expert development that works flawlessly.",
+        "Your digital presence is your storefront.",
+        "A good platform keeps your business moving forward.",
+        "If it is slow or buggy, people leave.",
+        "Your platform deserves expert development.",
       ]}
       packages={[
         {
@@ -135,7 +135,7 @@ export default function WebDevelopmentPage() {
           Why Development Services Matter
         </h2>
         <p className="mt-4 text-slate-600">
-          A good platform keeps your business moving forward. A bad one feels like driving a car with square wheels. Strong development is the engine behind great user experience and long term growth.
+          A good platform keeps your business moving forward. Strong development is the engine behind great user experience and growth.
         </p>
         <p className="mt-4 text-slate-600">
           Proper development helps you:
@@ -145,11 +145,11 @@ export default function WebDevelopmentPage() {
           <li>Improve user satisfaction</li>
           <li>Reduce bugs and technical headaches</li>
           <li>Boost speed and performance</li>
-          <li>Increase sales, engagement, and conversions</li>
+          <li>Increase sales and conversions</li>
           <li>Stay ahead of competitors</li>
         </ul>
         <p className="mt-4 text-slate-600">
-          Good code does not just work. It works quietly, efficiently, and without causing drama.
+          Good code works quietly, efficiently, and without drama.
         </p>
       </div>
 
@@ -158,10 +158,7 @@ export default function WebDevelopmentPage() {
           Why EHM Technology Services Is Your Best Development Partner
         </h2>
         <p className="mt-4 text-slate-600">
-          We know tech can feel complicated, so we keep everything simple, clear, and friendly. You tell us what you want. We build it. You relax while we do the heavy lifting.
-        </p>
-        <p className="mt-4 text-slate-600">
-          With us, you get:
+          We keep everything simple, clear, and friendly. You tell us what you want. We build it. You relax while we do the heavy lifting.
         </p>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="section-card p-5">
@@ -169,15 +166,15 @@ export default function WebDevelopmentPage() {
               Clean & Modern
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Clean and modern development. Fast communication. Support for all project sizes. Scalable solutions that grow with your business.
+              Clean, modern development. Fast communication. Scalable solutions that grow with your business.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-sunsetPeach">
-              Easy Collaboration & Clear Communication
+              Easy Collaboration
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Easy collaboration and smooth updates. A team that explains everything in plain English. We make development feel like a calm walk instead of a stressful sprint.
+              Smooth updates. Plain English explanations. We make development feel like a calm walk, not a stressful sprint.
             </p>
           </div>
         </div>
@@ -188,7 +185,7 @@ export default function WebDevelopmentPage() {
           What We Cover In Our Development Services
         </h2>
         <p className="mt-4 text-slate-600">
-          We build digital solutions for all industries and all types of platforms.
+          We build digital solutions for all industries and platforms.
         </p>
         <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="section-card p-5">
@@ -196,7 +193,7 @@ export default function WebDevelopmentPage() {
               Website Development
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Business websites. Service pages. Landing pages. eCommerce stores. Fast, clean, and responsive websites that help you convert visitors into customers.
+              Business websites, service pages, landing pages, and eCommerce stores. Fast, clean, and responsive.
             </p>
           </div>
           <div className="section-card p-5">
@@ -204,7 +201,7 @@ export default function WebDevelopmentPage() {
               Web App Development
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Custom dashboards. Customer portals. Booking systems. SaaS platforms. Tools made exactly for your business needs.
+              Custom dashboards, portals, booking systems, and SaaS platforms made for your needs.
             </p>
           </div>
           <div className="section-card p-5">
@@ -212,7 +209,7 @@ export default function WebDevelopmentPage() {
               Mobile App Development
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              iOS and Android apps designed with smooth performance and beautiful interfaces.
+              iOS and Android apps with smooth performance and beautiful interfaces.
             </p>
           </div>
           <div className="section-card p-5">
@@ -220,7 +217,7 @@ export default function WebDevelopmentPage() {
               Full Stack Development
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Front end. Back end. Databases. APIs. We create systems that work together without breaking or slowing down.
+              Front end, back end, databases, and APIs working together seamlessly.
             </p>
           </div>
           <div className="section-card p-5">
@@ -228,23 +225,23 @@ export default function WebDevelopmentPage() {
               WordPress Development
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Themes. Plugins. Custom pages. Secure setups. Websites you can update easily without any tech stress.
+              Themes, plugins, and secure setups. Websites you can update easily.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-sunsetPeach">
-              Shopify and eCommerce Development
+              Shopify and eCommerce
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Online stores that are fast, modern, and built to sell. Clean product pages. Smart cart flows. Great user experience.
+              Online stores built to sell. Clean product pages, smart cart flows, and great UX.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-sunsetPeach">
-              Custom Software Development
+              Custom Software
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We build tools and systems that streamline your workflow, automate tasks, and make your business run smoother.
+              Tools and systems that streamline workflow and automate tasks.
             </p>
           </div>
           <div className="section-card p-5">
@@ -252,7 +249,7 @@ export default function WebDevelopmentPage() {
               API Integration
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Payment gateways. CRMs. Third party tools. We connect everything so your systems communicate effortlessly.
+              Connect payment gateways, CRMs, and tools so your systems communicate effortlessly.
             </p>
           </div>
           <div className="section-card p-5">
@@ -260,7 +257,7 @@ export default function WebDevelopmentPage() {
               Maintenance and Support
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Bug fixes. Updates. Performance improvements. Security checks. We keep your digital products running smoothly.
+              Bug fixes, updates, and security checks to keep your products running smoothly.
             </p>
           </div>
         </div>
@@ -373,15 +370,15 @@ export default function WebDevelopmentPage() {
               Fast & Reliable
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Fast and reliable development. Modern and scalable solutions. Clear updates. Smooth collaboration.
+              Fast and reliable development. Modern, scalable solutions. Clear updates.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-sunsetPeach">
-              Fair Pricing & Dedicated Team
+              Fair Pricing & Dedication
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Fair pricing. A team dedicated to your success. We make development simple, enjoyable, and effective.
+              Fair pricing. A team dedicated to your success. We make development simple and effective.
             </p>
           </div>
         </div>

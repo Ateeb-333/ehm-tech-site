@@ -14,7 +14,7 @@ export default function BidEstimationPage() {
       title="Bid Estimating Services"
       groupLabel="CONSTRUCTION"
       accent="engineering"
-      intro="Winning a bid is not about luck. It is about smart numbers that work in your favor. At EHM Technology Services, our Bid Estimating Services give you the competitive edge you need to stand out, win projects, and protect your profit. Submitting a bid without a proper estimate feels like taking a test with one eye closed. You might get close, but you will not get the score you want. We make sure your bid is backed by clear numbers, strong strategy, and a deep understanding of the project you are chasing. Whether you are bidding on residential, commercial, industrial, or civil jobs, our team prepares accurate and easy to understand bid estimates that help you win more work with confidence."
+      intro="Winning a bid isn't luck. It's smart numbers. EHM Technology Services gives you the competitive edge to stand out and protect your profit. Submitting a bid without a proper estimate is risky. We ensure your bid is backed by clear numbers and strategy. Whether residential, commercial, or industrial, we prepare accurate estimates that help you win with confidence."
       primaryCta={{ label: "Get a bid estimate", href: "/contact" }}
       sideHeading="What we cover"
       sideItems={[
@@ -58,46 +58,46 @@ export default function BidEstimationPage() {
         {
           title: "Send drawings & project info",
           detail:
-            "Share your project drawings, specifications, and any relevant details. We review everything to understand your bidding requirements.",
+            "Share your drawings and specs. We review everything to understand your needs.",
         },
         {
           title: "Study project & confirm scope",
           detail:
-            "Our team analyzes the project thoroughly, identifies all scopes, spots potential gaps, and confirms everything needed for a winning bid.",
+            "We analyze the project, identify scopes, and confirm everything needed for a winning bid.",
         },
         {
           title: "Build comprehensive bid estimate",
           detail:
-            "We create a comprehensive bid estimate using current market pricing, accurate quantities, and competitive labor rates that help you win.",
+            "We create a detailed estimate using current market pricing and competitive labor rates.",
         },
         {
           title: "Receive polished bid package",
           detail:
-            "You get a professional, organized bid package with clear breakdowns that's ready to submit and impress clients.",
+            "You get a professional, organized bid package ready to submit and impress.",
         },
       ]}
       faqs={[
         {
           question: "What types of projects do you prepare bid estimates for?",
           answer:
-            "We prepare winning bid estimates for every construction trade and every project type including residential construction, commercial buildings, industrial facilities, heavy civil projects, retail and hospitality, institutional buildings, renovations and expansions, and mixed use developments. Big jobs. Small jobs. Tricky jobs. Urgent jobs. We handle them all.",
+            "We handle all trades and project types: residential, commercial, industrial, civil, retail, and mixed-use. Big or small, we do it all.",
         },
         {
           question: "How do you ensure competitive pricing?",
           answer:
-            "We pull accurate prices using current market data and vendor inputs so your number feels real and reliable. We calculate hours, crew size, productivity, and workload to give you labor rates that keep your bid competitive and safe. We also help you find ways to price smarter without lowering quality through value engineering suggestions.",
+            "We use current market data for materials and calculate precise labor rates based on productivity. We also offer value engineering to price smarter.",
         },
         {
           question: "Who can benefit from your bid estimating services?",
           answer:
-            "Our services support general contractors, subcontractors, builders, developers, homeowners, architects, investors, project managers, and government projects. If you submit bids, we can help you win more of them.",
+            "Contractors, subcontractors, builders, developers, architects, and homeowners. If you bid, we can help you win.",
         },
       ]}
-      ctaNote="Your next project might be one bid away. With EHM Technology Services, your bid stands tall, sharp, and confident. If you are tired of losing bids by guessing or rushing, let us help you create estimates that impress clients and beat competitors. Reach out today and let EHM Technology Services prepare your next winning bid."
+      ctaNote="Your next project might be one bid away. Get estimates that impress clients and beat competitors. Reach out today."
       signals={[
-        "Submitting a bid without a proper estimate feels like taking a test with one eye closed.",
+        "Submitting a bid without a proper estimate is risky.",
         "A small mistake can send you too low or too high.",
-        "You need numbers that help you submit bids with full confidence instead of crossed fingers.",
+        "You need numbers that help you submit bids with confidence.",
         "Winning bids becomes easier when your estimate is strong.",
       ]}
       packages={[
@@ -133,7 +133,7 @@ export default function BidEstimationPage() {
           Why Bid Estimating Matters
         </h2>
         <p className="mt-4 text-slate-600">
-          A bid can make or break your project pipeline. A small mistake can send you too low or too high. Too low means lost profit. Too high means lost opportunity.
+          A bid can make or break your pipeline. Too low means lost profit. Too high means lost opportunity.
         </p>
         <p className="mt-4 text-slate-600">
           A solid bid estimate helps you:
@@ -147,7 +147,7 @@ export default function BidEstimationPage() {
           <li>Increase your bid hit rate</li>
         </ul>
         <p className="mt-4 text-slate-600">
-          We give you numbers that help you submit bids with full confidence instead of crossed fingers.
+          We give you numbers that help you submit bids with full confidence.
         </p>
       </div>
 
@@ -156,13 +156,7 @@ export default function BidEstimationPage() {
           Why EHM Technology Services Is Your Best Partner
         </h2>
         <p className="mt-4 text-slate-600">
-          At EHM Technology Services, you get more than an estimate. You get a team that understands pressure, deadlines, and the reality of construction bidding.
-        </p>
-        <p className="mt-4 text-slate-600">
-          We keep things simple, friendly, and fast. You bring the drawings. We bring the strategy. Together, we build bids that actually win.
-        </p>
-        <p className="mt-4 text-slate-600">
-          With us, you get:
+          You get a team that understands pressure and deadlines. We keep things simple and fast. You bring the drawings, we bring the strategy.
         </p>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <div className="section-card p-5">
@@ -170,7 +164,7 @@ export default function BidEstimationPage() {
               Quick Turnaround
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Quick turnaround. Clear and organized bid estimates. Updated market pricing. Support for all construction scopes.
+              Fast delivery. Clear estimates. Updated pricing. Support for all scopes.
             </p>
           </div>
           <div className="section-card p-5">
@@ -178,7 +172,7 @@ export default function BidEstimationPage() {
               Team That Listens
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              A team that listens and guides you. Zero confusion and zero surprises. Clients feel like they have their own in house estimator.
+              We listen and guide you. Zero confusion. Like having an in-house estimator.
             </p>
           </div>
           <div className="section-card p-5">
@@ -186,7 +180,7 @@ export default function BidEstimationPage() {
               No Heavy Payroll
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              No heavy payroll. No stress. Just results. Your bid arrives strong, organized, and ready to win.
+              No payroll stress. Just results. Your bid arrives strong and ready to win.
             </p>
           </div>
           <div className="section-card p-5">
@@ -194,7 +188,7 @@ export default function BidEstimationPage() {
               Simple Process
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We designed a process that keeps you moving fast. With EHM Technology Services, bidding becomes easy.
+              We keep you moving fast. Bidding becomes easy with us.
             </p>
           </div>
         </div>
@@ -205,7 +199,7 @@ export default function BidEstimationPage() {
           What We Cover In Our Bid Estimating Services
         </h2>
         <p className="mt-4 text-slate-600">
-          We prepare winning bid estimates for every construction trade and every project type.
+          We prepare winning bid estimates for every trade and project type.
         </p>
         <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="section-card p-5">
@@ -213,15 +207,15 @@ export default function BidEstimationPage() {
               Complete Bid Estimates
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We break down materials, labor, equipment, overhead, profit, and every other cost that shapes your bid.
+              Materials, labor, equipment, overhead, and profit. Every cost covered.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Scope Review and Clarification
+              Scope Review
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We study your drawings and spot missing items, unclear notes, risky areas, and potential gaps that could hurt your bid.
+              We spot missing items, unclear notes, and gaps that could hurt your bid.
             </p>
           </div>
           <div className="section-card p-5">
@@ -229,7 +223,7 @@ export default function BidEstimationPage() {
               Material Pricing
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We pull accurate prices using current market data and vendor inputs so your number feels real and reliable.
+              Accurate prices using current market data so your number is reliable.
             </p>
           </div>
           <div className="section-card p-5">
@@ -237,7 +231,7 @@ export default function BidEstimationPage() {
               Labor Costing
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We calculate hours, crew size, productivity, and workload to give you labor rates that keep your bid competitive and safe.
+              precise labor rates based on productivity to keep you competitive.
             </p>
           </div>
           <div className="section-card p-5">
@@ -245,15 +239,15 @@ export default function BidEstimationPage() {
               Equipment Estimating
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Rental costs, operating hours, fuel, transportation, and all equipment needs included.
+              Rentals, fuel, and operating costs included.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Value Engineering Suggestions
+              Value Engineering
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              We help you find ways to price smarter without lowering quality.
+              Smart pricing strategies without lowering quality.
             </p>
           </div>
         </div>
@@ -273,7 +267,7 @@ export default function BidEstimationPage() {
           Trade Specific Bid Support
         </h2>
         <p className="mt-4 text-slate-600">
-          We provide specialized bid support for every trade in the industry:
+          We provide specialized bid support for every trade:
         </p>
         <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
@@ -305,39 +299,39 @@ export default function BidEstimationPage() {
         <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Residential Bid Estimates
+              Residential
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Additions. New builds. Remodels. Multi family. Custom homes. Everything homeowners and builders need.
+              Additions, new builds, remodels, and custom homes.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Commercial Bid Estimates
+              Commercial
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Offices. Retail. Hospitality. Schools. Medical facilities. Restaurants. Malls. Warehouses. All covered.
+              Offices, retail, hospitality, schools, and medical facilities.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Industrial Bid Estimates
+              Industrial
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Factories. Processing units. Plants. Oil and gas. High complexity projects with tight deadlines.
+              Factories, plants, and complex projects with tight deadlines.
             </p>
           </div>
           <div className="section-card p-5">
             <h3 className="text-lg font-semibold text-softSkyCyan">
-              Civil Bid Estimates
+              Civil
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Earthwork. Utilities. Roads. Bridges. Concrete. Sitework. You name it.
+              Earthwork, utilities, roads, and bridges.
             </p>
           </div>
         </div>
         <p className="mt-6 text-slate-600">
-          EHM Technology Services covers all trades and all project types, no matter the size or complexity.
+          EHM Technology Services covers all trades and project types.
         </p>
       </div>
 
@@ -346,7 +340,7 @@ export default function BidEstimationPage() {
           Who Uses Our Bid Estimating Services
         </h2>
         <p className="mt-4 text-slate-600">
-          Our services support everyone who submits bids. If you submit bids, we can help you win more of them.
+          If you submit bids, we can help you win more of them.
         </p>
         <div className="mt-6 grid md:grid-cols-3 gap-5">
           {[
@@ -364,7 +358,7 @@ export default function BidEstimationPage() {
             },
             {
               title: "Developers",
-              desc: "Clear cost breakdowns for project planning and budgeting.",
+              desc: "Clear cost breakdowns for planning and budgeting.",
             },
             {
               title: "Homeowners",
@@ -380,11 +374,11 @@ export default function BidEstimationPage() {
             },
             {
               title: "Project Managers",
-              desc: "Accurate bids to manage project budgets effectively.",
+              desc: "Accurate bids to manage project budgets.",
             },
             {
               title: "Government Projects",
-              desc: "Compliant bid packages meeting procurement requirements.",
+              desc: "Compliant bid packages meeting requirements.",
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
@@ -419,7 +413,7 @@ export default function BidEstimationPage() {
           ))}
         </div>
         <p className="mt-6 text-slate-600">
-          Big jobs. Small jobs. Tricky jobs. Urgent jobs. We handle them all.
+          Big jobs. Small jobs. Tricky jobs. We handle them all.
         </p>
       </div>
 
@@ -428,7 +422,7 @@ export default function BidEstimationPage() {
           Why Contractors Choose EHM Technology Services
         </h2>
         <p className="mt-4 text-slate-600">
-          Winning bids becomes easier when your estimate is strong. That is why contractors trust us.
+          Winning bids becomes easier when your estimate is strong.
         </p>
         <p className="mt-4 text-slate-600">
           You get:
@@ -439,7 +433,7 @@ export default function BidEstimationPage() {
               Accurate & Fast
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Accurate bid numbers. Fast delivery. Easy communication. Friendly support. Competitive pricing.
+              Accurate numbers. Fast delivery. Easy communication. Competitive pricing.
             </p>
           </div>
           <div className="section-card p-5">
@@ -447,7 +441,7 @@ export default function BidEstimationPage() {
               Committed to Your Success
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              A team committed to your success. We treat every bid like it is our own. Because your win is our win too.
+              We treat every bid like it is our own. Your win is our win.
             </p>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
@@ -9,6 +10,7 @@ type Project = {
   title: string;
   category: "Engineering" | "AI Automation" | "Web" | "Marketing";
   description: string;
+  image: string;
 };
 
 const projects: Project[] = [
@@ -17,36 +19,42 @@ const projects: Project[] = [
     title: "Industrial Plant Design Support",
     category: "Engineering",
     description: "Design coordination and documentation for a multi-discipline plant.",
+    image: "/images/portfolio-industrial-plant.png",
   },
   {
     id: 2,
     title: "AI Support Assistant",
     category: "AI Automation",
     description: "Internal chatbot answering project and technical queries.",
+    image: "/images/portfolio-ai-assistant.png",
   },
   {
     id: 3,
     title: "Corporate Services Website",
     category: "Web",
     description: "Next.js website with service pages and case studies.",
+    image: "/images/portfolio-corporate-website.png",
   },
   {
     id: 4,
     title: "Lead Nurture Email Funnel",
     category: "Marketing",
     description: "Simple automated flow for educating new leads.",
+    image: "/images/portfolio-email-funnel.png",
   },
   {
     id: 5,
     title: "MEP Design Package",
     category: "Engineering",
     description: "Mechanical, electrical and plumbing documentation.",
+    image: "/images/portfolio-mep-design.png",
   },
   {
     id: 6,
     title: "AI Document Classifier",
     category: "AI Automation",
     description: "Automatic tagging and sorting of project documents.",
+    image: "/images/portfolio-ai-classifier.png",
   },
 ];
 
@@ -102,15 +110,28 @@ export default function PortfolioPage() {
 
       {/* Portfolio Showcase */}
       <section className="mt-6">
-        <MediaPlaceholder
-          label="Project Showcase"
-          caption="A glimpse of our diverse portfolio across multiple disciplines."
-          badge="Featured Work"
-          aspect="wide"
-          accent="violet"
-          imageSrc="/images/portfolio-showcase.png"
-          imageAlt="Professional portfolio showcase of engineering and digital projects"
-        />
+        <div className="relative aspect-[4/1] w-full rounded-2xl overflow-hidden shadow-soft group">
+          <Image
+            src="/images/portfolio-showcase.png"
+            alt="Professional portfolio showcase of engineering and digital projects"
+            fill
+            className="object-cover"
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
+          <div className="absolute top-4 left-4 flex gap-2">
+            <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-white/90 text-slate-700 rounded-full">
+              Featured Work
+            </span>
+            <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider text-slate-500">
+              Portfolio
+            </span>
+          </div>
+          <div className="absolute bottom-4 left-4 right-4">
+            <h3 className="text-xl font-semibold text-white">Project Showcase</h3>
+            <p className="text-sm text-white/80 mt-1">A glimpse of our diverse portfolio across multiple disciplines.</p>
+          </div>
+        </div>
       </section>
 
       {/* Cards */}
@@ -125,7 +146,16 @@ export default function PortfolioPage() {
               exit={{ opacity: 0, y: 10 }}
               className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-soft group"
             >
-              <div className="h-28 bg-gradient-to-tr from-slateBlue via-softSkyCyan to-sunsetPeach group-hover:scale-[1.02] transition-transform" />
+              <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
               <div className="p-4">
                 <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-gradient-label">
                   {p.category}

@@ -14,7 +14,7 @@ export default function EngineeringDesignPage() {
       title="Engineering Design"
       groupLabel="ENGINEERING & ESTIMATION"
       accent="engineering"
-      intro="We support your projects with clear, build-ready engineering design for mechanical, electrical and structural systems. From concept sketches to detailed drawings, our team helps you reduce risk and speed up approvals."
+      intro="We support your projects with clear, build-ready engineering design. From concept sketches to detailed drawings, our team helps you reduce risk and speed up approvals."
       primaryCta={{
         label: "Discuss an upcoming project",
         href: "/contact",
@@ -59,47 +59,47 @@ export default function EngineeringDesignPage() {
         {
           title: "Discover & benchmark",
           detail:
-            "We gather constraints, standards and previous assets so we start aligned with reality.",
+            "We gather constraints and standards to start aligned with reality.",
         },
         {
           title: "Options & concept routes",
           detail:
-            "Quick sketches or markups help you compare alternatives before investing heavily.",
+            "Quick sketches help you compare alternatives before investing heavily.",
         },
         {
           title: "Detailed design production",
           detail:
-            "Coordinated drawings, schedules and calculations are developed with live feedback loops.",
+            "Coordinated drawings and schedules developed with live feedback.",
         },
         {
           title: "Technical review & handover",
           detail:
-            "We facilitate reviews, compile documentation and stay available for site queries.",
+            "We facilitate reviews and stay available for site queries.",
         },
       ]}
       faqs={[
         {
           question: "Can you slot into an existing BIM workflow?",
           answer:
-            "Yes. We work inside client environments (Revit, Navisworks, ACC, Notion) or provide exports that match your template so there’s no rework on your side.",
+            "Yes. We work inside client environments (Revit, ACC) or provide exports that match your template.",
         },
         {
           question: "How do you ensure code compliance?",
           answer:
-            "We reference project-specific standards, local regulations and client specs from day one. Every package ships with a brief checklist outlining the compliance path.",
+            "We reference project-specific standards and local regulations. Every package includes a compliance checklist.",
         },
         {
           question: "What if the scope evolves mid-project?",
           answer:
-            "We expect iteration. Change requests are logged, impact is highlighted the same day, and we adapt the schedule without derailing the rest of the workstream.",
+            "We expect iteration. Change requests are logged and we adapt the schedule immediately.",
         },
       ]}
       ctaNote="Send us your latest markups or sketches—we’ll turn them into clear, coordinated design packages."
       signals={[
-        "You’re juggling markups across email, WhatsApp and manual PDFs.",
-        "Internal teams need quick options before committing to detailed design.",
-        "Authority approval timelines are slipping due to unclear documentation.",
-        "Contractors keep raising RFIs because intent isn’t obvious on drawings.",
+        "You’re juggling markups across email and manual PDFs.",
+        "Internal teams need quick options before detailed design.",
+        "Approval timelines are slipping due to unclear docs.",
+        "Contractors raise RFIs because intent isn’t obvious.",
       ]}
       packages={[
         {
@@ -139,8 +139,7 @@ export default function EngineeringDesignPage() {
               Design Packages
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Complete design packages including drawings, schedules and
-              calculations to support tendering and execution.
+              Complete packages including drawings, schedules and calculations.
             </p>
           </div>
           <div className="section-card p-5">
@@ -148,8 +147,7 @@ export default function EngineeringDesignPage() {
               Coordination & Reviews
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Coordinated layouts and clash checks across disciplines to reduce
-              site changes and rework.
+              Coordinated layouts and clash checks to reduce site changes.
             </p>
           </div>
           <div className="section-card p-5">
@@ -157,7 +155,7 @@ export default function EngineeringDesignPage() {
               Compliance & Standards
             </h3>
             <p className="mt-2 text-sm text-slate-600">
-              Designs aligned with relevant codes, client standards and local
+              Designs aligned with relevant codes and client standards.
             </p>
           </div>
         </div>
@@ -201,11 +199,11 @@ export default function EngineeringDesignPage() {
           {[
             {
               title: "Design review rituals",
-              desc: "Internal peer reviews before every submission ensure drawings and models are build-ready.",
+              desc: "Internal peer reviews ensure drawings are build-ready.",
             },
             {
               title: "Issue tracking & context",
-              desc: "We log every open item with screenshots, markups and decisions so you always see the latest status.",
+              desc: "We log every item with screenshots and decisions for full visibility.",
             },
           ].map((item) => (
             <div key={item.title} className="section-card p-5">
