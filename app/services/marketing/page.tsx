@@ -135,7 +135,7 @@ export default function MarketingPage() {
             You can have the best product, but if no one hears about it, it stays hidden. Marketing brings your brand to the spotlight.
           </p>
           <div className="mt-6">
-            <h3 className="text-lg font-semibold bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent">
+            <h3 className="text-lg font-semibold text-[#046BC6]">
               Strong marketing helps you:
             </h3>
             <ul className="mt-4 grid gap-3 md:grid-cols-2">

@@ -4,6 +4,7 @@ import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { motion, Variants } from "framer-motion";
 import { TextShimmer } from "@/components/TextShimmer";
 import { Typewriter } from "@/components/Typewriter";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import Image from "next/image";
 
 const fadeInUp: Variants = {
@@ -121,7 +122,7 @@ export default function HomePage() {
                                 className="text-slate-700"
                             />
                         </span>
-                        <span className="block bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent mt-2">
+                        <span className="block text-[#046BC6] mt-2">
                             You Can Rely On.
                         </span>
                     </h1>
@@ -434,30 +435,11 @@ export default function HomePage() {
                         communication, and dedicated project support.
                     </p>
                 </motion.div>
-                <motion.div
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                    className="grid gap-6 md:grid-cols-3"
-                >
-                    {testimonials.map((item, idx) => (
-                        <motion.div
-                            key={idx}
-                            variants={itemVariant}
-                            whileHover={{ y: -5 }}
-                            className="section-card p-5 flex flex-col gap-4 transition-all duration-300"
-                        >
-                            <p className="text-meta italic">"{item.quote}"</p>
-                            <div>
-                                <p className="text-sm font-semibold text-slate-900">
-                                    {item.author}
-                                </p>
-                                <p className="text-xs text-slate-500">{item.role}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                <TestimonialCarousel
+                    testimonials={testimonials}
+                    autoPlay={true}
+                    autoPlayInterval={6000}
+                />
             </motion.section>
 
             {/* CTA */}

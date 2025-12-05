@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeToggle } from "./ThemeToggle";
 
 type ServiceItem = {
   label: string;
@@ -193,7 +194,7 @@ export const Navbar = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
                           {/* Construction */}
                           <div>
-                            <p className="text-[11px] font-semibold tracking-widest uppercase text-softSkyCyan">
+                            <p className="text-[11px] font-semibold tracking-widest uppercase text-[#046BC6]">
                               Construction
                             </p>
                             <p className="mt-1 text-xs text-slate-500">
@@ -225,7 +226,7 @@ export const Navbar = () => {
 
                           {/* Engineering */}
                           <div>
-                            <p className="text-[11px] font-semibold tracking-widest uppercase text-softSkyCyan">
+                            <p className="text-[11px] font-semibold tracking-widest uppercase text-[#046BC6]">
                               Engineering
                             </p>
                             <p className="mt-1 text-xs text-slate-500">
@@ -257,7 +258,7 @@ export const Navbar = () => {
 
                           {/* AI & Digital Solutions */}
                           <div>
-                            <p className="text-[11px] font-semibold tracking-widest uppercase text-sunsetPeach">
+                            <p className="text-[11px] font-semibold tracking-widest uppercase text-[#046BC6]">
                               AI & Digital Solutions
                             </p>
                             <p className="mt-1 text-xs text-slate-500">
@@ -309,6 +310,7 @@ export const Navbar = () => {
             {navLink("/careers", "Careers")}
             {navLink("/about", "About")}
             {navLink("/contact", "Contact")}
+            
           </div>
 
           {/* Mobile Toggle */}
@@ -367,7 +369,7 @@ export const Navbar = () => {
                     >
                       <div className="pl-4 pt-2 space-y-6 text-sm">
                         <div>
-                          <p className="font-semibold text-softSkyCyan mb-2 text-xs uppercase tracking-wider">
+                          <p className="font-semibold text-[#046BC6] mb-2 text-xs uppercase tracking-wider">
                             Construction
                           </p>
                           <div className="space-y-3 border-l-2 border-slate-100 pl-3">
@@ -385,7 +387,7 @@ export const Navbar = () => {
                         </div>
 
                         <div>
-                          <p className="font-semibold text-softSkyCyan mb-2 text-xs uppercase tracking-wider">
+                          <p className="font-semibold text-[#046BC6] mb-2 text-xs uppercase tracking-wider">
                             Engineering
                           </p>
                           <div className="space-y-3 border-l-2 border-slate-100 pl-3">
@@ -403,7 +405,7 @@ export const Navbar = () => {
                         </div>
 
                         <div>
-                          <p className="font-semibold text-sunsetPeach mb-2 text-xs uppercase tracking-wider">
+                          <p className="font-semibold text-[#046BC6] mb-2 text-xs uppercase tracking-wider">
                             AI & Digital Solutions
                           </p>
                           <div className="space-y-3 border-l-2 border-slate-100 pl-3">

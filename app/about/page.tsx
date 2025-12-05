@@ -1,6 +1,7 @@
 "use client";
 
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 
@@ -83,6 +84,7 @@ const reasons = [
 export default function AboutPage() {
   return (
     <main className="main-shell space-y-12">
+      <Breadcrumbs className="mb-4" />
       {/* Intro Section */}
       <motion.section
         initial="hidden"

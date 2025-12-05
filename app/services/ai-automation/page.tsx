@@ -1,16 +1,56 @@
 import type { Metadata } from "next";
 import { ServiceLayout } from "@/components/ServiceLayout";
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { ServiceSchema, FAQSchema } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "AI Automation | EHM Tech Services",
+  title: "AI Automation",
   description:
-    "AI assistants, workflows and integrations that remove repetitive work from your team.",
+    "AI assistants, workflows and integrations that remove repetitive work from your team. Custom AI solutions, chatbots, automation workflows, and smart assistants for businesses.",
+  keywords: [
+    "AI automation",
+    "artificial intelligence",
+    "chatbots",
+    "workflow automation",
+    "machine learning",
+    "AI solutions",
+    "business automation",
+  ],
+  openGraph: {
+    title: "AI Automation Services | EHM Tech Services",
+    description:
+      "AI assistants, workflows and integrations that remove repetitive work from your team.",
+    type: "website",
+  },
 };
 
 export default function AiAutomationPage() {
+  const faqs = [
+    {
+      question: "Do you use off-the-shelf tools or custom code?",
+      answer:
+        "Both. We combine platforms like Make/Zapier with custom scripts so you get speed and control.",
+    },
+    {
+      question: "How do you handle data privacy?",
+      answer:
+        "We isolate credentials, use secure vendors, redact sensitive data, and document every integration.",
+    },
+    {
+      question: "What happens if the AI gets something wrong?",
+      answer:
+        "Every automation has guardrails—confidence thresholds and human review queues—so you stay in control.",
+    },
+  ];
+
   return (
-    <ServiceLayout
+    <>
+      <ServiceSchema
+        name="AI Automation Services"
+        description="AI assistants, workflows and integrations that remove repetitive work from your team."
+      />
+      <FAQSchema faqs={faqs} />
+      <ServiceLayout
       title="AI Automation"
       groupLabel="AI & DIGITAL SOLUTIONS"
       accent="digital"
@@ -72,23 +112,7 @@ export default function AiAutomationPage() {
           detail: "We improve and update your system as you grow.",
         },
       ]}
-      faqs={[
-        {
-          question: "Do you use off-the-shelf tools or custom code?",
-          answer:
-            "Both. We combine platforms like Make/Zapier with custom scripts so you get speed and control.",
-        },
-        {
-          question: "How do you handle data privacy?",
-          answer:
-            "We isolate credentials, use secure vendors, redact sensitive data, and document every integration.",
-        },
-        {
-          question: "What happens if the AI gets something wrong?",
-          answer:
-            "Every automation has guardrails—confidence thresholds and human review queues—so you stay in control.",
-        },
-      ]}
+      faqs={faqs}
       ctaNote="AI helps people do their best work. Get solutions that make your business faster and smarter. Step into the future with confidence."
       signals={[
         "Teams rely on tribal knowledge and ping each other for answers.",
@@ -138,7 +162,7 @@ export default function AiAutomationPage() {
               AI is a powerful tool that helps your business work better. It boosts productivity and opens new possibilities.
             </p>
             <div className="mt-6">
-              <h3 className="text-lg font-semibold bg-gradient-to-r from-softSkyCyan via-sunsetPeach to-slateBlue bg-clip-text text-transparent">
+              <h3 className="text-lg font-semibold text-[#046BC6]">
                 AI helps you:
               </h3>
               <ul className="mt-4 grid gap-3">
@@ -382,5 +406,6 @@ export default function AiAutomationPage() {
         </div>
       </div>
     </ServiceLayout>
+    </>
   );
 }

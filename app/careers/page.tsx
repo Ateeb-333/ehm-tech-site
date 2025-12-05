@@ -1,6 +1,7 @@
 "use client";
 
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, FormEvent } from "react";
 
@@ -91,6 +92,7 @@ export default function CareersPage() {
   };
   return (
     <main className="main-shell space-y-12">
+      <Breadcrumbs className="mb-4" />
       <motion.section
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}

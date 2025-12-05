@@ -1,6 +1,8 @@
 "use client";
 
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BookMeeting } from "@/components/BookMeeting";
 import { motion } from "framer-motion";
 import { FormEvent, useState } from "react";
 
@@ -15,6 +17,7 @@ export default function ContactPage() {
 
   return (
     <main className="main-shell">
+      <Breadcrumbs className="mb-6" />
       <motion.section
         className="grid md:grid-cols-[1.1fr,1fr] gap-10 items-start"
         initial={{ opacity: 0, y: 20 }}
@@ -247,11 +250,14 @@ export default function ContactPage() {
               HAVE A QUESTION ?
             </p>
             <a
-              href="/contact"
-              className="mt-4 inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-xs uppercase tracking-[0.2em]"
-            >
-              Contact us →
-            </a>
+                    href="/contact"
+                    className="mt-4 inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-xs uppercase tracking-[0.2em]"
+                  >
+                    Contact us →
+                  </a>
+                  <div className="mt-4">
+                    <BookMeeting />
+                  </div>
           </div>
         </div>
       </motion.section>

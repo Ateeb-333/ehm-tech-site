@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Offset for fixed navbar */
 }
 
 :root {
@@ -143,10 +144,12 @@ body::after {
 
 .text-gradient-label {
   display: inline-block;
-  background-image: linear-gradient(120deg, var(--tw-gradient-from, #016CC8), var(--tw-gradient-to, #016CC8));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #046BC6;
+}
+
+/* Heading color utility class */
+.heading-color {
+  color: #046BC6;
 }
 
 .sr-only {
@@ -422,4 +425,215 @@ body::after {
 
 .animate-shimmer {
   animation: shimmer 3s infinite linear;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #046BC6;
+  border-radius: 10px;
+  border: 2px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #035a9e;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #046BC6 #f1f5f9;
+}
+
+/* Dark Mode Styles */
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --surface: #1e293b;
+  --surface-muted: #334155;
+  --border: rgba(255, 255, 255, 0.1);
+  --text-muted: #cbd5e1;
+}
+
+.dark body {
+  background: radial-gradient(circle at 18% -5%,
+      rgba(15, 23, 42, 0.95) 0%,
+      rgba(30, 41, 59, 0.97) 35%,
+      rgba(51, 65, 85, 0.98) 70%,
+      rgba(71, 85, 105, 0.99) 100%),
+    linear-gradient(180deg, #0f172a 0%, #1e293b 45%, #334155 100%);
+}
+
+.dark .section-card {
+  background: radial-gradient(circle at 0% 0%, rgba(51, 65, 85, 0.3), transparent 55%),
+    radial-gradient(circle at 100% 0%, rgba(51, 65, 85, 0.25), transparent 55%),
+    radial-gradient(circle at 0% 100%, rgba(51, 65, 85, 0.2), transparent 55%),
+    linear-gradient(145deg, #1e293b, #334155);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-panel {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.dark .text-meta {
+  color: #cbd5e1;
+}
+
+/* Enhanced Glassmorphism */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.dark .glass-effect {
+  background: rgba(15, 23, 42, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Gradient Animation (using solid color instead) */
+@keyframes colorPulse {
+  0%, 100% {
+    color: #046BC6;
+  }
+  50% {
+    color: #035a9e;
+  }
+}
+
+.animate-color-pulse {
+  animation: colorPulse 3s ease-in-out infinite;
+}
+
+/* Smooth Scroll Enhancement */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Touch target optimization for mobile */
+@media (max-width: 768px) {
+  button,
+  a[role="button"],
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #046BC6;
+  border-radius: 10px;
+  border: 2px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #035a9e;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #046BC6 #f1f5f9;
+}
+
+/* Dark Mode Styles */
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --surface: #1e293b;
+  --surface-muted: #334155;
+  --border: rgba(255, 255, 255, 0.1);
+  --text-muted: #cbd5e1;
+}
+
+.dark body {
+  background: radial-gradient(circle at 18% -5%,
+      rgba(15, 23, 42, 0.95) 0%,
+      rgba(30, 41, 59, 0.97) 35%,
+      rgba(51, 65, 85, 0.98) 70%,
+      rgba(71, 85, 105, 0.99) 100%),
+    linear-gradient(180deg, #0f172a 0%, #1e293b 45%, #334155 100%);
+}
+
+.dark .section-card {
+  background: radial-gradient(circle at 0% 0%, rgba(51, 65, 85, 0.3), transparent 55%),
+    radial-gradient(circle at 100% 0%, rgba(51, 65, 85, 0.25), transparent 55%),
+    radial-gradient(circle at 0% 100%, rgba(51, 65, 85, 0.2), transparent 55%),
+    linear-gradient(145deg, #1e293b, #334155);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-panel {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.dark .text-meta {
+  color: #cbd5e1;
+}
+
+/* Enhanced Glassmorphism */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.dark .glass-effect {
+  background: rgba(15, 23, 42, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Gradient Animation (using solid color instead) */
+@keyframes colorPulse {
+  0%, 100% {
+    color: #046BC6;
+  }
+  50% {
+    color: #035a9e;
+  }
+}
+
+.animate-color-pulse {
+  animation: colorPulse 3s ease-in-out infinite;
 }

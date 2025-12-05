@@ -1,6 +1,7 @@
 "use client";
 
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -11,6 +12,7 @@ type Project = {
   category: "Engineering" | "AI Automation" | "Web" | "Marketing";
   description: string;
   image: string;
+  tags?: string[];
 };
 
 const projects: Project[] = [
@@ -20,6 +22,7 @@ const projects: Project[] = [
     category: "Engineering",
     description: "Design coordination and documentation for a multi-discipline plant.",
     image: "/images/portfolio-industrial-plant.png",
+    tags: ["Revit", "AutoCAD", "Plant Design", "Multi-discipline"],
   },
   {
     id: 2,
@@ -27,6 +30,7 @@ const projects: Project[] = [
     category: "AI Automation",
     description: "Internal chatbot answering project and technical queries.",
     image: "/images/portfolio-ai-assistant.png",
+    tags: ["Chatbot", "LLM", "Python", "LangChain"],
   },
   {
     id: 3,
@@ -34,6 +38,7 @@ const projects: Project[] = [
     category: "Web",
     description: "Next.js website with service pages and case studies.",
     image: "/images/portfolio-corporate-website.png",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind"],
   },
   {
     id: 4,
@@ -41,6 +46,7 @@ const projects: Project[] = [
     category: "Marketing",
     description: "Simple automated flow for educating new leads.",
     image: "/images/portfolio-email-funnel.png",
+    tags: ["Email Marketing", "Automation", "CRM Integration"],
   },
   {
     id: 5,
@@ -48,6 +54,7 @@ const projects: Project[] = [
     category: "Engineering",
     description: "Mechanical, electrical and plumbing documentation.",
     image: "/images/portfolio-mep-design.png",
+    tags: ["MEP", "Revit", "Load Calculations", "Design"],
   },
   {
     id: 6,
@@ -55,6 +62,7 @@ const projects: Project[] = [
     category: "AI Automation",
     description: "Automatic tagging and sorting of project documents.",
     image: "/images/portfolio-ai-classifier.png",
+    tags: ["Machine Learning", "Document Processing", "Python"],
   },
 ];
 
@@ -70,6 +78,7 @@ export default function PortfolioPage() {
 
   return (
     <main className="main-shell">
+      <Breadcrumbs className="mb-6" />
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -166,6 +175,18 @@ export default function PortfolioPage() {
                 <p className="mt-2 text-xs md:text-sm text-slate-600">
                   {p.description}
                 </p>
+                {p.tags && p.tags.length > 0 && (
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {p.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-0.5 text-[10px] rounded-full bg-slate-100 text-slate-600 border border-slate-200"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

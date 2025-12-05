@@ -3,6 +3,9 @@
 import { motion, Variants } from "framer-motion";
 import type { ReactNode } from "react";
 import { MediaPlaceholder } from "./MediaPlaceholder";
+import { FAQAccordion } from "./FAQAccordion";
+import { Breadcrumbs } from "./Breadcrumbs";
+import { RelatedServices } from "./RelatedServices";
 
 type ServiceStat = { label: string; value: string; detail?: string };
 type ApproachStep = { title: string; detail: string };
@@ -94,8 +97,33 @@ export function ServiceLayout({
   packages,
   children,
 }: ServiceLayoutProps) {
+  // Related services data (can be passed as prop or generated)
+  const allServices = [
+    {
+      title: "Web Development",
+      href: "/services/web-development",
+      description: "Modern, performant websites & dashboards.",
+      category: "digital",
+    },
+    {
+      title: "Cost Estimation",
+      href: "/services/cost-estimation",
+      description: "Detailed BOQs and cost breakdowns.",
+      category: "construction",
+    },
+    {
+      title: "MEP Engineering",
+      href: "/services/mep-engineering",
+      description: "Mechanical, electrical & plumbing systems.",
+      category: "engineering",
+    },
+  ];
+
   return (
     <main className="main-shell space-y-4">
+      {/* Breadcrumbs */}
+      <Breadcrumbs className="mb-4" />
+
       {/* Hero */}
       <motion.section
         variants={fadeInUp}
@@ -345,27 +373,7 @@ export function ServiceLayout({
                 {faqsTitle}
               </h2>
             </div>
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              className="space-y-4"
-            >
-              {faqs.map((faq) => (
-                <motion.div
-                  key={faq.question}
-                  variants={itemVariant}
-                  className="border-t border-slate-200 pt-4 first:border-t-0 first:pt-0"
-                >
-                  <p className="text-sm font-semibold text-slate-900 flex items-start gap-2">
-                    <span className="text-lg">❓</span>
-                    <span>{faq.question}</span>
-                  </p>
-                  <p className="mt-1 text-sm text-slate-600 ml-7">{faq.answer}</p>
-                </motion.div>
-              ))}
-            </motion.div>
+            <FAQAccordion faqs={faqs} />
           </div>
         </motion.section>
       )}
@@ -421,6 +429,12 @@ export function ServiceLayout({
           </div>
         </motion.section>
       )}
+
+      {/* Related Services */}
+      <RelatedServices
+        currentService={title}
+        services={allServices}
+      />
 
       {/* CTA */}
       <motion.section

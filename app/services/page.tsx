@@ -1,6 +1,7 @@
 "use client";
 
 import { MediaPlaceholder } from "@/components/MediaPlaceholder";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -57,6 +58,7 @@ const groups = [
 export default function ServicesPage() {
   return (
     <main className="main-shell">
+      <Breadcrumbs className="mb-6" />
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
