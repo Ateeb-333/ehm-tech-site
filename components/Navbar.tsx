@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ThemeToggle } from "./ThemeToggle";
+
 
 type ServiceItem = {
   label: string;
@@ -310,7 +310,7 @@ export const Navbar = () => {
             {navLink("/careers", "Careers")}
             {navLink("/about", "About")}
             {navLink("/contact", "Contact")}
-            
+
           </div>
 
           {/* Mobile Toggle */}
