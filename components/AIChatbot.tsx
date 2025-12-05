@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "./ThemeProvider";
 
 type Message = {
   id: string;
@@ -18,14 +17,6 @@ const quickReplies = [
   "What's your pricing?",
 ];
 
-const botResponses: Record<string, string> = {
-  "services": "We offer Engineering Design, Cost Estimation, AI Automation, Web Development, and Digital Marketing services. Would you like to know more about any specific service?",
-  "quote": "You can request a quote by visiting our contact page or filling out the form. We typically respond within 24 hours. Would you like me to help you get started?",
-  "team": "Our team consists of engineers, estimators, and developers working together to deliver precision and innovation. We're a remote-first team with expertise across multiple disciplines.",
-  "pricing": "Our pricing varies based on project scope and requirements. We offer flexible engagement options including project-based sprints and retainers. Let's discuss your specific needs!",
-  "default": "I'm here to help! You can ask me about our services, request a quote, learn about our team, or get pricing information. How can I assist you today?",
-};
-
 export function AIChatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -39,7 +30,6 @@ export function AIChatbot() {
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const { theme } = useTheme();
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -49,26 +39,7 @@ export function AIChatbot() {
     scrollToBottom();
   }, [messages]);
 
-  const getBotResponse = (userMessage: string): string => {
-    const lowerMessage = userMessage.toLowerCase();
-    
-    if (lowerMessage.includes("service")) {
-      return botResponses["services"];
-    }
-    if (lowerMessage.includes("quote") || lowerMessage.includes("price") || lowerMessage.includes("cost")) {
-      return botResponses["quote"];
-    }
-    if (lowerMessage.includes("team") || lowerMessage.includes("about")) {
-      return botResponses["team"];
-    }
-    if (lowerMessage.includes("pricing") || lowerMessage.includes("how much")) {
-      return botResponses["pricing"];
-    }
-    
-    return botResponses["default"];
-  };
-
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!input.trim()) return;
 
     const userMessage: Message = {
@@ -79,26 +50,56 @@ export function AIChatbot() {
     };
 
     setMessages((prev) => [...prev, userMessage]);
+    const userInput = input;
     setInput("");
     setIsTyping(true);
 
-    // Simulate bot thinking
-    setTimeout(() => {
+    try {
+      // Get chat history (excluding the initial greeting)
+      const history = messages.slice(1).map((msg) => ({
+        sender: msg.sender,
+        text: msg.text,
+      }));
+
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: userInput,
+          history,
+        }),
+      });
+
+      const data = await response.json();
+
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: getBotResponse(input),
+        text: data.response || data.error || "Sorry, I encountered an error. Please try again.",
         sender: "bot",
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, botMessage]);
+    } catch (error) {
+      console.error("Chat error:", error);
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: "Sorry, I'm having trouble connecting. Please try again or contact us directly at info@ehmtechservices.com",
+        sender: "bot",
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, errorMessage]);
+    } finally {
       setIsTyping(false);
-    }, 1000);
+    }
   };
 
   const handleQuickReply = (reply: string) => {
     setInput(reply);
     setTimeout(() => handleSend(), 100);
   };
+
 
   return (
     <>
@@ -133,7 +134,7 @@ export function AIChatbot() {
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
-              className="fixed bottom-24 left-6 z-50 w-96 max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-8rem)] bg-white dark:bg-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-slate-200 dark:border-slate-700"
+              className="fixed bottom-24 left-6 z-50 w-96 max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-8rem)] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-slate-200"
             >
               {/* Header */}
               <div className="bg-[#046BC6] text-white p-4 flex items-center justify-between">
@@ -158,11 +159,10 @@ export function AIChatbot() {
                     className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
                   >
                     <div
-                      className={`max-w-[80%] rounded-2xl px-4 py-2 ${
-                        message.sender === "user"
-                          ? "bg-[#046BC6] text-white"
-                          : "bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100"
-                      }`}
+                      className={`max-w-[80%] rounded-2xl px-4 py-2 ${message.sender === "user"
+                        ? "bg-[#046BC6] text-white"
+                        : "bg-slate-100 text-slate-900"
+                        }`}
                     >
                       <p className="text-sm">{message.text}</p>
                     </div>
@@ -170,7 +170,7 @@ export function AIChatbot() {
                 ))}
                 {isTyping && (
                   <div className="flex justify-start">
-                    <div className="bg-slate-100 dark:bg-slate-700 rounded-2xl px-4 py-2">
+                    <div className="bg-slate-100 rounded-2xl px-4 py-2">
                       <div className="flex gap-1">
                         <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></span>
                         <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }}></span>
@@ -190,7 +190,7 @@ export function AIChatbot() {
                       <button
                         key={reply}
                         onClick={() => handleQuickReply(reply)}
-                        className="text-xs px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-[#046BC6] hover:text-white transition-colors"
+                        className="text-xs px-3 py-1.5 rounded-full bg-slate-100 text-slate-700 hover:bg-[#046BC6] hover:text-white transition-colors"
                       >
                         {reply}
                       </button>
@@ -200,7 +200,7 @@ export function AIChatbot() {
               )}
 
               {/* Input */}
-              <div className="p-4 border-t border-slate-200 dark:border-slate-700">
+              <div className="p-4 border-t border-slate-200">
                 <div className="flex gap-2">
                   <input
                     type="text"
@@ -208,7 +208,7 @@ export function AIChatbot() {
                     onChange={(e) => setInput(e.target.value)}
                     onKeyPress={(e) => e.key === "Enter" && handleSend()}
                     placeholder="Type your message..."
-                    className="flex-1 px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-[#046BC6]"
+                    className="flex-1 px-4 py-2 rounded-xl border border-slate-200 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#046BC6]"
                   />
                   <button
                     onClick={handleSend}

@@ -7,12 +7,45 @@ import { motion } from "framer-motion";
 import { FormEvent, useState } from "react";
 
 export default function ContactPage() {
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
-    setTimeout(() => setStatus("sent"), 800);
+    setErrorMessage("");
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      company: formData.get("company") as string,
+      message: formData.get("message") as string,
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatus("sent");
+        // Reset form
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setStatus("error");
+        setErrorMessage(result.error || "Failed to send message");
+      }
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage("Network error. Please try again.");
+    }
   };
 
   return (
@@ -110,9 +143,15 @@ export default function ContactPage() {
           </button>
 
           {status === "sent" && (
-            <p className="text-xs text-softSkyCyan">
+            <p className="text-xs text-green-600">
               Thank you! Your message has been received — we&apos;ll get back to
               you shortly.
+            </p>
+          )}
+
+          {status === "error" && (
+            <p className="text-xs text-red-600">
+              {errorMessage || "Something went wrong. Please try again."}
             </p>
           )}
         </motion.form>
@@ -250,14 +289,14 @@ export default function ContactPage() {
               HAVE A QUESTION ?
             </p>
             <a
-                    href="/contact"
-                    className="mt-4 inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-xs uppercase tracking-[0.2em]"
-                  >
-                    Contact us →
-                  </a>
-                  <div className="mt-4">
-                    <BookMeeting />
-                  </div>
+              href="/contact"
+              className="mt-4 inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-xs uppercase tracking-[0.2em]"
+            >
+              Contact us →
+            </a>
+            <div className="mt-4">
+              <BookMeeting />
+            </div>
           </div>
         </div>
       </motion.section>
