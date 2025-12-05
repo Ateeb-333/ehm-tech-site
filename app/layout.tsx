@@ -93,7 +93,7 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen text-slate-900 dark:text-slate-100 bg-transparent dark:bg-slate-900 transition-colors">
+      <body className="min-h-screen text-slate-900 bg-transparent transition-colors">
         <ThemeProvider>
           <OrganizationSchema />
           <LocalBusinessSchema />
@@ -104,24 +104,24 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <ScrollProgressBar />
           <Navbar />
 
-        {/* Wrapper for all page content */}
-        <div className="pt-20 min-h-screen flex flex-col">
-          <main id="main-content" className="flex-1">
-            <PageTransition>{children}</PageTransition>
-          </main>
+          {/* Wrapper for all page content */}
+          <div className="pt-20 min-h-screen flex flex-col">
+            <main id="main-content" className="flex-1">
+              <PageTransition>{children}</PageTransition>
+            </main>
 
-          {/* Global scroll-to-top button */}
-          <ScrollToTopButton />
+            {/* Global scroll-to-top button */}
+            <ScrollToTopButton />
 
-          {/* Sticky CTA */}
-          <StickyCTA text="Get a Quote" href="/contact" />
+            {/* Sticky CTA */}
+            <StickyCTA text="Get a Quote" href="/contact" />
 
-          {/* AI Chatbot */}
-          <AIChatbot />
+            {/* AI Chatbot */}
+            <AIChatbot />
 
-          {/* Footer */}
-          <Footer />
-        </div>
+            {/* Footer */}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
