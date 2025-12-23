@@ -92,17 +92,21 @@ export function TestimonialCarousel({
           <>
             <button
               onClick={goToPrevious}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm border border-slate-200 flex items-center justify-center text-slateBlue hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-slateBlue text-white flex items-center justify-center hover:bg-[#035aa0] hover:scale-110 transition-all duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-slateBlue focus:ring-offset-2"
               aria-label="Previous testimonial"
             >
-              ←
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+              </svg>
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm border border-slate-200 flex items-center justify-center text-slateBlue hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-slateBlue text-white flex items-center justify-center hover:bg-[#035aa0] hover:scale-110 transition-all duration-200 shadow-lg focus:outline-none focus:ring-2 focus:ring-slateBlue focus:ring-offset-2"
               aria-label="Next testimonial"
             >
-              →
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+              </svg>
             </button>
           </>
         )}

@@ -53,7 +53,7 @@ const engineeringServices: ServiceItem[] = [
     description: "Mechanical, electrical & plumbing systems.",
   },
   {
-    label: "Archi & Design",
+    label: "Architecture & Design",
     href: "/services/architectural-design",
     description: "Architectural planning and design solutions.",
   },
@@ -65,17 +65,17 @@ const engineeringServices: ServiceItem[] = [
 ];
 const aiDigitalServices: ServiceItem[] = [
   {
-    label: "Development",
+    label: "Web Development",
     href: "/services/web-development",
     description: "Modern, performant websites & dashboards.",
   },
   {
-    label: "Designing",
+    label: "Design & Branding",
     href: "/services/designing",
     description: "Creative design solutions for digital experiences.",
   },
   {
-    label: "Marketing",
+    label: "Digital Marketing",
     href: "/services/marketing",
     description: "Social media, email & digital marketing campaigns.",
   },
@@ -127,8 +127,8 @@ export const Navbar = () => {
       {/* Glow behind navbar */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-transparent" />
 
-      <nav className="max-w-6xl mx-auto px-4 mt-5">
-        <div className="relative flex items-center justify-between px-4 py-3 rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-xl shadow-[0_18px_35px_rgba(15,23,42,0.08)]">
+      <nav className="px-4 mt-5">
+        <div className="max-w-7xl mx-auto relative flex items-center justify-between px-4 py-3 rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-xl shadow-[0_18px_35px_rgba(15,23,42,0.08)]">
           {/* Logo + Brand */}
           <Link href="/" className="flex items-center gap-2 z-10">
             <div className="relative h-20 w-32 flex items-center justify-center">
@@ -315,11 +315,25 @@ export const Navbar = () => {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden z-10 flex flex-col gap-1.5"
+            className="md:hidden z-10 flex flex-col gap-1.5 w-10 h-10 items-center justify-center relative group"
             onClick={() => setMobileOpen((open) => !open)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
-            <span className="w-6 h-0.5 bg-slate-900 rounded-full" />
-            <span className="w-6 h-0.5 bg-slate-900 rounded-full" />
+            <motion.span
+              animate={mobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="w-6 h-0.5 bg-slate-900 rounded-full origin-center"
+            />
+            <motion.span
+              animate={mobileOpen ? { opacity: 0, x: -10 } : { opacity: 1, x: 0 }}
+              transition={{ duration: 0.2 }}
+              className="w-6 h-0.5 bg-slate-900 rounded-full"
+            />
+            <motion.span
+              animate={mobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="w-6 h-0.5 bg-slate-900 rounded-full origin-center"
+            />
           </button>
         </div>
       </nav>
@@ -327,26 +341,49 @@ export const Navbar = () => {
       {/* Mobile Drawer */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden fixed inset-0 top-[80px] z-40 bg-white/95 backdrop-blur-xl overflow-y-auto"
-          >
-            <div className="flex flex-col p-6 space-y-6 text-base font-medium text-slate-800 pb-20">
-              <Link
-                href="/"
-                onClick={() => setMobileOpen(false)}
-                className="py-2 border-b border-slate-100"
-              >
-                Home
-              </Link>
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden fixed inset-0 top-[80px] z-30 bg-slate-900/20 backdrop-blur-sm"
+              onClick={() => setMobileOpen(false)}
+            />
+
+            {/* Drawer */}
+            <motion.div
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="md:hidden fixed right-0 top-[80px] bottom-0 z-40 w-[85%] max-w-sm bg-white/98 backdrop-blur-xl shadow-2xl overflow-y-auto"
+            >
+              <div className="flex flex-col p-6 space-y-1 text-base font-medium text-slate-800">
+                {/* Close button */}
+                <button
+                  onClick={() => setMobileOpen(false)}
+                  className="self-end p-2 -mt-2 -mr-2 rounded-full hover:bg-slate-100 transition-colors mb-4"
+                  aria-label="Close menu"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+
+                <Link
+                  href="/"
+                  onClick={() => setMobileOpen(false)}
+                  className="py-3 px-4 rounded-xl hover:bg-slate-50 transition-colors border-b border-slate-100"
+                >
+                  Home
+                </Link>
 
               <div className="border-b border-slate-100 pb-2">
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex w-full items-center justify-between py-2"
+                  className="flex w-full items-center justify-between py-3 px-4 rounded-xl hover:bg-slate-50 transition-colors"
                 >
                   <span>Services</span>
                   <motion.span
@@ -367,18 +404,18 @@ export const Navbar = () => {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <div className="pl-4 pt-2 space-y-6 text-sm">
-                        <div>
-                          <p className="font-semibold text-[#046BC6] mb-2 text-xs uppercase tracking-wider">
+                      <div className="pl-2 pt-2 space-y-4 text-sm">
+                        <div className="bg-slate-50/50 rounded-xl p-3">
+                          <p className="font-semibold text-[#046BC6] mb-3 text-xs uppercase tracking-wider">
                             Construction
                           </p>
-                          <div className="space-y-3 border-l-2 border-slate-100 pl-3">
+                          <div className="space-y-2">
                             {constructionServices.map((item) => (
                               <Link
                                 key={item.label}
                                 href={item.href}
                                 onClick={() => setMobileOpen(false)}
-                                className="block text-slate-600 hover:text-slate-900 transition-colors"
+                                className="block py-2 px-3 text-slate-600 hover:text-slate-900 hover:bg-white rounded-lg transition-colors"
                               >
                                 {item.label}
                               </Link>
@@ -386,17 +423,17 @@ export const Navbar = () => {
                           </div>
                         </div>
 
-                        <div>
-                          <p className="font-semibold text-[#046BC6] mb-2 text-xs uppercase tracking-wider">
+                        <div className="bg-slate-50/50 rounded-xl p-3">
+                          <p className="font-semibold text-[#046BC6] mb-3 text-xs uppercase tracking-wider">
                             Engineering
                           </p>
-                          <div className="space-y-3 border-l-2 border-slate-100 pl-3">
+                          <div className="space-y-2">
                             {engineeringServices.map((item) => (
                               <Link
                                 key={item.label}
                                 href={item.href}
                                 onClick={() => setMobileOpen(false)}
-                                className="block text-slate-600 hover:text-slate-900 transition-colors"
+                                className="block py-2 px-3 text-slate-600 hover:text-slate-900 hover:bg-white rounded-lg transition-colors"
                               >
                                 {item.label}
                               </Link>
@@ -404,17 +441,17 @@ export const Navbar = () => {
                           </div>
                         </div>
 
-                        <div>
-                          <p className="font-semibold text-[#046BC6] mb-2 text-xs uppercase tracking-wider">
+                        <div className="bg-slate-50/50 rounded-xl p-3">
+                          <p className="font-semibold text-[#046BC6] mb-3 text-xs uppercase tracking-wider">
                             AI & Digital Solutions
                           </p>
-                          <div className="space-y-3 border-l-2 border-slate-100 pl-3">
+                          <div className="space-y-2">
                             {aiDigitalServices.map((item) => (
                               <Link
                                 key={item.label}
                                 href={item.href}
                                 onClick={() => setMobileOpen(false)}
-                                className="block text-slate-600 hover:text-slate-900 transition-colors"
+                                className="block py-2 px-3 text-slate-600 hover:text-slate-900 hover:bg-white rounded-lg transition-colors"
                               >
                                 {item.label}
                               </Link>
@@ -430,33 +467,34 @@ export const Navbar = () => {
               <Link
                 href="/portfolio"
                 onClick={() => setMobileOpen(false)}
-                className="py-2 border-b border-slate-100"
+                className="py-3 px-4 rounded-xl hover:bg-slate-50 transition-colors border-b border-slate-100"
               >
                 Portfolio
               </Link>
               <Link
                 href="/careers"
                 onClick={() => setMobileOpen(false)}
-                className="py-2 border-b border-slate-100"
+                className="py-3 px-4 rounded-xl hover:bg-slate-50 transition-colors border-b border-slate-100"
               >
                 Careers
               </Link>
               <Link
                 href="/about"
                 onClick={() => setMobileOpen(false)}
-                className="py-2 border-b border-slate-100"
+                className="py-3 px-4 rounded-xl hover:bg-slate-50 transition-colors border-b border-slate-100"
               >
                 About
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="py-2 border-b border-slate-100"
+                className="py-3 px-4 rounded-xl bg-slateBlue text-white hover:bg-slateBlue/90 transition-colors mt-4 text-center font-medium"
               >
-                Contact
+                Contact Us
               </Link>
             </div>
           </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>

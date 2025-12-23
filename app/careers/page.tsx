@@ -96,18 +96,20 @@ export default function CareersPage() {
       <motion.section
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
-        className="section-card p-6 md:p-8"
+        className="max-w-7xl mx-auto"
       >
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Careers section">
-          <span className="sr-only">Careers section: </span>Careers
-        </p>
-        <h1 className="mt-3 text-3xl md:text-4xl font-semibold text-slate-900">
-          Build modern delivery systems for engineering, automation & digital.
-        </h1>
-        <p className="mt-4 text-lg text-slate-600 max-w-3xl">
-          We’re a remote-first team shipping high-trust work for technical organizations.
-          If you obsess over clarity, documentation and momentum, you’ll feel at home here.
-        </p>
+        <div className="section-card p-6 md:p-8">
+          <div className="text-center max-w-4xl mx-auto">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Careers section">
+            <span className="sr-only">Careers section: </span>JOIN OUR TEAM
+          </p>
+          <h1 className="mt-3 text-3xl md:text-4xl font-semibold text-slate-900">
+            Build the Future of Engineering & Digital Solutions
+          </h1>
+          <p className="mt-4 text-sm md:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Join our remote-first team delivering excellence in engineering, automation, and digital innovation. If you value clarity, quality, and impact, you'll thrive here.
+          </p>
+          </div>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {perks.map((perk) => (
             <div key={perk} className="rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-700 flex gap-3">
@@ -115,6 +117,7 @@ export default function CareersPage() {
               <span>{perk}</span>
             </div>
           ))}
+        </div>
         </div>
       </motion.section>
 

@@ -62,34 +62,40 @@ export default function ServicesPage() {
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
+        className="max-w-7xl mx-auto"
       >
+        <div className="max-w-3xl">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label" aria-label="Services section">
-          <span className="sr-only">Services section: </span>SERVICES
+          <span className="sr-only">Services section: </span>OUR SERVICES
         </p>
         <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900">
-          From first sketch to digital launch.
+          Engineering to Digital Solutions
         </h1>
-        <p className="mt-3 text-meta max-w-2xl">
-          Traditional engineering meets modern digital work. We bridge both sides so you don't have to choose.
+        <p className="mt-4 text-sm md:text-base text-slate-600 leading-relaxed">
+          Comprehensive services spanning engineering design, cost estimation, AI automation, and web development. One team, complete solutions.
         </p>
+        </div>
       </motion.section>
 
       <motion.section
-        className="mt-10 section-card p-6 md:p-8"
+        className="mt-12 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label" aria-label="Why EHM section">
-          <span className="sr-only">Why EHM section: </span>WHY EHM
-        </p>
-        <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-          One team. Complete context.
-        </h2>
-        <p className="mt-3 text-meta font-normal max-w-2xl">
-          We combine engineering rigor with automation and web tech. No multiple vendors. No lost context. Just one team getting it done.
-        </p>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className="section-card p-6 md:p-8">
+          <div className="max-w-3xl mx-auto text-center mb-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label" aria-label="Why EHM section">
+            <span className="sr-only">Why EHM section: </span>WHY CHOOSE US
+          </p>
+          <h2 className="mt-2 text-2xl md:text-3xl font-semibold text-slate-900">
+            One Team, Complete Solutions
+          </h2>
+          <p className="mt-3 text-sm md:text-base text-slate-600 max-w-2xl mx-auto">
+            Engineering expertise combined with digital innovation. No handoffs, no lost context.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {[
             {
               title: "Engineering + Digital",
@@ -114,6 +120,7 @@ export default function ServicesPage() {
             </div>
           ))}
         </div>
+        </div>
       </motion.section>
 
       <section className="mt-10 space-y-10">
@@ -134,24 +141,24 @@ export default function ServicesPage() {
                 {group.services.length} services in this group
               </span>
             </div>
-            <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {group.services.map((svc) => (
                 <Link
                   key={svc.title}
                   href={svc.href}
-                  className="relative rounded-2xl border border-slate-200 bg-white p-4 group overflow-hidden"
+                  className="relative rounded-2xl border border-slate-200 bg-white p-4 group overflow-hidden transition-all hover:shadow-lg flex flex-col min-h-[120px]"
                 >
                   <div
-                    className={`pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br ${group.color} transition-opacity`}
+                    className={`pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br ${group.color} transition-opacity duration-300`}
                   />
-                  <div className="relative">
-                    <p className="text-sm font-semibold text-slate-900">
+                  <div className="relative flex flex-col h-full">
+                    <p className="text-sm font-semibold text-slate-900 mb-2">
                       {svc.title}
                     </p>
-                    <p className="mt-1 text-xs text-meta">{svc.desc}</p>
-                    <p className="mt-3 text-[11px] text-slateBlue group-hover:translate-x-1 transition-transform">
-                      View details →
-                    </p>
+                    <p className="text-xs text-slate-600 flex-1">{svc.desc}</p>
+                    <span className="text-xs text-slateBlue font-medium mt-3 inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      Learn more →
+                    </span>
                   </div>
                 </Link>
               ))}
@@ -160,6 +167,7 @@ export default function ServicesPage() {
         ))}
       </section>
 
+      {/* Operating stats */}
       <motion.section
         className="mt-12 grid gap-4 md:grid-cols-3"
         initial={{ opacity: 0, y: 20 }}
@@ -167,22 +175,32 @@ export default function ServicesPage() {
         viewport={{ once: true, amount: 0.3 }}
       >
         {[
-          { label: "Avg. overlap", value: "4-6 hrs / day", desc: "We align with your timezone so collaboration stays async-first." },
-          { label: "Parallel tracks", value: "3 streams", desc: "Engineering, automation and digital can move together." },
-          { label: "Satisfaction", value: "9.6 / 10", desc: "Rolling feedback score from retained partners." },
+          { label: "Avg. overlap", value: "4–6 hrs / day", desc: "We align with your timezone so collaboration stays async‑first.", icon: "⏱" },
+          { label: "Parallel tracks", value: "3 streams", desc: "Engineering, automation and digital can move together.", icon: "▱" },
+          { label: "Satisfaction", value: "9.6 / 10", desc: "Rolling feedback score from retained partners.", icon: "★" },
         ].map((stat) => (
-          <div key={stat.label} className="section-card p-4 md:p-6 flex flex-col gap-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-              {stat.label}
-            </p>
-            <p className="text-2xl font-semibold text-slate-900">{stat.value}</p>
+          <div
+            key={stat.label}
+            className="section-card p-5 md:p-6 flex flex-col gap-3 relative overflow-hidden"
+          >
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-slateBlue via-softSkyCyan to-slateBlue" />
+            <div className="flex items-center gap-3 pt-1">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-slateBlue/10 text-slateBlue text-base">
+                {stat.icon}
+              </div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
+                {stat.label}
+              </p>
+            </div>
+            <p className="text-2xl font-semibold text-[#046BC6]">{stat.value}</p>
             <p className="text-meta font-normal">{stat.desc}</p>
           </div>
         ))}
       </motion.section>
 
+      {/* Engagement formats */}
       <motion.section
-        className="mt-12 grid md:grid-cols-3 gap-6"
+        className="mt-10 grid md:grid-cols-3 gap-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -191,19 +209,28 @@ export default function ServicesPage() {
           {
             title: "Embedded partner",
             desc: "We join your channels and PM tools, acting as an extension of your team.",
+            tag: "Most collaborative",
           },
           {
             title: "Project-based sprints",
             desc: "Perfect for a discrete automation, estimation package or website launch.",
+            tag: "Scoped delivery",
           },
           {
             title: "Advisory retainers",
             desc: "Monthly access to senior leads for reviews, QA and strategic direction.",
+            tag: "Ongoing support",
           },
         ].map((item) => (
-          <div key={item.title} className="section-card p-4 md:p-6">
-            <p className="text-lg font-semibold text-slate-900">{item.title}</p>
-            <p className="mt-2 text-meta font-normal">{item.desc}</p>
+          <div
+            key={item.title}
+            className="section-card p-5 md:p-6 flex flex-col gap-3 hover:translate-y-[-4px] hover:shadow-lg transition-all duration-300 border-l-4 border-l-slateBlue"
+          >
+            <span className="inline-flex items-center rounded-full bg-slateBlue/10 px-3 py-1 text-[11px] font-medium text-slateBlue w-fit">
+              {item.tag}
+            </span>
+            <p className="text-lg font-semibold">{item.title}</p>
+            <p className="text-meta font-normal">{item.desc}</p>
           </div>
         ))}
       </motion.section>

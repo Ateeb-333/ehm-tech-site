@@ -138,10 +138,10 @@ export function ServiceLayout({
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">
               {groupLabel}
             </p>
-            <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900 leading-snug">
+            <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-[#046BC6] leading-snug">
               {title}
             </h1>
-            <p className="mt-4 text-sm md:text-base text-slate-600 max-w-2xl leading-relaxed">
+            <p className="mt-4 text-sm md:text-base text-slate-600 max-w-2xl leading-relaxed reading-width">
               {intro}
             </p>
 
@@ -185,15 +185,15 @@ export function ServiceLayout({
               animate="visible"
               className="section-card p-6 backdrop-blur"
             >
-              <h3 className="text-sm font-semibold text-slate-900">
+              <h3 className="text-sm font-semibold text-[#046BC6]">
                 {sideHeading}
               </h3>
-              <ul className="mt-4 space-y-3 text-sm text-slate-600">
+              <ul className="mt-4 space-y-3 text-sm text-slate-600 list-enhanced">
                 {sideItems.map((item) => (
                   <motion.li
                     key={item}
                     variants={itemVariant}
-                    className="flex gap-2 p-2 rounded-lg hover:bg-slate-50 transition-colors"
+                    className="flex gap-2 p-2 rounded-lg hover:bg-slate-50 transition-colors leading-relaxed"
                   >
                     <span className="text-softSkyCyan">•</span>
                     <span>{item}</span>
@@ -236,7 +236,7 @@ export function ServiceLayout({
           )}
 
           {children && (
-            <motion.div variants={fadeInUp} className="space-y-8">
+            <motion.div variants={fadeInUp} className="space-y-8 prose-enhanced">
               {children}
             </motion.div>
           )}
@@ -255,7 +255,7 @@ export function ServiceLayout({
             <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.18em]">
               ALIGNMENT
             </p>
-            <h2 className="mt-2 text-2xl font-semibold text-slate-900">
+            <h2 className="mt-2 text-2xl font-semibold text-[#046BC6]">
               {signalsTitle}
             </h2>
             <motion.div
@@ -294,7 +294,7 @@ export function ServiceLayout({
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
                   STACK
                 </p>
-                <h2 className="mt-2 text-2xl font-semibold text-slate-900">
+                <h2 className="mt-2 text-2xl font-semibold text-[#046BC6]">
                   {toolsTitle}
                 </h2>
               </div>
@@ -330,7 +330,7 @@ export function ServiceLayout({
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className="text-2xl font-semibold text-slate-900">{approachTitle}</h2>
+          <h2 className="text-2xl font-semibold text-[#046BC6]">{approachTitle}</h2>
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -369,7 +369,7 @@ export function ServiceLayout({
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
                 FAQs
               </p>
-              <h2 className="mt-2 text-2xl font-semibold text-slate-900">
+              <h2 className="mt-2 text-2xl font-semibold text-[#046BC6]">
                 {faqsTitle}
               </h2>
             </div>
@@ -391,7 +391,7 @@ export function ServiceLayout({
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">
                 FORMATS
               </p>
-              <h2 className="mt-2 text-2xl font-semibold text-slate-900">
+              <h2 className="mt-2 text-2xl font-semibold text-[#046BC6]">
                 {packagesTitle}
               </h2>
             </div>
@@ -448,7 +448,7 @@ export function ServiceLayout({
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">
             READY WHEN YOU ARE
           </p>
-          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
+          <h2 className="mt-2 text-2xl font-semibold text-[#046BC6]">
             Let&apos;s map the next deliverable together
           </h2>
           <p className="mt-2 text-sm text-slate-600 max-w-xl">{ctaNote}</p>
