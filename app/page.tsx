@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { IconGlyph, SectionDivider } from "@/components/VisualLanguage";
 import { ProofStrip } from "@/components/ProofStrip";
 
@@ -84,7 +85,7 @@ const caseStudies = [
 ];
 
 export default function HomePage() {
-  const sectionVariant = {
+  const sectionVariant: Variants = {
     hidden: { opacity: 0, y: 26 },
     visible: {
       opacity: 1,
