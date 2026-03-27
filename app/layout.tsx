@@ -4,12 +4,10 @@ import type { ReactNode } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
-import { PageTransition } from "@/components/PageTransition";
-import { ScrollProgressBar } from "@/components/ScrollProgressBar";
+import { ScrollRevealObserver } from "@/components/ScrollRevealObserver";
 import { OrganizationSchema, LocalBusinessSchema } from "@/components/StructuredData";
-import { StickyCTA } from "@/components/StickyCTA";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { AIChatbot } from "@/components/AIChatbot";
+import { PageTransition } from "@/components/PageTransition";
 
 export const metadata: Metadata = {
   title: {
@@ -93,33 +91,20 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen text-slate-900 bg-transparent transition-colors">
+      <body className="min-h-screen text-slate-900 transition-colors">
         <ThemeProvider>
           <OrganizationSchema />
           <LocalBusinessSchema />
+          <ScrollRevealObserver />
           <a href="#main-content" className="skip-link">
             Skip to main content
           </a>
-          {/* Progress + Navbar */}
-          <ScrollProgressBar />
           <Navbar />
-
-          {/* Wrapper for all page content */}
-          <div className="pt-20 min-h-screen flex flex-col">
-            <main id="main-content" className="flex-1">
+          <div className="site-shell">
+            <main id="main-content" className="site-main">
               <PageTransition>{children}</PageTransition>
             </main>
-
-            {/* Global scroll-to-top button */}
             <ScrollToTopButton />
-
-            {/* Sticky CTA */}
-            <StickyCTA text="Get a Quote" href="/contact" />
-
-            {/* AI Chatbot */}
-            <AIChatbot />
-
-            {/* Footer */}
             <Footer />
           </div>
         </ThemeProvider>

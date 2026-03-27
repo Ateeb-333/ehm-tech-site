@@ -1,249 +1,222 @@
-"use client";
-
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
-};
-
-const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1,
-    },
-  },
-};
-
-const itemVariant: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-};
+import { IconGlyph, SectionDivider } from "@/components/VisualLanguage";
+import { ProofStrip } from "@/components/ProofStrip";
 
 const values = [
-  {
-    title: "Accuracy",
-    detail: "We prioritize precision in every drawing, estimate, and technical output.",
-  },
-  {
-    title: "Reliability",
-    detail: "Clients trust us because we deliver consistently and communicate clearly.",
-  },
-  {
-    title: "Innovation",
-    detail: "We use modern tools and smart solutions — including AI and advanced software — to enhance our work.",
-  },
-  {
-    title: "Quality",
-    detail: "Every project, small or large, receives attention to detail and professional handling.",
-  },
-  {
-    title: "Client Focus",
-    detail: "We shape our services around the needs, challenges, and goals of each client.",
-  },
+  "Accuracy in every output",
+  "Transparent communication",
+  "Reliable timelines",
+  "Practical innovation",
+  "Long-term client partnerships",
 ];
 
-const services = [
-  {
-    title: "Engineering Solutions",
-    detail: "We provide engineering support across Civil, Structural, MEP, Architectural, and Industrial disciplines. Our team delivers drawings, calculations, planning support, documentation, and technical coordination to ensure strong foundations and efficient project execution.",
-  },
-  {
-    title: "Construction Estimation & Project Support",
-    detail: "Our estimation division helps contractors and developers with accurate quantity takeoffs, cost estimates, bid preparation, drafting, and project management support. We focus on the details that drive better decisions and competitive bids.",
-  },
-  {
-    title: "IT, Development & AI Solutions",
-    detail: "We offer digital and technology services, including web development, AI-based tools, workflow automation, UI/UX design, branding, and marketing support. Our solutions help businesses improve efficiency, strengthen their digital presence, and adapt to modern technology trends.",
-  },
-];
-
-const reasons = [
-  "Multi-discipline experts across engineering, estimation, and IT",
-  "Clear and structured workflows",
-  "On-time delivery with transparent communication",
-  "Support for projects of any scale",
-  "Modern tools, accurate outputs, and organized documentation",
-  "Reliable partnership throughout the project lifecycle",
+const pillars = [
+  { label: "Experience Design", glyph: "design" as const },
+  { label: "Integrated Engineering", glyph: "integration" as const },
+  { label: "Digital Operations", glyph: "operations" as const },
+  { label: "Delivery Governance", glyph: "governance" as const },
 ];
 
 export default function AboutPage() {
   return (
     <main className="main-shell space-y-12">
-      <Breadcrumbs className="mb-4" />
-      {/* Intro Section */}
-      <motion.section
-        initial="hidden"
-        animate="visible"
-        variants={fadeInUp}
-        className="section-card p-6 md:p-8 space-y-6"
-      >
-        <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900">
-          About EHM Technology Services
-        </h1>
-        <p className="mt-4 text-meta md:text-base max-w-3xl">
-          EHM Technology Services provides complete Engineering, Construction Estimation, and IT/AI solutions. We combine technical expertise with modern tools to deliver accurate, reliable results for clients across all industries.
+      <Breadcrumbs className="mb-2" />
+
+      <section className="section-card p-7 md:p-10">
+        <div className="grid gap-8 lg:grid-cols-[1.15fr,0.85fr] items-start">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">About Us</p>
+            <h1 className="mt-4 max-w-3xl text-5xl md:text-6xl lg:text-7xl leading-[0.96] text-slate-900">Systems thinking, practical delivery.</h1>
+            <p className="mt-5 max-w-3xl text-meta text-base md:text-lg">
+              We enable constant enterprise transformation at speed and scale through engineering discipline, construction insight, and digital execution.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              {[
+                "Engineering-led",
+                "Digital-native",
+                "Outcome-focused",
+              ].map((item) => (
+                <span key={item} className="chip">{item}</span>
+              ))}
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <article className="section-card image-frame overflow-hidden p-0">
+              <div className="relative h-[260px] md:h-[300px]">
+                <Image
+                  src="/images/about-team.png"
+                  alt="EHM team"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover"
+                />
+              </div>
+            </article>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="kpi-inline">
+                <IconGlyph name="delivery" className="h-8 w-8 rounded-lg" />
+                <div>
+                  <p className="kpi-inline-value">240+</p>
+                  <p className="kpi-inline-label">Programs</p>
+                </div>
+              </div>
+              <div className="kpi-inline">
+                <IconGlyph name="growth" className="h-8 w-8 rounded-lg" />
+                <div>
+                  <p className="kpi-inline-value">100%</p>
+                  <p className="kpi-inline-label">Client Satisfaction</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="grid gap-5 md:grid-cols-2">
+        <article className="soft-tile p-6">
+          <IconGlyph name="workflow" />
+          <h2 className="text-2xl text-slate-900">Business Peoples</h2>
+          <p className="mt-3 text-meta">240+ projects and collaborations across engineering, estimation, and technology service lines.</p>
+        </article>
+        <article className="soft-tile p-6">
+          <IconGlyph name="growth" />
+          <h2 className="text-2xl text-slate-900">Customer Satisfaction</h2>
+          <p className="mt-3 text-meta">100% focus on responsiveness, quality control, and practical delivery accountability.</p>
+        </article>
+      </section>
+
+      <section className="grid gap-5 lg:grid-cols-[1.25fr,0.75fr]">
+        <article className="section-card overflow-hidden p-0">
+          <div className="image-frame relative h-[320px] w-full md:h-[380px]">
+            <Image
+              src="/images/team-collaboration-v2.png"
+              alt="EHM team collaborating across engineering and digital workflows"
+              fill
+              sizes="(max-width: 1024px) 100vw, 70vw"
+              className="object-cover"
+            />
+          </div>
+        </article>
+        <div className="grid gap-5">
+          <article className="section-card overflow-hidden p-0">
+            <div className="image-frame relative h-[180px] w-full">
+              <Image
+                src="/images/values-in-action.jpg"
+                alt="Values in action during project delivery"
+                fill
+                sizes="(max-width: 1024px) 100vw, 30vw"
+                className="object-cover"
+              />
+            </div>
+          </article>
+          <article className="section-card overflow-hidden p-0">
+            <div className="image-frame relative h-[180px] w-full">
+              <Image
+                src="/images/professional-team.png"
+                alt="Professional team support"
+                fill
+                sizes="(max-width: 1024px) 100vw, 30vw"
+                className="object-cover"
+              />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <SectionDivider label="Operating Model" />
+
+      <section className="open-section p-8 md:p-9">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Our Direction</p>
+        <h2 className="mt-3 text-2xl text-slate-900">Building practical value in every engagement</h2>
+        <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {pillars.map((pillar) => (
+            <div key={pillar.label} className="soft-tile px-5 py-5 text-sm font-medium text-slate-700">
+              <div className="mb-3">
+                <IconGlyph name={pillar.glyph} />
+              </div>
+              {pillar.label}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="open-section p-8 md:p-9">
+        <h2 className="text-2xl text-slate-900">How We Work</h2>
+        <p className="mt-3 text-meta max-w-4xl">
+          Success requires clarity, ownership, and execution. We run integrated workflows so our clients can move from concept to delivery without unnecessary delays.
         </p>
-
-        <div className="grid gap-4 md:grid-cols-2 mt-8">
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 hover:border-softSkyCyan/50 transition-colors">
-            <div className="mb-4 h-10 w-10 rounded-full bg-slate-50 flex items-center justify-center text-xl">
-              🎯
-            </div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-2">Our Mission</h3>
-            <p className="text-meta">
-              To deliver dependable services that bring clarity, efficiency, and structure to every project.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 hover:border-softSkyCyan/50 transition-colors">
-            <div className="mb-4 h-10 w-10 rounded-full bg-slate-50 flex items-center justify-center text-xl">
-              🔭
-            </div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-2">Our Vision</h3>
-            <p className="text-meta">
-              To be a trusted partner known for accuracy, professionalism, and innovation in engineering and technology.
-            </p>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* What We Do */}
-      <motion.section
-        className="grid gap-6 md:grid-cols-3"
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        {services.map((service) => (
-          <motion.div
-            key={service.title}
-            variants={itemVariant}
-            whileHover={{ y: -5 }}
-            className="section-card p-6 space-y-3 transition-all duration-300 hover:shadow-md"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-              WHAT WE DO
-            </p>
-            <h3 className="text-lg font-semibold text-slate-900">{service.title}</h3>
-            <p className="text-meta text-sm leading-relaxed">{service.detail}</p>
-          </motion.div>
-        ))}
-      </motion.section>
-
-      {/* Core Values */}
-      <motion.section
-        className="section-card p-6 md:p-8"
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <h2 className="text-2xl font-semibold text-slate-900 mb-6">Our Core Values</h2>
-        <motion.div
-          className="grid md:grid-cols-3 gap-6"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+        <ul className="mt-5 grid gap-4 md:grid-cols-2 text-sm text-meta">
           {values.map((value) => (
-            <motion.div
-              key={value.title}
-              variants={itemVariant}
-              className="flex flex-col gap-2"
-            >
-              <h3 className="text-lg font-semibold text-slate-900">{value.title}</h3>
-              <p className="text-meta text-sm">{value.detail}</p>
-            </motion.div>
+            <li key={value} className="soft-tile px-5 py-4">{value}</li>
           ))}
-        </motion.div>
-      </motion.section>
+        </ul>
+      </section>
 
-      {/* Why Choose EHM */}
-      <motion.section
-        className="space-y-8"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <motion.div
-          variants={fadeInUp}
-          className="text-center max-w-2xl mx-auto"
-        >
-          <h2 className="text-2xl font-semibold text-slate-900 mb-4">
-            Why Clients Choose EHM
-          </h2>
-          <p className="text-meta">
-            We aim to be not just a service provider — but a long-term partner you can trust.
-          </p>
-        </motion.div>
+      <section className="open-section p-8 md:p-9">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Open to Collaboration</p>
+        <h2 className="mt-3 text-2xl text-slate-900">Looking for a multidisciplinary execution partner?</h2>
+        <p className="mt-4 text-meta max-w-3xl">Our team supports long-term programs and focused short-term initiatives with the same quality standards.</p>
+      </section>
 
-        <motion.div
-          className="grid md:grid-cols-3 gap-6"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {reasons.map((reason, idx) => (
-            <motion.div
-              key={idx}
-              variants={itemVariant}
-              whileHover={{ scale: 1.02 }}
-              className="section-card p-5 flex items-start gap-3 hover:border-softSkyCyan/50 transition-all duration-300"
-            >
-              <span className="text-softSkyCyan mt-1">★</span>
-              <span className="text-sm text-slate-700 font-medium">{reason}</span>
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.section>
-
-      {/* Visual Placeholder */}
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInUp}
-      >
-        <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-soft group">
-          <Image
-            src="/images/about-team.png"
-            alt="Professional diverse team in modern office"
-            fill
-            className="object-cover"
-          />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
-          <div className="absolute top-4 left-4 flex gap-2">
-            <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-white/90 text-slate-700 rounded-full">
-              Team
-            </span>
-            <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider text-slate-500">
-              Our People
-            </span>
+      <section className="open-section p-8 md:p-9">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Timeline</p>
+        <h2 className="mt-3 text-2xl text-slate-900">How EHM has evolved</h2>
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr,1fr]">
+          <div className="image-frame soft-tile relative overflow-hidden p-0">
+            <div className="relative h-[250px] md:h-[320px]">
+              <Image
+                src="/images/graphics/grid-orbit.svg"
+                alt="EHM growth timeline visualization"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
           </div>
-          <div className="absolute bottom-4 left-4 right-4">
-            <h3 className="text-xl font-semibold text-white">EHM Team</h3>
-            <p className="text-sm text-white/80 mt-1">Dedicated professionals working together to deliver excellence.</p>
+          <div className="space-y-3">
+            <article className="soft-tile p-4"><p className="text-sm text-meta"><span className="font-semibold text-slate-100">2018-2020:</span> Core engineering and estimation delivery setup.</p></article>
+            <article className="soft-tile p-4"><p className="text-sm text-meta"><span className="font-semibold text-slate-100">2021-2023:</span> Expanded into digital operations and technical automation workflows.</p></article>
+            <article className="soft-tile p-4"><p className="text-sm text-meta"><span className="font-semibold text-slate-100">2024-now:</span> Unified engineering, documentation, and growth systems under one model.</p></article>
           </div>
         </div>
-      </motion.section>
+      </section>
+
+      <section className="open-section p-8 md:p-9">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Assurance</p>
+        <h2 className="mt-3 text-2xl text-slate-900">Why teams continue to work with us</h2>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <article className="soft-tile p-5">
+            <p className="text-sm font-semibold text-slate-100">Consistent quality reviews</p>
+            <p className="mt-2 text-sm text-meta">Internal verification across technical outputs before client submission.</p>
+          </article>
+          <article className="soft-tile p-5">
+            <p className="text-sm font-semibold text-slate-100">Clear accountability</p>
+            <p className="mt-2 text-sm text-meta">Defined owners and response windows for each phase and workstream.</p>
+          </article>
+          <article className="soft-tile p-5">
+            <p className="text-sm font-semibold text-slate-100">Long-term partnerships</p>
+            <p className="mt-2 text-sm text-meta">Many projects grow into multi-phase collaboration with repeat delivery cycles.</p>
+          </article>
+        </div>
+      </section>
+
+      <ProofStrip
+        heading="Partnership Signals"
+        subheading="How clients describe working with EHM"
+        tone="partnership"
+        audienceLine="Built for long-term collaboration across technical and business teams"
+        partnerLabels={["Construction Program Office", "Design Coordination Cell", "Procurement Controls Team", "Site Operations Desk"]}
+        metrics={[
+          { label: "Programs", value: "240+" },
+          { label: "Satisfaction", value: "100%" },
+          { label: "Core Domains", value: "8+" },
+        ]}
+        testimonial={{
+          quote: "The team combines technical depth with practical communication, which made coordination much easier.",
+          byline: "Lead Engineer, Multi-Site Project Team",
+        }}
+      />
     </main>
   );
 }

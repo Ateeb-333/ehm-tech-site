@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { BookMeeting } from "@/components/BookMeeting";
-import { motion } from "framer-motion";
 import { FormEvent, useState } from "react";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import Image from "next/image";
+import { IconGlyph, SectionDivider } from "@/components/VisualLanguage";
+import { ProofStrip } from "@/components/ProofStrip";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -16,290 +16,245 @@ export default function ContactPage() {
     setErrorMessage("");
 
     const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      company: formData.get("company") as string,
-      message: formData.get("message") as string,
-    };
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          company: formData.get("company"),
+          message: formData.get("message"),
+        }),
       });
 
       const result = await response.json();
-
-      if (response.ok) {
-        setStatus("sent");
-        // Reset form
-        (e.target as HTMLFormElement).reset();
-      } else {
+      if (!response.ok) {
         setStatus("error");
-        setErrorMessage(result.error || "Failed to send message");
+        setErrorMessage(result.error || "Failed to send message.");
+        return;
       }
-    } catch (error) {
+
+      setStatus("sent");
+      e.currentTarget.reset();
+    } catch {
       setStatus("error");
       setErrorMessage("Network error. Please try again.");
     }
   };
 
   return (
-    <main className="main-shell">
-      <Breadcrumbs className="mb-6" />
-      <motion.section
-        className="grid md:grid-cols-[1.1fr,1fr] gap-10 items-start"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        {/* Left text */}
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Contact section">
-            <span className="sr-only">Contact section: </span>CONTACT
-          </p>
-          <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900">
-            Let&apos;s talk about your next project or workflow.
-          </h1>
-          <p className="mt-3 text-sm text-slate-600 max-w-xl">
-            A short message is enough to get started. Share where you are today,
-            the kind of outcome you&apos;re aiming for, and we&apos;ll suggest
-            ways we can help.
-          </p>
+    <main className="main-shell space-y-12">
+      <Breadcrumbs className="mb-2" />
 
-          <div className="mt-6 space-y-2 text-sm text-slate-600">
-            <p>Typical topics we discuss:</p>
-            <ul className="list-disc list-inside text-xs md:text-sm text-slate-600">
-              <li>Upcoming engineering design or estimation work.</li>
-              <li>Ideas for automating internal tasks with AI.</li>
-              <li>Plans for a new website or digital refresh.</li>
-            </ul>
+      <section className="section-card p-7 md:p-10">
+        <div className="grid gap-8 lg:grid-cols-[1.1fr,0.9fr] items-start">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Contact</p>
+            <h1 className="mt-4 max-w-3xl text-5xl md:text-6xl lg:text-7xl leading-[0.96] text-slate-900">Let’s scope your next milestone.</h1>
+            <p className="mt-5 text-meta max-w-3xl text-base md:text-lg">
+              We love talking about digital strategy, engineering delivery, and business execution plans.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              {[
+                "1 business day response",
+                "Remote-first collaboration",
+                "Clear execution plans",
+              ].map((item) => (
+                <span key={item} className="chip">{item}</span>
+              ))}
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <article className="section-card image-frame overflow-hidden p-0">
+              <div className="relative h-[260px] md:h-[300px]">
+                <Image
+                  src="/images/contact-communication.png"
+                  alt="Contact and communication workflow"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover"
+                />
+              </div>
+            </article>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="kpi-inline">
+                <IconGlyph name="response" className="h-8 w-8 rounded-lg" />
+                <div>
+                  <p className="kpi-inline-value">24h</p>
+                  <p className="kpi-inline-label">Typical Reply</p>
+                </div>
+              </div>
+              <div className="kpi-inline">
+                <IconGlyph name="global" className="h-8 w-8 rounded-lg" />
+                <div>
+                  <p className="kpi-inline-value">Global</p>
+                  <p className="kpi-inline-label">Delivery Coverage</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Form */}
-        <motion.form
-          onSubmit={handleSubmit}
-          className="section-card p-5 md:p-6 space-y-4 text-sm"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-        >
+      <SectionDivider label="Talk To Us" />
+
+      <section className="grid gap-6 lg:grid-cols-[1.2fr,0.8fr] items-start">
+        <form onSubmit={handleSubmit} className="section-card p-7 md:p-8 space-y-5">
           <div>
-            <label className="block text-xs text-slate-500 mb-1">
-              Name
-            </label>
-            <input
-              name="name"
-              required
-              className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan"
-              placeholder="Your name"
-            />
+            <label htmlFor="name" className="block text-sm font-medium text-slate-700">Name</label>
+            <input id="name" name="name" required className="mt-1 w-full rounded-xl border border-slate-200 px-4 py-2.5" />
           </div>
           <div>
-            <label className="block text-xs text-slate-500 mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              required
-              className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan"
-              placeholder="you@company.com"
-            />
+            <label htmlFor="email" className="block text-sm font-medium text-slate-700">Email</label>
+            <input id="email" type="email" name="email" required className="mt-1 w-full rounded-xl border border-slate-200 px-4 py-2.5" />
           </div>
           <div>
-            <label className="block text-xs text-slate-500 mb-1">
-              Company / Organization (optional)
-            </label>
-            <input
-              name="company"
-              className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan"
-              placeholder="Where you work"
-            />
+            <label htmlFor="company" className="block text-sm font-medium text-slate-700">Company (optional)</label>
+            <input id="company" name="company" className="mt-1 w-full rounded-xl border border-slate-200 px-4 py-2.5" />
           </div>
           <div>
-            <label className="block text-xs text-slate-500 mb-1">
-              What would you like help with?
-            </label>
-            <textarea
-              name="message"
-              required
-              rows={5}
-              className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan resize-none"
-              placeholder="Briefly describe your project, current tools and target timeline..."
-            />
+            <label htmlFor="message" className="block text-sm font-medium text-slate-700">Message</label>
+            <textarea id="message" name="message" rows={6} required className="mt-1 w-full rounded-xl border border-slate-200 px-4 py-2.5" />
           </div>
 
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="mt-2 w-full rounded-full bg-slateBlue px-4 py-2.5 text-sm font-medium text-white shadow-soft disabled:opacity-70"
-          >
-            {status === "sending" ? "Sending..." : "Send message"}
+          <button type="submit" disabled={status === "sending"} className="btn-primary disabled:opacity-70">
+            {status === "sending" ? "Sending..." : "Send Message"}
           </button>
 
-          {status === "sent" && (
-            <p className="text-xs text-green-600">
-              Thank you! Your message has been received — we&apos;ll get back to
-              you shortly.
-            </p>
-          )}
+          {status === "sent" && <p className="text-sm text-green-700">Message sent successfully.</p>}
+          {status === "error" && <p className="text-sm text-red-700">{errorMessage}</p>}
+        </form>
 
-          {status === "error" && (
-            <p className="text-xs text-red-600">
-              {errorMessage || "Something went wrong. Please try again."}
-            </p>
-          )}
-        </motion.form>
-      </motion.section>
-
-      <motion.section
-        className="mt-12 grid gap-6 md:grid-cols-[1.1fr,0.9fr]"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <MediaPlaceholder
-          label="Collaboration rooms"
-          caption="A rolling feed of workshops, walkthroughs and implementation calls."
-          badge="Live notes"
-          accent="cyan"
-          aspect="wide"
-          imageSrc="/images/contact-communication.png"
-          imageAlt="Collaboration workspace preview"
-        />
-        <div className="section-card p-5 space-y-3 text-sm text-slate-600">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-            HOW WE PREP FOR CALLS
-          </p>
-          <ul className="space-y-2">
-            <li>▹ Review your materials & tools in advance</li>
-            <li>▹ Draft opportunities board with quick wins</li>
-            <li>▹ Share collaborative notes immediately after</li>
+        <aside className="section-card p-7 lg:sticky lg:top-28">
+          <div className="mb-4">
+            <IconGlyph name="workflow" />
+          </div>
+          <h2 className="text-2xl text-slate-900">Our Direction</h2>
+          <ul className="mt-4 space-y-2 text-meta">
+            <li>Faisalabad Office: Regency Plaza, Pakistan</li>
+            <li>Global Remote Collaboration: GCC, EU, APAC</li>
+            <li>Email: info@ehmtechservices.com</li>
+            <li>Phone: +92 322 628 3848</li>
           </ul>
-          <p className="text-xs text-slate-500">
-            Include any relevant files/links above so we can show up ready.
-          </p>
-        </div>
-      </motion.section>
+          <p className="mt-5 text-sm text-meta">Typical reply time is within one business day.</p>
+        </aside>
+      </section>
 
-      <motion.section
-        className="mt-12 grid md:grid-cols-3 gap-6"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        {[
-          {
-            title: "Email :",
-            value: "info@ehmtechservices.com",
-
-          },
-          {
-            title: "Phone :",
-            value: "+92 322 628 3848",
-
-          },
-          {
-            title: "Address :",
-            value: "Office#205, 2nd floor, Regency Plaza Opposite PIA Office",
-            caption: "Faisalabad, Pakistan",
-          },
-        ].map((item) => (
-          <div key={item.title} className="section-card p-5 flex flex-col min-h-[160px]">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-              {item.title}
-            </p>
-            <div className="flex-1 flex flex-col justify-center">
-              <p className="text-lg font-semibold text-slate-900">{item.value}</p>
-              {item.caption && <p className="mt-1 text-sm text-slate-600">{item.caption}</p>}
-            </div>
+      <section className="grid gap-5 md:grid-cols-3">
+        <article className="soft-tile p-6">
+          <div className="image-frame relative mb-4 h-24 overflow-hidden rounded-lg border border-slate-200">
+            <Image
+              src="/images/project-management.png"
+              alt="Project hub"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover"
+            />
           </div>
-        ))}
-      </motion.section>
+          <div className="mb-3">
+            <IconGlyph name="hq" />
+          </div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">Pakistan</p>
+          <h2 className="mt-2 text-lg text-slate-900">Faisalabad HQ</h2>
+          <p className="mt-2 text-sm text-meta">Regency Plaza, Pakistan</p>
+        </article>
+        <article className="soft-tile p-6">
+          <div className="image-frame relative mb-4 h-24 overflow-hidden rounded-lg border border-slate-200">
+            <Image
+              src="/images/services-workflow.jpg"
+              alt="Remote operations"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="mb-3">
+            <IconGlyph name="global" />
+          </div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">Global</p>
+          <h2 className="mt-2 text-lg text-slate-900">Remote Operations</h2>
+          <p className="mt-2 text-sm text-meta">Distributed delivery support for GCC, EU, and APAC clients.</p>
+        </article>
+        <article className="soft-tile p-6">
+          <div className="image-frame relative mb-4 h-24 overflow-hidden rounded-lg border border-slate-200">
+            <Image
+              src="/images/ops-canvas.png"
+              alt="Response management"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="mb-3">
+            <IconGlyph name="response" />
+          </div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">Response</p>
+          <h2 className="mt-2 text-lg text-slate-900">Within 1 Business Day</h2>
+          <p className="mt-2 text-sm text-meta">Project scoping calls and estimate requests are prioritized.</p>
+        </article>
+      </section>
 
-      <motion.section
-        className="mt-12 grid gap-6 md:grid-cols-[1.2fr,1fr]"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <div className="section-card p-6">
-          <h2 className="text-2xl font-semibold text-slate-900">
-            Common questions
-          </h2>
-          <div className="mt-4 space-y-4 text-sm text-slate-600">
-            {[
-              {
-                q: "Do you sign NDAs?",
-                a: "Yes—feel free to send yours along with the brief or request ours.",
-              },
-              {
-                q: "What info helps you respond faster?",
-                a: "Project stage, target timelines, current tooling and any reference files or URLs.",
-              },
-              {
-                q: "Can we schedule a workshop instead of a form?",
-                a: "Absolutely. Mention it above and we’ll send a booking link for a 30-min alignment call.",
-              },
-            ].map((item) => (
-              <div key={item.q} className="border-t border-slate-200 pt-3 first:border-t-0 first:pt-0">
-                <p className="text-sm font-semibold text-slate-900">{item.q}</p>
-                <p className="mt-1 text-slate-600">{item.a}</p>
-              </div>
-            ))}
+      <section className="open-section p-8 md:p-9">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Before We Start</p>
+        <h2 className="mt-3 text-2xl text-slate-900">Quick answers before you contact us</h2>
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr,1fr]">
+          <div className="space-y-3">
+            <article className="soft-tile p-4"><p className="text-sm text-meta"><span className="font-semibold text-slate-100">Do you work internationally?</span> Yes, our workflow is remote-first with global client support.</p></article>
+            <article className="soft-tile p-4"><p className="text-sm text-meta"><span className="font-semibold text-slate-100">How soon can you start?</span> Usually within a few business days after scope alignment.</p></article>
+            <article className="soft-tile p-4"><p className="text-sm text-meta"><span className="font-semibold text-slate-100">Can we begin with a small phase?</span> Yes, we can start with discovery or pilot execution.</p></article>
           </div>
-        </div>
-        <div className="section-card p-6 space-y-4">
-          <h2 className="text-2xl font-semibold text-slate-900">Typical flow</h2>
-          <ul className="space-y-3 text-sm text-slate-600">
-            <li>• Day 0 – You submit the form (or send an email)</li>
-            <li>• Day 1 – We reply with clarifying questions or a call invite</li>
-            <li>• Day 3 – You receive a plan with scope, timeline & commercials</li>
-          </ul>
-          <div className="rounded-xl border border-slate-200 bg-white p-4 text-xs text-slate-500">
-            Need to move faster? Mention your deadline and we’ll prioritize.
-          </div>
-        </div>
-      </motion.section>
-
-      <motion.section
-        className="mt-12 section-card p-6 md:p-7"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <div className="grid md:grid-cols-2 gap-5 text-sm text-meta">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-              EMAIL US FOR QUERIES :
-            </p>
-            <ul className="mt-3 space-y-3">
-              <li>
-                <span className="text-slate-900 font-medium">Email:</span> info@ehmtechservices.com
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-              HAVE A QUESTION ?
-            </p>
-            <a
-              href="/contact"
-              className="mt-4 inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-xs uppercase tracking-[0.2em]"
-            >
-              Contact us →
-            </a>
-            <div className="mt-4">
-              <BookMeeting />
+          <div className="image-frame soft-tile relative overflow-hidden p-0">
+            <div className="relative h-[250px] md:h-[320px]">
+              <Image
+                src="/images/graphics/grid-orbit.svg"
+                alt="Contact and onboarding process graphic"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
-      </motion.section>
+      </section>
+
+      <section className="open-section p-8 md:p-9">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Client Assurance</p>
+        <h2 className="mt-3 text-2xl text-slate-900">What happens after you reach out</h2>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <article className="soft-tile p-5">
+            <p className="text-sm font-semibold text-slate-100">Initial response in 1 day</p>
+            <p className="mt-2 text-sm text-meta">You receive a clear reply with next steps and information requests.</p>
+          </article>
+          <article className="soft-tile p-5">
+            <p className="text-sm font-semibold text-slate-100">Scope alignment</p>
+            <p className="mt-2 text-sm text-meta">We confirm objectives, deliverables, and timeline expectations before kickoff.</p>
+          </article>
+          <article className="soft-tile p-5">
+            <p className="text-sm font-semibold text-slate-100">Transparent engagement</p>
+            <p className="mt-2 text-sm text-meta">Communication cadence and ownership are shared at the start.</p>
+          </article>
+        </div>
+      </section>
+
+      <ProofStrip
+        heading="Contact Trust"
+        subheading="Teams that start projects with us"
+        tone="partnership"
+        audienceLine="A practical first step for teams planning engineering and digital initiatives"
+        partnerLabels={["Program Management Office", "Engineering Consultants", "Founders and SMEs", "Remote Delivery Teams"]}
+        metrics={[
+          { label: "Typical Reply", value: "24h" },
+          { label: "Delivery", value: "Global" },
+          { label: "Consult Mode", value: "Remote" },
+        ]}
+        testimonial={{
+          quote: "The first call was structured and useful. We left with a clear plan, not vague promises.",
+          byline: "Client Representative, Technical Services",
+        }}
+      />
     </main>
   );
 }
+

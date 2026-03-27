@@ -1,11 +1,10 @@
-"use client";
-
-import { motion, Variants } from "framer-motion";
-import type { ReactNode } from "react";
+﻿import type { ReactNode } from "react";
+import Link from "next/link";
+import { Breadcrumbs } from "./Breadcrumbs";
 import { MediaPlaceholder } from "./MediaPlaceholder";
 import { FAQAccordion } from "./FAQAccordion";
-import { Breadcrumbs } from "./Breadcrumbs";
 import { RelatedServices } from "./RelatedServices";
+import { IconGlyph, SectionDivider } from "./VisualLanguage";
 
 type ServiceStat = { label: string; value: string; detail?: string };
 type ApproachStep = { title: string; detail: string };
@@ -38,40 +37,6 @@ type ServiceLayoutProps = {
   children?: ReactNode;
 };
 
-const accentClass = (accent: ServiceLayoutProps["accent"]) => {
-  if (accent === "engineering") return "text-softSkyCyan";
-  return "text-sunsetPeach";
-};
-
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
-};
-
-const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1,
-    },
-  },
-};
-
-const itemVariant: Variants = {
-  hidden: { opacity: 0, y: 15 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-};
-
 export function ServiceLayout({
   title,
   groupLabel,
@@ -84,11 +49,11 @@ export function ServiceLayout({
   stats,
   approachTitle = "How we collaborate",
   approach,
-  toolsTitle = "Tools & platforms we tap into",
+  toolsTitle = "Tools and platforms",
   tools,
   faqsTitle = "FAQs",
   faqs,
-  ctaNote = "Share your context and we’ll respond with the fastest path forward.",
+  ctaNote = "Share your context and we will respond with a practical next step.",
   heroMedia,
   heroMediaLabel,
   signalsTitle = "Signals you might need this",
@@ -97,369 +62,247 @@ export function ServiceLayout({
   packages,
   children,
 }: ServiceLayoutProps) {
-  // Related services data (can be passed as prop or generated)
   const allServices = [
     {
       title: "Web Development",
       href: "/services/web-development",
-      description: "Modern, performant websites & dashboards.",
-      category: "digital",
+      description: "Modern, performant websites and internal tools.",
     },
     {
       title: "Cost Estimation",
       href: "/services/cost-estimation",
-      description: "Detailed BOQs and cost breakdowns.",
-      category: "construction",
+      description: "Detailed BOQs and quantity takeoff workflows.",
     },
     {
       title: "MEP Engineering",
       href: "/services/mep-engineering",
-      description: "Mechanical, electrical & plumbing systems.",
-      category: "engineering",
+      description: "Mechanical, electrical and plumbing design support.",
     },
   ];
 
-  return (
-    <main className="main-shell space-y-4">
-      {/* Breadcrumbs */}
-      <Breadcrumbs className="mb-4" />
+  const accentClass = accent === "engineering" ? "text-[#3663D8]" : "text-[#77BEFF]";
 
-      {/* Hero */}
-      <motion.section
-        variants={fadeInUp}
-        initial="hidden"
-        animate="visible"
-        className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-gradient-to-r from-white via-white to-slate-50 p-6 md:p-10 shadow-soft"
-      >
-        <div className="floating-orb floating-orb--cyan -top-16 -right-10 opacity-20" />
-        <div className="floating-orb floating-orb--peach -bottom-24 -left-8 opacity-20" />
-        <div className="grid gap-10 md:grid-cols-[1.5fr,1fr] items-start relative z-10">
+  return (
+    <main className="main-shell space-y-12">
+      <Breadcrumbs className="mb-2" />
+
+      <section className="section-card p-7 md:p-10">
+        <div className="grid gap-8 lg:grid-cols-[1.15fr,0.85fr] items-start">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">
-              {groupLabel}
-            </p>
-            <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-slate-900 leading-snug">
-              {title}
-            </h1>
-            <p className="mt-4 text-sm md:text-base text-slate-600 max-w-2xl leading-relaxed">
-              {intro}
-            </p>
+            <p className={`text-xs font-semibold uppercase tracking-[0.2em] ${accentClass}`}>{groupLabel}</p>
+            <h1 className="mt-4 max-w-3xl text-5xl md:text-6xl lg:text-7xl leading-[0.96] text-slate-900">{title}</h1>
+            <p className="mt-5 max-w-3xl text-meta text-base md:text-lg">{intro}</p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              {sideItems.slice(0, 3).map((item) => (
+                <span key={item} className="chip">{item}</span>
+              ))}
+            </div>
 
             {(primaryCta || secondaryCta) && (
-              <div className="mt-6 flex flex-wrap gap-3 text-sm">
+              <div className="mt-7 flex flex-wrap gap-3">
                 {primaryCta && (
-                  <a
-                    href={primaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full bg-slateBlue px-6 py-2.5 font-medium text-white shadow-soft hover:bg-slateBlue/90 hover:scale-105 transition-all duration-300"
-                  >
+                  <Link href={primaryCta.href} className="btn-primary">
                     {primaryCta.label}
-                  </a>
+                  </Link>
                 )}
                 {secondaryCta && (
-                  <a
-                    href={secondaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-2.5 font-medium text-slate-700 hover:border-softSkyCyan/80 hover:bg-slate-50 transition-all duration-300"
-                  >
+                  <Link href={secondaryCta.href} className="btn-secondary">
                     {secondaryCta.label}
-                  </a>
+                  </Link>
                 )}
               </div>
             )}
+          </div>
 
-            <div className="mt-8">
-              {heroMedia ?? (
+          <div className="grid gap-4">
+            <article className="section-card image-frame overflow-hidden p-2">
+              {heroMedia || (
                 <MediaPlaceholder
-                  label={heroMediaLabel ?? `${title} preview`}
-                  caption="Visual references will be updated after the next delivery cycle."
-                  badge={accent === "engineering" ? "Blueprint" : "Digital"}
+                  label={heroMediaLabel || `${title} preview`}
+                  caption="Theme-converted service preview"
+                  badge={accent === "engineering" ? "Engineering" : "Digital"}
                   accent={accent === "engineering" ? "cyan" : "peach"}
                 />
               )}
+            </article>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {(stats && stats.length > 0
+                ? stats.slice(0, 3).map((stat) => ({ label: stat.label, value: stat.value }))
+                : [
+                    { label: "Focus", value: "Precision" },
+                    { label: "Mode", value: "Collaborative" },
+                    { label: "Delivery", value: "Outcome-first" },
+                  ]
+              ).map((item) => (
+                <article key={item.label} className="section-card p-4 text-center">
+                  <p className="text-xl font-bold text-slate-900">{item.value}</p>
+                  <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-meta">{item.label}</p>
+                </article>
+              ))}
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="space-y-4">
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              animate="visible"
-              className="section-card p-6 backdrop-blur"
-            >
-              <h3 className="text-sm font-semibold text-slate-900">
-                {sideHeading}
-              </h3>
-              <ul className="mt-4 space-y-3 text-sm text-slate-600">
+      <SectionDivider label="Scope" />
+
+      <section className="grid gap-6 lg:grid-cols-[0.95fr,1.45fr] items-start">
+          <aside className="space-y-4 lg:sticky lg:top-28">
+            <div className="section-card p-5">
+              <h2 className="text-lg text-slate-900">Categories</h2>
+              <ul className="mt-3 space-y-2 text-sm text-meta">
                 {sideItems.map((item) => (
-                  <motion.li
-                    key={item}
-                    variants={itemVariant}
-                    className="flex gap-2 p-2 rounded-lg hover:bg-slate-50 transition-colors"
-                  >
-                    <span className="text-softSkyCyan">•</span>
+                  <li key={item} className="rounded-lg border border-slate-200 bg-white px-3 py-2 flex items-center gap-2">
+                    <IconGlyph name="integration" className="h-7 w-7 rounded-lg" />
                     <span>{item}</span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Stats and Content */}
-      {(stats && stats.length > 0) || children ? (
-        <motion.section
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          className="space-y-4"
-        >
-          {stats && stats.length > 0 && (
-            <div className="grid gap-4 md:grid-cols-3">
-              {stats.map((stat) => (
-                <motion.div
-                  key={stat.label}
-                  variants={itemVariant}
-                  whileHover={{ y: -5 }}
-                  className="glass-panel glow-accent p-4 md:p-6 flex flex-col gap-1 transition-all duration-300"
-                >
-                  <p className="text-xs uppercase tracking-[0.18em] text-slate-500">
-                    {stat.label}
-                  </p>
-                  <p className="text-2xl font-semibold text-slate-900">{stat.value}</p>
-                  {stat.detail && (
-                    <p className="text-sm text-slate-600">{stat.detail}</p>
-                  )}
-                </motion.div>
-              ))}
             </div>
-          )}
 
-          {children && (
-            <motion.div variants={fadeInUp} className="space-y-8">
-              {children}
-            </motion.div>
-          )}
-        </motion.section>
-      ) : null}
-
-      {/* Signals */}
-      {signals && signals.length > 0 && (
-        <motion.section
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className="section-card p-6 md:p-7">
-            <p className="text-xs font-semibold text-softSkyCyan uppercase tracking-[0.18em]">
-              ALIGNMENT
-            </p>
-            <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-              {signalsTitle}
-            </h2>
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              className="mt-4 grid gap-3 text-sm text-slate-600 md:grid-cols-2"
-            >
-              {signals.map((signal) => (
-                <motion.div
-                  key={signal}
-                  variants={itemVariant}
-                  className="flex items-start gap-2 rounded-xl border border-slate-200 bg-white p-3 hover:border-softSkyCyan/50 transition-colors duration-300"
-                >
-                  <span className="mt-1 text-softSkyCyan">▹</span>
-                  <span>{signal}</span>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </motion.section>
-      )}
-
-      {/* Tools */}
-      {tools && tools.length > 0 && (
-        <motion.section
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className="section-card p-6 md:p-7">
-            <div className="flex items-center justify-between gap-4 flex-wrap">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-                  STACK
-                </p>
-                <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-                  {toolsTitle}
-                </h2>
+            <div className="section-card p-5">
+              <div className="mb-3">
+                <IconGlyph name="workflow" />
               </div>
-              <span className="chip">Updated quarterly</span>
+              <h2 className="text-lg text-slate-900">{sideHeading}</h2>
+              <p className="mt-3 text-sm text-meta">For those of you who are serious about having more, let us plan the fastest path to delivery.</p>
+              <div className="mt-4 space-y-2 text-sm">
+                <p className="text-slate-700">+92 322 628 3848</p>
+                <p className="text-slate-700">info@ehmtechservices.com</p>
+              </div>
             </div>
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              className="mt-5 flex flex-wrap gap-3"
-            >
-              {tools.map((tool) => (
-                <motion.span
-                  key={tool}
-                  variants={itemVariant}
-                  whileHover={{ scale: 1.05 }}
-                  className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-xs font-normal text-slate-700 transition-transform duration-200"
-                >
-                  {tool}
-                </motion.span>
-              ))}
-            </motion.div>
-          </div>
-        </motion.section>
-      )}
+          </aside>
 
-      {/* Approach */}
-      {approach && approach.length > 0 && (
-        <motion.section
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <h2 className="text-2xl font-semibold text-slate-900">{approachTitle}</h2>
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="mt-5 grid gap-4 md:grid-cols-4"
-          >
-            {approach.map((step, idx) => (
-              <motion.div
-                key={step.title}
-                variants={itemVariant}
-                whileHover={{ y: -5 }}
-                className="section-card p-4 transition-all duration-300"
-              >
-                <div className="w-7 h-7 flex items-center justify-center rounded-full bg-slateBlue text-white text-xs font-semibold shadow-md">
-                  {idx + 1}
+          <div className="space-y-6">
+            <section className="open-section p-6 md:p-7">
+              <div className="image-frame rounded-2xl overflow-hidden border border-slate-200 bg-white p-2">
+                {heroMedia || (
+                  <MediaPlaceholder
+                    label={heroMediaLabel || `${title} preview`}
+                    caption="Theme-converted service preview"
+                    badge={accent === "engineering" ? "Engineering" : "Digital"}
+                    accent={accent === "engineering" ? "cyan" : "peach"}
+                  />
+                )}
+              </div>
+
+              <div className="mt-6">
+                <h2 className="text-2xl text-slate-900">Service Overview</h2>
+                <p className="mt-3 text-meta">{intro}</p>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  {primaryCta && (
+                    <Link href={primaryCta.href} className="btn-primary">
+                      {primaryCta.label}
+                    </Link>
+                  )}
+                  {secondaryCta && (
+                    <Link href={secondaryCta.href} className="btn-secondary">
+                      {secondaryCta.label}
+                    </Link>
+                  )}
                 </div>
-                <p className="mt-3 font-medium text-slate-900">{step.title}</p>
-                <p className="mt-2 text-sm text-slate-600">{step.detail}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.section>
-      )}
+              </div>
+            </section>
 
-      {/* FAQs */}
-      {faqs && faqs.length > 0 && (
-        <motion.section
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className="section-card p-6 md:p-7 space-y-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-                FAQs
-              </p>
-              <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-                {faqsTitle}
-              </h2>
-            </div>
-            <FAQAccordion faqs={faqs} />
+            {stats && stats.length > 0 && (
+              <section className="grid gap-4 md:grid-cols-3">
+                {stats.map((stat) => (
+                  <article key={stat.label} className="soft-tile p-5">
+                    <p className="text-xs uppercase tracking-[0.18em] text-gradient-label">{stat.label}</p>
+                    <p className="mt-2 text-xl text-slate-900">{stat.value}</p>
+                    {stat.detail && <p className="mt-2 text-sm text-meta">{stat.detail}</p>}
+                  </article>
+                ))}
+              </section>
+            )}
+
+            {children && <section className="space-y-6">{children}</section>}
+
+            {signals && signals.length > 0 && (
+              <section className="open-section p-6">
+                <h2 className="text-2xl text-slate-900">{signalsTitle}</h2>
+                <div className="mt-4 grid gap-3 md:grid-cols-2">
+                  {signals.map((signal) => (
+                    <div key={signal} className="soft-tile px-4 py-3 text-sm text-meta flex items-start gap-2">
+                      <IconGlyph name="strategy" className="h-7 w-7 rounded-lg" />
+                      <p>{signal}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {tools && tools.length > 0 && (
+              <section className="open-section p-6">
+                <h2 className="text-2xl text-slate-900">{toolsTitle}</h2>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {tools.map((tool) => (
+                    <span key={tool} className="chip">{tool}</span>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {approach && approach.length > 0 && (
+              <section className="open-section p-6">
+                <h2 className="text-2xl text-slate-900">{approachTitle}</h2>
+                <div className="mt-4 grid gap-4 md:grid-cols-4">
+                  {approach.map((step, index) => (
+                    <article key={step.title} className="soft-tile p-4">
+                      <div className="mb-2">
+                        <IconGlyph
+                          name={index % 3 === 0 ? "discovery" : index % 3 === 1 ? "roadmap" : "delivery"}
+                        />
+                      </div>
+                      <h3 className="text-base text-slate-900">{step.title}</h3>
+                      <p className="mt-2 text-sm text-meta">{step.detail}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {packages && packages.length > 0 && (
+              <section className="open-section p-6">
+                <h2 className="text-2xl text-slate-900">{packagesTitle}</h2>
+                <div className="mt-4 grid gap-4 md:grid-cols-3">
+                  {packages.map((pkg) => (
+                    <article key={pkg.title} className="soft-tile p-4">
+                      <div className="mb-2">
+                        <IconGlyph name="operations" />
+                      </div>
+                      <h3 className="text-base text-slate-900">{pkg.title}</h3>
+                      <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-meta">
+                        {pkg.items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                      {pkg.note && <p className="mt-3 text-xs text-slate-500">{pkg.note}</p>}
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {faqs && faqs.length > 0 && (
+              <section className="open-section p-6">
+                <h2 className="text-2xl text-slate-900">{faqsTitle}</h2>
+                <FAQAccordion faqs={faqs} className="mt-4" />
+              </section>
+            )}
+
+            <section className="open-section p-6 md:p-7">
+              <h2 className="text-2xl text-slate-900">Need a custom plan?</h2>
+              <p className="mt-3 text-meta">{ctaNote}</p>
+              <Link href="/contact" className="btn-primary mt-5 inline-flex">
+                Contact Us
+              </Link>
+            </section>
+
+            <RelatedServices currentService={title} services={allServices} />
           </div>
-        </motion.section>
-      )}
-
-      {/* Packages */}
-      {packages && packages.length > 0 && (
-        <motion.section
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className="section-card p-6 md:p-7 space-y-5">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">
-                FORMATS
-              </p>
-              <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-                {packagesTitle}
-              </h2>
-            </div>
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              className="grid gap-4 md:grid-cols-3"
-            >
-              {packages.map((pkg) => (
-                <motion.div
-                  key={pkg.title}
-                  variants={itemVariant}
-                  whileHover={{ y: -5 }}
-                  className="rounded-2xl border border-slate-200 bg-white p-3 md:p-4 flex flex-col gap-3 transition-all duration-300 hover:shadow-md"
-                >
-                  <div>
-                    <p className="text-sm font-semibold text-slate-900">{pkg.title}</p>
-                    {pkg.note && (
-                      <p className="text-xs text-slate-500 mt-1">{pkg.note}</p>
-                    )}
-                  </div>
-                  <ul className="space-y-2 text-sm text-slate-600">
-                    {pkg.items.map((item) => (
-                      <li key={item} className="flex gap-2">
-                        <span className="text-softSkyCyan">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </motion.section>
-      )}
-
-      {/* Related Services */}
-      <RelatedServices
-        currentService={title}
-        services={allServices}
-      />
-
-      {/* CTA */}
-      <motion.section
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        className="section-card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
-      >
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gradient-label">
-            READY WHEN YOU ARE
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-            Let&apos;s map the next deliverable together
-          </h2>
-          <p className="mt-2 text-sm text-slate-600 max-w-xl">{ctaNote}</p>
-        </div>
-        <a
-          href="/contact"
-          className="rounded-full bg-slateBlue px-6 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-slateBlue/90 hover:scale-105 transition-all duration-300"
-        >
-          Book a call
-        </a>
-      </motion.section>
+        </section>
     </main>
   );
 }
+

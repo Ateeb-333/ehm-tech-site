@@ -1,363 +1,381 @@
-"use client";
+﻿"use client";
 
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, FormEvent } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { IconGlyph, SectionDivider } from "@/components/VisualLanguage";
+import { ProofStrip } from "@/components/ProofStrip";
 
-const openings = [
+const roles = [
   {
     title: "Senior Automation Engineer",
-    dept: "AI & Automation",
     type: "Full-time",
-    location: "Remote • GCC/EU overlap",
-    summary: "Own discovery-to-deployment for AI copilots and workflow orchestration.",
-    tags: ["LangChain", "TypeScript", "Notion", "LLM Ops"],
+    location: "Remote",
+    summary: "Design and ship practical AI automation for client operations.",
+    glyph: "automation" as const,
   },
   {
     title: "Technical Project Lead",
-    dept: "Engineering Ops",
     type: "Contract",
-    location: "Hybrid • Dubai",
-    summary: "Guide multi-discipline engineering packages and keep stakeholders aligned.",
-    tags: ["MEP", "Revit", "Stakeholder comms", "QA"],
+    location: "Hybrid",
+    summary: "Manage engineering packages, reviews, and stakeholder reporting.",
+    glyph: "lead" as const,
   },
   {
     title: "Digital Experience Strategist",
-    dept: "Web & Growth",
     type: "Part-time",
-    location: "Remote • APAC",
-    summary: "Ship data-informed experiments across websites, email and social.",
-    tags: ["Next.js", "Analytics", "Figma", "Lifecycle"],
-  },
-];
-
-const perks = [
-  "Remote-first with purposeful on-sites across GCC/EU/APAC",
-  "Quarterly learning budget & dedicated R&D sprint",
-  "Async-friendly rituals — Looms, Notion HQ, light meetings",
-  "Flexible Fridays for deep work, research or community projects",
-];
-
-const process = [
-  "Share your work samples or portfolio with context.",
-  "30-min chemistry call with the hiring lead.",
-  "Paid working session or case walkthrough.",
-  "Reference chat + offer with clear onboarding plan.",
-];
-
-const testimonials = [
-  {
-    quote:
-      "EHM plugged into our engineering team like they'd been here for years. Iterations were quick and documentation spotless.",
-    author: "Farah Siddiqui",
-    role: "Project Director, Apex Build",
+    location: "Remote",
+    summary: "Plan and optimize digital touchpoints across web and campaigns.",
+    glyph: "strategy" as const,
   },
   {
-    quote:
-      "Their automation sprint eliminated two full days of manual updates every week. The team finally focuses on high-leverage work.",
-    author: "Liam Ortega",
-    role: "Head of Ops, Fluxbyte",
-  },
-  {
-    quote:
-      "From strategy to shipping the site, everything felt intentional. We launched in record time without sacrificing polish.",
-    author: "Nadia Alvi",
-    role: "Managing Partner, Kairo Studio",
+    title: "Estimation and Planning Engineer",
+    type: "Full-time",
+    location: "On-site",
+    summary: "Prepare BOQs, costing logic, and project estimation documentation.",
+    glyph: "estimation" as const,
   },
 ];
 
-export default function CareersPage() {
-  const [showForm, setShowForm] = useState(false);
-  const [selectedRole, setSelectedRole] = useState<string | null>(null);
-  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "sent">("idle");
+const stats = [
+  { label: "Years of Excellence", value: 8, symbol: "+" },
+  { label: "Projects Delivered", value: 240, symbol: "+" },
+  { label: "Team Members", value: 45, symbol: "+" },
+];
 
-  const handleApplyClick = (roleTitle: string) => {
-    setSelectedRole(roleTitle);
-    setShowForm(true);
-  };
+function AnimatedCounter({ target }: { target: number }) {
+  const [count, setCount] = useState(0);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setFormStatus("sending");
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus("sent");
-      setTimeout(() => {
-        setShowForm(false);
-        setFormStatus("idle");
-        setSelectedRole(null);
-      }, 2000);
-    }, 800);
-  };
+  useEffect(() => {
+    let current = 0;
+    const increment = target / 30;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, 30);
+
+    return () => clearInterval(timer);
+  }, [target]);
+
+  return <span>{count}</span>;
+}
+
+function JobCard({ role, index }: { role: (typeof roles)[0]; index: number }) {
   return (
-    <main className="main-shell space-y-12">
-      <Breadcrumbs className="mb-4" />
-      <motion.section
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="section-card p-6 md:p-8"
-      >
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Careers section">
-          <span className="sr-only">Careers section: </span>Careers
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileHover={{
+        scale: 1.05,
+        boxShadow: "0 20px 40px rgba(79, 125, 255, 0.14)",
+      }}
+      className="section-card group relative overflow-hidden p-6 cursor-pointer transition-all duration-300"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/0 to-indigo-50/0 group-hover:from-cyan-50/55 group-hover:to-indigo-50/45 transition-all duration-300" />
+
+      <div className="relative z-10">
+        <div className="flex items-start justify-between">
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gradient-label">{role.type}</p>
+            <h2 className="mt-2 text-xl text-slate-900 group-hover:text-[#4f7dff] transition-colors">{role.title}</h2>
+          </div>
+          <IconGlyph name={role.glyph} className="h-12 w-12" />
+        </div>
+
+        <p className="mt-3 text-sm text-meta">{role.summary}</p>
+
+        <motion.div
+          initial={{ width: 0 }}
+          whileHover={{ width: "100%" }}
+          className="my-4 h-1 bg-gradient-to-r from-[#5ad7ff] to-[#4f7dff] rounded-full"
+        />
+
+        <p className="mt-4 text-xs text-slate-500 flex items-center gap-2">
+          <IconGlyph name="hq" className="h-7 w-7 rounded-lg" /> {role.location}
         </p>
-        <h1 className="mt-3 text-3xl md:text-4xl font-semibold text-slate-900">
-          Build modern delivery systems for engineering, automation & digital.
-        </h1>
-        <p className="mt-4 text-lg text-slate-600 max-w-3xl">
-          We’re a remote-first team shipping high-trust work for technical organizations.
-          If you obsess over clarity, documentation and momentum, you’ll feel at home here.
-        </p>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          {perks.map((perk) => (
-            <div key={perk} className="rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-700 flex gap-3">
-              <span className="text-softSkyCyan text-lg">✺</span>
-              <span>{perk}</span>
-            </div>
-          ))}
-        </div>
-      </motion.section>
 
-      <motion.section
-        className="grid gap-6 md:grid-cols-[1.2fr,0.8fr]"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <div className="space-y-5">
-          <div className="flex items-center justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Open roles section">
-                <span className="sr-only">Open roles section: </span>Open roles
-              </p>
-              <h2 className="mt-2 text-2xl font-semibold text-slate-900">Current opportunities</h2>
-            </div>
-            <span className="chip">{openings.length} roles</span>
-          </div>
-
-          <div className="space-y-4">
-            {openings.map((role) => (
-              <div key={role.title} className="section-card p-5 space-y-3">
-                <div className="flex flex-wrap items-center gap-3 justify-between">
-                  <div>
-                    <p className="text-lg font-semibold text-slate-900">{role.title}</p>
-                    <p className="text-sm text-slate-600">{role.dept}</p>
-                  </div>
-                  <span className="chip">{role.type}</span>
-                </div>
-                <p className="text-sm text-slate-600">{role.summary}</p>
-                <div className="flex flex-wrap gap-2 text-xs text-slate-600">
-                  <span className="rounded-full border border-slate-200 px-3 py-1">
-                    {role.location}
-                  </span>
-                  {role.tags.map((tag) => (
-                    <span key={tag} className="rounded-full border border-slate-200 px-3 py-1">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <button
-                  onClick={() => handleApplyClick(role.title)}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-slateBlue hover:text-slateBlue/80 transition-colors"
-                >
-                  Apply via email →
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="section-card p-5 space-y-6">
-          <MediaPlaceholder
-            label="Join Our Team"
-            caption="Work with talented professionals on exciting projects worldwide."
-            badge="Team Culture"
-            accent="violet"
-            aspect="wide"
-            imageSrc="/images/careers-hiring.jpg"
-            imageAlt="Join our team - career opportunities"
-          />
-          <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Interview flow section">
-              <span className="sr-only">Interview flow section: </span>Interview flow
-            </p>
-            <h3 className="text-lg font-semibold text-slate-900">What to expect</h3>
-            <ol className="list-decimal list-inside space-y-2 text-sm text-slate-600">
-              {process.map((step) => (
-                <li key={step}>{step}</li>
-              ))}
-            </ol>
-            <p className="text-xs text-slate-500">
-              We keep feedback loops tight — expect updates within 48 hours of each touchpoint.
-            </p>
-          </div>
-        </div>
-      </motion.section>
-
-      <motion.section
-        className="section-card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Don't see your role section">
-            <span className="sr-only">Don't see your role section: </span>Don't see your role?
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-            Pitch us a role or collaboration.
-          </h2>
-          <p className="mt-2 text-sm text-slate-600 max-w-2xl">
-            Tell us what you’d like to own, the systems you improve, and the kind of outcomes you’ve delivered.
-            We often craft bespoke roles for people who think in systems.
-          </p>
-        </div>
-        <button
-          onClick={() => handleApplyClick("General Application")}
-          className="rounded-full bg-slateBlue px-6 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-slateBlue/90 transition-colors"
+        <motion.a
+          href="mailto:info@ehmtechservices.com"
+          whileHover={{ x: 5 }}
+          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#4f7dff] hover:text-[#3663d8] transition-colors group/link"
         >
-          Send your profile →
-        </button>
-      </motion.section>
-
-      {/* Testimonials Section */}
-      <motion.section
-        className="mt-12"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <div className="mb-6 max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label" aria-label="Team testimonials section">
-            <span className="sr-only">Team testimonials section: </span>TEAM VOICES
-          </p>
-          <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-            What it's like working with us.
-          </h2>
-        </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {testimonials.map((item, idx) => (
-            <motion.div
-              key={item.author}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="section-card p-5 flex flex-col gap-4"
-            >
-              <p className="text-meta font-normal">{item.quote}</p>
-              <div>
-                <p className="text-sm font-semibold text-slate-900">
-                  {item.author}
-                </p>
-                <p className="text-xs text-slate-500 font-normal">{item.role}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
-
-      {/* Application Form Modal */}
-      <AnimatePresence>
-        {showForm && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50"
-              onClick={() => setShowForm(false)}
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-4"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="section-card p-6 md:p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto">
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-xl font-semibold text-slate-900">Apply to EHM Tech</h2>
-                  <button
-                    onClick={() => setShowForm(false)}
-                    className="text-slate-500 hover:text-slate-900 text-xl leading-none"
-                    aria-label="Close form"
-                  >
-                    ×
-                  </button>
-                </div>
-                {selectedRole && (
-                  <p className="text-sm text-slate-600 mb-4">
-                    Applying for: <span className="font-semibold text-slate-900">{selectedRole}</span>
-                  </p>
-                )}
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-xs text-slate-500 mb-1">
-                      Name *
-                    </label>
-                    <input
-                      name="name"
-                      required
-                      className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs text-slate-500 mb-1">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan"
-                      placeholder="you@example.com"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs text-slate-500 mb-1">
-                      Portfolio / Work samples (URL)
-                    </label>
-                    <input
-                      type="url"
-                      name="portfolio"
-                      className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan"
-                      placeholder="https://..."
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs text-slate-500 mb-1">
-                      Why EHM? *
-                    </label>
-                    <textarea
-                      name="message"
-                      required
-                      rows={4}
-                      className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-softSkyCyan resize-none"
-                      placeholder="Tell us what interests you about this role and EHM Tech..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={formStatus === "sending"}
-                    className="w-full rounded-full bg-slateBlue px-4 py-2.5 text-sm font-medium text-white shadow-soft disabled:opacity-70 transition-colors"
-                  >
-                    {formStatus === "sending" ? "Sending..." : formStatus === "sent" ? "Sent!" : "Submit application"}
-                  </button>
-                  {formStatus === "sent" && (
-                    <p className="text-xs text-softSkyCyan">
-                      Thank you! We'll review your application and get back to you within 48 hours.
-                    </p>
-                  )}
-                </form>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-    </main>
+          Apply via Email
+          <motion.span
+            animate={{ x: [0, 3, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="inline-block"
+          >
+            →
+          </motion.span>
+        </motion.a>
+      </div>
+    </motion.article>
   );
 }
 
+export default function CareersPage() {
+  return (
+    <main className="main-shell space-y-12">
+      <Breadcrumbs className="mb-2" />
+
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.25 }}
+        className="section-card p-7 md:p-10"
+      >
+        <div className="grid gap-8 lg:grid-cols-[1.15fr,0.85fr] items-start">
+          <div>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label"
+            >
+              Careers
+            </motion.p>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mt-4 max-w-3xl text-5xl md:text-6xl lg:text-7xl leading-[0.96] text-slate-900"
+            >
+              Build the systems behind measurable outcomes.
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mt-5 text-meta max-w-3xl text-base md:text-lg"
+            >
+              Join a multidisciplinary team where engineering, digital operations, and accountability come together to deliver high-impact client programs.
+            </motion.p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              {["Remote-first", "High ownership", "Cross-functional"].map((item) => (
+                <span key={item} className="chip">{item}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid gap-4">
+            <article className="section-card image-frame overflow-hidden p-0">
+              <div className="relative h-[260px] md:h-[300px]">
+                <Image
+                  src="/images/careers-hiring.jpg"
+                  alt="Team collaboration and hiring"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover"
+                />
+              </div>
+            </article>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {stats.map((stat) => (
+                <div key={stat.label} className="kpi-inline">
+                  <IconGlyph name="growth" className="h-8 w-8 rounded-lg" />
+                  <div>
+                    <p className="kpi-inline-value">
+                      <AnimatedCounter target={stat.value} />{stat.symbol}
+                    </p>
+                    <p className="kpi-inline-label">{stat.label}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="open-section p-8 md:p-9"
+      >
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.1 }}
+          viewport={{ once: true }}
+          className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label"
+        >
+          Open Positions
+        </motion.p>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-3 text-3xl text-slate-900"
+        >
+          Find Your Job Here
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-3 max-w-3xl text-meta"
+        >
+          Explore active roles built for people who enjoy clarity, ownership, and measurable impact.
+        </motion.p>
+      </motion.section>
+
+      <SectionDivider label="Opportunities" />
+
+      <section className="grid gap-5 lg:grid-cols-[1.2fr,0.8fr]">
+        <article className="section-card overflow-hidden p-0">
+          <div className="image-frame relative h-[280px] w-full md:h-[360px]">
+            <Image
+              src="/images/careers-hiring.jpg"
+              alt="Hiring and collaboration environment"
+              fill
+              sizes="(max-width: 1024px) 100vw, 65vw"
+              className="object-cover"
+            />
+          </div>
+        </article>
+        <div className="grid gap-5">
+          <article className="section-card overflow-hidden p-0">
+            <div className="image-frame relative h-[168px] w-full">
+              <Image
+                src="/images/careers-opportunity.png"
+                alt="Career opportunity spotlight"
+                fill
+                sizes="(max-width: 1024px) 100vw, 35vw"
+                className="object-cover"
+              />
+            </div>
+          </article>
+          <article className="soft-tile p-5">
+            <div className="mb-3">
+              <IconGlyph name="growth" />
+            </div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Work Culture</p>
+            <p className="mt-3 text-sm text-meta">
+              Visual-first project reviews, clear communication loops, and high ownership are part of everyday work at EHM.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {roles.map((role, index) => (
+          <JobCard key={role.title} role={role} index={index} />
+        ))}
+      </section>
+
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="open-section p-8 md:p-9"
+      >
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Why Join EHM</p>
+
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
+          {[
+            "Ownership with clarity on outcomes and timelines.",
+            "Cross-domain collaboration between engineering and digital teams.",
+            "Growth through high-impact, real client delivery programs.",
+          ].map((benefit, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{
+                backgroundColor: "#EFF6FF",
+                borderColor: "#3663D8",
+              }}
+              className="soft-tile px-5 py-5 text-sm text-meta transition-all duration-300 cursor-pointer"
+            >
+              {benefit}
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      <section className="open-section p-8 md:p-9">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Hiring Flow</p>
+        <h2 className="mt-3 text-2xl text-slate-900">What the recruitment process looks like</h2>
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr,1fr]">
+          <div className="space-y-3">
+            <article className="soft-tile p-4"><p className="text-sm text-meta"><span className="font-semibold text-slate-100">Step 1:</span> Portfolio and role-fit review.</p></article>
+            <article className="soft-tile p-4"><p className="text-sm text-meta"><span className="font-semibold text-slate-100">Step 2:</span> Technical or case-based interview.</p></article>
+            <article className="soft-tile p-4"><p className="text-sm text-meta"><span className="font-semibold text-slate-100">Step 3:</span> Team conversation and expectations alignment.</p></article>
+            <article className="soft-tile p-4"><p className="text-sm text-meta"><span className="font-semibold text-slate-100">Step 4:</span> Offer and onboarding plan.</p></article>
+          </div>
+          <div className="image-frame soft-tile relative overflow-hidden p-0">
+            <div className="relative h-[250px] md:h-[320px]">
+              <Image
+                src="/images/graphics/signal-network.svg"
+                alt="Hiring process network graphic"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="open-section p-8 md:p-9">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Candidate Promise</p>
+        <h2 className="mt-3 text-2xl text-slate-900">What applicants can expect from us</h2>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <article className="soft-tile p-5">
+            <p className="text-sm font-semibold text-slate-100">Respectful process</p>
+            <p className="mt-2 text-sm text-meta">Clear communication and practical timelines throughout the hiring flow.</p>
+          </article>
+          <article className="soft-tile p-5">
+            <p className="text-sm font-semibold text-slate-100">Role clarity</p>
+            <p className="mt-2 text-sm text-meta">Expectations, ownership, and growth paths are discussed transparently.</p>
+          </article>
+          <article className="soft-tile p-5">
+            <p className="text-sm font-semibold text-slate-100">Feedback culture</p>
+            <p className="mt-2 text-sm text-meta">We value constructive dialogue and continuous improvement from both sides.</p>
+          </article>
+        </div>
+      </section>
+
+      <ProofStrip
+        heading="Culture Signals"
+        subheading="What current teammates value most"
+        tone="talent"
+        audienceLine="Designed for builders who want ownership, growth, and practical impact"
+        partnerLabels={["Automation Team", "Project Delivery Team", "Design and Engineering Team", "Operations and PMO"]}
+        metrics={[
+          { label: "Team Members", value: "45+" },
+          { label: "Projects", value: "240+" },
+          { label: "Work Mode", value: "Hybrid" },
+        ]}
+        testimonial={{
+          quote: "Ownership is real here. You can see your work move from idea to measurable impact.",
+          byline: "Team Member, Cross-Functional Delivery",
+        }}
+      />
+    </main>
+  );
+}
 

@@ -1,0 +1,27 @@
+<svg width="1400" height="820" viewBox="0 0 1400 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="820" fill="#070D18"/>
+  <defs>
+    <linearGradient id="g1" x1="155" y1="102" x2="1275" y2="742" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5AD7FF" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#4F7DFF" stop-opacity="0.62"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="1120" y1="84" x2="224" y2="706" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9AD2FF" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#79B4FF" stop-opacity="0.12"/>
+    </linearGradient>
+    <filter id="blur" x="-80" y="-80" width="1560" height="980" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+  <g opacity="0.75" filter="url(#blur)">
+    <path d="M66 601C232 503 347 484 477 448C603 413 732 318 858 262C1001 198 1143 178 1336 162" stroke="url(#g1)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M48 668C194 575 333 540 452 507C603 466 694 437 836 378C964 325 1110 292 1360 278" stroke="url(#g2)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M118 720C286 617 399 580 536 547C684 510 790 454 938 402C1088 349 1211 338 1365 325" stroke="url(#g1)" stroke-opacity="0.8" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g opacity="0.32">
+    <circle cx="240" cy="582" r="6" fill="#8CD7FF"/>
+    <circle cx="516" cy="455" r="7" fill="#79B8FF"/>
+    <circle cx="840" cy="305" r="7" fill="#8CD7FF"/>
+    <circle cx="1122" cy="226" r="6" fill="#79B8FF"/>
+  </g>
+</svg>

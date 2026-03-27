@@ -1,559 +1,353 @@
-"use client";
+﻿"use client";
 
-import { MediaPlaceholder } from "@/components/MediaPlaceholder";
-import { motion, Variants } from "framer-motion";
-import { TextShimmer } from "@/components/TextShimmer";
-import { Typewriter } from "@/components/Typewriter";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
+import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { IconGlyph, SectionDivider } from "@/components/VisualLanguage";
+import { ProofStrip } from "@/components/ProofStrip";
 
-const fadeInUp: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: "easeOut" },
-    },
-};
-
-const staggerContainer: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.1,
-        },
-    },
-};
-
-const itemVariant: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.5, ease: "easeOut" },
-    },
-};
-
-const marqueeItems = [
-    "Engineering Design",
-    "Cost Estimation",
-    "IT Solutions",
-    "AI Automation",
-    "Project Management",
-    "Digital Marketing",
+const serviceCards = [
+  {
+    title: "Engineering Design",
+    text: "Civil, structural, MEP and architecture support.",
+    href: "/services/engineering-design",
+    image: "/images/engineering-design.jpg",
+    glyph: "engineering" as const,
+  },
+  {
+    title: "Cost Estimation",
+    text: "BOQs, quantity takeoffs, and bid estimation workflows.",
+    href: "/services/cost-estimation",
+    image: "/images/cost-estimation.jpg",
+    glyph: "estimation" as const,
+  },
+  {
+    title: "Drafting Services",
+    text: "2D and 3D drawings with technical documentation.",
+    href: "/services/drafting-services",
+    image: "/images/drafting-blueprint-preview.jpg",
+    glyph: "docs" as const,
+  },
+  {
+    title: "Project Management",
+    text: "Coordination and reporting across project phases.",
+    href: "/services/project-management",
+    image: "/images/project-planning.jpg",
+    glyph: "workflow" as const,
+  },
+  {
+    title: "AI Automation",
+    text: "Assistants, automation and smart operations tools.",
+    href: "/services/ai-automation",
+    image: "/images/ai-futuristic-ui.jpg",
+    glyph: "automation" as const,
+  },
+  {
+    title: "Web Development",
+    text: "Modern websites and internal business tools.",
+    href: "/services/web-development",
+    image: "/images/coding-keyboard.jpg",
+    glyph: "web" as const,
+  },
 ];
 
-const capabilityGroups = [
-    {
-        label: "Engineering Highlights",
-        pillars: [
-            "Civil & structural layouts and design packages",
-            "MEP planning, drawings, and load calculations",
-            "Architectural plans, 2D/3D drafting, and design documentation",
-        ],
-    },
-    {
-        label: "Estimation Highlights",
-        pillars: [
-            "Quantity takeoff reports for all construction trades",
-            "Detailed cost estimation and bid preparation",
-            "Blueprint reading, drafting corrections, and project coordination",
-        ],
-    },
-    {
-        label: "Digital Highlights",
-        pillars: [
-            "Custom website development and software engineering",
-            "AI-based tools, automation workflows, and chatbots",
-            "UI/UX design, branding, and digital marketing assets",
-        ],
-    },
+const brandMarquee = [
+  "Web Design",
+  "UI/UX Design",
+  "Developer",
+  "ISO Developer",
+  "Digital Agency",
+  "IT Services",
+  "Engineering",
+  "Automation",
 ];
 
-const testimonials = [
-    {
-        quote: "Reliable and accurate work every time.",
-        author: "Client",
-        role: "Construction Partner",
-    },
-    {
-        quote: "Great communication and fast delivery.",
-        author: "Client",
-        role: "Business Owner",
-    },
-    {
-        quote: "Their engineering and estimation support helped us win more bids.",
-        author: "Client",
-        role: "General Contractor",
-    },
+const caseStudies = [
+  {
+    title: "Enterprise PMO Digitization",
+    text: "Reporting automation and document governance across multi-site delivery teams.",
+    image: "/images/project-workflow.jpg",
+    glyph: "workflow" as const,
+  },
+  {
+    title: "MEP Coordination Delivery",
+    text: "High-clarity drawing and calculation packs delivered on strict turnaround timelines.",
+    image: "/images/mep-engineering.jpg",
+    glyph: "engineering" as const,
+  },
+  {
+    title: "Marketing Stack Enablement",
+    text: "Campaign execution model with CRM-linked email and social media operations.",
+    image: "/images/social-media-dashboard.jpg",
+    glyph: "marketing" as const,
+  },
 ];
 
 export default function HomePage() {
-    return (
-        <main className="main-shell">
-            {/* Hero */}
-            <motion.section
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="grid gap-10 md:grid-cols-[1.5fr,1fr] items-center min-h-[80vh] relative"
-            >
-                {/* Dynamic Background Elements Removed */}
-                <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-                </div>
+  const sectionVariant = {
+    hidden: { opacity: 0, y: 26 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.65, ease: "easeOut" },
+    },
+  };
 
-                <div>
-                    <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight">
-                        <TextShimmer>EHM Technology Services</TextShimmer>
-                        <span className="block mt-2">
-                            <Typewriter
-                                words={[
-                                    "Professional Engineering",
-                                    "Cost Estimation",
-                                    "IT Solutions",
-                                    "AI Automation",
-                                    "Digital Innovation"
-                                ]}
-                                typingSpeed={80}
-                                deletingSpeed={40}
-                                pauseDuration={2500}
-                                className="text-slate-700"
-                            />
-                        </span>
-                        <span className="block text-[#046BC6] mt-2">
-                            You Can Rely On.
-                        </span>
-                    </h1>
-                    <p className="mt-4 text-meta max-w-xl text-sm md:text-base">
-                        Integrated support across engineering, construction estimation, and modern IT solutions — helping you plan smarter and build better.
-                    </p>
-                    <div className="mt-8 flex flex-wrap gap-4">
-                        <a
-                            href="/services"
-                            className="rounded-full bg-slateBlue px-6 py-3 text-sm font-medium text-white shadow-soft transition-transform hover:scale-105 hover:bg-slateBlue/90"
-                        >
-                            Explore Services
-                        </a>
-                        <a
-                            href="/contact"
-                            className="rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-700 transition-colors hover:border-slateBlue/50 hover:bg-slate-50"
-                        >
-                            Get a Quote
-                        </a>
-                    </div>
-                </div>
-
-                {/* Right visual */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: "easeIn" }}
-                    className="space-y-4"
-                >
-                    <MediaPlaceholder
-                        label="Integrated Workflow"
-                        caption="Seamlessly connecting engineering precision with digital efficiency."
-                        badge="Our Process"
-                        accent="cyan"
-                        aspect="square"
-                        imageSrc="/images/hero-workflow.png"
-                        imageAlt="Engineering and digital workflow visualization"
-                    />
-                </motion.div>
-            </motion.section>
-
-            {/* Marquee */}
-            <div className="w-full overflow-hidden border-y border-slate-200 bg-slate-50 py-4">
-                <div className="marquee-track">
-                    {[...marqueeItems, ...marqueeItems].map((item, idx) => (
-                        <span
-                            key={idx}
-                            className="whitespace-nowrap text-sm font-medium text-slate-500 uppercase tracking-wider"
-                        >
-                            {item} <span className="mx-4 text-slate-300">•</span>
-                        </span>
-                    ))}
-                </div>
+  return (
+    <main className="main-shell space-y-12">
+      <motion.section
+        className="section-card p-7 md:p-10"
+        variants={sectionVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <div className="grid gap-8 lg:grid-cols-[1.15fr,0.85fr] items-start">
+          <div className="pt-1">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Creative solutions real results</p>
+            <h1 className="mt-4 max-w-3xl text-5xl md:text-6xl lg:text-7xl leading-[0.95] text-slate-900">
+              EHM Technology Services
+            </h1>
+            <p className="mt-5 text-meta max-w-2xl text-base md:text-lg">
+              Your experience is everything to us. We combine engineering, estimation, and digital systems to deliver outcomes that are clear, practical, and scalable.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              {["Engineering", "Automation", "Digital Ops"].map((item) => (
+                <span key={item} className="chip">{item}</span>
+              ))}
             </div>
-
-            {/* About Us Block */}
-            <motion.section
-                className="mt-16 rounded-2xl border border-slate-200 bg-white p-6 md:p-8"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeInUp}
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href="/services" className="btn-primary">
+                Get A Quote
+              </Link>
+              <Link href="/about" className="btn-secondary">
+                About Us
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <motion.article
+              className="section-card image-frame overflow-hidden p-0"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.55, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
             >
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-                            About Us
-                        </p>
-                        <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-                            About EHM Technology Services
-                        </h2>
-                        <p className="mt-4 text-meta leading-relaxed">
-                            We offer complete solutions for contractors, engineering firms, and businesses. Our expertise spans engineering design, cost estimation, and IT development, ensuring reliable results for projects of any scale.
-                        </p>
-                    </div>
-                    <div className="space-y-6">
-                        <MediaPlaceholder
-                            label="Our Focus"
-                            caption="Accuracy, Modern Tools, and Smooth Workflows."
-                            badge="Core Values"
-                            aspect="wide"
-                            accent="cyan"
-                            imageSrc="/images/professional-team.png"
-                            imageAlt="Professional team working with modern technology"
-                        />
-                        <div className="section-card p-6 bg-slate-50">
-                            <h3 className="text-lg font-semibold text-slate-900 mb-4">
-                                Our Focus
-                            </h3>
-                            <ul className="space-y-3 text-sm text-meta">
-                                {[
-                                    "Accuracy & Clarity",
-                                    "Modern Tools",
-                                    "Smooth Workflows",
-                                    "Concept to Delivery",
-                                ].map((item) => (
-                                    <li key={item} className="flex items-center gap-2">
-                                        <span className="text-sunsetPeach">✓</span>
-                                        <span>{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </motion.section>
-
-            {/* Core Areas of Expertise */}
-            <motion.section
-                className="mt-16 grid md:grid-cols-3 gap-6"
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-            >
-                {[
-                    {
-                        title: "Engineering Services",
-                        body: "Structured design and technical solutions across civil, structural, MEP, architectural, and industrial engineering.",
-                        accent: "Stronger, Smarter Project Development",
-                    },
-                    {
-                        title: "Construction Estimation",
-                        body: "Accurate quantity takeoffs, bid estimates, drafting assistance, and project cost analysis.",
-                        accent: "Clarity for Your Projects",
-                    },
-                    {
-                        title: "IT & AI Solutions",
-                        body: "Custom development, AI automation, digital design, branding, and marketing support.",
-                        accent: "Designed for Modern Business Growth",
-                    },
-                ].map((card, i) => (
-                    <motion.div
-                        key={card.title}
-                        variants={itemVariant}
-                        whileHover={{ y: -5 }}
-                        className="section-card p-5 transition-all duration-300 hover:shadow-md"
-                    >
-                        <p className="text-xs font-semibold text-softSkyCyan">0{i + 1}</p>
-                        <h3 className="mt-2 text-lg font-semibold text-slate-900">
-                            {card.title}
-                        </h3>
-                        <p className="mt-2 text-meta">{card.body}</p>
-                        <p className="mt-3 text-xs text-slate-500 font-normal">
-                            {card.accent}
-                        </p>
-                    </motion.div>
-                ))}
-            </motion.section>
-
-            {/* Why Choose EHM */}
-            <motion.section
-                className="mt-16"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-            >
-                <motion.div variants={fadeInUp} className="mb-8">
-                    <h2 className="text-2xl font-semibold text-slate-900">
-                        Why Choose EHM Technology Services
-                    </h2>
-                    <p className="mt-2 text-meta max-w-2xl">
-                        We value accuracy, quality, and clear communication. We focus on practical needs and deliver results that support long-term success.
-                    </p>
-                </motion.div>
-                <motion.div
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                    className="grid gap-4 md:grid-cols-3"
-                >
-                    {[
-                        { text: "Multi-disciplinary expertise across engineering, construction, and technology", icon: "✦" },
-                        { text: "Accurate and detailed work with modern tools and best practices", icon: "⚡" },
-                        { text: "Smooth coordination and transparent communication", icon: "🤝" },
-                        { text: "Flexible support for small, medium, and large projects", icon: "🏗️" },
-                        { text: "On-time delivery and organized workflows", icon: "⏱️" },
-                        { text: "Commitment to reliable, high-quality outcomes", icon: "✅" },
-                    ].map((item, idx) => (
-                        <motion.div
-                            key={idx}
-                            variants={itemVariant}
-                            whileHover={{ scale: 1.02 }}
-                            className="section-card p-5 flex items-start gap-3 hover:border-softSkyCyan/50 transition-all duration-300"
-                        >
-                            <span className="text-lg">{item.icon}</span>
-                            <p className="text-sm text-slate-700">{item.text}</p>
-                        </motion.div>
-                    ))}
-                </motion.div>
-            </motion.section>
-
-            {/* Featured Capabilities */}
-            <motion.section
-                className="mt-16 grid gap-6 md:grid-cols-3"
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-            >
-                {capabilityGroups.map((group, idx) => (
-                    <motion.div
-                        key={group.label}
-                        variants={itemVariant}
-                        whileHover={{ y: -5 }}
-                        className="section-card p-5 flex flex-col gap-3 transition-all duration-300"
-                    >
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
-                            Capabilities
-                        </p>
-                        <h3 className="text-xl font-semibold text-slate-900">
-                            {group.label}
-                        </h3>
-                        <ul className="space-y-2 text-sm text-meta">
-                            {group.pillars.map((pillar) => (
-                                <li key={pillar} className="flex items-start gap-2">
-                                    <span className="text-softSkyCyan mt-1">▹</span>
-                                    <span>{pillar}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </motion.div>
-                ))}
-            </motion.section>
-
-            {/* Project Highlights */}
-            <motion.section
-                className="mt-16"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeInUp}
-            >
-                <h2 className="text-2xl font-semibold text-slate-900 mb-2">
-                    Project Highlights — Work Delivered Across Industries
-                </h2>
-                <p className="text-slate-600 mb-8">
-                    This section showcases the variety and quality of our completed tasks.
-                </p>
-                <motion.div
-                    className="grid gap-6 md:grid-cols-3"
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                >
-                    {[
-                        {
-                            title: "Engineering Excellence",
-                            desc: "Drawing packages for residential, commercial, and industrial projects",
-                            image: "/images/engineering-highlight.png",
-                            alt: "Engineering blueprints and structural designs"
-                        },
-                        {
-                            title: "Estimation Precision",
-                            desc: "Detailed takeoff sheets and cost estimates for contractors and builders",
-                            image: "/images/estimation-highlight.png",
-                            alt: "Cost estimation spreadsheets and takeoff reports"
-                        },
-                        {
-                            title: "Digital Innovation",
-                            desc: "Web platforms, automation systems, and digital solutions for businesses",
-                            image: "/images/digital-highlight.png",
-                            alt: "Modern web application dashboard"
-                        },
-                    ].map((item, idx) => (
-                        <motion.div
-                            key={idx}
-                            variants={itemVariant}
-                            whileHover={{ y: -5 }}
-                            className="section-card p-0 overflow-hidden transition-all duration-300 hover:shadow-lg"
-                        >
-                            <div className="relative h-48 w-full overflow-hidden bg-slate-100">
-                                <Image
-                                    src={item.image}
-                                    alt={item.alt}
-                                    fill
-                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                />
-                            </div>
-                            <div className="p-5">
-                                <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
-                                <p className="text-sm text-slate-600">{item.desc}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </motion.div>
-            </motion.section>
-
-            {/* Client Feedback */}
-            <motion.section
-                className="mt-16"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-            >
-                <motion.div
-                    variants={fadeInUp}
-                    className="mb-6 max-w-2xl"
-                >
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-                        Testimonials
-                    </p>
-                    <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-                        What Our Clients Appreciate Most
-                    </h2>
-                    <p className="mt-2 text-meta">
-                        Our clients trust us for our consistent accuracy, responsible
-                        communication, and dedicated project support.
-                    </p>
-                </motion.div>
-                <TestimonialCarousel
-                    testimonials={testimonials}
-                    autoPlay={true}
-                    autoPlayInterval={6000}
+              <div className="relative h-[260px] md:h-[320px]">
+                <Image
+                  src="/images/hero-workflow.png"
+                  alt="Integrated engineering and digital workflow"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover"
                 />
-            </motion.section>
-
-            {/* CTA */}
-            <motion.section
-                className="mt-16 section-card p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={fadeInUp}
-            >
+              </div>
+            </motion.article>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="kpi-inline">
+                <IconGlyph name="delivery" className="h-8 w-8 rounded-lg" />
                 <div>
-                    <h2 className="text-2xl font-semibold text-slate-900">
-                        Ready to Begin Your Next Project?
-                    </h2>
-                    <p className="mt-2 text-meta max-w-xl">
-                        Whether you need engineering support, cost estimation, drafting work,
-                        or modern IT solutions, our team is ready to assist. We're here to
-                        help you plan, execute, and deliver with confidence.
-                    </p>
+                  <p className="kpi-inline-value">240+</p>
+                  <p className="kpi-inline-label">Projects</p>
                 </div>
-                <div className="flex gap-3">
-                    <a
-                        href="/contact"
-                        className="rounded-full bg-slateBlue px-6 py-2.5 text-sm font-medium text-white shadow-soft hover:bg-slateBlue/90 hover:scale-105 transition-all duration-300"
-                    >
-                        Contact Us
-                    </a>
-                    <a
-                        href="/contact"
-                        className="rounded-full border border-slate-200 bg-white px-6 py-2.5 text-sm font-medium text-slate-700 hover:border-softSkyCyan/80 hover:bg-slate-50 transition-all duration-300"
-                    >
-                        Request a Quote
-                    </a>
-                </div>
-            </motion.section>
-
-            {/* Contact Info */}
-            <motion.section
-                className="mt-12 mb-12 text-center"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={fadeInUp}
-            >
-                <h2 className="text-xl font-semibold text-slate-900">
-                    Contact EHM Technology Services
-                </h2>
-                <p className="mt-2 text-meta">
-                    For inquiries, quotes, or project discussions, feel free to reach out.
-                </p>
-                <div className="mt-2 flex flex-wrap justify-center gap-5 text-sm text-slate-600">
-                    <div className="flex items-center gap-4">
-                        <span className="text-slateBlue">✉</span>
-                        <span>Email: info@ehmtechservices.com</span>
-                    </div>
-                    <div className="flex items-center gap-4">
-                        <span className="text-slateBlue">📞</span>
-                        <span>Phone: +92 322 628 3848</span>
-                    </div>
-                    <div className="flex items-center gap-4">
-                        <span className="text-slateBlue">💬</span>
-                        <span>WhatsApp: +92 322 628 3848</span>
-                    </div>
-                </div>
-            </motion.section>
-
-            {/* About Teaser */}
-            <motion.section
-                className="mt-20 grid gap-8 md:grid-cols-2 items-center"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeInUp}
-            >
+              </div>
+              <div className="kpi-inline">
+                <IconGlyph name="global" className="h-8 w-8 rounded-lg" />
                 <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">
-                        About Us
-                    </p>
-                    <h2 className="mt-2 text-2xl font-semibold text-slate-900">
-                        About EHM Technology Services
-                    </h2>
-                    <p className="mt-4 text-slate-600 leading-relaxed">
-                        We are a multidisciplinary team of engineers, estimators, and developers dedicated to delivering precision and innovation. From complex structural designs to custom software solutions, we bridge the gap between technical requirements and business goals.
-                    </p>
-                    <a
-                        href="/about"
-                        className="mt-6 inline-flex items-center text-sm font-medium text-slateBlue hover:text-slateBlue/80"
-                    >
-                        Read more about our team <span className="ml-1">→</span>
-                    </a>
+                  <p className="kpi-inline-value">100%</p>
+                  <p className="kpi-inline-label">Client Focus</p>
                 </div>
-                <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-soft group">
-                    <Image
-                        src="/images/team-collaboration-v2.png"
-                        alt="EHM Team collaborating on engineering and development projects"
-                        fill
-                        className="object-cover"
-                    />
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
-                    <div className="absolute top-4 left-4 flex gap-2">
-                        <span className="px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-white/90 text-slate-700 rounded-full">
-                            Team
-                        </span>
-                        <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider text-slate-500">
-                            Live Capture
-                        </span>
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                        <h3 className="text-xl font-semibold text-white">Team Collaboration</h3>
-                        <p className="text-sm text-white/80 mt-1">Engineers, estimators, and developers working together.</p>
-                    </div>
-                </div>
-            </motion.section>
-        </main>
-    );
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      <motion.section
+        className="open-band p-4 md:p-5 overflow-hidden"
+        variants={sectionVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.35 }}
+      >
+        <div className="marquee-track">
+          {[...brandMarquee, ...brandMarquee].map((item, idx) => (
+            <span key={`${item}-${idx}`} className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-600">
+              {item}
+            </span>
+          ))}
+        </div>
+      </motion.section>
+
+      <motion.section
+        variants={sectionVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <div className="mb-5 flex items-end justify-between gap-4">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Our Services</p>
+            <h2 className="mt-2 text-3xl text-slate-900">Our Services in the world of IT</h2>
+          </div>
+          <Link href="/services" className="text-sm font-semibold text-[#3663D8] hover:text-[#77BEFF]">
+            View all services {">"}
+          </Link>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {serviceCards.map((service, index) => (
+            <motion.article
+              key={service.title}
+              className="section-card p-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
+              transition={{ delay: index * 0.06, duration: 0.4, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.25 }}
+            >
+              <div className="image-frame relative mb-4 h-36 overflow-hidden rounded-xl border border-slate-200">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="mb-3 flex items-center justify-between">
+                <IconGlyph name={service.glyph} />
+              </div>
+              <h2 className="text-xl text-slate-900">{service.title}</h2>
+              <p className="mt-3 text-meta">{service.text}</p>
+              <Link href={service.href} className="mt-4 inline-block text-sm font-semibold text-[#3663D8] hover:text-[#77BEFF]">
+                View details {">"}
+              </Link>
+            </motion.article>
+          ))}
+        </div>
+      </motion.section>
+
+      <SectionDivider label="Proof" />
+
+      <motion.section
+        className="open-section p-8 md:p-10"
+        variants={sectionVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Case Studies</p>
+        <h2 className="mt-3 text-3xl text-slate-900">Having clarity of purpose</h2>
+        <p className="mt-4 max-w-4xl text-meta text-base">
+          Explore how our team solves real project challenges across engineering, estimation, and digital transformation.
+        </p>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {caseStudies.map((item, index) => (
+            <motion.article
+              key={item.title}
+              className="soft-tile p-5"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -4, scale: 1.01 }}
+              transition={{ delay: index * 0.1, duration: 0.45 }}
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              <div className="image-frame relative mb-4 h-32 overflow-hidden rounded-lg border border-slate-200">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="mb-3">
+                <IconGlyph name={item.glyph} />
+              </div>
+              <h3 className="text-lg text-slate-900">{item.title}</h3>
+              <p className="mt-2 text-sm text-meta">{item.text}</p>
+            </motion.article>
+          ))}
+        </div>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link href="/portfolio" className="btn-primary">
+            Browse Case Studies
+          </Link>
+          <Link href="/contact" className="btn-secondary">
+            Start a Project
+          </Link>
+        </div>
+      </motion.section>
+
+      <section className="open-section p-8 md:p-10">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Delivery Model</p>
+        <h2 className="mt-3 text-3xl text-slate-900">How we keep delivery predictable</h2>
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1.05fr,0.95fr]">
+          <div className="image-frame soft-tile relative overflow-hidden p-0">
+            <div className="relative h-[260px] md:h-[320px]">
+              <Image
+                src="/images/graphics/flow-lines.svg"
+                alt="Flow-based delivery model graphic"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <article className="soft-tile p-5">
+              <p className="text-sm font-semibold text-slate-100">Structured kickoff</p>
+              <p className="mt-2 text-sm text-meta">Scope, owners, and acceptance criteria are confirmed before execution starts.</p>
+            </article>
+            <article className="soft-tile p-5">
+              <p className="text-sm font-semibold text-slate-100">Weekly visibility</p>
+              <p className="mt-2 text-sm text-meta">Progress snapshots, blockers, and next milestones are shared in a clear format.</p>
+            </article>
+            <article className="soft-tile p-5">
+              <p className="text-sm font-semibold text-slate-100">Outcome review</p>
+              <p className="mt-2 text-sm text-meta">Every phase ends with QA, handover notes, and performance checks.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="open-section p-8 md:p-10">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gradient-label">Trust Signals</p>
+        <h2 className="mt-3 text-3xl text-slate-900">Built with accountability, not guesswork</h2>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <article className="soft-tile p-5">
+            <p className="text-xs uppercase tracking-[0.15em] text-meta">Delivery reliability</p>
+            <p className="mt-2 text-sm text-meta">Milestone tracking, QA checkpoints, and documented handovers on every engagement.</p>
+          </article>
+          <article className="soft-tile p-5">
+            <p className="text-xs uppercase tracking-[0.15em] text-meta">Transparent reporting</p>
+            <p className="mt-2 text-sm text-meta">Weekly progress snapshots covering outcomes, blockers, and next commitments.</p>
+          </article>
+          <article className="soft-tile p-5">
+            <p className="text-xs uppercase tracking-[0.15em] text-meta">Cross-domain execution</p>
+            <p className="mt-2 text-sm text-meta">Engineering, automation, and digital teams aligned under one practical workflow.</p>
+          </article>
+        </div>
+      </section>
+
+      <ProofStrip
+        heading="Client Confidence"
+        subheading="Teams that rely on our delivery model"
+        tone="delivery"
+        audienceLine="Trusted by program teams that need predictable outcomes"
+        partnerLabels={["Enterprise PMO", "MEP Delivery Team", "Ops Automation Unit", "Digital Growth Squad"]}
+        metrics={[
+          { label: "Projects", value: "240+" },
+          { label: "Client Focus", value: "100%" },
+          { label: "Avg Reply", value: "24h" },
+        ]}
+        testimonial={{
+          quote: "The weekly visibility and clear ownership structure helped us move faster with fewer surprises.",
+          byline: "Program Coordinator, Regional Infrastructure Team",
+        }}
+      />
+    </main>
+  );
 }
+
