@@ -128,13 +128,13 @@ export default function EmailMarketingPage() {
         <h2 className="text-2xl font-semibold text-slate-900">
           Why Email Marketing Matters
         </h2>
-        <p className="mt-4 text-slate-600">
+        <p className="mt-4 text-slate-600 leading-relaxed">
           Social media is rented land. Email is your home. It is the most reliable way to reach your audience without fighting an algorithm.
         </p>
-        <p className="mt-4 text-slate-600">
+        <p className="mt-4 text-slate-600 leading-relaxed">
           Good email marketing:
         </p>
-        <ul className="mt-4 space-y-2 text-slate-600 list-disc list-inside">
+        <ul className="mt-4 space-y-3 text-slate-600 list-enhanced">
           <li>Builds trust over time</li>
           <li>Drives repeat sales</li>
           <li>Keeps your brand top of mind</li>
@@ -146,7 +146,7 @@ export default function EmailMarketingPage() {
         <h2 className="text-2xl font-semibold text-slate-900">
           Why Choose EHM Technology Services
         </h2>
-        <p className="mt-4 text-slate-600">
+        <p className="mt-4 text-slate-600 leading-relaxed">
           We don't just send emails. We build relationships. We write like humans, not robots. We design for clarity, not clutter.
         </p>
         <div className="mt-6 grid md:grid-cols-2 gap-6">
@@ -154,7 +154,7 @@ export default function EmailMarketingPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Human Touch
             </h3>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="mt-2 text-sm text-slate-600 leading-relaxed">
               Copy that sounds like you. Designs that look like you.
             </p>
           </div>
@@ -162,7 +162,7 @@ export default function EmailMarketingPage() {
             <h3 className="text-lg font-semibold text-softSkyCyan">
               Data Driven
             </h3>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="mt-2 text-sm text-slate-600 leading-relaxed">
               We watch the numbers. If it works, we do more of it. If it doesn't, we fix it.
             </p>
           </div>

@@ -106,7 +106,7 @@ export function AIChatbot() {
       {/* Chat Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-[#046BC6] text-white shadow-lg hover:bg-[#035a9e] transition-colors flex items-center justify-center"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#046BC6] text-white shadow-lg hover:bg-[#035a9e] transition-colors flex items-center justify-center"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         aria-label="Open chat"
@@ -127,7 +127,7 @@ export function AIChatbot() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+              className="fixed inset-0 bg-black/10 md:bg-black/20 backdrop-blur-[2px] md:backdrop-blur-sm z-40"
               onClick={() => setIsOpen(false)}
             />
             <motion.div
